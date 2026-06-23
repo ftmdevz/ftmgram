@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -57,7 +57,7 @@ else:
             InputStickerSetTonGifts
         """
 
-        QUALNAME = "ftmgram.raw.base.InputStickerSet"
+        QUALNAME = "pyrogram.raw.base.InputStickerSet"
         __union_types__ = Union[raw.types.InputStickerSetAnimatedEmoji, raw.types.InputStickerSetAnimatedEmojiAnimations, raw.types.InputStickerSetDice, raw.types.InputStickerSetEmojiChannelDefaultStatuses, raw.types.InputStickerSetEmojiDefaultStatuses, raw.types.InputStickerSetEmojiDefaultTopicIcons, raw.types.InputStickerSetEmojiGenericAnimations, raw.types.InputStickerSetEmpty, raw.types.InputStickerSetID, raw.types.InputStickerSetPremiumGifts, raw.types.InputStickerSetShortName, raw.types.InputStickerSetTonGifts]
 
         def __init__(self):

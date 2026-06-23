@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -58,7 +58,7 @@ else:
             updates.GetChannelDifference
         """
 
-        QUALNAME = "ftmgram.raw.base.updates.ChannelDifference"
+        QUALNAME = "pyrogram.raw.base.updates.ChannelDifference"
         __union_types__ = Union[raw.types.updates.ChannelDifference, raw.types.updates.ChannelDifferenceEmpty, raw.types.updates.ChannelDifferenceTooLong]
 
         def __init__(self):

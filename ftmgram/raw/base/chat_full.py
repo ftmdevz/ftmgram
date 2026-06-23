@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -47,7 +47,7 @@ else:
             ChatFull
         """
 
-        QUALNAME = "ftmgram.raw.base.ChatFull"
+        QUALNAME = "pyrogram.raw.base.ChatFull"
         __union_types__ = Union[raw.types.ChannelFull, raw.types.ChatFull]
 
         def __init__(self):

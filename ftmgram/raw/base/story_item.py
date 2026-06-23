@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -48,7 +48,7 @@ else:
             StoryItemSkipped
         """
 
-        QUALNAME = "ftmgram.raw.base.StoryItem"
+        QUALNAME = "pyrogram.raw.base.StoryItem"
         __union_types__ = Union[raw.types.StoryItem, raw.types.StoryItemDeleted, raw.types.StoryItemSkipped]
 
         def __init__(self):

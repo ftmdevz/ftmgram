@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -49,7 +49,7 @@ else:
             PQInnerDataTempDc
         """
 
-        QUALNAME = "ftmgram.raw.base.PQInnerData"
+        QUALNAME = "pyrogram.raw.base.PQInnerData"
         __union_types__ = Union[raw.types.PQInnerData, raw.types.PQInnerDataDc, raw.types.PQInnerDataTemp, raw.types.PQInnerDataTempDc]
 
         def __init__(self):

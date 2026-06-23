@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -58,7 +58,7 @@ else:
             help.EditUserInfo
         """
 
-        QUALNAME = "ftmgram.raw.base.help.UserInfo"
+        QUALNAME = "pyrogram.raw.base.help.UserInfo"
         __union_types__ = Union[raw.types.help.UserInfo, raw.types.help.UserInfoEmpty]
 
         def __init__(self):

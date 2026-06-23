@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -59,7 +59,7 @@ else:
             payments.EditConnectedStarRefBot
         """
 
-        QUALNAME = "ftmgram.raw.base.payments.ConnectedStarRefBots"
+        QUALNAME = "pyrogram.raw.base.payments.ConnectedStarRefBots"
         __union_types__ = Union[raw.types.payments.ConnectedStarRefBots]
 
         def __init__(self):

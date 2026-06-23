@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -57,7 +57,7 @@ else:
             ReqDHParams
         """
 
-        QUALNAME = "ftmgram.raw.base.ServerDHParams"
+        QUALNAME = "pyrogram.raw.base.ServerDHParams"
         __union_types__ = Union[raw.types.ServerDHParamsFail, raw.types.ServerDHParamsOk]
 
         def __init__(self):

@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -57,7 +57,7 @@ else:
             messages.GetQuickReplies
         """
 
-        QUALNAME = "ftmgram.raw.base.messages.QuickReplies"
+        QUALNAME = "pyrogram.raw.base.messages.QuickReplies"
         __union_types__ = Union[raw.types.messages.QuickReplies, raw.types.messages.QuickRepliesNotModified]
 
         def __init__(self):

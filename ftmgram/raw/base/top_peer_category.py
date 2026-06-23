@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -55,7 +55,7 @@ else:
             TopPeerCategoryPhoneCalls
         """
 
-        QUALNAME = "ftmgram.raw.base.TopPeerCategory"
+        QUALNAME = "pyrogram.raw.base.TopPeerCategory"
         __union_types__ = Union[raw.types.TopPeerCategoryBotsApp, raw.types.TopPeerCategoryBotsGuestChat, raw.types.TopPeerCategoryBotsInline, raw.types.TopPeerCategoryBotsPM, raw.types.TopPeerCategoryChannels, raw.types.TopPeerCategoryCorrespondents, raw.types.TopPeerCategoryForwardChats, raw.types.TopPeerCategoryForwardUsers, raw.types.TopPeerCategoryGroups, raw.types.TopPeerCategoryPhoneCalls]
 
         def __init__(self):

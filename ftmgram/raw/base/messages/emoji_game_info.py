@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -57,7 +57,7 @@ else:
             messages.GetEmojiGameInfo
         """
 
-        QUALNAME = "ftmgram.raw.base.messages.EmojiGameInfo"
+        QUALNAME = "pyrogram.raw.base.messages.EmojiGameInfo"
         __union_types__ = Union[raw.types.messages.EmojiGameDiceInfo, raw.types.messages.EmojiGameUnavailable]
 
         def __init__(self):

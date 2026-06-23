@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -48,7 +48,7 @@ else:
             InputRichMessageMarkdown
         """
 
-        QUALNAME = "ftmgram.raw.base.InputRichMessage"
+        QUALNAME = "pyrogram.raw.base.InputRichMessage"
         __union_types__ = Union[raw.types.InputRichMessage, raw.types.InputRichMessageHTML, raw.types.InputRichMessageMarkdown]
 
         def __init__(self):

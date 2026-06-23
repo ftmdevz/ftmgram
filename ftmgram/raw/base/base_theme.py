@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -50,7 +50,7 @@ else:
             BaseThemeTinted
         """
 
-        QUALNAME = "ftmgram.raw.base.BaseTheme"
+        QUALNAME = "pyrogram.raw.base.BaseTheme"
         __union_types__ = Union[raw.types.BaseThemeArctic, raw.types.BaseThemeClassic, raw.types.BaseThemeDay, raw.types.BaseThemeNight, raw.types.BaseThemeTinted]
 
         def __init__(self):

@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -54,7 +54,7 @@ else:
             MediaAreaWeather
         """
 
-        QUALNAME = "ftmgram.raw.base.MediaArea"
+        QUALNAME = "pyrogram.raw.base.MediaArea"
         __union_types__ = Union[raw.types.InputMediaAreaChannelPost, raw.types.InputMediaAreaVenue, raw.types.MediaAreaChannelPost, raw.types.MediaAreaGeoPoint, raw.types.MediaAreaStarGift, raw.types.MediaAreaSuggestedReaction, raw.types.MediaAreaUrl, raw.types.MediaAreaVenue, raw.types.MediaAreaWeather]
 
         def __init__(self):

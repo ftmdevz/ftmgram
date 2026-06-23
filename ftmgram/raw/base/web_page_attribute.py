@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -52,7 +52,7 @@ else:
             WebPageAttributeUniqueStarGift
         """
 
-        QUALNAME = "ftmgram.raw.base.WebPageAttribute"
+        QUALNAME = "pyrogram.raw.base.WebPageAttribute"
         __union_types__ = Union[raw.types.WebPageAttributeAiComposeTone, raw.types.WebPageAttributeStarGiftAuction, raw.types.WebPageAttributeStarGiftCollection, raw.types.WebPageAttributeStickerSet, raw.types.WebPageAttributeStory, raw.types.WebPageAttributeTheme, raw.types.WebPageAttributeUniqueStarGift]
 
         def __init__(self):

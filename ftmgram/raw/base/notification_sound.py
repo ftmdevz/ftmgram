@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -49,7 +49,7 @@ else:
             NotificationSoundRingtone
         """
 
-        QUALNAME = "ftmgram.raw.base.NotificationSound"
+        QUALNAME = "pyrogram.raw.base.NotificationSound"
         __union_types__ = Union[raw.types.NotificationSoundDefault, raw.types.NotificationSoundLocal, raw.types.NotificationSoundNone, raw.types.NotificationSoundRingtone]
 
         def __init__(self):

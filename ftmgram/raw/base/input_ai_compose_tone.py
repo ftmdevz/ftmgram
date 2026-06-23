@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -48,7 +48,7 @@ else:
             InputAiComposeToneSlug
         """
 
-        QUALNAME = "ftmgram.raw.base.InputAiComposeTone"
+        QUALNAME = "pyrogram.raw.base.InputAiComposeTone"
         __union_types__ = Union[raw.types.InputAiComposeToneDefault, raw.types.InputAiComposeToneID, raw.types.InputAiComposeToneSlug]
 
         def __init__(self):

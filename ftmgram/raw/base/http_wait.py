@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -46,7 +46,7 @@ else:
             HttpWait
         """
 
-        QUALNAME = "ftmgram.raw.base.HttpWait"
+        QUALNAME = "pyrogram.raw.base.HttpWait"
         __union_types__ = Union[raw.types.HttpWait]
 
         def __init__(self):

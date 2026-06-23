@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -57,7 +57,7 @@ else:
             account.GetSavedMusicIds
         """
 
-        QUALNAME = "ftmgram.raw.base.account.SavedMusicIds"
+        QUALNAME = "pyrogram.raw.base.account.SavedMusicIds"
         __union_types__ = Union[raw.types.account.SavedMusicIds, raw.types.account.SavedMusicIdsNotModified]
 
         def __init__(self):

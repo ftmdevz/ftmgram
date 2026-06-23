@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -58,7 +58,7 @@ else:
             langpack.GetStrings
         """
 
-        QUALNAME = "ftmgram.raw.base.LangPackString"
+        QUALNAME = "pyrogram.raw.base.LangPackString"
         __union_types__ = Union[raw.types.LangPackString, raw.types.LangPackStringDeleted, raw.types.LangPackStringPluralized]
 
         def __init__(self):

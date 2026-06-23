@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -49,7 +49,7 @@ else:
             InputMessageReplyTo
         """
 
-        QUALNAME = "ftmgram.raw.base.InputMessage"
+        QUALNAME = "pyrogram.raw.base.InputMessage"
         __union_types__ = Union[raw.types.InputMessageCallbackQuery, raw.types.InputMessageID, raw.types.InputMessagePinned, raw.types.InputMessageReplyTo]
 
         def __init__(self):

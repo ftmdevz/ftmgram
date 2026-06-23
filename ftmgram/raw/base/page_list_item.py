@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -47,7 +47,7 @@ else:
             PageListItemText
         """
 
-        QUALNAME = "ftmgram.raw.base.PageListItem"
+        QUALNAME = "pyrogram.raw.base.PageListItem"
         __union_types__ = Union[raw.types.PageListItemBlocks, raw.types.PageListItemText]
 
         def __init__(self):

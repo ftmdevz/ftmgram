@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -51,7 +51,7 @@ else:
             PhotoStrippedSize
         """
 
-        QUALNAME = "ftmgram.raw.base.PhotoSize"
+        QUALNAME = "pyrogram.raw.base.PhotoSize"
         __union_types__ = Union[raw.types.PhotoCachedSize, raw.types.PhotoPathSize, raw.types.PhotoSize, raw.types.PhotoSizeEmpty, raw.types.PhotoSizeProgressive, raw.types.PhotoStrippedSize]
 
         def __init__(self):

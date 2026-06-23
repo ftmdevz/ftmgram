@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -64,7 +64,7 @@ else:
             account.SendVerifyPhoneCode
         """
 
-        QUALNAME = "ftmgram.raw.base.auth.SentCode"
+        QUALNAME = "pyrogram.raw.base.auth.SentCode"
         __union_types__ = Union[raw.types.auth.SentCode, raw.types.auth.SentCodePaymentRequired, raw.types.auth.SentCodeSuccess]
 
         def __init__(self):

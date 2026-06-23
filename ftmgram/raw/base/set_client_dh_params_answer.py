@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -58,7 +58,7 @@ else:
             SetClientDHParams
         """
 
-        QUALNAME = "ftmgram.raw.base.SetClientDHParamsAnswer"
+        QUALNAME = "pyrogram.raw.base.SetClientDHParamsAnswer"
         __union_types__ = Union[raw.types.DhGenFail, raw.types.DhGenOk, raw.types.DhGenRetry]
 
         def __init__(self):

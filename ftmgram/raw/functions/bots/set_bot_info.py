@@ -19,11 +19,11 @@
 from io import BytesIO
 from typing import TYPE_CHECKING, List, Optional, Any
 
-from ftmgram.raw.core.primitives import Int, Long, Int128, Int256, Bool, Bytes, String, Double, Vector
-from ftmgram.raw.core import TLObject
+from pyrogram.raw.core.primitives import Int, Long, Int128, Int256, Bool, Bytes, String, Double, Vector
+from pyrogram.raw.core import TLObject
 
 if TYPE_CHECKING:
-    from ftmgram import raw
+    from pyrogram import raw
 
 # # # # # # # # # # # # # # # # # # # # # # # #
 #               !!! WARNING !!!               #

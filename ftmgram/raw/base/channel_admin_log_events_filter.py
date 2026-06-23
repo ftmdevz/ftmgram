@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -46,7 +46,7 @@ else:
             ChannelAdminLogEventsFilter
         """
 
-        QUALNAME = "ftmgram.raw.base.ChannelAdminLogEventsFilter"
+        QUALNAME = "pyrogram.raw.base.ChannelAdminLogEventsFilter"
         __union_types__ = Union[raw.types.ChannelAdminLogEventsFilter]
 
         def __init__(self):

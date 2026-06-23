@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -57,7 +57,7 @@ else:
             account.GetUniqueGiftChatThemes
         """
 
-        QUALNAME = "ftmgram.raw.base.account.ChatThemes"
+        QUALNAME = "pyrogram.raw.base.account.ChatThemes"
         __union_types__ = Union[raw.types.account.ChatThemes, raw.types.account.ChatThemesNotModified]
 
         def __init__(self):

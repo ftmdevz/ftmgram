@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -59,7 +59,7 @@ else:
             stories.Report
         """
 
-        QUALNAME = "ftmgram.raw.base.ReportResult"
+        QUALNAME = "pyrogram.raw.base.ReportResult"
         __union_types__ = Union[raw.types.ReportResultAddComment, raw.types.ReportResultChooseOption, raw.types.ReportResultReported]
 
         def __init__(self):

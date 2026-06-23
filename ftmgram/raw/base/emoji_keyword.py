@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -47,7 +47,7 @@ else:
             EmojiKeywordDeleted
         """
 
-        QUALNAME = "ftmgram.raw.base.EmojiKeyword"
+        QUALNAME = "pyrogram.raw.base.EmojiKeyword"
         __union_types__ = Union[raw.types.EmojiKeyword, raw.types.EmojiKeywordDeleted]
 
         def __init__(self):

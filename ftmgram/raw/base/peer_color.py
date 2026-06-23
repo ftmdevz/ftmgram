@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -48,7 +48,7 @@ else:
             PeerColorCollectible
         """
 
-        QUALNAME = "ftmgram.raw.base.PeerColor"
+        QUALNAME = "pyrogram.raw.base.PeerColor"
         __union_types__ = Union[raw.types.InputPeerColorCollectible, raw.types.PeerColor, raw.types.PeerColorCollectible]
 
         def __init__(self):

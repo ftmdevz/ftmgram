@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -58,7 +58,7 @@ else:
             channels.InviteToChannel
         """
 
-        QUALNAME = "ftmgram.raw.base.messages.InvitedUsers"
+        QUALNAME = "pyrogram.raw.base.messages.InvitedUsers"
         __union_types__ = Union[raw.types.messages.InvitedUsers]
 
         def __init__(self):

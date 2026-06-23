@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -50,7 +50,7 @@ else:
             InputNotifyUsers
         """
 
-        QUALNAME = "ftmgram.raw.base.InputNotifyPeer"
+        QUALNAME = "pyrogram.raw.base.InputNotifyPeer"
         __union_types__ = Union[raw.types.InputNotifyBroadcasts, raw.types.InputNotifyChats, raw.types.InputNotifyForumTopic, raw.types.InputNotifyPeer, raw.types.InputNotifyUsers]
 
         def __init__(self):

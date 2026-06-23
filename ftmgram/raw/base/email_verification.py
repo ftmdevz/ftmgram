@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -48,7 +48,7 @@ else:
             EmailVerificationGoogle
         """
 
-        QUALNAME = "ftmgram.raw.base.EmailVerification"
+        QUALNAME = "pyrogram.raw.base.EmailVerification"
         __union_types__ = Union[raw.types.EmailVerificationApple, raw.types.EmailVerificationCode, raw.types.EmailVerificationGoogle]
 
         def __init__(self):

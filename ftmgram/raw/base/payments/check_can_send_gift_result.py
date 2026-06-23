@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -57,7 +57,7 @@ else:
             payments.CheckCanSendGift
         """
 
-        QUALNAME = "ftmgram.raw.base.payments.CheckCanSendGiftResult"
+        QUALNAME = "pyrogram.raw.base.payments.CheckCanSendGiftResult"
         __union_types__ = Union[raw.types.payments.CheckCanSendGiftResultFail, raw.types.payments.CheckCanSendGiftResultOk]
 
         def __init__(self):

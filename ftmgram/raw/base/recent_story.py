@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -56,7 +56,7 @@ else:
             stories.GetPeerMaxIDs
         """
 
-        QUALNAME = "ftmgram.raw.base.RecentStory"
+        QUALNAME = "pyrogram.raw.base.RecentStory"
         __union_types__ = Union[raw.types.RecentStory]
 
         def __init__(self):

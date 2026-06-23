@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -50,7 +50,7 @@ else:
             PhoneCallDiscardReasonMissed
         """
 
-        QUALNAME = "ftmgram.raw.base.PhoneCallDiscardReason"
+        QUALNAME = "pyrogram.raw.base.PhoneCallDiscardReason"
         __union_types__ = Union[raw.types.PhoneCallDiscardReasonBusy, raw.types.PhoneCallDiscardReasonDisconnect, raw.types.PhoneCallDiscardReasonHangup, raw.types.PhoneCallDiscardReasonMigrateConferenceCall, raw.types.PhoneCallDiscardReasonMissed]
 
         def __init__(self):

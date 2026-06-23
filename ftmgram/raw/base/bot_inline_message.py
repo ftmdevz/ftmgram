@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -53,7 +53,7 @@ else:
             BotInlineMessageText
         """
 
-        QUALNAME = "ftmgram.raw.base.BotInlineMessage"
+        QUALNAME = "pyrogram.raw.base.BotInlineMessage"
         __union_types__ = Union[raw.types.BotInlineMessageMediaAuto, raw.types.BotInlineMessageMediaContact, raw.types.BotInlineMessageMediaGeo, raw.types.BotInlineMessageMediaInvoice, raw.types.BotInlineMessageMediaVenue, raw.types.BotInlineMessageMediaWebPage, raw.types.BotInlineMessageRichMessage, raw.types.BotInlineMessageText]
 
         def __init__(self):

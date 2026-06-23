@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -191,7 +191,7 @@ else:
             stories.StartLive
         """
 
-        QUALNAME = "ftmgram.raw.base.Updates"
+        QUALNAME = "pyrogram.raw.base.Updates"
         __union_types__ = Union[raw.types.UpdateShort, raw.types.UpdateShortChatMessage, raw.types.UpdateShortMessage, raw.types.UpdateShortSentMessage, raw.types.Updates, raw.types.UpdatesCombined, raw.types.UpdatesTooLong]
 
         def __init__(self):

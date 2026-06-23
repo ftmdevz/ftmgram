@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -58,7 +58,7 @@ else:
             users.GetRequirementsToContact
         """
 
-        QUALNAME = "ftmgram.raw.base.RequirementToContact"
+        QUALNAME = "pyrogram.raw.base.RequirementToContact"
         __union_types__ = Union[raw.types.RequirementToContactEmpty, raw.types.RequirementToContactPaidMessages, raw.types.RequirementToContactPremium]
 
         def __init__(self):

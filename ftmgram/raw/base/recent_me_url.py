@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -50,7 +50,7 @@ else:
             RecentMeUrlUser
         """
 
-        QUALNAME = "ftmgram.raw.base.RecentMeUrl"
+        QUALNAME = "pyrogram.raw.base.RecentMeUrl"
         __union_types__ = Union[raw.types.RecentMeUrlChat, raw.types.RecentMeUrlChatInvite, raw.types.RecentMeUrlStickerSet, raw.types.RecentMeUrlUnknown, raw.types.RecentMeUrlUser]
 
         def __init__(self):

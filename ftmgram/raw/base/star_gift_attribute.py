@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -49,7 +49,7 @@ else:
             StarGiftAttributePattern
         """
 
-        QUALNAME = "ftmgram.raw.base.StarGiftAttribute"
+        QUALNAME = "pyrogram.raw.base.StarGiftAttribute"
         __union_types__ = Union[raw.types.StarGiftAttributeBackdrop, raw.types.StarGiftAttributeModel, raw.types.StarGiftAttributeOriginalDetails, raw.types.StarGiftAttributePattern]
 
         def __init__(self):

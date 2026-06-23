@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -46,7 +46,7 @@ else:
             WebDomainException
         """
 
-        QUALNAME = "ftmgram.raw.base.WebDomainException"
+        QUALNAME = "pyrogram.raw.base.WebDomainException"
         __union_types__ = Union[raw.types.WebDomainException]
 
         def __init__(self):

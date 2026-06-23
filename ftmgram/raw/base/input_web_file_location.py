@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -48,7 +48,7 @@ else:
             InputWebFileLocation
         """
 
-        QUALNAME = "ftmgram.raw.base.InputWebFileLocation"
+        QUALNAME = "pyrogram.raw.base.InputWebFileLocation"
         __union_types__ = Union[raw.types.InputWebFileAudioAlbumThumbLocation, raw.types.InputWebFileGeoPointLocation, raw.types.InputWebFileLocation]
 
         def __init__(self):

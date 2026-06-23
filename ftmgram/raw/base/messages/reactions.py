@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -59,7 +59,7 @@ else:
             messages.GetDefaultTagReactions
         """
 
-        QUALNAME = "ftmgram.raw.base.messages.Reactions"
+        QUALNAME = "pyrogram.raw.base.messages.Reactions"
         __union_types__ = Union[raw.types.messages.Reactions, raw.types.messages.ReactionsNotModified]
 
         def __init__(self):

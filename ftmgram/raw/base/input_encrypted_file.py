@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -49,7 +49,7 @@ else:
             InputEncryptedFileUploaded
         """
 
-        QUALNAME = "ftmgram.raw.base.InputEncryptedFile"
+        QUALNAME = "pyrogram.raw.base.InputEncryptedFile"
         __union_types__ = Union[raw.types.InputEncryptedFile, raw.types.InputEncryptedFileBigUploaded, raw.types.InputEncryptedFileEmpty, raw.types.InputEncryptedFileUploaded]
 
         def __init__(self):

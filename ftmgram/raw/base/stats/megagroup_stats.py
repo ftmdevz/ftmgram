@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -56,7 +56,7 @@ else:
             stats.GetMegagroupStats
         """
 
-        QUALNAME = "ftmgram.raw.base.stats.MegagroupStats"
+        QUALNAME = "pyrogram.raw.base.stats.MegagroupStats"
         __union_types__ = Union[raw.types.stats.MegagroupStats]
 
         def __init__(self):

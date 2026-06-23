@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -48,7 +48,7 @@ else:
             EmojiGroupPremium
         """
 
-        QUALNAME = "ftmgram.raw.base.EmojiGroup"
+        QUALNAME = "pyrogram.raw.base.EmojiGroup"
         __union_types__ = Union[raw.types.EmojiGroup, raw.types.EmojiGroupGreeting, raw.types.EmojiGroupPremium]
 
         def __init__(self):

@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -59,7 +59,7 @@ else:
             account.GetMultiWallPapers
         """
 
-        QUALNAME = "ftmgram.raw.base.WallPaper"
+        QUALNAME = "pyrogram.raw.base.WallPaper"
         __union_types__ = Union[raw.types.WallPaper, raw.types.WallPaperNoFile]
 
         def __init__(self):

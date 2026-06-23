@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -59,7 +59,7 @@ else:
             messages.GetAttachedStickers
         """
 
-        QUALNAME = "ftmgram.raw.base.StickerSetCovered"
+        QUALNAME = "pyrogram.raw.base.StickerSetCovered"
         __union_types__ = Union[raw.types.StickerSetCovered, raw.types.StickerSetFullCovered, raw.types.StickerSetMultiCovered, raw.types.StickerSetNoCovered]
 
         def __init__(self):

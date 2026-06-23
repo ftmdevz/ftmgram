@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -58,7 +58,7 @@ else:
             phone.ConfirmCall
         """
 
-        QUALNAME = "ftmgram.raw.base.phone.PhoneCall"
+        QUALNAME = "pyrogram.raw.base.phone.PhoneCall"
         __union_types__ = Union[raw.types.phone.PhoneCall]
 
         def __init__(self):

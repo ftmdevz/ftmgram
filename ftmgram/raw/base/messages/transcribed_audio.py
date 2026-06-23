@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -56,7 +56,7 @@ else:
             messages.TranscribeAudio
         """
 
-        QUALNAME = "ftmgram.raw.base.messages.TranscribedAudio"
+        QUALNAME = "pyrogram.raw.base.messages.TranscribedAudio"
         __union_types__ = Union[raw.types.messages.TranscribedAudio]
 
         def __init__(self):

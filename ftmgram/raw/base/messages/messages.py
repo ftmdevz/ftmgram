@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -76,7 +76,7 @@ else:
             channels.SearchPosts
         """
 
-        QUALNAME = "ftmgram.raw.base.messages.Messages"
+        QUALNAME = "pyrogram.raw.base.messages.Messages"
         __union_types__ = Union[raw.types.messages.ChannelMessages, raw.types.messages.Messages, raw.types.messages.MessagesNotModified, raw.types.messages.MessagesSlice]
 
         def __init__(self):

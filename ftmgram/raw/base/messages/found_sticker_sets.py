@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -58,7 +58,7 @@ else:
             messages.SearchEmojiStickerSets
         """
 
-        QUALNAME = "ftmgram.raw.base.messages.FoundStickerSets"
+        QUALNAME = "pyrogram.raw.base.messages.FoundStickerSets"
         __union_types__ = Union[raw.types.messages.FoundStickerSets, raw.types.messages.FoundStickerSetsNotModified]
 
         def __init__(self):

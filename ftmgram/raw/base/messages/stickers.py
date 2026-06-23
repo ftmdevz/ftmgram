@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -57,7 +57,7 @@ else:
             messages.GetStickers
         """
 
-        QUALNAME = "ftmgram.raw.base.messages.Stickers"
+        QUALNAME = "pyrogram.raw.base.messages.Stickers"
         __union_types__ = Union[raw.types.messages.Stickers, raw.types.messages.StickersNotModified]
 
         def __init__(self):

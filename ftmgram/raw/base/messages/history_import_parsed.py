@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -56,7 +56,7 @@ else:
             messages.CheckHistoryImport
         """
 
-        QUALNAME = "ftmgram.raw.base.messages.HistoryImportParsed"
+        QUALNAME = "pyrogram.raw.base.messages.HistoryImportParsed"
         __union_types__ = Union[raw.types.messages.HistoryImportParsed]
 
         def __init__(self):

@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -56,7 +56,7 @@ else:
             auth.SentCodeTypeSmsWord
         """
 
-        QUALNAME = "ftmgram.raw.base.auth.SentCodeType"
+        QUALNAME = "pyrogram.raw.base.auth.SentCodeType"
         __union_types__ = Union[raw.types.auth.SentCodeTypeApp, raw.types.auth.SentCodeTypeCall, raw.types.auth.SentCodeTypeEmailCode, raw.types.auth.SentCodeTypeFirebaseSms, raw.types.auth.SentCodeTypeFlashCall, raw.types.auth.SentCodeTypeFragmentSms, raw.types.auth.SentCodeTypeMissedCall, raw.types.auth.SentCodeTypeSetUpEmailRequired, raw.types.auth.SentCodeTypeSms, raw.types.auth.SentCodeTypeSmsPhrase, raw.types.auth.SentCodeTypeSmsWord]
 
         def __init__(self):

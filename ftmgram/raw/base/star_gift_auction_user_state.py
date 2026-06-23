@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -46,7 +46,7 @@ else:
             StarGiftAuctionUserState
         """
 
-        QUALNAME = "ftmgram.raw.base.StarGiftAuctionUserState"
+        QUALNAME = "pyrogram.raw.base.StarGiftAuctionUserState"
         __union_types__ = Union[raw.types.StarGiftAuctionUserState]
 
         def __init__(self):

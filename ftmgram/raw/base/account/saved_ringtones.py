@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -57,7 +57,7 @@ else:
             account.GetSavedRingtones
         """
 
-        QUALNAME = "ftmgram.raw.base.account.SavedRingtones"
+        QUALNAME = "pyrogram.raw.base.account.SavedRingtones"
         __union_types__ = Union[raw.types.account.SavedRingtones, raw.types.account.SavedRingtonesNotModified]
 
         def __init__(self):

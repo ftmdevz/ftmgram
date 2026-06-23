@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -57,7 +57,7 @@ else:
             stories.GetAllStories
         """
 
-        QUALNAME = "ftmgram.raw.base.stories.AllStories"
+        QUALNAME = "pyrogram.raw.base.stories.AllStories"
         __union_types__ = Union[raw.types.stories.AllStories, raw.types.stories.AllStoriesNotModified]
 
         def __init__(self):

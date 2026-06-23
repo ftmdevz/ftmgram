@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from ftmgram import raw
-from ftmgram.raw.core import BaseTypeMeta
+from pyrogram import raw
+from pyrogram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -61,7 +61,7 @@ else:
             messages.SearchCustomEmoji
         """
 
-        QUALNAME = "ftmgram.raw.base.EmojiList"
+        QUALNAME = "pyrogram.raw.base.EmojiList"
         __union_types__ = Union[raw.types.EmojiList, raw.types.EmojiListNotModified]
 
         def __init__(self):
