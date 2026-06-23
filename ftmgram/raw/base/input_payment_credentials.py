@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from pyrogram import raw
-from pyrogram.raw.core import BaseTypeMeta
+from ftmgram import raw
+from ftmgram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -49,7 +49,7 @@ else:
             InputPaymentCredentialsSaved
         """
 
-        QUALNAME = "pyrogram.raw.base.InputPaymentCredentials"
+        QUALNAME = "ftmgram.raw.base.InputPaymentCredentials"
         __union_types__ = Union[raw.types.InputPaymentCredentials, raw.types.InputPaymentCredentialsApplePay, raw.types.InputPaymentCredentialsGooglePay, raw.types.InputPaymentCredentialsSaved]
 
         def __init__(self):

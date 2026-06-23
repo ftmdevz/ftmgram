@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from pyrogram import raw
-from pyrogram.raw.core import BaseTypeMeta
+from ftmgram import raw
+from ftmgram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -51,7 +51,7 @@ else:
             InlineQueryPeerTypeSameBotPM
         """
 
-        QUALNAME = "pyrogram.raw.base.InlineQueryPeerType"
+        QUALNAME = "ftmgram.raw.base.InlineQueryPeerType"
         __union_types__ = Union[raw.types.InlineQueryPeerTypeBotPM, raw.types.InlineQueryPeerTypeBroadcast, raw.types.InlineQueryPeerTypeChat, raw.types.InlineQueryPeerTypeMegagroup, raw.types.InlineQueryPeerTypePM, raw.types.InlineQueryPeerTypeSameBotPM]
 
         def __init__(self):

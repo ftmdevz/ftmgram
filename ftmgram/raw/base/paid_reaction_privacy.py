@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from pyrogram import raw
-from pyrogram.raw.core import BaseTypeMeta
+from ftmgram import raw
+from ftmgram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -48,7 +48,7 @@ else:
             PaidReactionPrivacyPeer
         """
 
-        QUALNAME = "pyrogram.raw.base.PaidReactionPrivacy"
+        QUALNAME = "ftmgram.raw.base.PaidReactionPrivacy"
         __union_types__ = Union[raw.types.PaidReactionPrivacyAnonymous, raw.types.PaidReactionPrivacyDefault, raw.types.PaidReactionPrivacyPeer]
 
         def __init__(self):

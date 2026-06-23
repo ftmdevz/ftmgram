@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from pyrogram import raw
-from pyrogram.raw.core import BaseTypeMeta
+from ftmgram import raw
+from ftmgram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -53,7 +53,7 @@ else:
             ChannelParticipantsSearch
         """
 
-        QUALNAME = "pyrogram.raw.base.ChannelParticipantsFilter"
+        QUALNAME = "ftmgram.raw.base.ChannelParticipantsFilter"
         __union_types__ = Union[raw.types.ChannelParticipantsAdmins, raw.types.ChannelParticipantsBanned, raw.types.ChannelParticipantsBots, raw.types.ChannelParticipantsContacts, raw.types.ChannelParticipantsKicked, raw.types.ChannelParticipantsMentions, raw.types.ChannelParticipantsRecent, raw.types.ChannelParticipantsSearch]
 
         def __init__(self):

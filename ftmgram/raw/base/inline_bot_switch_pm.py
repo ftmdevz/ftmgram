@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from pyrogram import raw
-from pyrogram.raw.core import BaseTypeMeta
+from ftmgram import raw
+from ftmgram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -46,7 +46,7 @@ else:
             InlineBotSwitchPM
         """
 
-        QUALNAME = "pyrogram.raw.base.InlineBotSwitchPM"
+        QUALNAME = "ftmgram.raw.base.InlineBotSwitchPM"
         __union_types__ = Union[raw.types.InlineBotSwitchPM]
 
         def __init__(self):

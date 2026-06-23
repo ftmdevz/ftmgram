@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from pyrogram import raw
-from pyrogram.raw.core import BaseTypeMeta
+from ftmgram import raw
+from ftmgram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -47,7 +47,7 @@ else:
             InputGameShortName
         """
 
-        QUALNAME = "pyrogram.raw.base.InputGame"
+        QUALNAME = "ftmgram.raw.base.InputGame"
         __union_types__ = Union[raw.types.InputGameID, raw.types.InputGameShortName]
 
         def __init__(self):

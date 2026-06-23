@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from pyrogram import raw
-from pyrogram.raw.core import BaseTypeMeta
+from ftmgram import raw
+from ftmgram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -58,7 +58,7 @@ else:
             messages.GetDialogs
         """
 
-        QUALNAME = "pyrogram.raw.base.messages.Dialogs"
+        QUALNAME = "ftmgram.raw.base.messages.Dialogs"
         __union_types__ = Union[raw.types.messages.Dialogs, raw.types.messages.DialogsNotModified, raw.types.messages.DialogsSlice]
 
         def __init__(self):

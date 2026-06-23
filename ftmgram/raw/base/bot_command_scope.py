@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from pyrogram import raw
-from pyrogram.raw.core import BaseTypeMeta
+from ftmgram import raw
+from ftmgram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -52,7 +52,7 @@ else:
             BotCommandScopeUsers
         """
 
-        QUALNAME = "pyrogram.raw.base.BotCommandScope"
+        QUALNAME = "ftmgram.raw.base.BotCommandScope"
         __union_types__ = Union[raw.types.BotCommandScopeChatAdmins, raw.types.BotCommandScopeChats, raw.types.BotCommandScopeDefault, raw.types.BotCommandScopePeer, raw.types.BotCommandScopePeerAdmins, raw.types.BotCommandScopePeerUser, raw.types.BotCommandScopeUsers]
 
         def __init__(self):

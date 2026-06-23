@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from pyrogram import raw
-from pyrogram.raw.core import BaseTypeMeta
+from ftmgram import raw
+from ftmgram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -56,7 +56,7 @@ else:
             messages.SummarizeText
         """
 
-        QUALNAME = "pyrogram.raw.base.TextWithEntities"
+        QUALNAME = "ftmgram.raw.base.TextWithEntities"
         __union_types__ = Union[raw.types.TextWithEntities]
 
         def __init__(self):

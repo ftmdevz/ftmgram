@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from pyrogram import raw
-from pyrogram.raw.core import BaseTypeMeta
+from ftmgram import raw
+from ftmgram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -61,7 +61,7 @@ else:
             messages.AcceptEncryption
         """
 
-        QUALNAME = "pyrogram.raw.base.EncryptedChat"
+        QUALNAME = "ftmgram.raw.base.EncryptedChat"
         __union_types__ = Union[raw.types.EncryptedChat, raw.types.EncryptedChatDiscarded, raw.types.EncryptedChatEmpty, raw.types.EncryptedChatRequested, raw.types.EncryptedChatWaiting]
 
         def __init__(self):

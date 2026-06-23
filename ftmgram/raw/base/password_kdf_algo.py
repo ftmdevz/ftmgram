@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from pyrogram import raw
-from pyrogram.raw.core import BaseTypeMeta
+from ftmgram import raw
+from ftmgram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -47,7 +47,7 @@ else:
             PasswordKdfAlgoUnknown
         """
 
-        QUALNAME = "pyrogram.raw.base.PasswordKdfAlgo"
+        QUALNAME = "ftmgram.raw.base.PasswordKdfAlgo"
         __union_types__ = Union[raw.types.PasswordKdfAlgoSHA256SHA256PBKDF2HMACSHA512iter100000SHA256ModPow, raw.types.PasswordKdfAlgoUnknown]
 
         def __init__(self):

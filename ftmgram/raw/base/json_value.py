@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from pyrogram import raw
-from pyrogram.raw.core import BaseTypeMeta
+from ftmgram import raw
+from ftmgram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -51,7 +51,7 @@ else:
             JsonString
         """
 
-        QUALNAME = "pyrogram.raw.base.JSONValue"
+        QUALNAME = "ftmgram.raw.base.JSONValue"
         __union_types__ = Union[raw.types.JsonArray, raw.types.JsonBool, raw.types.JsonNull, raw.types.JsonNumber, raw.types.JsonObject, raw.types.JsonString]
 
         def __init__(self):

@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from pyrogram import raw
-from pyrogram.raw.core import BaseTypeMeta
+from ftmgram import raw
+from ftmgram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -49,7 +49,7 @@ else:
             JoinChatBotResultWebView
         """
 
-        QUALNAME = "pyrogram.raw.base.JoinChatBotResult"
+        QUALNAME = "ftmgram.raw.base.JoinChatBotResult"
         __union_types__ = Union[raw.types.JoinChatBotResultApproved, raw.types.JoinChatBotResultDeclined, raw.types.JoinChatBotResultQueued, raw.types.JoinChatBotResultWebView]
 
         def __init__(self):

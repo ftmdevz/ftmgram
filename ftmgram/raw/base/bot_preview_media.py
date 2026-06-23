@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from pyrogram import raw
-from pyrogram.raw.core import BaseTypeMeta
+from ftmgram import raw
+from ftmgram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -58,7 +58,7 @@ else:
             bots.GetPreviewMedias
         """
 
-        QUALNAME = "pyrogram.raw.base.BotPreviewMedia"
+        QUALNAME = "ftmgram.raw.base.BotPreviewMedia"
         __union_types__ = Union[raw.types.BotPreviewMedia]
 
         def __init__(self):

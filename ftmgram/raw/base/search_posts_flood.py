@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from pyrogram import raw
-from pyrogram.raw.core import BaseTypeMeta
+from ftmgram import raw
+from ftmgram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -56,7 +56,7 @@ else:
             channels.CheckSearchPostsFlood
         """
 
-        QUALNAME = "pyrogram.raw.base.SearchPostsFlood"
+        QUALNAME = "ftmgram.raw.base.SearchPostsFlood"
         __union_types__ = Union[raw.types.SearchPostsFlood]
 
         def __init__(self):

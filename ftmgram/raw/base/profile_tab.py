@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from pyrogram import raw
-from pyrogram.raw.core import BaseTypeMeta
+from ftmgram import raw
+from ftmgram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -53,7 +53,7 @@ else:
             ProfileTabVoice
         """
 
-        QUALNAME = "pyrogram.raw.base.ProfileTab"
+        QUALNAME = "ftmgram.raw.base.ProfileTab"
         __union_types__ = Union[raw.types.ProfileTabFiles, raw.types.ProfileTabGifs, raw.types.ProfileTabGifts, raw.types.ProfileTabLinks, raw.types.ProfileTabMedia, raw.types.ProfileTabMusic, raw.types.ProfileTabPosts, raw.types.ProfileTabVoice]
 
         def __init__(self):

@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from pyrogram import raw
-from pyrogram.raw.core import BaseTypeMeta
+from ftmgram import raw
+from ftmgram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -58,7 +58,7 @@ else:
             DestroyAuthKey
         """
 
-        QUALNAME = "pyrogram.raw.base.DestroyAuthKeyRes"
+        QUALNAME = "ftmgram.raw.base.DestroyAuthKeyRes"
         __union_types__ = Union[raw.types.DestroyAuthKeyFail, raw.types.DestroyAuthKeyNone, raw.types.DestroyAuthKeyOk]
 
         def __init__(self):

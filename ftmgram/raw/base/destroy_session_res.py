@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from pyrogram import raw
-from pyrogram.raw.core import BaseTypeMeta
+from ftmgram import raw
+from ftmgram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -57,7 +57,7 @@ else:
             DestroySession
         """
 
-        QUALNAME = "pyrogram.raw.base.DestroySessionRes"
+        QUALNAME = "ftmgram.raw.base.DestroySessionRes"
         __union_types__ = Union[raw.types.DestroySessionNone, raw.types.DestroySessionOk]
 
         def __init__(self):

@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from pyrogram import raw
-from pyrogram.raw.core import BaseTypeMeta
+from ftmgram import raw
+from ftmgram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -59,7 +59,7 @@ else:
             auth.ImportLoginToken
         """
 
-        QUALNAME = "pyrogram.raw.base.auth.LoginToken"
+        QUALNAME = "ftmgram.raw.base.auth.LoginToken"
         __union_types__ = Union[raw.types.auth.LoginToken, raw.types.auth.LoginTokenMigrateTo, raw.types.auth.LoginTokenSuccess]
 
         def __init__(self):

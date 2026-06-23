@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from pyrogram import raw
-from pyrogram.raw.core import BaseTypeMeta
+from ftmgram import raw
+from ftmgram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -48,7 +48,7 @@ else:
             DialogFilterDefault
         """
 
-        QUALNAME = "pyrogram.raw.base.DialogFilter"
+        QUALNAME = "ftmgram.raw.base.DialogFilter"
         __union_types__ = Union[raw.types.DialogFilter, raw.types.DialogFilterChatlist, raw.types.DialogFilterDefault]
 
         def __init__(self):

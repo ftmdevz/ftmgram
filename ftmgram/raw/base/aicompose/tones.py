@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from pyrogram import raw
-from pyrogram.raw.core import BaseTypeMeta
+from ftmgram import raw
+from ftmgram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -58,7 +58,7 @@ else:
             aicompose.GetTones
         """
 
-        QUALNAME = "pyrogram.raw.base.aicompose.Tones"
+        QUALNAME = "ftmgram.raw.base.aicompose.Tones"
         __union_types__ = Union[raw.types.aicompose.Tones, raw.types.aicompose.TonesNotModified]
 
         def __init__(self):

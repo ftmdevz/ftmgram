@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from pyrogram import raw
-from pyrogram.raw.core import BaseTypeMeta
+from ftmgram import raw
+from ftmgram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -59,7 +59,7 @@ else:
             payments.GetStarsSubscriptions
         """
 
-        QUALNAME = "pyrogram.raw.base.payments.StarsStatus"
+        QUALNAME = "ftmgram.raw.base.payments.StarsStatus"
         __union_types__ = Union[raw.types.payments.StarsStatus]
 
         def __init__(self):

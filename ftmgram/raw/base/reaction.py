@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from pyrogram import raw
-from pyrogram.raw.core import BaseTypeMeta
+from ftmgram import raw
+from ftmgram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -49,7 +49,7 @@ else:
             ReactionPaid
         """
 
-        QUALNAME = "pyrogram.raw.base.Reaction"
+        QUALNAME = "ftmgram.raw.base.Reaction"
         __union_types__ = Union[raw.types.ReactionCustomEmoji, raw.types.ReactionEmoji, raw.types.ReactionEmpty, raw.types.ReactionPaid]
 
         def __init__(self):

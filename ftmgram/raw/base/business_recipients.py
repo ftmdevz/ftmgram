@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from pyrogram import raw
-from pyrogram.raw.core import BaseTypeMeta
+from ftmgram import raw
+from ftmgram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -46,7 +46,7 @@ else:
             BusinessRecipients
         """
 
-        QUALNAME = "pyrogram.raw.base.BusinessRecipients"
+        QUALNAME = "ftmgram.raw.base.BusinessRecipients"
         __union_types__ = Union[raw.types.BusinessRecipients]
 
         def __init__(self):

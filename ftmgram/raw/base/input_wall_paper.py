@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from pyrogram import raw
-from pyrogram.raw.core import BaseTypeMeta
+from ftmgram import raw
+from ftmgram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -48,7 +48,7 @@ else:
             InputWallPaperSlug
         """
 
-        QUALNAME = "pyrogram.raw.base.InputWallPaper"
+        QUALNAME = "ftmgram.raw.base.InputWallPaper"
         __union_types__ = Union[raw.types.InputWallPaper, raw.types.InputWallPaperNoFile, raw.types.InputWallPaperSlug]
 
         def __init__(self):

@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from pyrogram import raw
-from pyrogram.raw.core import BaseTypeMeta
+from ftmgram import raw
+from ftmgram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -57,7 +57,7 @@ else:
             contacts.GetBlocked
         """
 
-        QUALNAME = "pyrogram.raw.base.contacts.Blocked"
+        QUALNAME = "ftmgram.raw.base.contacts.Blocked"
         __union_types__ = Union[raw.types.contacts.Blocked, raw.types.contacts.BlockedSlice]
 
         def __init__(self):

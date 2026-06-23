@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from pyrogram import raw
-from pyrogram.raw.core import BaseTypeMeta
+from ftmgram import raw
+from ftmgram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -48,7 +48,7 @@ else:
             InputGroupCallSlug
         """
 
-        QUALNAME = "pyrogram.raw.base.InputGroupCall"
+        QUALNAME = "ftmgram.raw.base.InputGroupCall"
         __union_types__ = Union[raw.types.InputGroupCall, raw.types.InputGroupCallInviteMessage, raw.types.InputGroupCallSlug]
 
         def __init__(self):

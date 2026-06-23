@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from pyrogram import raw
-from pyrogram.raw.core import BaseTypeMeta
+from ftmgram import raw
+from ftmgram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -58,7 +58,7 @@ else:
             messages.ReportSponsoredMessage
         """
 
-        QUALNAME = "pyrogram.raw.base.channels.SponsoredMessageReportResult"
+        QUALNAME = "ftmgram.raw.base.channels.SponsoredMessageReportResult"
         __union_types__ = Union[raw.types.channels.SponsoredMessageReportResultAdsHidden, raw.types.channels.SponsoredMessageReportResultChooseOption, raw.types.channels.SponsoredMessageReportResultReported]
 
         def __init__(self):

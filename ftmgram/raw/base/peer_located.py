@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from pyrogram import raw
-from pyrogram.raw.core import BaseTypeMeta
+from ftmgram import raw
+from ftmgram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -47,7 +47,7 @@ else:
             PeerSelfLocated
         """
 
-        QUALNAME = "pyrogram.raw.base.PeerLocated"
+        QUALNAME = "ftmgram.raw.base.PeerLocated"
         __union_types__ = Union[raw.types.PeerLocated, raw.types.PeerSelfLocated]
 
         def __init__(self):

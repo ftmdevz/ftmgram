@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from pyrogram import raw
-from pyrogram.raw.core import BaseTypeMeta
+from ftmgram import raw
+from ftmgram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -46,7 +46,7 @@ else:
             MessagePeerReaction
         """
 
-        QUALNAME = "pyrogram.raw.base.MessagePeerReaction"
+        QUALNAME = "ftmgram.raw.base.MessagePeerReaction"
         __union_types__ = Union[raw.types.MessagePeerReaction]
 
         def __init__(self):

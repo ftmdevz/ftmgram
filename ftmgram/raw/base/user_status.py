@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from pyrogram import raw
-from pyrogram.raw.core import BaseTypeMeta
+from ftmgram import raw
+from ftmgram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -51,7 +51,7 @@ else:
             UserStatusRecently
         """
 
-        QUALNAME = "pyrogram.raw.base.UserStatus"
+        QUALNAME = "ftmgram.raw.base.UserStatus"
         __union_types__ = Union[raw.types.UserStatusEmpty, raw.types.UserStatusLastMonth, raw.types.UserStatusLastWeek, raw.types.UserStatusOffline, raw.types.UserStatusOnline, raw.types.UserStatusRecently]
 
         def __init__(self):

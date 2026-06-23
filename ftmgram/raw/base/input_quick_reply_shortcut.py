@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from pyrogram import raw
-from pyrogram.raw.core import BaseTypeMeta
+from ftmgram import raw
+from ftmgram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -47,7 +47,7 @@ else:
             InputQuickReplyShortcutId
         """
 
-        QUALNAME = "pyrogram.raw.base.InputQuickReplyShortcut"
+        QUALNAME = "ftmgram.raw.base.InputQuickReplyShortcut"
         __union_types__ = Union[raw.types.InputQuickReplyShortcut, raw.types.InputQuickReplyShortcutId]
 
         def __init__(self):

@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from pyrogram import raw
-from pyrogram.raw.core import BaseTypeMeta
+from ftmgram import raw
+from ftmgram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -57,7 +57,7 @@ else:
             contacts.GetSponsoredPeers
         """
 
-        QUALNAME = "pyrogram.raw.base.contacts.SponsoredPeers"
+        QUALNAME = "ftmgram.raw.base.contacts.SponsoredPeers"
         __union_types__ = Union[raw.types.contacts.SponsoredPeers, raw.types.contacts.SponsoredPeersEmpty]
 
         def __init__(self):

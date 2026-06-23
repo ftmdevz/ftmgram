@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from pyrogram import raw
-from pyrogram.raw.core import BaseTypeMeta
+from ftmgram import raw
+from ftmgram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -57,7 +57,7 @@ else:
             help.GetDeepLinkInfo
         """
 
-        QUALNAME = "pyrogram.raw.base.help.DeepLinkInfo"
+        QUALNAME = "ftmgram.raw.base.help.DeepLinkInfo"
         __union_types__ = Union[raw.types.help.DeepLinkInfo, raw.types.help.DeepLinkInfoEmpty]
 
         def __init__(self):

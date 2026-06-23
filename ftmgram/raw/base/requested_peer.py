@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from pyrogram import raw
-from pyrogram.raw.core import BaseTypeMeta
+from ftmgram import raw
+from ftmgram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -48,7 +48,7 @@ else:
             RequestedPeerUser
         """
 
-        QUALNAME = "pyrogram.raw.base.RequestedPeer"
+        QUALNAME = "ftmgram.raw.base.RequestedPeer"
         __union_types__ = Union[raw.types.RequestedPeerChannel, raw.types.RequestedPeerChat, raw.types.RequestedPeerUser]
 
         def __init__(self):

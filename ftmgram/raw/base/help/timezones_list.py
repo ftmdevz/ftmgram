@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from pyrogram import raw
-from pyrogram.raw.core import BaseTypeMeta
+from ftmgram import raw
+from ftmgram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -57,7 +57,7 @@ else:
             help.GetTimezonesList
         """
 
-        QUALNAME = "pyrogram.raw.base.help.TimezonesList"
+        QUALNAME = "ftmgram.raw.base.help.TimezonesList"
         __union_types__ = Union[raw.types.help.TimezonesList, raw.types.help.TimezonesListNotModified]
 
         def __init__(self):

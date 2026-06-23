@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from pyrogram import raw
-from pyrogram.raw.core import BaseTypeMeta
+from ftmgram import raw
+from ftmgram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -50,7 +50,7 @@ else:
             StarGiftAttributeRarityUncommon
         """
 
-        QUALNAME = "pyrogram.raw.base.StarGiftAttributeRarity"
+        QUALNAME = "ftmgram.raw.base.StarGiftAttributeRarity"
         __union_types__ = Union[raw.types.StarGiftAttributeRarity, raw.types.StarGiftAttributeRarityEpic, raw.types.StarGiftAttributeRarityLegendary, raw.types.StarGiftAttributeRarityRare, raw.types.StarGiftAttributeRarityUncommon]
 
         def __init__(self):

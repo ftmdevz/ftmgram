@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from pyrogram import raw
-from pyrogram.raw.core import BaseTypeMeta
+from ftmgram import raw
+from ftmgram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -46,7 +46,7 @@ else:
             BankCardOpenUrl
         """
 
-        QUALNAME = "pyrogram.raw.base.BankCardOpenUrl"
+        QUALNAME = "ftmgram.raw.base.BankCardOpenUrl"
         __union_types__ = Union[raw.types.BankCardOpenUrl]
 
         def __init__(self):

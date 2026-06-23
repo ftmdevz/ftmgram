@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from pyrogram import raw
-from pyrogram.raw.core import BaseTypeMeta
+from ftmgram import raw
+from ftmgram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -48,7 +48,7 @@ else:
             StoryReactionPublicRepost
         """
 
-        QUALNAME = "pyrogram.raw.base.StoryReaction"
+        QUALNAME = "ftmgram.raw.base.StoryReaction"
         __union_types__ = Union[raw.types.StoryReaction, raw.types.StoryReactionPublicForward, raw.types.StoryReactionPublicRepost]
 
         def __init__(self):

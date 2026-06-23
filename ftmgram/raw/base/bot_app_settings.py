@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from pyrogram import raw
-from pyrogram.raw.core import BaseTypeMeta
+from ftmgram import raw
+from ftmgram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -46,7 +46,7 @@ else:
             BotAppSettings
         """
 
-        QUALNAME = "pyrogram.raw.base.BotAppSettings"
+        QUALNAME = "ftmgram.raw.base.BotAppSettings"
         __union_types__ = Union[raw.types.BotAppSettings]
 
         def __init__(self):

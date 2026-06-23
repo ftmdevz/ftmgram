@@ -24,8 +24,8 @@
 
 from typing import TYPE_CHECKING, Union
 
-from pyrogram import raw
-from pyrogram.raw.core import BaseTypeMeta
+from ftmgram import raw
+from ftmgram.raw.core import BaseTypeMeta
 
 
 if TYPE_CHECKING:
@@ -57,7 +57,7 @@ else:
             help.GetCountriesList
         """
 
-        QUALNAME = "pyrogram.raw.base.help.CountriesList"
+        QUALNAME = "ftmgram.raw.base.help.CountriesList"
         __union_types__ = Union[raw.types.help.CountriesList, raw.types.help.CountriesListNotModified]
 
         def __init__(self):
