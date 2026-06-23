@@ -2,6 +2,8 @@ name: Upload release to GitHub
 
 on:
   push:
+    branches:
+      - ftmdevz
     tags:
       - 'v*'
   workflow_dispatch: {}
