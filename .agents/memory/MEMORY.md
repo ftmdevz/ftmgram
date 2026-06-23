@@ -1,0 +1,2 @@
+- [ftmgram method registration](ftmgram-methods.md) — all new methods need both a file and a __init__.py entry; many pre-existing files had missing typing imports.
+- [ftmgram raw import fix](ftmgram-raw-imports.md) — all 8600+ generated files in ftmgram/raw/ had `from pyrogram import raw` instead of `from ftmgram import raw`; fixed with bulk sed.
