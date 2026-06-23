@@ -21,8 +21,6 @@ extensions = [
 templates_path = ["_templates"]
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
-autodoc_mock_imports = ["pyrogram"]
-
 autodoc_member_order = "bysource"
 autodoc_typehints = "description"
 autodoc_default_options = {
