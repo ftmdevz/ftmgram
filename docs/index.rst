@@ -164,28 +164,18 @@ FTMGram
    :caption: Getting Started
 
    intro/index
-   intro/install
-   intro/quickstart
-   intro/migration
 
 .. toctree::
    :hidden:
    :caption: API Reference
 
    api/index
-   api/client
-   api/types
-   api/filters
-   api/enums
 
 .. toctree::
    :hidden:
    :caption: Topics
 
    topics/index
-   topics/rich-messages
-   topics/checklists
-   topics/poll-media
 
 .. toctree::
    :hidden:

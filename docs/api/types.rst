@@ -10,131 +10,200 @@ All types are found in the :mod:`ftmgram.types` namespace.
 
 ----
 
-.. rubric:: Core Types
+Core Types
+----------
 
-.. autosummary::
-   :nosignatures:
+.. list-table::
+   :widths: 30 70
+   :header-rows: 1
 
-   ftmgram.types.Message
-   ftmgram.types.User
-   ftmgram.types.Chat
-   ftmgram.types.ChatMember
-   ftmgram.types.ChatPermissions
-   ftmgram.types.ChatPrivileges
-   ftmgram.types.Dialog
+   * - Type
+     - Description
+   * - ``Message``
+     - A single Telegram message
+   * - ``User``
+     - A Telegram user or bot
+   * - ``Chat``
+     - A private chat, group, supergroup or channel
+   * - ``ChatMember``
+     - A member of a chat
+   * - ``ChatPermissions``
+     - Permissions available in a chat
+   * - ``Dialog``
+     - An entry in the dialog list
 
-.. rubric:: Media Types
+Media Types
+-----------
 
-.. autosummary::
-   :nosignatures:
+.. list-table::
+   :widths: 30 70
+   :header-rows: 1
 
-   ftmgram.types.Photo
-   ftmgram.types.Video
-   ftmgram.types.Audio
-   ftmgram.types.Document
-   ftmgram.types.Animation
-   ftmgram.types.Sticker
-   ftmgram.types.Voice
-   ftmgram.types.VideoNote
-   ftmgram.types.Location
-   ftmgram.types.Contact
-   ftmgram.types.Poll
-   ftmgram.types.PollOption
-   ftmgram.types.Venue
-   ftmgram.types.Game
-   ftmgram.types.Invoice
-   ftmgram.types.SuccessfulPayment
+   * - Type
+     - Description
+   * - ``Photo``
+     - A photo
+   * - ``Video``
+     - A video file
+   * - ``Audio``
+     - An audio file
+   * - ``Document``
+     - A generic document / file
+   * - ``Animation``
+     - A GIF or animation
+   * - ``Sticker``
+     - A sticker
+   * - ``Voice``
+     - A voice note
+   * - ``VideoNote``
+     - A round video message
+   * - ``Location``
+     - A geographic location
+   * - ``Contact``
+     - A phone contact
+   * - ``Poll``
+     - A poll
+   * - ``Venue``
+     - A venue/place
+   * - ``Game``
+     - A game
+   * - ``Invoice``
+     - A payment invoice
+   * - ``SuccessfulPayment``
+     - A successful payment result
 
-.. rubric:: Rich Messages (Bot API 10.1)
+Rich Messages — Bot API 10.1
+------------------------------
 
-.. autosummary::
-   :nosignatures:
+.. list-table::
+   :widths: 35 65
+   :header-rows: 1
 
-   ftmgram.types.RichMessage
-   ftmgram.types.InputRichMessage
-   ftmgram.types.InputRichMessageContent
-   ftmgram.types.RichText
-   ftmgram.types.RichTextBold
-   ftmgram.types.RichTextItalic
-   ftmgram.types.RichTextUnderline
-   ftmgram.types.RichTextStrikethrough
-   ftmgram.types.RichTextCode
-   ftmgram.types.RichTextUrl
-   ftmgram.types.RichTextEmailAddress
-   ftmgram.types.RichTextPhoneNumber
-   ftmgram.types.RichTextMarked
-   ftmgram.types.RichTextSubscript
-   ftmgram.types.RichTextSuperscript
-   ftmgram.types.RichTextAnchor
-   ftmgram.types.RichTextAnchorLink
-   ftmgram.types.RichBlockParagraph
-   ftmgram.types.RichBlockPhoto
-   ftmgram.types.RichBlockVideo
-   ftmgram.types.RichBlockAudio
-   ftmgram.types.RichBlockTable
-   ftmgram.types.RichBlockList
-   ftmgram.types.RichBlockSlideshow
-   ftmgram.types.RichBlockCollage
-   ftmgram.types.RichBlockBlockQuotation
-   ftmgram.types.RichBlockPreformatted
-   ftmgram.types.RichBlockSectionHeading
-   ftmgram.types.RichBlockDivider
-   ftmgram.types.RichBlockFooter
+   * - Type
+     - Description
+   * - ``RichMessage``
+     - A received rich/article message
+   * - ``InputRichMessage``
+     - Input object for sending rich messages
+   * - ``InputRichMessageContent``
+     - Builder for rich message content blocks
+   * - ``RichText``
+     - Base class + factory for inline text types
+   * - ``RichTextBold``
+     - **Bold** text
+   * - ``RichTextItalic``
+     - *Italic* text
+   * - ``RichTextUnderline``
+     - Underlined text
+   * - ``RichTextStrikethrough``
+     - Strikethrough text
+   * - ``RichTextCode``
+     - Inline ``code``
+   * - ``RichTextUrl``
+     - A hyperlink
+   * - ``RichTextEmailAddress``
+     - Clickable email address
+   * - ``RichTextPhoneNumber``
+     - Clickable phone number
+   * - ``RichTextMarked``
+     - Highlighted/marked text
+   * - ``RichTextSubscript``
+     - Subscript text
+   * - ``RichTextSuperscript``
+     - Superscript text
+   * - ``RichTextAnchor``
+     - Named anchor
+   * - ``RichTextAnchorLink``
+     - Link to a named anchor
+   * - ``RichBlockParagraph``
+     - A paragraph block
+   * - ``RichBlockPhoto``
+     - An inline photo block
+   * - ``RichBlockVideo``
+     - An inline video block
+   * - ``RichBlockAudio``
+     - An audio player block
+   * - ``RichBlockTable``
+     - A data table block
+   * - ``RichBlockList``
+     - Ordered or unordered list block
+   * - ``RichBlockSlideshow``
+     - Multi-image slideshow block
+   * - ``RichBlockCollage``
+     - Photo collage block
+   * - ``RichBlockBlockQuotation``
+     - Block quote
+   * - ``RichBlockPreformatted``
+     - Code / preformatted block
+   * - ``RichBlockSectionHeading``
+     - Section heading
+   * - ``RichBlockDivider``
+     - Horizontal divider
+   * - ``RichBlockFooter``
+     - Footer text block
 
-.. rubric:: Checklists (Bot API 10.1)
+Checklists — Bot API 10.1
+--------------------------
 
-.. autosummary::
-   :nosignatures:
+.. list-table::
+   :widths: 30 70
+   :header-rows: 1
 
-   ftmgram.types.Checklist
-   ftmgram.types.ChecklistTask
-   ftmgram.types.InputChecklistTask
+   * - Type
+     - Description
+   * - ``Checklist``
+     - A received checklist message
+   * - ``ChecklistTask``
+     - An individual checklist task
+   * - ``InputChecklistTask``
+     - Input for creating a new task
 
-.. rubric:: Link Media (Bot API 10.1)
+Link Media — Bot API 10.1
+--------------------------
 
-.. autosummary::
-   :nosignatures:
+.. list-table::
+   :widths: 30 70
+   :header-rows: 1
 
-   ftmgram.types.Link
+   * - Type
+     - Description
+   * - ``Link``
+     - A link attached to a poll option or message
 
-.. rubric:: Join Requests
+Join Requests
+-------------
 
-.. autosummary::
-   :nosignatures:
+.. list-table::
+   :widths: 30 70
+   :header-rows: 1
 
-   ftmgram.types.ChatJoinRequest
+   * - Type
+     - Description
+   * - ``ChatJoinRequest``
+     - A chat join request with optional ``query_id``
 
-.. rubric:: Inline & Keyboards
+Keyboards & Inline
+------------------
 
-.. autosummary::
-   :nosignatures:
+.. list-table::
+   :widths: 35 65
+   :header-rows: 1
 
-   ftmgram.types.InlineKeyboardMarkup
-   ftmgram.types.InlineKeyboardButton
-   ftmgram.types.ReplyKeyboardMarkup
-   ftmgram.types.KeyboardButton
-   ftmgram.types.ReplyKeyboardRemove
-   ftmgram.types.ForceReply
-   ftmgram.types.CallbackQuery
-   ftmgram.types.InlineQuery
-   ftmgram.types.InlineQueryResult
-
-.. rubric:: Input Media
-
-.. autosummary::
-   :nosignatures:
-
-   ftmgram.types.InputMediaPhoto
-   ftmgram.types.InputMediaVideo
-   ftmgram.types.InputMediaAudio
-   ftmgram.types.InputMediaDocument
-   ftmgram.types.InputMediaAnimation
-
-----
-
-Full Types Reference
---------------------
-
-.. automodule:: ftmgram.types
-   :members:
-   :undoc-members: False
+   * - Type
+     - Description
+   * - ``InlineKeyboardMarkup``
+     - An inline keyboard
+   * - ``InlineKeyboardButton``
+     - A single inline button
+   * - ``ReplyKeyboardMarkup``
+     - A reply keyboard
+   * - ``KeyboardButton``
+     - A single reply keyboard button
+   * - ``ReplyKeyboardRemove``
+     - Remove reply keyboard
+   * - ``ForceReply``
+     - Force a reply from the user
+   * - ``CallbackQuery``
+     - An incoming callback query
+   * - ``InlineQuery``
+     - An incoming inline query

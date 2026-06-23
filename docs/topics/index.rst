@@ -7,19 +7,19 @@ In-depth guides for FTMGram's advanced features and Bot API 10.1 additions.
    :gutter: 2
 
    .. grid-item-card:: 📄 Rich Messages
-      :link: ../topics/rich-messages
+      :link: rich-messages
       :link-type: doc
 
       Send structured article messages with styled text, photos, tables and more.
 
    .. grid-item-card:: ✅ Checklists
-      :link: ../topics/checklists
+      :link: checklists
       :link-type: doc
 
       Send interactive checklists and toggle individual tasks.
 
    .. grid-item-card:: 🔗 Link Poll Media
-      :link: ../topics/poll-media
+      :link: poll-media
       :link-type: doc
 
       Handle the new ``Link`` media type in messages.
@@ -28,6 +28,6 @@ In-depth guides for FTMGram's advanced features and Bot API 10.1 additions.
    :hidden:
    :maxdepth: 1
 
-   ../topics/rich-messages
-   ../topics/checklists
-   ../topics/poll-media
+   rich-messages
+   checklists
+   poll-media

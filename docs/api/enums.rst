@@ -13,9 +13,7 @@ All enums are in :mod:`ftmgram.enums`.
 ChatType
 --------
 
-.. autoclass:: ftmgram.enums.ChatType
-   :members:
-   :undoc-members:
+The type of a :class:`~ftmgram.types.Chat`.
 
 .. list-table::
    :widths: 30 70
@@ -37,9 +35,7 @@ ChatType
 MessageMediaType
 ----------------
 
-.. autoclass:: ftmgram.enums.MessageMediaType
-   :members:
-   :undoc-members:
+The type of media attached to a :class:`~ftmgram.types.Message`.
 
 .. list-table::
    :widths: 30 70
@@ -73,10 +69,6 @@ MessageMediaType
      - Poll
    * - ``DICE``
      - Dice
-   * - ``GAME``
-     - Game
-   * - ``STORY``
-     - Story preview
    * - ``WEB_PAGE``
      - Link preview
    * - ``GIVEAWAY``
@@ -91,9 +83,7 @@ MessageMediaType
 ParseMode
 ---------
 
-.. autoclass:: ftmgram.enums.ParseMode
-   :members:
-   :undoc-members:
+Controls how message text is parsed.
 
 .. list-table::
    :widths: 30 70
@@ -102,38 +92,48 @@ ParseMode
    * - Value
      - Description
    * - ``ParseMode.MARKDOWN``
-     - Pyrogram Markdown syntax
+     - Pyrogram Markdown syntax (default)
    * - ``ParseMode.HTML``
-     - HTML tags
+     - HTML tags (``<b>``, ``<i>``, ``<code>``, etc.)
    * - ``ParseMode.DISABLED``
-     - No parse mode — plain text only
+     - No parsing — plain text only
 
 ChatMemberStatus
 ----------------
 
-.. autoclass:: ftmgram.enums.ChatMemberStatus
-   :members:
-   :undoc-members:
+The status of a member within a chat.
 
-SentCodeType
-------------
+.. list-table::
+   :widths: 30 70
+   :header-rows: 1
 
-.. autoclass:: ftmgram.enums.SentCodeType
-   :members:
-   :undoc-members:
+   * - Value
+     - Description
+   * - ``OWNER``
+     - Chat creator
+   * - ``ADMINISTRATOR``
+     - Admin
+   * - ``MEMBER``
+     - Regular member
+   * - ``RESTRICTED``
+     - Restricted member
+   * - ``LEFT``
+     - Left the chat
+   * - ``BANNED``
+     - Banned / kicked
 
 StorageType
 -----------
 
-.. autoclass:: ftmgram.enums.StorageType
-   :members:
-   :undoc-members:
+Backend storage type for sessions.
 
-----
+.. list-table::
+   :widths: 30 70
+   :header-rows: 1
 
-Full Enums Reference
---------------------
-
-.. automodule:: ftmgram.enums
-   :members:
-   :undoc-members: False
+   * - Value
+     - Description
+   * - ``StorageType.FILE``
+     - SQLite file-based storage (default)
+   * - ``StorageType.MEMORY``
+     - In-memory storage (ephemeral)

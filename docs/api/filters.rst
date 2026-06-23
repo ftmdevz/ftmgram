@@ -70,10 +70,8 @@ Message Filters
      - Contact messages
    * - ``filters.poll``
      - Poll messages
-   * - ``filters.game``
-     - Game messages
-   * - ``filters.invoice``
-     - Invoice messages
+   * - ``filters.checklist``
+     - Checklist messages *(Bot API 10.1)*
    * - ``filters.media``
      - Any media message
    * - ``filters.web_page``
@@ -118,11 +116,11 @@ Command Filter
    @app.on_message(filters.command("start"))
    async def start(client, message): ...
 
-   # Multiple commands
+   # Multiple commands at once
    @app.on_message(filters.command(["help", "h"]))
    async def help_cmd(client, message): ...
 
-   # Custom prefix
+   # Custom prefix (e.g. ! instead of /)
    @app.on_message(filters.command("ban", prefixes="!"))
    async def ban(client, message): ...
 
@@ -154,21 +152,12 @@ Custom Filters
 
 .. code-block:: python
 
-   from ftmgram import filters
    from ftmgram.filters import Filter
 
    async def is_long(_, __, message):
        return message.text and len(message.text) > 200
 
-   long_text = filters.create(is_long, "LongTextFilter")
+   long_text = Filter.create(is_long, "LongTextFilter")
 
    @app.on_message(long_text)
    async def handle_long(client, message): ...
-
-----
-
-Full Filters Reference
-----------------------
-
-.. automodule:: ftmgram.filters
-   :members:

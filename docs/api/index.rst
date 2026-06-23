@@ -7,25 +7,25 @@ Complete reference for every public class, method, type, filter and enum in FTMG
    :gutter: 2
 
    .. grid-item-card:: 🤖 Client
-      :link: ../api/client
+      :link: client
       :link-type: doc
 
       All methods you can call on a ``Client`` instance — messages, media, chats, users, and more.
 
    .. grid-item-card:: 🗂️ Types
-      :link: ../api/types
+      :link: types
       :link-type: doc
 
       High-level Python objects returned by Client methods — ``Message``, ``User``, ``Chat``, and more.
 
    .. grid-item-card:: 🔍 Filters
-      :link: ../api/filters
+      :link: filters
       :link-type: doc
 
       Built-in update filters for handler decorators.
 
    .. grid-item-card:: 🔢 Enums
-      :link: ../api/enums
+      :link: enums
       :link-type: doc
 
       All enumeration types used across the API.
@@ -34,7 +34,7 @@ Complete reference for every public class, method, type, filter and enum in FTMG
    :hidden:
    :maxdepth: 1
 
-   ../api/client
-   ../api/types
-   ../api/filters
-   ../api/enums
+   client
+   types
+   filters
+   enums

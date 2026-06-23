@@ -14,7 +14,6 @@ extensions = [
     "sphinx.ext.napoleon",
     "sphinx.ext.viewcode",
     "sphinx.ext.intersphinx",
-    "sphinx.ext.autosummary",
     "sphinx_copybutton",
     "sphinx_design",
 ]
@@ -22,7 +21,8 @@ extensions = [
 templates_path = ["_templates"]
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
-autosummary_generate = True
+autodoc_mock_imports = ["pyrogram"]
+
 autodoc_member_order = "bysource"
 autodoc_typehints = "description"
 autodoc_default_options = {
