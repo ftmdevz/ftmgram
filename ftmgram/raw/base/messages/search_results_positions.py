@@ -56,7 +56,7 @@ else:
             messages.GetSearchResultsPositions
         """
 
-        QUALNAME = "pyrogram.raw.base.messages.SearchResultsPositions"
+        QUALNAME = "ftmgram.raw.base.messages.SearchResultsPositions"
         __union_types__ = Union[raw.types.messages.SearchResultsPositions]
 
         def __init__(self):

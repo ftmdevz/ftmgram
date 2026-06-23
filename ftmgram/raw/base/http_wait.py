@@ -46,7 +46,7 @@ else:
             HttpWait
         """
 
-        QUALNAME = "pyrogram.raw.base.HttpWait"
+        QUALNAME = "ftmgram.raw.base.HttpWait"
         __union_types__ = Union[raw.types.HttpWait]
 
         def __init__(self):

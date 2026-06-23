@@ -47,7 +47,7 @@ else:
             ReactionNotificationsFromContacts
         """
 
-        QUALNAME = "pyrogram.raw.base.ReactionNotificationsFrom"
+        QUALNAME = "ftmgram.raw.base.ReactionNotificationsFrom"
         __union_types__ = Union[raw.types.ReactionNotificationsFromAll, raw.types.ReactionNotificationsFromContacts]
 
         def __init__(self):

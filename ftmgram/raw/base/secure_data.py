@@ -46,7 +46,7 @@ else:
             SecureData
         """
 
-        QUALNAME = "pyrogram.raw.base.SecureData"
+        QUALNAME = "ftmgram.raw.base.SecureData"
         __union_types__ = Union[raw.types.SecureData]
 
         def __init__(self):

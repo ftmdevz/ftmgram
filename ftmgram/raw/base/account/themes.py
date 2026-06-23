@@ -58,7 +58,7 @@ else:
             account.GetChatThemes
         """
 
-        QUALNAME = "pyrogram.raw.base.account.Themes"
+        QUALNAME = "ftmgram.raw.base.account.Themes"
         __union_types__ = Union[raw.types.account.Themes, raw.types.account.ThemesNotModified]
 
         def __init__(self):

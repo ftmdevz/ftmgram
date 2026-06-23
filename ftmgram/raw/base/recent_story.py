@@ -56,7 +56,7 @@ else:
             stories.GetPeerMaxIDs
         """
 
-        QUALNAME = "pyrogram.raw.base.RecentStory"
+        QUALNAME = "ftmgram.raw.base.RecentStory"
         __union_types__ = Union[raw.types.RecentStory]
 
         def __init__(self):

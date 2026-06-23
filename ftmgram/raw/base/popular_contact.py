@@ -46,7 +46,7 @@ else:
             PopularContact
         """
 
-        QUALNAME = "pyrogram.raw.base.PopularContact"
+        QUALNAME = "ftmgram.raw.base.PopularContact"
         __union_types__ = Union[raw.types.PopularContact]
 
         def __init__(self):

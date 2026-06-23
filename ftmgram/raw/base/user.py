@@ -65,7 +65,7 @@ else:
             bots.CreateBot
         """
 
-        QUALNAME = "pyrogram.raw.base.User"
+        QUALNAME = "ftmgram.raw.base.User"
         __union_types__ = Union[raw.types.User, raw.types.UserEmpty]
 
         def __init__(self):

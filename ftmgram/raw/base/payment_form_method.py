@@ -46,7 +46,7 @@ else:
             PaymentFormMethod
         """
 
-        QUALNAME = "pyrogram.raw.base.PaymentFormMethod"
+        QUALNAME = "ftmgram.raw.base.PaymentFormMethod"
         __union_types__ = Union[raw.types.PaymentFormMethod]
 
         def __init__(self):

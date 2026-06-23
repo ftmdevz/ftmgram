@@ -57,7 +57,7 @@ else:
             payments.GetGiveawayInfo
         """
 
-        QUALNAME = "pyrogram.raw.base.payments.GiveawayInfo"
+        QUALNAME = "ftmgram.raw.base.payments.GiveawayInfo"
         __union_types__ = Union[raw.types.payments.GiveawayInfo, raw.types.payments.GiveawayInfoResults]
 
         def __init__(self):

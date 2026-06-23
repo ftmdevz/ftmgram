@@ -48,7 +48,7 @@ else:
             RequestedPeerUser
         """
 
-        QUALNAME = "pyrogram.raw.base.RequestedPeer"
+        QUALNAME = "ftmgram.raw.base.RequestedPeer"
         __union_types__ = Union[raw.types.RequestedPeerChannel, raw.types.RequestedPeerChat, raw.types.RequestedPeerUser]
 
         def __init__(self):

@@ -56,7 +56,7 @@ else:
             contacts.GetBirthdays
         """
 
-        QUALNAME = "pyrogram.raw.base.contacts.ContactBirthdays"
+        QUALNAME = "ftmgram.raw.base.contacts.ContactBirthdays"
         __union_types__ = Union[raw.types.contacts.ContactBirthdays]
 
         def __init__(self):

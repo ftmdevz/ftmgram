@@ -47,7 +47,7 @@ else:
             PageListItemText
         """
 
-        QUALNAME = "pyrogram.raw.base.PageListItem"
+        QUALNAME = "ftmgram.raw.base.PageListItem"
         __union_types__ = Union[raw.types.PageListItemBlocks, raw.types.PageListItemText]
 
         def __init__(self):

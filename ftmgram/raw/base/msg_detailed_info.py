@@ -47,7 +47,7 @@ else:
             MsgNewDetailedInfo
         """
 
-        QUALNAME = "pyrogram.raw.base.MsgDetailedInfo"
+        QUALNAME = "ftmgram.raw.base.MsgDetailedInfo"
         __union_types__ = Union[raw.types.MsgDetailedInfo, raw.types.MsgNewDetailedInfo]
 
         def __init__(self):

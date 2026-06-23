@@ -57,7 +57,7 @@ else:
             contacts.ResolvePhone
         """
 
-        QUALNAME = "pyrogram.raw.base.contacts.ResolvedPeer"
+        QUALNAME = "ftmgram.raw.base.contacts.ResolvedPeer"
         __union_types__ = Union[raw.types.contacts.ResolvedPeer]
 
         def __init__(self):

@@ -56,7 +56,7 @@ else:
             messages.GetWebPagePreview
         """
 
-        QUALNAME = "pyrogram.raw.base.messages.WebPagePreview"
+        QUALNAME = "ftmgram.raw.base.messages.WebPagePreview"
         __union_types__ = Union[raw.types.messages.WebPagePreview]
 
         def __init__(self):

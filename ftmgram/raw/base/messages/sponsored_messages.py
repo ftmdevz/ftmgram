@@ -57,7 +57,7 @@ else:
             messages.GetSponsoredMessages
         """
 
-        QUALNAME = "pyrogram.raw.base.messages.SponsoredMessages"
+        QUALNAME = "ftmgram.raw.base.messages.SponsoredMessages"
         __union_types__ = Union[raw.types.messages.SponsoredMessages, raw.types.messages.SponsoredMessagesEmpty]
 
         def __init__(self):

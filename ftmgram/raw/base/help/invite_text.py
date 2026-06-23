@@ -56,7 +56,7 @@ else:
             help.GetInviteText
         """
 
-        QUALNAME = "pyrogram.raw.base.help.InviteText"
+        QUALNAME = "ftmgram.raw.base.help.InviteText"
         __union_types__ = Union[raw.types.help.InviteText]
 
         def __init__(self):

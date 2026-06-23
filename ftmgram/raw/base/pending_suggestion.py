@@ -46,7 +46,7 @@ else:
             PendingSuggestion
         """
 
-        QUALNAME = "pyrogram.raw.base.PendingSuggestion"
+        QUALNAME = "ftmgram.raw.base.PendingSuggestion"
         __union_types__ = Union[raw.types.PendingSuggestion]
 
         def __init__(self):

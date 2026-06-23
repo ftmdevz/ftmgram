@@ -57,7 +57,7 @@ else:
             langpack.GetDifference
         """
 
-        QUALNAME = "pyrogram.raw.base.LangPackDifference"
+        QUALNAME = "ftmgram.raw.base.LangPackDifference"
         __union_types__ = Union[raw.types.LangPackDifference]
 
         def __init__(self):

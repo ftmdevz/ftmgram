@@ -46,7 +46,7 @@ else:
             help.CountryCode
         """
 
-        QUALNAME = "pyrogram.raw.base.help.CountryCode"
+        QUALNAME = "ftmgram.raw.base.help.CountryCode"
         __union_types__ = Union[raw.types.help.CountryCode]
 
         def __init__(self):

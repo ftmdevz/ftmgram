@@ -56,7 +56,7 @@ else:
             stats.GetStoryStats
         """
 
-        QUALNAME = "pyrogram.raw.base.stats.StoryStats"
+        QUALNAME = "ftmgram.raw.base.stats.StoryStats"
         __union_types__ = Union[raw.types.stats.StoryStats]
 
         def __init__(self):

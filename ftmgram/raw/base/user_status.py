@@ -51,7 +51,7 @@ else:
             UserStatusRecently
         """
 
-        QUALNAME = "pyrogram.raw.base.UserStatus"
+        QUALNAME = "ftmgram.raw.base.UserStatus"
         __union_types__ = Union[raw.types.UserStatusEmpty, raw.types.UserStatusLastMonth, raw.types.UserStatusLastWeek, raw.types.UserStatusOffline, raw.types.UserStatusOnline, raw.types.UserStatusRecently]
 
         def __init__(self):

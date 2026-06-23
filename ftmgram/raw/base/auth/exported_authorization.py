@@ -56,7 +56,7 @@ else:
             auth.ExportAuthorization
         """
 
-        QUALNAME = "pyrogram.raw.base.auth.ExportedAuthorization"
+        QUALNAME = "ftmgram.raw.base.auth.ExportedAuthorization"
         __union_types__ = Union[raw.types.auth.ExportedAuthorization]
 
         def __init__(self):

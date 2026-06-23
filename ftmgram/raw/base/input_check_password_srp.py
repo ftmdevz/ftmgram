@@ -47,7 +47,7 @@ else:
             InputCheckPasswordSRP
         """
 
-        QUALNAME = "pyrogram.raw.base.InputCheckPasswordSRP"
+        QUALNAME = "ftmgram.raw.base.InputCheckPasswordSRP"
         __union_types__ = Union[raw.types.InputCheckPasswordEmpty, raw.types.InputCheckPasswordSRP]
 
         def __init__(self):

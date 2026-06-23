@@ -46,7 +46,7 @@ else:
             AutoSaveSettings
         """
 
-        QUALNAME = "pyrogram.raw.base.AutoSaveSettings"
+        QUALNAME = "ftmgram.raw.base.AutoSaveSettings"
         __union_types__ = Union[raw.types.AutoSaveSettings]
 
         def __init__(self):

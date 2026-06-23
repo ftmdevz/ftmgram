@@ -60,7 +60,7 @@ else:
             messages.GetEmojiStickerGroups
         """
 
-        QUALNAME = "pyrogram.raw.base.messages.EmojiGroups"
+        QUALNAME = "ftmgram.raw.base.messages.EmojiGroups"
         __union_types__ = Union[raw.types.messages.EmojiGroups, raw.types.messages.EmojiGroupsNotModified]
 
         def __init__(self):

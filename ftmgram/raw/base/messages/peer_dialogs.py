@@ -57,7 +57,7 @@ else:
             messages.GetPinnedDialogs
         """
 
-        QUALNAME = "pyrogram.raw.base.messages.PeerDialogs"
+        QUALNAME = "ftmgram.raw.base.messages.PeerDialogs"
         __union_types__ = Union[raw.types.messages.PeerDialogs]
 
         def __init__(self):

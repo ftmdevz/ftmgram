@@ -46,7 +46,7 @@ else:
             BusinessWorkHours
         """
 
-        QUALNAME = "pyrogram.raw.base.BusinessWorkHours"
+        QUALNAME = "ftmgram.raw.base.BusinessWorkHours"
         __union_types__ = Union[raw.types.BusinessWorkHours]
 
         def __init__(self):

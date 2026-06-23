@@ -57,7 +57,7 @@ else:
             langpack.GetLanguage
         """
 
-        QUALNAME = "pyrogram.raw.base.LangPackLanguage"
+        QUALNAME = "ftmgram.raw.base.LangPackLanguage"
         __union_types__ = Union[raw.types.LangPackLanguage]
 
         def __init__(self):

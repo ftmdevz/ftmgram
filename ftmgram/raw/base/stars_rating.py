@@ -46,7 +46,7 @@ else:
             StarsRating
         """
 
-        QUALNAME = "pyrogram.raw.base.StarsRating"
+        QUALNAME = "ftmgram.raw.base.StarsRating"
         __union_types__ = Union[raw.types.StarsRating]
 
         def __init__(self):

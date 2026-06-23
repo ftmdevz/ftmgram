@@ -56,7 +56,7 @@ else:
             help.GetConfig
         """
 
-        QUALNAME = "pyrogram.raw.base.Config"
+        QUALNAME = "ftmgram.raw.base.Config"
         __union_types__ = Union[raw.types.Config]
 
         def __init__(self):

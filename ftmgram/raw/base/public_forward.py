@@ -47,7 +47,7 @@ else:
             PublicForwardStory
         """
 
-        QUALNAME = "pyrogram.raw.base.PublicForward"
+        QUALNAME = "ftmgram.raw.base.PublicForward"
         __union_types__ = Union[raw.types.PublicForwardMessage, raw.types.PublicForwardStory]
 
         def __init__(self):

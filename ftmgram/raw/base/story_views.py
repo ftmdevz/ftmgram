@@ -46,7 +46,7 @@ else:
             StoryViews
         """
 
-        QUALNAME = "pyrogram.raw.base.StoryViews"
+        QUALNAME = "ftmgram.raw.base.StoryViews"
         __union_types__ = Union[raw.types.StoryViews]
 
         def __init__(self):

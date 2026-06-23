@@ -56,7 +56,7 @@ else:
             messages.GetDialogFilters
         """
 
-        QUALNAME = "pyrogram.raw.base.messages.DialogFilters"
+        QUALNAME = "ftmgram.raw.base.messages.DialogFilters"
         __union_types__ = Union[raw.types.messages.DialogFilters]
 
         def __init__(self):

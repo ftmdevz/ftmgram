@@ -56,7 +56,7 @@ else:
             auth.LogOut
         """
 
-        QUALNAME = "pyrogram.raw.base.auth.LoggedOut"
+        QUALNAME = "ftmgram.raw.base.auth.LoggedOut"
         __union_types__ = Union[raw.types.auth.LoggedOut]
 
         def __init__(self):

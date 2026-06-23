@@ -49,7 +49,7 @@ else:
             InputEncryptedFileUploaded
         """
 
-        QUALNAME = "pyrogram.raw.base.InputEncryptedFile"
+        QUALNAME = "ftmgram.raw.base.InputEncryptedFile"
         __union_types__ = Union[raw.types.InputEncryptedFile, raw.types.InputEncryptedFileBigUploaded, raw.types.InputEncryptedFileEmpty, raw.types.InputEncryptedFileUploaded]
 
         def __init__(self):

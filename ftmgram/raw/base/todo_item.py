@@ -46,7 +46,7 @@ else:
             TodoItem
         """
 
-        QUALNAME = "pyrogram.raw.base.TodoItem"
+        QUALNAME = "ftmgram.raw.base.TodoItem"
         __union_types__ = Union[raw.types.TodoItem]
 
         def __init__(self):

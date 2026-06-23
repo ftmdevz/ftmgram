@@ -47,7 +47,7 @@ else:
             BadServerSalt
         """
 
-        QUALNAME = "pyrogram.raw.base.BadMsgNotification"
+        QUALNAME = "ftmgram.raw.base.BadMsgNotification"
         __union_types__ = Union[raw.types.BadMsgNotification, raw.types.BadServerSalt]
 
         def __init__(self):

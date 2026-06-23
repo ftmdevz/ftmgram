@@ -47,7 +47,7 @@ else:
             ChannelMessagesFilterEmpty
         """
 
-        QUALNAME = "pyrogram.raw.base.ChannelMessagesFilter"
+        QUALNAME = "ftmgram.raw.base.ChannelMessagesFilter"
         __union_types__ = Union[raw.types.ChannelMessagesFilter, raw.types.ChannelMessagesFilterEmpty]
 
         def __init__(self):

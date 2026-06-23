@@ -48,7 +48,7 @@ else:
             InputReplyToStory
         """
 
-        QUALNAME = "pyrogram.raw.base.InputReplyTo"
+        QUALNAME = "ftmgram.raw.base.InputReplyTo"
         __union_types__ = Union[raw.types.InputReplyToMessage, raw.types.InputReplyToMonoForum, raw.types.InputReplyToStory]
 
         def __init__(self):

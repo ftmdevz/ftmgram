@@ -51,7 +51,7 @@ else:
             ChannelParticipantSelf
         """
 
-        QUALNAME = "pyrogram.raw.base.ChannelParticipant"
+        QUALNAME = "ftmgram.raw.base.ChannelParticipant"
         __union_types__ = Union[raw.types.ChannelParticipant, raw.types.ChannelParticipantAdmin, raw.types.ChannelParticipantBanned, raw.types.ChannelParticipantCreator, raw.types.ChannelParticipantLeft, raw.types.ChannelParticipantSelf]
 
         def __init__(self):

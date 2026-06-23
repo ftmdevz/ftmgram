@@ -57,7 +57,7 @@ else:
             messages.GetStickers
         """
 
-        QUALNAME = "pyrogram.raw.base.messages.Stickers"
+        QUALNAME = "ftmgram.raw.base.messages.Stickers"
         __union_types__ = Union[raw.types.messages.Stickers, raw.types.messages.StickersNotModified]
 
         def __init__(self):

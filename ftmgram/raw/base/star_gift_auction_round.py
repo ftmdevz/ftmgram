@@ -47,7 +47,7 @@ else:
             StarGiftAuctionRoundExtendable
         """
 
-        QUALNAME = "pyrogram.raw.base.StarGiftAuctionRound"
+        QUALNAME = "ftmgram.raw.base.StarGiftAuctionRound"
         __union_types__ = Union[raw.types.StarGiftAuctionRound, raw.types.StarGiftAuctionRoundExtendable]
 
         def __init__(self):

@@ -47,7 +47,7 @@ else:
             InputDocumentEmpty
         """
 
-        QUALNAME = "pyrogram.raw.base.InputDocument"
+        QUALNAME = "ftmgram.raw.base.InputDocument"
         __union_types__ = Union[raw.types.InputDocument, raw.types.InputDocumentEmpty]
 
         def __init__(self):

@@ -47,7 +47,7 @@ else:
             MessageExtendedMediaPreview
         """
 
-        QUALNAME = "pyrogram.raw.base.MessageExtendedMedia"
+        QUALNAME = "ftmgram.raw.base.MessageExtendedMedia"
         __union_types__ = Union[raw.types.MessageExtendedMedia, raw.types.MessageExtendedMediaPreview]
 
         def __init__(self):

@@ -47,7 +47,7 @@ else:
             PasswordKdfAlgoUnknown
         """
 
-        QUALNAME = "pyrogram.raw.base.PasswordKdfAlgo"
+        QUALNAME = "ftmgram.raw.base.PasswordKdfAlgo"
         __union_types__ = Union[raw.types.PasswordKdfAlgoSHA256SHA256PBKDF2HMACSHA512iter100000SHA256ModPow, raw.types.PasswordKdfAlgoUnknown]
 
         def __init__(self):

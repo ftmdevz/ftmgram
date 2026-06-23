@@ -47,7 +47,7 @@ else:
             InputPasskeyCredentialPublicKey
         """
 
-        QUALNAME = "pyrogram.raw.base.InputPasskeyCredential"
+        QUALNAME = "ftmgram.raw.base.InputPasskeyCredential"
         __union_types__ = Union[raw.types.InputPasskeyCredentialFirebasePNV, raw.types.InputPasskeyCredentialPublicKey]
 
         def __init__(self):

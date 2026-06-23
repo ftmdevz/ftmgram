@@ -59,7 +59,7 @@ else:
             auth.ImportLoginToken
         """
 
-        QUALNAME = "pyrogram.raw.base.auth.LoginToken"
+        QUALNAME = "ftmgram.raw.base.auth.LoginToken"
         __union_types__ = Union[raw.types.auth.LoginToken, raw.types.auth.LoginTokenMigrateTo, raw.types.auth.LoginTokenSuccess]
 
         def __init__(self):

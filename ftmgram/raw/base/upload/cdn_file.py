@@ -57,7 +57,7 @@ else:
             upload.GetCdnFile
         """
 
-        QUALNAME = "pyrogram.raw.base.upload.CdnFile"
+        QUALNAME = "ftmgram.raw.base.upload.CdnFile"
         __union_types__ = Union[raw.types.upload.CdnFile, raw.types.upload.CdnFileReuploadNeeded]
 
         def __init__(self):

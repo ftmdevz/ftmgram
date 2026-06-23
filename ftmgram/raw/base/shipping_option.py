@@ -46,7 +46,7 @@ else:
             ShippingOption
         """
 
-        QUALNAME = "pyrogram.raw.base.ShippingOption"
+        QUALNAME = "ftmgram.raw.base.ShippingOption"
         __union_types__ = Union[raw.types.ShippingOption]
 
         def __init__(self):

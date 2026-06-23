@@ -56,7 +56,7 @@ else:
             stickers.SuggestShortName
         """
 
-        QUALNAME = "pyrogram.raw.base.stickers.SuggestedShortName"
+        QUALNAME = "ftmgram.raw.base.stickers.SuggestedShortName"
         __union_types__ = Union[raw.types.stickers.SuggestedShortName]
 
         def __init__(self):

@@ -64,7 +64,7 @@ else:
             account.SendVerifyPhoneCode
         """
 
-        QUALNAME = "pyrogram.raw.base.auth.SentCode"
+        QUALNAME = "ftmgram.raw.base.auth.SentCode"
         __union_types__ = Union[raw.types.auth.SentCode, raw.types.auth.SentCodePaymentRequired, raw.types.auth.SentCodeSuccess]
 
         def __init__(self):

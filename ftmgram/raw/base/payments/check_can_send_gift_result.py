@@ -57,7 +57,7 @@ else:
             payments.CheckCanSendGift
         """
 
-        QUALNAME = "pyrogram.raw.base.payments.CheckCanSendGiftResult"
+        QUALNAME = "ftmgram.raw.base.payments.CheckCanSendGiftResult"
         __union_types__ = Union[raw.types.payments.CheckCanSendGiftResultFail, raw.types.payments.CheckCanSendGiftResultOk]
 
         def __init__(self):

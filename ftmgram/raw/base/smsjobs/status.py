@@ -56,7 +56,7 @@ else:
             smsjobs.GetStatus
         """
 
-        QUALNAME = "pyrogram.raw.base.smsjobs.Status"
+        QUALNAME = "ftmgram.raw.base.smsjobs.Status"
         __union_types__ = Union[raw.types.smsjobs.Status]
 
         def __init__(self):

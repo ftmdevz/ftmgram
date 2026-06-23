@@ -57,7 +57,7 @@ else:
             help.GetPromoData
         """
 
-        QUALNAME = "pyrogram.raw.base.help.PromoData"
+        QUALNAME = "ftmgram.raw.base.help.PromoData"
         __union_types__ = Union[raw.types.help.PromoData, raw.types.help.PromoDataEmpty]
 
         def __init__(self):

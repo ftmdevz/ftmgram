@@ -46,7 +46,7 @@ else:
             InputBusinessIntro
         """
 
-        QUALNAME = "pyrogram.raw.base.InputBusinessIntro"
+        QUALNAME = "ftmgram.raw.base.InputBusinessIntro"
         __union_types__ = Union[raw.types.InputBusinessIntro]
 
         def __init__(self):

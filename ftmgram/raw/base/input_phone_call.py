@@ -46,7 +46,7 @@ else:
             InputPhoneCall
         """
 
-        QUALNAME = "pyrogram.raw.base.InputPhoneCall"
+        QUALNAME = "ftmgram.raw.base.InputPhoneCall"
         __union_types__ = Union[raw.types.InputPhoneCall]
 
         def __init__(self):

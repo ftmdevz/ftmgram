@@ -46,7 +46,7 @@ else:
             PageTableCell
         """
 
-        QUALNAME = "pyrogram.raw.base.PageTableCell"
+        QUALNAME = "ftmgram.raw.base.PageTableCell"
         __union_types__ = Union[raw.types.PageTableCell]
 
         def __init__(self):

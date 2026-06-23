@@ -56,7 +56,7 @@ else:
             aicompose.GetToneExample
         """
 
-        QUALNAME = "pyrogram.raw.base.AiComposeToneExample"
+        QUALNAME = "ftmgram.raw.base.AiComposeToneExample"
         __union_types__ = Union[raw.types.AiComposeToneExample]
 
         def __init__(self):

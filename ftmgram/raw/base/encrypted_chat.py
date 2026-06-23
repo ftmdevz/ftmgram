@@ -61,7 +61,7 @@ else:
             messages.AcceptEncryption
         """
 
-        QUALNAME = "pyrogram.raw.base.EncryptedChat"
+        QUALNAME = "ftmgram.raw.base.EncryptedChat"
         __union_types__ = Union[raw.types.EncryptedChat, raw.types.EncryptedChatDiscarded, raw.types.EncryptedChatEmpty, raw.types.EncryptedChatRequested, raw.types.EncryptedChatWaiting]
 
         def __init__(self):

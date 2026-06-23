@@ -56,7 +56,7 @@ else:
             messages.GetAdminsWithInvites
         """
 
-        QUALNAME = "pyrogram.raw.base.messages.ChatAdminsWithInvites"
+        QUALNAME = "ftmgram.raw.base.messages.ChatAdminsWithInvites"
         __union_types__ = Union[raw.types.messages.ChatAdminsWithInvites]
 
         def __init__(self):

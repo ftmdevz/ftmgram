@@ -47,7 +47,7 @@ else:
             MsgResendReq
         """
 
-        QUALNAME = "pyrogram.raw.base.MsgResendReq"
+        QUALNAME = "ftmgram.raw.base.MsgResendReq"
         __union_types__ = Union[raw.types.MsgResendAnsReq, raw.types.MsgResendReq]
 
         def __init__(self):

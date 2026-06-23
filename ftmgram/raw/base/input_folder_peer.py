@@ -46,7 +46,7 @@ else:
             InputFolderPeer
         """
 
-        QUALNAME = "pyrogram.raw.base.InputFolderPeer"
+        QUALNAME = "ftmgram.raw.base.InputFolderPeer"
         __union_types__ = Union[raw.types.InputFolderPeer]
 
         def __init__(self):

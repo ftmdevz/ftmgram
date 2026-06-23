@@ -56,7 +56,7 @@ else:
             payments.GetSuggestedStarRefBots
         """
 
-        QUALNAME = "pyrogram.raw.base.payments.SuggestedStarRefBots"
+        QUALNAME = "ftmgram.raw.base.payments.SuggestedStarRefBots"
         __union_types__ = Union[raw.types.payments.SuggestedStarRefBots]
 
         def __init__(self):

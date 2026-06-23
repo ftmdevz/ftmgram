@@ -56,7 +56,7 @@ else:
             messages.GetMessageEditData
         """
 
-        QUALNAME = "pyrogram.raw.base.messages.MessageEditData"
+        QUALNAME = "ftmgram.raw.base.messages.MessageEditData"
         __union_types__ = Union[raw.types.messages.MessageEditData]
 
         def __init__(self):

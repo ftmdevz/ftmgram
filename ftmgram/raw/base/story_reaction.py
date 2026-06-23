@@ -48,7 +48,7 @@ else:
             StoryReactionPublicRepost
         """
 
-        QUALNAME = "pyrogram.raw.base.StoryReaction"
+        QUALNAME = "ftmgram.raw.base.StoryReaction"
         __union_types__ = Union[raw.types.StoryReaction, raw.types.StoryReactionPublicForward, raw.types.StoryReactionPublicRepost]
 
         def __init__(self):

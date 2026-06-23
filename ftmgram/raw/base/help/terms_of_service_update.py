@@ -57,7 +57,7 @@ else:
             help.GetTermsOfServiceUpdate
         """
 
-        QUALNAME = "pyrogram.raw.base.help.TermsOfServiceUpdate"
+        QUALNAME = "ftmgram.raw.base.help.TermsOfServiceUpdate"
         __union_types__ = Union[raw.types.help.TermsOfServiceUpdate, raw.types.help.TermsOfServiceUpdateEmpty]
 
         def __init__(self):

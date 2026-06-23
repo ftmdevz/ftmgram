@@ -58,7 +58,7 @@ else:
             RpcDropAnswer
         """
 
-        QUALNAME = "pyrogram.raw.base.RpcDropAnswer"
+        QUALNAME = "ftmgram.raw.base.RpcDropAnswer"
         __union_types__ = Union[raw.types.RpcAnswerDropped, raw.types.RpcAnswerDroppedRunning, raw.types.RpcAnswerUnknown]
 
         def __init__(self):

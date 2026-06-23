@@ -47,7 +47,7 @@ else:
             SecureRequiredTypeOneOf
         """
 
-        QUALNAME = "pyrogram.raw.base.SecureRequiredType"
+        QUALNAME = "ftmgram.raw.base.SecureRequiredType"
         __union_types__ = Union[raw.types.SecureRequiredType, raw.types.SecureRequiredTypeOneOf]
 
         def __init__(self):

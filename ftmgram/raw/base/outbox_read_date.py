@@ -56,7 +56,7 @@ else:
             messages.GetOutboxReadDate
         """
 
-        QUALNAME = "pyrogram.raw.base.OutboxReadDate"
+        QUALNAME = "ftmgram.raw.base.OutboxReadDate"
         __union_types__ = Union[raw.types.OutboxReadDate]
 
         def __init__(self):

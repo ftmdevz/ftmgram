@@ -46,7 +46,7 @@ else:
             PhoneCallProtocol
         """
 
-        QUALNAME = "pyrogram.raw.base.PhoneCallProtocol"
+        QUALNAME = "ftmgram.raw.base.PhoneCallProtocol"
         __union_types__ = Union[raw.types.PhoneCallProtocol]
 
         def __init__(self):

@@ -49,7 +49,7 @@ else:
             ReplyKeyboardMarkup
         """
 
-        QUALNAME = "pyrogram.raw.base.ReplyMarkup"
+        QUALNAME = "ftmgram.raw.base.ReplyMarkup"
         __union_types__ = Union[raw.types.ReplyInlineMarkup, raw.types.ReplyKeyboardForceReply, raw.types.ReplyKeyboardHide, raw.types.ReplyKeyboardMarkup]
 
         def __init__(self):

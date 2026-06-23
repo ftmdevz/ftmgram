@@ -46,7 +46,7 @@ else:
             InlineBotWebView
         """
 
-        QUALNAME = "pyrogram.raw.base.InlineBotWebView"
+        QUALNAME = "ftmgram.raw.base.InlineBotWebView"
         __union_types__ = Union[raw.types.InlineBotWebView]
 
         def __init__(self):

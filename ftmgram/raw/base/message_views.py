@@ -46,7 +46,7 @@ else:
             MessageViews
         """
 
-        QUALNAME = "pyrogram.raw.base.MessageViews"
+        QUALNAME = "ftmgram.raw.base.MessageViews"
         __union_types__ = Union[raw.types.MessageViews]
 
         def __init__(self):

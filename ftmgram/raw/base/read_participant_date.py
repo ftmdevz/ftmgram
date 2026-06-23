@@ -56,7 +56,7 @@ else:
             messages.GetMessageReadParticipants
         """
 
-        QUALNAME = "pyrogram.raw.base.ReadParticipantDate"
+        QUALNAME = "ftmgram.raw.base.ReadParticipantDate"
         __union_types__ = Union[raw.types.ReadParticipantDate]
 
         def __init__(self):

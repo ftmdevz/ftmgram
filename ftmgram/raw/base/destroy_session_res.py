@@ -57,7 +57,7 @@ else:
             DestroySession
         """
 
-        QUALNAME = "pyrogram.raw.base.DestroySessionRes"
+        QUALNAME = "ftmgram.raw.base.DestroySessionRes"
         __union_types__ = Union[raw.types.DestroySessionNone, raw.types.DestroySessionOk]
 
         def __init__(self):

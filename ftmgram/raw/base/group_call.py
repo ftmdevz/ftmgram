@@ -47,7 +47,7 @@ else:
             GroupCallDiscarded
         """
 
-        QUALNAME = "pyrogram.raw.base.GroupCall"
+        QUALNAME = "ftmgram.raw.base.GroupCall"
         __union_types__ = Union[raw.types.GroupCall, raw.types.GroupCallDiscarded]
 
         def __init__(self):

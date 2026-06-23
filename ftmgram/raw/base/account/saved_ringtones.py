@@ -57,7 +57,7 @@ else:
             account.GetSavedRingtones
         """
 
-        QUALNAME = "pyrogram.raw.base.account.SavedRingtones"
+        QUALNAME = "ftmgram.raw.base.account.SavedRingtones"
         __union_types__ = Union[raw.types.account.SavedRingtones, raw.types.account.SavedRingtonesNotModified]
 
         def __init__(self):

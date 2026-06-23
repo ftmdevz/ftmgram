@@ -56,7 +56,7 @@ else:
             messages.GetBotCallbackAnswer
         """
 
-        QUALNAME = "pyrogram.raw.base.messages.BotCallbackAnswer"
+        QUALNAME = "ftmgram.raw.base.messages.BotCallbackAnswer"
         __union_types__ = Union[raw.types.messages.BotCallbackAnswer]
 
         def __init__(self):

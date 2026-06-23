@@ -56,7 +56,7 @@ else:
             messages.GetExportedChatInvites
         """
 
-        QUALNAME = "pyrogram.raw.base.messages.ExportedChatInvites"
+        QUALNAME = "ftmgram.raw.base.messages.ExportedChatInvites"
         __union_types__ = Union[raw.types.messages.ExportedChatInvites]
 
         def __init__(self):

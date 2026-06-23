@@ -46,7 +46,7 @@ else:
             InputPeerNotifySettings
         """
 
-        QUALNAME = "pyrogram.raw.base.InputPeerNotifySettings"
+        QUALNAME = "ftmgram.raw.base.InputPeerNotifySettings"
         __union_types__ = Union[raw.types.InputPeerNotifySettings]
 
         def __init__(self):

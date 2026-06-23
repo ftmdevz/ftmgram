@@ -57,7 +57,7 @@ else:
             bots.GetBotRecommendations
         """
 
-        QUALNAME = "pyrogram.raw.base.users.Users"
+        QUALNAME = "ftmgram.raw.base.users.Users"
         __union_types__ = Union[raw.types.users.Users, raw.types.users.UsersSlice]
 
         def __init__(self):

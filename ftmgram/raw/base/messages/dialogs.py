@@ -58,7 +58,7 @@ else:
             messages.GetDialogs
         """
 
-        QUALNAME = "pyrogram.raw.base.messages.Dialogs"
+        QUALNAME = "ftmgram.raw.base.messages.Dialogs"
         __union_types__ = Union[raw.types.messages.Dialogs, raw.types.messages.DialogsNotModified, raw.types.messages.DialogsSlice]
 
         def __init__(self):

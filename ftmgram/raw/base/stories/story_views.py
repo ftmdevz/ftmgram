@@ -56,7 +56,7 @@ else:
             stories.GetStoriesViews
         """
 
-        QUALNAME = "pyrogram.raw.base.stories.StoryViews"
+        QUALNAME = "ftmgram.raw.base.stories.StoryViews"
         __union_types__ = Union[raw.types.stories.StoryViews]
 
         def __init__(self):

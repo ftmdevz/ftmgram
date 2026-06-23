@@ -46,7 +46,7 @@ else:
             account.PasswordInputSettings
         """
 
-        QUALNAME = "pyrogram.raw.base.account.PasswordInputSettings"
+        QUALNAME = "ftmgram.raw.base.account.PasswordInputSettings"
         __union_types__ = Union[raw.types.account.PasswordInputSettings]
 
         def __init__(self):

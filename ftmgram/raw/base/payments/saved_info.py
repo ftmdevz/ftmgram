@@ -56,7 +56,7 @@ else:
             payments.GetSavedInfo
         """
 
-        QUALNAME = "pyrogram.raw.base.payments.SavedInfo"
+        QUALNAME = "ftmgram.raw.base.payments.SavedInfo"
         __union_types__ = Union[raw.types.payments.SavedInfo]
 
         def __init__(self):

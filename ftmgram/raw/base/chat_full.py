@@ -47,7 +47,7 @@ else:
             ChatFull
         """
 
-        QUALNAME = "pyrogram.raw.base.ChatFull"
+        QUALNAME = "ftmgram.raw.base.ChatFull"
         __union_types__ = Union[raw.types.ChannelFull, raw.types.ChatFull]
 
         def __init__(self):

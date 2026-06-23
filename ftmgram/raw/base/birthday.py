@@ -46,7 +46,7 @@ else:
             Birthday
         """
 
-        QUALNAME = "pyrogram.raw.base.Birthday"
+        QUALNAME = "ftmgram.raw.base.Birthday"
         __union_types__ = Union[raw.types.Birthday]
 
         def __init__(self):

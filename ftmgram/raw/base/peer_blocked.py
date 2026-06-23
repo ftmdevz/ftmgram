@@ -46,7 +46,7 @@ else:
             PeerBlocked
         """
 
-        QUALNAME = "pyrogram.raw.base.PeerBlocked"
+        QUALNAME = "ftmgram.raw.base.PeerBlocked"
         __union_types__ = Union[raw.types.PeerBlocked]
 
         def __init__(self):

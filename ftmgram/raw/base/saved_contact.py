@@ -56,7 +56,7 @@ else:
             contacts.GetSaved
         """
 
-        QUALNAME = "pyrogram.raw.base.SavedContact"
+        QUALNAME = "ftmgram.raw.base.SavedContact"
         __union_types__ = Union[raw.types.SavedPhoneContact]
 
         def __init__(self):

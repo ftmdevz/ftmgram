@@ -47,7 +47,7 @@ else:
             DraftMessageEmpty
         """
 
-        QUALNAME = "pyrogram.raw.base.DraftMessage"
+        QUALNAME = "ftmgram.raw.base.DraftMessage"
         __union_types__ = Union[raw.types.DraftMessage, raw.types.DraftMessageEmpty]
 
         def __init__(self):

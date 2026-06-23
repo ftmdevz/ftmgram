@@ -46,7 +46,7 @@ else:
             Page
         """
 
-        QUALNAME = "pyrogram.raw.base.Page"
+        QUALNAME = "ftmgram.raw.base.Page"
         __union_types__ = Union[raw.types.Page]
 
         def __init__(self):

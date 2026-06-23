@@ -46,7 +46,7 @@ else:
             InputChatlistDialogFilter
         """
 
-        QUALNAME = "pyrogram.raw.base.InputChatlist"
+        QUALNAME = "ftmgram.raw.base.InputChatlist"
         __union_types__ = Union[raw.types.InputChatlistDialogFilter]
 
         def __init__(self):

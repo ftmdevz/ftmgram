@@ -58,7 +58,7 @@ else:
             updates.GetChannelDifference
         """
 
-        QUALNAME = "pyrogram.raw.base.updates.ChannelDifference"
+        QUALNAME = "ftmgram.raw.base.updates.ChannelDifference"
         __union_types__ = Union[raw.types.updates.ChannelDifference, raw.types.updates.ChannelDifferenceEmpty, raw.types.updates.ChannelDifferenceTooLong]
 
         def __init__(self):

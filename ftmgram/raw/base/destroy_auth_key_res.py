@@ -58,7 +58,7 @@ else:
             DestroyAuthKey
         """
 
-        QUALNAME = "pyrogram.raw.base.DestroyAuthKeyRes"
+        QUALNAME = "ftmgram.raw.base.DestroyAuthKeyRes"
         __union_types__ = Union[raw.types.DestroyAuthKeyFail, raw.types.DestroyAuthKeyNone, raw.types.DestroyAuthKeyOk]
 
         def __init__(self):

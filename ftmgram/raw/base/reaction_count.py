@@ -46,7 +46,7 @@ else:
             ReactionCount
         """
 
-        QUALNAME = "pyrogram.raw.base.ReactionCount"
+        QUALNAME = "ftmgram.raw.base.ReactionCount"
         __union_types__ = Union[raw.types.ReactionCount]
 
         def __init__(self):

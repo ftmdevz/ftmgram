@@ -53,7 +53,7 @@ else:
             StarsTransactionPeerUnsupported
         """
 
-        QUALNAME = "pyrogram.raw.base.StarsTransactionPeer"
+        QUALNAME = "ftmgram.raw.base.StarsTransactionPeer"
         __union_types__ = Union[raw.types.StarsTransactionPeer, raw.types.StarsTransactionPeerAPI, raw.types.StarsTransactionPeerAds, raw.types.StarsTransactionPeerAppStore, raw.types.StarsTransactionPeerFragment, raw.types.StarsTransactionPeerPlayMarket, raw.types.StarsTransactionPeerPremiumBot, raw.types.StarsTransactionPeerUnsupported]
 
         def __init__(self):

@@ -57,7 +57,7 @@ else:
             premium.GetUserBoosts
         """
 
-        QUALNAME = "pyrogram.raw.base.premium.BoostsList"
+        QUALNAME = "ftmgram.raw.base.premium.BoostsList"
         __union_types__ = Union[raw.types.premium.BoostsList]
 
         def __init__(self):

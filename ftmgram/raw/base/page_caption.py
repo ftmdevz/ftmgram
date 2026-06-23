@@ -46,7 +46,7 @@ else:
             PageCaption
         """
 
-        QUALNAME = "pyrogram.raw.base.PageCaption"
+        QUALNAME = "ftmgram.raw.base.PageCaption"
         __union_types__ = Union[raw.types.PageCaption]
 
         def __init__(self):

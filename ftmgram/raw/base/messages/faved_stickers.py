@@ -57,7 +57,7 @@ else:
             messages.GetFavedStickers
         """
 
-        QUALNAME = "pyrogram.raw.base.messages.FavedStickers"
+        QUALNAME = "ftmgram.raw.base.messages.FavedStickers"
         __union_types__ = Union[raw.types.messages.FavedStickers, raw.types.messages.FavedStickersNotModified]
 
         def __init__(self):

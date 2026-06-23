@@ -46,7 +46,7 @@ else:
             AttachMenuBotIconColor
         """
 
-        QUALNAME = "pyrogram.raw.base.AttachMenuBotIconColor"
+        QUALNAME = "ftmgram.raw.base.AttachMenuBotIconColor"
         __union_types__ = Union[raw.types.AttachMenuBotIconColor]
 
         def __init__(self):

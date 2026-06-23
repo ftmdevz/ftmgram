@@ -51,7 +51,7 @@ else:
             InlineQueryPeerTypeSameBotPM
         """
 
-        QUALNAME = "pyrogram.raw.base.InlineQueryPeerType"
+        QUALNAME = "ftmgram.raw.base.InlineQueryPeerType"
         __union_types__ = Union[raw.types.InlineQueryPeerTypeBotPM, raw.types.InlineQueryPeerTypeBroadcast, raw.types.InlineQueryPeerTypeChat, raw.types.InlineQueryPeerTypeMegagroup, raw.types.InlineQueryPeerTypePM, raw.types.InlineQueryPeerTypeSameBotPM]
 
         def __init__(self):

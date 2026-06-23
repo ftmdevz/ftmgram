@@ -56,7 +56,7 @@ else:
             help.GetNearestDc
         """
 
-        QUALNAME = "pyrogram.raw.base.NearestDc"
+        QUALNAME = "ftmgram.raw.base.NearestDc"
         __union_types__ = Union[raw.types.NearestDc]
 
         def __init__(self):

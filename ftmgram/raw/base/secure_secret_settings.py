@@ -46,7 +46,7 @@ else:
             SecureSecretSettings
         """
 
-        QUALNAME = "pyrogram.raw.base.SecureSecretSettings"
+        QUALNAME = "ftmgram.raw.base.SecureSecretSettings"
         __union_types__ = Union[raw.types.SecureSecretSettings]
 
         def __init__(self):

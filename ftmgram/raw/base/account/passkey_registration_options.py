@@ -56,7 +56,7 @@ else:
             account.InitPasskeyRegistration
         """
 
-        QUALNAME = "pyrogram.raw.base.account.PasskeyRegistrationOptions"
+        QUALNAME = "ftmgram.raw.base.account.PasskeyRegistrationOptions"
         __union_types__ = Union[raw.types.account.PasskeyRegistrationOptions]
 
         def __init__(self):

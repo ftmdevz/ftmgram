@@ -58,7 +58,7 @@ else:
             stats.LoadAsyncGraph
         """
 
-        QUALNAME = "pyrogram.raw.base.StatsGraph"
+        QUALNAME = "ftmgram.raw.base.StatsGraph"
         __union_types__ = Union[raw.types.StatsGraph, raw.types.StatsGraphAsync, raw.types.StatsGraphError]
 
         def __init__(self):

@@ -49,7 +49,7 @@ else:
             JoinChatBotResultWebView
         """
 
-        QUALNAME = "pyrogram.raw.base.JoinChatBotResult"
+        QUALNAME = "ftmgram.raw.base.JoinChatBotResult"
         __union_types__ = Union[raw.types.JoinChatBotResultApproved, raw.types.JoinChatBotResultDeclined, raw.types.JoinChatBotResultQueued, raw.types.JoinChatBotResultWebView]
 
         def __init__(self):

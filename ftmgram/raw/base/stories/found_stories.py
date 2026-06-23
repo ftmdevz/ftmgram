@@ -56,7 +56,7 @@ else:
             stories.SearchPosts
         """
 
-        QUALNAME = "pyrogram.raw.base.stories.FoundStories"
+        QUALNAME = "ftmgram.raw.base.stories.FoundStories"
         __union_types__ = Union[raw.types.stories.FoundStories]
 
         def __init__(self):

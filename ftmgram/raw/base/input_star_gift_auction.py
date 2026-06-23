@@ -47,7 +47,7 @@ else:
             InputStarGiftAuctionSlug
         """
 
-        QUALNAME = "pyrogram.raw.base.InputStarGiftAuction"
+        QUALNAME = "ftmgram.raw.base.InputStarGiftAuction"
         __union_types__ = Union[raw.types.InputStarGiftAuction, raw.types.InputStarGiftAuctionSlug]
 
         def __init__(self):

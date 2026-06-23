@@ -48,7 +48,7 @@ else:
             EmailVerifyPurposePassport
         """
 
-        QUALNAME = "pyrogram.raw.base.EmailVerifyPurpose"
+        QUALNAME = "ftmgram.raw.base.EmailVerifyPurpose"
         __union_types__ = Union[raw.types.EmailVerifyPurposeLoginChange, raw.types.EmailVerifyPurposeLoginSetup, raw.types.EmailVerifyPurposePassport]
 
         def __init__(self):

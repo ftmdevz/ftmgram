@@ -84,7 +84,7 @@ else:
             PageBlockVideo
         """
 
-        QUALNAME = "pyrogram.raw.base.PageBlock"
+        QUALNAME = "ftmgram.raw.base.PageBlock"
         __union_types__ = Union[raw.types.InputPageBlockMap, raw.types.PageBlockAnchor, raw.types.PageBlockAudio, raw.types.PageBlockAuthorDate, raw.types.PageBlockBlockquote, raw.types.PageBlockBlockquoteBlocks, raw.types.PageBlockChannel, raw.types.PageBlockCollage, raw.types.PageBlockCover, raw.types.PageBlockDetails, raw.types.PageBlockDivider, raw.types.PageBlockEmbed, raw.types.PageBlockEmbedPost, raw.types.PageBlockFooter, raw.types.PageBlockHeader, raw.types.PageBlockHeading1, raw.types.PageBlockHeading2, raw.types.PageBlockHeading3, raw.types.PageBlockHeading4, raw.types.PageBlockHeading5, raw.types.PageBlockHeading6, raw.types.PageBlockKicker, raw.types.PageBlockList, raw.types.PageBlockMap, raw.types.PageBlockMath, raw.types.PageBlockOrderedList, raw.types.PageBlockParagraph, raw.types.PageBlockPhoto, raw.types.PageBlockPreformatted, raw.types.PageBlockPullquote, raw.types.PageBlockRelatedArticles, raw.types.PageBlockSlideshow, raw.types.PageBlockSubheader, raw.types.PageBlockSubtitle, raw.types.PageBlockTable, raw.types.PageBlockThinking, raw.types.PageBlockTitle, raw.types.PageBlockUnsupported, raw.types.PageBlockVideo]
 
         def __init__(self):

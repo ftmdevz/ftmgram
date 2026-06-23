@@ -46,7 +46,7 @@ else:
             ChannelAdminLogEvent
         """
 
-        QUALNAME = "pyrogram.raw.base.ChannelAdminLogEvent"
+        QUALNAME = "ftmgram.raw.base.ChannelAdminLogEvent"
         __union_types__ = Union[raw.types.ChannelAdminLogEvent]
 
         def __init__(self):

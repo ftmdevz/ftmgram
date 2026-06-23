@@ -46,7 +46,7 @@ else:
             PaymentCharge
         """
 
-        QUALNAME = "pyrogram.raw.base.PaymentCharge"
+        QUALNAME = "ftmgram.raw.base.PaymentCharge"
         __union_types__ = Union[raw.types.PaymentCharge]
 
         def __init__(self):

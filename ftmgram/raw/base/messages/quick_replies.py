@@ -57,7 +57,7 @@ else:
             messages.GetQuickReplies
         """
 
-        QUALNAME = "pyrogram.raw.base.messages.QuickReplies"
+        QUALNAME = "ftmgram.raw.base.messages.QuickReplies"
         __union_types__ = Union[raw.types.messages.QuickReplies, raw.types.messages.QuickRepliesNotModified]
 
         def __init__(self):

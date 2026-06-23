@@ -46,7 +46,7 @@ else:
             GroupCallParticipantVideoSourceGroup
         """
 
-        QUALNAME = "pyrogram.raw.base.GroupCallParticipantVideoSourceGroup"
+        QUALNAME = "ftmgram.raw.base.GroupCallParticipantVideoSourceGroup"
         __union_types__ = Union[raw.types.GroupCallParticipantVideoSourceGroup]
 
         def __init__(self):

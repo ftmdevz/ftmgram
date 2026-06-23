@@ -46,7 +46,7 @@ else:
             help.ConfigSimple
         """
 
-        QUALNAME = "pyrogram.raw.base.help.ConfigSimple"
+        QUALNAME = "ftmgram.raw.base.help.ConfigSimple"
         __union_types__ = Union[raw.types.help.ConfigSimple]
 
         def __init__(self):

@@ -47,7 +47,7 @@ else:
             InputQuickReplyShortcutId
         """
 
-        QUALNAME = "pyrogram.raw.base.InputQuickReplyShortcut"
+        QUALNAME = "ftmgram.raw.base.InputQuickReplyShortcut"
         __union_types__ = Union[raw.types.InputQuickReplyShortcut, raw.types.InputQuickReplyShortcutId]
 
         def __init__(self):

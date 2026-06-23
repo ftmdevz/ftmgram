@@ -46,7 +46,7 @@ else:
             AuctionBidLevel
         """
 
-        QUALNAME = "pyrogram.raw.base.AuctionBidLevel"
+        QUALNAME = "ftmgram.raw.base.AuctionBidLevel"
         __union_types__ = Union[raw.types.AuctionBidLevel]
 
         def __init__(self):

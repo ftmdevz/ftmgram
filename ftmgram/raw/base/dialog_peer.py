@@ -57,7 +57,7 @@ else:
             messages.GetDialogUnreadMarks
         """
 
-        QUALNAME = "pyrogram.raw.base.DialogPeer"
+        QUALNAME = "ftmgram.raw.base.DialogPeer"
         __union_types__ = Union[raw.types.DialogPeer, raw.types.DialogPeerFolder]
 
         def __init__(self):

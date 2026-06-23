@@ -56,7 +56,7 @@ else:
             bots.UpdateStarRefProgram
         """
 
-        QUALNAME = "pyrogram.raw.base.StarRefProgram"
+        QUALNAME = "ftmgram.raw.base.StarRefProgram"
         __union_types__ = Union[raw.types.StarRefProgram]
 
         def __init__(self):

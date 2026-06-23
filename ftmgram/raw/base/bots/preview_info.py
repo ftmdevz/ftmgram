@@ -56,7 +56,7 @@ else:
             bots.GetPreviewInfo
         """
 
-        QUALNAME = "pyrogram.raw.base.bots.PreviewInfo"
+        QUALNAME = "ftmgram.raw.base.bots.PreviewInfo"
         __union_types__ = Union[raw.types.bots.PreviewInfo]
 
         def __init__(self):

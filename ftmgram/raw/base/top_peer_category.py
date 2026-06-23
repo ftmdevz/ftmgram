@@ -55,7 +55,7 @@ else:
             TopPeerCategoryPhoneCalls
         """
 
-        QUALNAME = "pyrogram.raw.base.TopPeerCategory"
+        QUALNAME = "ftmgram.raw.base.TopPeerCategory"
         __union_types__ = Union[raw.types.TopPeerCategoryBotsApp, raw.types.TopPeerCategoryBotsGuestChat, raw.types.TopPeerCategoryBotsInline, raw.types.TopPeerCategoryBotsPM, raw.types.TopPeerCategoryChannels, raw.types.TopPeerCategoryCorrespondents, raw.types.TopPeerCategoryForwardChats, raw.types.TopPeerCategoryForwardUsers, raw.types.TopPeerCategoryGroups, raw.types.TopPeerCategoryPhoneCalls]
 
         def __init__(self):

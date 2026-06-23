@@ -48,7 +48,7 @@ else:
             PeerColorCollectible
         """
 
-        QUALNAME = "pyrogram.raw.base.PeerColor"
+        QUALNAME = "ftmgram.raw.base.PeerColor"
         __union_types__ = Union[raw.types.InputPeerColorCollectible, raw.types.PeerColor, raw.types.PeerColorCollectible]
 
         def __init__(self):

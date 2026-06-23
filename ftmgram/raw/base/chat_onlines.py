@@ -56,7 +56,7 @@ else:
             messages.GetOnlines
         """
 
-        QUALNAME = "pyrogram.raw.base.ChatOnlines"
+        QUALNAME = "ftmgram.raw.base.ChatOnlines"
         __union_types__ = Union[raw.types.ChatOnlines]
 
         def __init__(self):

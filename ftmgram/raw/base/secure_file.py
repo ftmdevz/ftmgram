@@ -47,7 +47,7 @@ else:
             SecureFileEmpty
         """
 
-        QUALNAME = "pyrogram.raw.base.SecureFile"
+        QUALNAME = "ftmgram.raw.base.SecureFile"
         __union_types__ = Union[raw.types.SecureFile, raw.types.SecureFileEmpty]
 
         def __init__(self):

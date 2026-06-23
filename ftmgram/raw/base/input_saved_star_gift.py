@@ -48,7 +48,7 @@ else:
             InputSavedStarGiftUser
         """
 
-        QUALNAME = "pyrogram.raw.base.InputSavedStarGift"
+        QUALNAME = "ftmgram.raw.base.InputSavedStarGift"
         __union_types__ = Union[raw.types.InputSavedStarGiftChat, raw.types.InputSavedStarGiftSlug, raw.types.InputSavedStarGiftUser]
 
         def __init__(self):

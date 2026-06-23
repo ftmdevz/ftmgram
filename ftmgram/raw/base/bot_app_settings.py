@@ -46,7 +46,7 @@ else:
             BotAppSettings
         """
 
-        QUALNAME = "pyrogram.raw.base.BotAppSettings"
+        QUALNAME = "ftmgram.raw.base.BotAppSettings"
         __union_types__ = Union[raw.types.BotAppSettings]
 
         def __init__(self):

@@ -46,7 +46,7 @@ else:
             SecureCredentialsEncrypted
         """
 
-        QUALNAME = "pyrogram.raw.base.SecureCredentialsEncrypted"
+        QUALNAME = "ftmgram.raw.base.SecureCredentialsEncrypted"
         __union_types__ = Union[raw.types.SecureCredentialsEncrypted]
 
         def __init__(self):

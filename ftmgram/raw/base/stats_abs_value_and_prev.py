@@ -46,7 +46,7 @@ else:
             StatsAbsValueAndPrev
         """
 
-        QUALNAME = "pyrogram.raw.base.StatsAbsValueAndPrev"
+        QUALNAME = "ftmgram.raw.base.StatsAbsValueAndPrev"
         __union_types__ = Union[raw.types.StatsAbsValueAndPrev]
 
         def __init__(self):

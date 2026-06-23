@@ -56,7 +56,7 @@ else:
             bots.GetBotInfo
         """
 
-        QUALNAME = "pyrogram.raw.base.bots.BotInfo"
+        QUALNAME = "ftmgram.raw.base.bots.BotInfo"
         __union_types__ = Union[raw.types.bots.BotInfo]
 
         def __init__(self):

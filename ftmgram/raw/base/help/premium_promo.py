@@ -56,7 +56,7 @@ else:
             help.GetPremiumPromo
         """
 
-        QUALNAME = "pyrogram.raw.base.help.PremiumPromo"
+        QUALNAME = "ftmgram.raw.base.help.PremiumPromo"
         __union_types__ = Union[raw.types.help.PremiumPromo]
 
         def __init__(self):

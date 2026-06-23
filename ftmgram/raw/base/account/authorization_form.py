@@ -56,7 +56,7 @@ else:
             account.GetAuthorizationForm
         """
 
-        QUALNAME = "pyrogram.raw.base.account.AuthorizationForm"
+        QUALNAME = "ftmgram.raw.base.account.AuthorizationForm"
         __union_types__ = Union[raw.types.account.AuthorizationForm]
 
         def __init__(self):

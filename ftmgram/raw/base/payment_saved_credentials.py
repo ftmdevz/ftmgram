@@ -46,7 +46,7 @@ else:
             PaymentSavedCredentialsCard
         """
 
-        QUALNAME = "pyrogram.raw.base.PaymentSavedCredentials"
+        QUALNAME = "ftmgram.raw.base.PaymentSavedCredentials"
         __union_types__ = Union[raw.types.PaymentSavedCredentialsCard]
 
         def __init__(self):

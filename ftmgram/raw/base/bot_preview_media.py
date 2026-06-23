@@ -58,7 +58,7 @@ else:
             bots.GetPreviewMedias
         """
 
-        QUALNAME = "pyrogram.raw.base.BotPreviewMedia"
+        QUALNAME = "ftmgram.raw.base.BotPreviewMedia"
         __union_types__ = Union[raw.types.BotPreviewMedia]
 
         def __init__(self):

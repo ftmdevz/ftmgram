@@ -60,7 +60,7 @@ else:
             messages.GetCustomEmojiDocuments
         """
 
-        QUALNAME = "pyrogram.raw.base.Document"
+        QUALNAME = "ftmgram.raw.base.Document"
         __union_types__ = Union[raw.types.Document, raw.types.DocumentEmpty]
 
         def __init__(self):

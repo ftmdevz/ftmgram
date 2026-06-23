@@ -56,7 +56,7 @@ else:
             channels.ExportMessageLink
         """
 
-        QUALNAME = "pyrogram.raw.base.ExportedMessageLink"
+        QUALNAME = "ftmgram.raw.base.ExportedMessageLink"
         __union_types__ = Union[raw.types.ExportedMessageLink]
 
         def __init__(self):

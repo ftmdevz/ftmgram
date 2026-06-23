@@ -46,7 +46,7 @@ else:
             CdnPublicKey
         """
 
-        QUALNAME = "pyrogram.raw.base.CdnPublicKey"
+        QUALNAME = "ftmgram.raw.base.CdnPublicKey"
         __union_types__ = Union[raw.types.CdnPublicKey]
 
         def __init__(self):

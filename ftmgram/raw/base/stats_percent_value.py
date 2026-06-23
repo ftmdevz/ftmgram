@@ -46,7 +46,7 @@ else:
             StatsPercentValue
         """
 
-        QUALNAME = "pyrogram.raw.base.StatsPercentValue"
+        QUALNAME = "ftmgram.raw.base.StatsPercentValue"
         __union_types__ = Union[raw.types.StatsPercentValue]
 
         def __init__(self):

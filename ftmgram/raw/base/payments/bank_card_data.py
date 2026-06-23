@@ -56,7 +56,7 @@ else:
             payments.GetBankCardData
         """
 
-        QUALNAME = "pyrogram.raw.base.payments.BankCardData"
+        QUALNAME = "ftmgram.raw.base.payments.BankCardData"
         __union_types__ = Union[raw.types.payments.BankCardData]
 
         def __init__(self):

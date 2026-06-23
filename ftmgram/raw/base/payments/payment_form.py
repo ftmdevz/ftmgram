@@ -58,7 +58,7 @@ else:
             payments.GetPaymentForm
         """
 
-        QUALNAME = "pyrogram.raw.base.payments.PaymentForm"
+        QUALNAME = "ftmgram.raw.base.payments.PaymentForm"
         __union_types__ = Union[raw.types.payments.PaymentForm, raw.types.payments.PaymentFormStarGift, raw.types.payments.PaymentFormStars]
 
         def __init__(self):

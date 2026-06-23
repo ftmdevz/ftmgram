@@ -56,7 +56,7 @@ else:
             messages.GetDefaultHistoryTTL
         """
 
-        QUALNAME = "pyrogram.raw.base.DefaultHistoryTTL"
+        QUALNAME = "ftmgram.raw.base.DefaultHistoryTTL"
         __union_types__ = Union[raw.types.DefaultHistoryTTL]
 
         def __init__(self):

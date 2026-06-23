@@ -57,7 +57,7 @@ else:
             PingDelayDisconnect
         """
 
-        QUALNAME = "pyrogram.raw.base.Pong"
+        QUALNAME = "ftmgram.raw.base.Pong"
         __union_types__ = Union[raw.types.Pong]
 
         def __init__(self):

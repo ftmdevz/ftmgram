@@ -56,7 +56,7 @@ else:
             messages.GetDiscussionMessage
         """
 
-        QUALNAME = "pyrogram.raw.base.messages.DiscussionMessage"
+        QUALNAME = "ftmgram.raw.base.messages.DiscussionMessage"
         __union_types__ = Union[raw.types.messages.DiscussionMessage]
 
         def __init__(self):

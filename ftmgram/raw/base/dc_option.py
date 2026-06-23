@@ -46,7 +46,7 @@ else:
             DcOption
         """
 
-        QUALNAME = "pyrogram.raw.base.DcOption"
+        QUALNAME = "ftmgram.raw.base.DcOption"
         __union_types__ = Union[raw.types.DcOption]
 
         def __init__(self):

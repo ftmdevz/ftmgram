@@ -48,7 +48,7 @@ else:
             InputWebFileLocation
         """
 
-        QUALNAME = "pyrogram.raw.base.InputWebFileLocation"
+        QUALNAME = "ftmgram.raw.base.InputWebFileLocation"
         __union_types__ = Union[raw.types.InputWebFileAudioAlbumThumbLocation, raw.types.InputWebFileGeoPointLocation, raw.types.InputWebFileLocation]
 
         def __init__(self):

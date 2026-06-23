@@ -46,7 +46,7 @@ else:
             LabeledPrice
         """
 
-        QUALNAME = "pyrogram.raw.base.LabeledPrice"
+        QUALNAME = "ftmgram.raw.base.LabeledPrice"
         __union_types__ = Union[raw.types.LabeledPrice]
 
         def __init__(self):

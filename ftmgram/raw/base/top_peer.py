@@ -46,7 +46,7 @@ else:
             TopPeer
         """
 
-        QUALNAME = "pyrogram.raw.base.TopPeer"
+        QUALNAME = "ftmgram.raw.base.TopPeer"
         __union_types__ = Union[raw.types.TopPeer]
 
         def __init__(self):

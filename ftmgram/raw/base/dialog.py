@@ -47,7 +47,7 @@ else:
             DialogFolder
         """
 
-        QUALNAME = "pyrogram.raw.base.Dialog"
+        QUALNAME = "ftmgram.raw.base.Dialog"
         __union_types__ = Union[raw.types.Dialog, raw.types.DialogFolder]
 
         def __init__(self):

@@ -46,7 +46,7 @@ else:
             Invoice
         """
 
-        QUALNAME = "pyrogram.raw.base.Invoice"
+        QUALNAME = "ftmgram.raw.base.Invoice"
         __union_types__ = Union[raw.types.Invoice]
 
         def __init__(self):

@@ -46,7 +46,7 @@ else:
             StarsSubscriptionPricing
         """
 
-        QUALNAME = "pyrogram.raw.base.StarsSubscriptionPricing"
+        QUALNAME = "ftmgram.raw.base.StarsSubscriptionPricing"
         __union_types__ = Union[raw.types.StarsSubscriptionPricing]
 
         def __init__(self):

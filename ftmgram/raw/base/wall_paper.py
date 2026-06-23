@@ -59,7 +59,7 @@ else:
             account.GetMultiWallPapers
         """
 
-        QUALNAME = "pyrogram.raw.base.WallPaper"
+        QUALNAME = "ftmgram.raw.base.WallPaper"
         __union_types__ = Union[raw.types.WallPaper, raw.types.WallPaperNoFile]
 
         def __init__(self):

@@ -61,7 +61,7 @@ else:
             messages.SearchCustomEmoji
         """
 
-        QUALNAME = "pyrogram.raw.base.EmojiList"
+        QUALNAME = "ftmgram.raw.base.EmojiList"
         __union_types__ = Union[raw.types.EmojiList, raw.types.EmojiListNotModified]
 
         def __init__(self):

@@ -46,7 +46,7 @@ else:
             RestrictionReason
         """
 
-        QUALNAME = "pyrogram.raw.base.RestrictionReason"
+        QUALNAME = "ftmgram.raw.base.RestrictionReason"
         __union_types__ = Union[raw.types.RestrictionReason]
 
         def __init__(self):

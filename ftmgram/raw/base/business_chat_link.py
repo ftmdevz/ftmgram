@@ -57,7 +57,7 @@ else:
             account.EditBusinessChatLink
         """
 
-        QUALNAME = "pyrogram.raw.base.BusinessChatLink"
+        QUALNAME = "ftmgram.raw.base.BusinessChatLink"
         __union_types__ = Union[raw.types.BusinessChatLink]
 
         def __init__(self):

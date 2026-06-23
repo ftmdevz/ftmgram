@@ -46,7 +46,7 @@ else:
             BusinessLocation
         """
 
-        QUALNAME = "pyrogram.raw.base.BusinessLocation"
+        QUALNAME = "ftmgram.raw.base.BusinessLocation"
         __union_types__ = Union[raw.types.BusinessLocation]
 
         def __init__(self):

@@ -59,7 +59,7 @@ else:
             messages.AcceptUrlAuth
         """
 
-        QUALNAME = "pyrogram.raw.base.UrlAuthResult"
+        QUALNAME = "ftmgram.raw.base.UrlAuthResult"
         __union_types__ = Union[raw.types.UrlAuthResultAccepted, raw.types.UrlAuthResultDefault, raw.types.UrlAuthResultRequest]
 
         def __init__(self):

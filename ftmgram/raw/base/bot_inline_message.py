@@ -53,7 +53,7 @@ else:
             BotInlineMessageText
         """
 
-        QUALNAME = "pyrogram.raw.base.BotInlineMessage"
+        QUALNAME = "ftmgram.raw.base.BotInlineMessage"
         __union_types__ = Union[raw.types.BotInlineMessageMediaAuto, raw.types.BotInlineMessageMediaContact, raw.types.BotInlineMessageMediaGeo, raw.types.BotInlineMessageMediaInvoice, raw.types.BotInlineMessageMediaVenue, raw.types.BotInlineMessageMediaWebPage, raw.types.BotInlineMessageRichMessage, raw.types.BotInlineMessageText]
 
         def __init__(self):

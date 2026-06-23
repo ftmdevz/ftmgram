@@ -56,7 +56,7 @@ else:
             account.GetConnectedBots
         """
 
-        QUALNAME = "pyrogram.raw.base.account.ConnectedBots"
+        QUALNAME = "ftmgram.raw.base.account.ConnectedBots"
         __union_types__ = Union[raw.types.account.ConnectedBots]
 
         def __init__(self):

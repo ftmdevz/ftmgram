@@ -48,7 +48,7 @@ else:
             InputFileStoryDocument
         """
 
-        QUALNAME = "pyrogram.raw.base.InputFile"
+        QUALNAME = "ftmgram.raw.base.InputFile"
         __union_types__ = Union[raw.types.InputFile, raw.types.InputFileBig, raw.types.InputFileStoryDocument]
 
         def __init__(self):

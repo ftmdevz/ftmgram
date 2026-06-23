@@ -46,7 +46,7 @@ else:
             StatsDateRangeDays
         """
 
-        QUALNAME = "pyrogram.raw.base.StatsDateRangeDays"
+        QUALNAME = "ftmgram.raw.base.StatsDateRangeDays"
         __union_types__ = Union[raw.types.StatsDateRangeDays]
 
         def __init__(self):

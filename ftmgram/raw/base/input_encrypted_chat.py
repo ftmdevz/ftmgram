@@ -46,7 +46,7 @@ else:
             InputEncryptedChat
         """
 
-        QUALNAME = "pyrogram.raw.base.InputEncryptedChat"
+        QUALNAME = "ftmgram.raw.base.InputEncryptedChat"
         __union_types__ = Union[raw.types.InputEncryptedChat]
 
         def __init__(self):

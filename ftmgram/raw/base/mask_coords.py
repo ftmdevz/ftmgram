@@ -46,7 +46,7 @@ else:
             MaskCoords
         """
 
-        QUALNAME = "pyrogram.raw.base.MaskCoords"
+        QUALNAME = "ftmgram.raw.base.MaskCoords"
         __union_types__ = Union[raw.types.MaskCoords]
 
         def __init__(self):

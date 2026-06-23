@@ -56,7 +56,7 @@ else:
             account.GetAutoDownloadSettings
         """
 
-        QUALNAME = "pyrogram.raw.base.account.AutoDownloadSettings"
+        QUALNAME = "ftmgram.raw.base.account.AutoDownloadSettings"
         __union_types__ = Union[raw.types.account.AutoDownloadSettings]
 
         def __init__(self):

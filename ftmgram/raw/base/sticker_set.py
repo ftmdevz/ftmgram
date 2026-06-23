@@ -46,7 +46,7 @@ else:
             StickerSet
         """
 
-        QUALNAME = "pyrogram.raw.base.StickerSet"
+        QUALNAME = "ftmgram.raw.base.StickerSet"
         __union_types__ = Union[raw.types.StickerSet]
 
         def __init__(self):

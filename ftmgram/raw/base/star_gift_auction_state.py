@@ -48,7 +48,7 @@ else:
             StarGiftAuctionStateNotModified
         """
 
-        QUALNAME = "pyrogram.raw.base.StarGiftAuctionState"
+        QUALNAME = "ftmgram.raw.base.StarGiftAuctionState"
         __union_types__ = Union[raw.types.StarGiftAuctionState, raw.types.StarGiftAuctionStateFinished, raw.types.StarGiftAuctionStateNotModified]
 
         def __init__(self):

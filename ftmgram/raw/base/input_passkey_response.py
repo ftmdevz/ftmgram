@@ -47,7 +47,7 @@ else:
             InputPasskeyResponseRegister
         """
 
-        QUALNAME = "pyrogram.raw.base.InputPasskeyResponse"
+        QUALNAME = "ftmgram.raw.base.InputPasskeyResponse"
         __union_types__ = Union[raw.types.InputPasskeyResponseLogin, raw.types.InputPasskeyResponseRegister]
 
         def __init__(self):

@@ -58,7 +58,7 @@ else:
             SecureValueTypeUtilityBill
         """
 
-        QUALNAME = "pyrogram.raw.base.SecureValueType"
+        QUALNAME = "ftmgram.raw.base.SecureValueType"
         __union_types__ = Union[raw.types.SecureValueTypeAddress, raw.types.SecureValueTypeBankStatement, raw.types.SecureValueTypeDriverLicense, raw.types.SecureValueTypeEmail, raw.types.SecureValueTypeIdentityCard, raw.types.SecureValueTypeInternalPassport, raw.types.SecureValueTypePassport, raw.types.SecureValueTypePassportRegistration, raw.types.SecureValueTypePersonalDetails, raw.types.SecureValueTypePhone, raw.types.SecureValueTypeRentalAgreement, raw.types.SecureValueTypeTemporaryRegistration, raw.types.SecureValueTypeUtilityBill]
 
         def __init__(self):

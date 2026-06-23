@@ -46,7 +46,7 @@ else:
             PostAddress
         """
 
-        QUALNAME = "pyrogram.raw.base.PostAddress"
+        QUALNAME = "ftmgram.raw.base.PostAddress"
         __union_types__ = Union[raw.types.PostAddress]
 
         def __init__(self):

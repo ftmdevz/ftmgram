@@ -46,7 +46,7 @@ else:
             InputPhoneContact
         """
 
-        QUALNAME = "pyrogram.raw.base.InputContact"
+        QUALNAME = "ftmgram.raw.base.InputContact"
         __union_types__ = Union[raw.types.InputPhoneContact]
 
         def __init__(self):

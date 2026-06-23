@@ -57,7 +57,7 @@ else:
             account.SetGlobalPrivacySettings
         """
 
-        QUALNAME = "pyrogram.raw.base.GlobalPrivacySettings"
+        QUALNAME = "ftmgram.raw.base.GlobalPrivacySettings"
         __union_types__ = Union[raw.types.GlobalPrivacySettings]
 
         def __init__(self):

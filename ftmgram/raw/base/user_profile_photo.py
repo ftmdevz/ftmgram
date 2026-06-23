@@ -47,7 +47,7 @@ else:
             UserProfilePhotoEmpty
         """
 
-        QUALNAME = "pyrogram.raw.base.UserProfilePhoto"
+        QUALNAME = "ftmgram.raw.base.UserProfilePhoto"
         __union_types__ = Union[raw.types.UserProfilePhoto, raw.types.UserProfilePhotoEmpty]
 
         def __init__(self):

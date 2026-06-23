@@ -56,7 +56,7 @@ else:
             updates.GetState
         """
 
-        QUALNAME = "pyrogram.raw.base.updates.State"
+        QUALNAME = "ftmgram.raw.base.updates.State"
         __union_types__ = Union[raw.types.updates.State]
 
         def __init__(self):

@@ -46,7 +46,7 @@ else:
             StatsGroupTopAdmin
         """
 
-        QUALNAME = "pyrogram.raw.base.StatsGroupTopAdmin"
+        QUALNAME = "ftmgram.raw.base.StatsGroupTopAdmin"
         __union_types__ = Union[raw.types.StatsGroupTopAdmin]
 
         def __init__(self):

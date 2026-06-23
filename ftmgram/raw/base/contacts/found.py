@@ -56,7 +56,7 @@ else:
             contacts.Search
         """
 
-        QUALNAME = "pyrogram.raw.base.contacts.Found"
+        QUALNAME = "ftmgram.raw.base.contacts.Found"
         __union_types__ = Union[raw.types.contacts.Found]
 
         def __init__(self):

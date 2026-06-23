@@ -49,7 +49,7 @@ else:
             ReactionPaid
         """
 
-        QUALNAME = "pyrogram.raw.base.Reaction"
+        QUALNAME = "ftmgram.raw.base.Reaction"
         __union_types__ = Union[raw.types.ReactionCustomEmoji, raw.types.ReactionEmoji, raw.types.ReactionEmpty, raw.types.ReactionPaid]
 
         def __init__(self):

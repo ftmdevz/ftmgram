@@ -56,7 +56,7 @@ else:
             account.GetAccountTTL
         """
 
-        QUALNAME = "pyrogram.raw.base.AccountDaysTTL"
+        QUALNAME = "ftmgram.raw.base.AccountDaysTTL"
         __union_types__ = Union[raw.types.AccountDaysTTL]
 
         def __init__(self):

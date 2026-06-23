@@ -58,7 +58,7 @@ else:
             langpack.GetStrings
         """
 
-        QUALNAME = "pyrogram.raw.base.LangPackString"
+        QUALNAME = "ftmgram.raw.base.LangPackString"
         __union_types__ = Union[raw.types.LangPackString, raw.types.LangPackStringDeleted, raw.types.LangPackStringPluralized]
 
         def __init__(self):

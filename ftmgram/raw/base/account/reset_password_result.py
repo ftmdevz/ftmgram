@@ -58,7 +58,7 @@ else:
             account.ResetPassword
         """
 
-        QUALNAME = "pyrogram.raw.base.account.ResetPasswordResult"
+        QUALNAME = "ftmgram.raw.base.account.ResetPasswordResult"
         __union_types__ = Union[raw.types.account.ResetPasswordFailedWait, raw.types.account.ResetPasswordOk, raw.types.account.ResetPasswordRequestedWait]
 
         def __init__(self):

@@ -48,7 +48,7 @@ else:
             InputRichMessageMarkdown
         """
 
-        QUALNAME = "pyrogram.raw.base.InputRichMessage"
+        QUALNAME = "ftmgram.raw.base.InputRichMessage"
         __union_types__ = Union[raw.types.InputRichMessage, raw.types.InputRichMessageHTML, raw.types.InputRichMessageMarkdown]
 
         def __init__(self):

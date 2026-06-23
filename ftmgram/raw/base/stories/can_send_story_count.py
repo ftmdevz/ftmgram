@@ -56,7 +56,7 @@ else:
             stories.CanSendStory
         """
 
-        QUALNAME = "pyrogram.raw.base.stories.CanSendStoryCount"
+        QUALNAME = "ftmgram.raw.base.stories.CanSendStoryCount"
         __union_types__ = Union[raw.types.stories.CanSendStoryCount]
 
         def __init__(self):

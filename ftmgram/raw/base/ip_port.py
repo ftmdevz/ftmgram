@@ -47,7 +47,7 @@ else:
             IpPortSecret
         """
 
-        QUALNAME = "pyrogram.raw.base.IpPort"
+        QUALNAME = "ftmgram.raw.base.IpPort"
         __union_types__ = Union[raw.types.IpPort, raw.types.IpPortSecret]
 
         def __init__(self):

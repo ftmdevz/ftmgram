@@ -65,7 +65,7 @@ else:
             stickers.ReplaceSticker
         """
 
-        QUALNAME = "pyrogram.raw.base.messages.StickerSet"
+        QUALNAME = "ftmgram.raw.base.messages.StickerSet"
         __union_types__ = Union[raw.types.messages.StickerSet, raw.types.messages.StickerSetNotModified]
 
         def __init__(self):

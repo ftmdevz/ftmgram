@@ -57,7 +57,7 @@ else:
             premium.ApplyBoost
         """
 
-        QUALNAME = "pyrogram.raw.base.premium.MyBoosts"
+        QUALNAME = "ftmgram.raw.base.premium.MyBoosts"
         __union_types__ = Union[raw.types.premium.MyBoosts]
 
         def __init__(self):

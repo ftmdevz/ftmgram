@@ -56,7 +56,7 @@ else:
             contacts.GetStatuses
         """
 
-        QUALNAME = "pyrogram.raw.base.ContactStatus"
+        QUALNAME = "ftmgram.raw.base.ContactStatus"
         __union_types__ = Union[raw.types.ContactStatus]
 
         def __init__(self):

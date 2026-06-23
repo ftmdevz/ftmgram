@@ -46,7 +46,7 @@ else:
             TodoCompletion
         """
 
-        QUALNAME = "pyrogram.raw.base.TodoCompletion"
+        QUALNAME = "ftmgram.raw.base.TodoCompletion"
         __union_types__ = Union[raw.types.TodoCompletion]
 
         def __init__(self):

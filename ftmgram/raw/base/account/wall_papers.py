@@ -57,7 +57,7 @@ else:
             account.GetWallPapers
         """
 
-        QUALNAME = "pyrogram.raw.base.account.WallPapers"
+        QUALNAME = "ftmgram.raw.base.account.WallPapers"
         __union_types__ = Union[raw.types.account.WallPapers, raw.types.account.WallPapersNotModified]
 
         def __init__(self):

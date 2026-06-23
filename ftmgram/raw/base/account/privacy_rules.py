@@ -57,7 +57,7 @@ else:
             account.SetPrivacy
         """
 
-        QUALNAME = "pyrogram.raw.base.account.PrivacyRules"
+        QUALNAME = "ftmgram.raw.base.account.PrivacyRules"
         __union_types__ = Union[raw.types.account.PrivacyRules]
 
         def __init__(self):

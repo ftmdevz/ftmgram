@@ -56,7 +56,7 @@ else:
             channels.CheckSearchPostsFlood
         """
 
-        QUALNAME = "pyrogram.raw.base.SearchPostsFlood"
+        QUALNAME = "ftmgram.raw.base.SearchPostsFlood"
         __union_types__ = Union[raw.types.SearchPostsFlood]
 
         def __init__(self):

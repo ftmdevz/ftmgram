@@ -56,7 +56,7 @@ else:
             phone.GetGroupCallStreamRtmpUrl
         """
 
-        QUALNAME = "pyrogram.raw.base.phone.GroupCallStreamRtmpUrl"
+        QUALNAME = "ftmgram.raw.base.phone.GroupCallStreamRtmpUrl"
         __union_types__ = Union[raw.types.phone.GroupCallStreamRtmpUrl]
 
         def __init__(self):

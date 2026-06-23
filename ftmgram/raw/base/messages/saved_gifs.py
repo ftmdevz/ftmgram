@@ -57,7 +57,7 @@ else:
             messages.GetSavedGifs
         """
 
-        QUALNAME = "pyrogram.raw.base.messages.SavedGifs"
+        QUALNAME = "ftmgram.raw.base.messages.SavedGifs"
         __union_types__ = Union[raw.types.messages.SavedGifs, raw.types.messages.SavedGifsNotModified]
 
         def __init__(self):

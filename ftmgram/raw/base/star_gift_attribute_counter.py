@@ -46,7 +46,7 @@ else:
             StarGiftAttributeCounter
         """
 
-        QUALNAME = "pyrogram.raw.base.StarGiftAttributeCounter"
+        QUALNAME = "ftmgram.raw.base.StarGiftAttributeCounter"
         __union_types__ = Union[raw.types.StarGiftAttributeCounter]
 
         def __init__(self):

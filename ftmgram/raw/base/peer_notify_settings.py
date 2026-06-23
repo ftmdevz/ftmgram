@@ -56,7 +56,7 @@ else:
             account.GetNotifySettings
         """
 
-        QUALNAME = "pyrogram.raw.base.PeerNotifySettings"
+        QUALNAME = "ftmgram.raw.base.PeerNotifySettings"
         __union_types__ = Union[raw.types.PeerNotifySettings]
 
         def __init__(self):

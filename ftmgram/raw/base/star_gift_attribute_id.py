@@ -48,7 +48,7 @@ else:
             StarGiftAttributeIdPattern
         """
 
-        QUALNAME = "pyrogram.raw.base.StarGiftAttributeId"
+        QUALNAME = "ftmgram.raw.base.StarGiftAttributeId"
         __union_types__ = Union[raw.types.StarGiftAttributeIdBackdrop, raw.types.StarGiftAttributeIdModel, raw.types.StarGiftAttributeIdPattern]
 
         def __init__(self):

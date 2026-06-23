@@ -57,7 +57,7 @@ else:
             ReqPqMulti
         """
 
-        QUALNAME = "pyrogram.raw.base.ResPQ"
+        QUALNAME = "ftmgram.raw.base.ResPQ"
         __union_types__ = Union[raw.types.ResPQ]
 
         def __init__(self):

@@ -64,7 +64,7 @@ else:
             stories.GetChatsToSend
         """
 
-        QUALNAME = "pyrogram.raw.base.messages.Chats"
+        QUALNAME = "ftmgram.raw.base.messages.Chats"
         __union_types__ = Union[raw.types.messages.Chats, raw.types.messages.ChatsSlice]
 
         def __init__(self):

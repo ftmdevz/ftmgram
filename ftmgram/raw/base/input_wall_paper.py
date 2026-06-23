@@ -48,7 +48,7 @@ else:
             InputWallPaperSlug
         """
 
-        QUALNAME = "pyrogram.raw.base.InputWallPaper"
+        QUALNAME = "ftmgram.raw.base.InputWallPaper"
         __union_types__ = Union[raw.types.InputWallPaper, raw.types.InputWallPaperNoFile, raw.types.InputWallPaperSlug]
 
         def __init__(self):

@@ -56,7 +56,7 @@ else:
             messages.GetSearchResultsCalendar
         """
 
-        QUALNAME = "pyrogram.raw.base.messages.SearchResultsCalendar"
+        QUALNAME = "ftmgram.raw.base.messages.SearchResultsCalendar"
         __union_types__ = Union[raw.types.messages.SearchResultsCalendar]
 
         def __init__(self):

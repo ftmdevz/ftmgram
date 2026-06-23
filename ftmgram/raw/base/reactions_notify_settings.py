@@ -57,7 +57,7 @@ else:
             account.SetReactionsNotifySettings
         """
 
-        QUALNAME = "pyrogram.raw.base.ReactionsNotifySettings"
+        QUALNAME = "ftmgram.raw.base.ReactionsNotifySettings"
         __union_types__ = Union[raw.types.ReactionsNotifySettings]
 
         def __init__(self):

@@ -46,7 +46,7 @@ else:
             WallPaperSettings
         """
 
-        QUALNAME = "pyrogram.raw.base.WallPaperSettings"
+        QUALNAME = "ftmgram.raw.base.WallPaperSettings"
         __union_types__ = Union[raw.types.WallPaperSettings]
 
         def __init__(self):

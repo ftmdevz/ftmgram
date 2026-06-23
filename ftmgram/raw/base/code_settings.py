@@ -46,7 +46,7 @@ else:
             CodeSettings
         """
 
-        QUALNAME = "pyrogram.raw.base.CodeSettings"
+        QUALNAME = "ftmgram.raw.base.CodeSettings"
         __union_types__ = Union[raw.types.CodeSettings]
 
         def __init__(self):

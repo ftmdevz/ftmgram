@@ -48,7 +48,7 @@ else:
             StoryItemSkipped
         """
 
-        QUALNAME = "pyrogram.raw.base.StoryItem"
+        QUALNAME = "ftmgram.raw.base.StoryItem"
         __union_types__ = Union[raw.types.StoryItem, raw.types.StoryItemDeleted, raw.types.StoryItemSkipped]
 
         def __init__(self):

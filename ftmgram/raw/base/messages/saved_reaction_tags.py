@@ -57,7 +57,7 @@ else:
             messages.GetSavedReactionTags
         """
 
-        QUALNAME = "pyrogram.raw.base.messages.SavedReactionTags"
+        QUALNAME = "ftmgram.raw.base.messages.SavedReactionTags"
         __union_types__ = Union[raw.types.messages.SavedReactionTags, raw.types.messages.SavedReactionTagsNotModified]
 
         def __init__(self):

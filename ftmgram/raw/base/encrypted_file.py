@@ -57,7 +57,7 @@ else:
             messages.UploadEncryptedFile
         """
 
-        QUALNAME = "pyrogram.raw.base.EncryptedFile"
+        QUALNAME = "ftmgram.raw.base.EncryptedFile"
         __union_types__ = Union[raw.types.EncryptedFile, raw.types.EncryptedFileEmpty]
 
         def __init__(self):

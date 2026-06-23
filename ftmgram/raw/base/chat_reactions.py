@@ -48,7 +48,7 @@ else:
             ChatReactionsSome
         """
 
-        QUALNAME = "pyrogram.raw.base.ChatReactions"
+        QUALNAME = "ftmgram.raw.base.ChatReactions"
         __union_types__ = Union[raw.types.ChatReactionsAll, raw.types.ChatReactionsNone, raw.types.ChatReactionsSome]
 
         def __init__(self):

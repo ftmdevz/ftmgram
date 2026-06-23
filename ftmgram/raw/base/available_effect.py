@@ -46,7 +46,7 @@ else:
             AvailableEffect
         """
 
-        QUALNAME = "pyrogram.raw.base.AvailableEffect"
+        QUALNAME = "ftmgram.raw.base.AvailableEffect"
         __union_types__ = Union[raw.types.AvailableEffect]
 
         def __init__(self):

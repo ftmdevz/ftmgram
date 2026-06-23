@@ -46,7 +46,7 @@ else:
             UserFull
         """
 
-        QUALNAME = "pyrogram.raw.base.UserFull"
+        QUALNAME = "ftmgram.raw.base.UserFull"
         __union_types__ = Union[raw.types.UserFull]
 
         def __init__(self):

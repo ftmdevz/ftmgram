@@ -46,7 +46,7 @@ else:
             Folder
         """
 
-        QUALNAME = "pyrogram.raw.base.Folder"
+        QUALNAME = "ftmgram.raw.base.Folder"
         __union_types__ = Union[raw.types.Folder]
 
         def __init__(self):

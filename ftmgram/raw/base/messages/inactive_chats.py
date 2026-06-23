@@ -56,7 +56,7 @@ else:
             channels.GetInactiveChannels
         """
 
-        QUALNAME = "pyrogram.raw.base.messages.InactiveChats"
+        QUALNAME = "ftmgram.raw.base.messages.InactiveChats"
         __union_types__ = Union[raw.types.messages.InactiveChats]
 
         def __init__(self):

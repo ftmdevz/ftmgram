@@ -46,7 +46,7 @@ else:
             RpcResult
         """
 
-        QUALNAME = "pyrogram.raw.base.RpcResult"
+        QUALNAME = "ftmgram.raw.base.RpcResult"
         __union_types__ = Union[raw.types.RpcResult]
 
         def __init__(self):

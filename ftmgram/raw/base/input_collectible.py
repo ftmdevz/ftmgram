@@ -47,7 +47,7 @@ else:
             InputCollectibleUsername
         """
 
-        QUALNAME = "pyrogram.raw.base.InputCollectible"
+        QUALNAME = "ftmgram.raw.base.InputCollectible"
         __union_types__ = Union[raw.types.InputCollectiblePhone, raw.types.InputCollectibleUsername]
 
         def __init__(self):

@@ -47,7 +47,7 @@ else:
             ChannelLocationEmpty
         """
 
-        QUALNAME = "pyrogram.raw.base.ChannelLocation"
+        QUALNAME = "ftmgram.raw.base.ChannelLocation"
         __union_types__ = Union[raw.types.ChannelLocation, raw.types.ChannelLocationEmpty]
 
         def __init__(self):

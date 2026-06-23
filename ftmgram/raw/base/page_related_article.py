@@ -46,7 +46,7 @@ else:
             PageRelatedArticle
         """
 
-        QUALNAME = "pyrogram.raw.base.PageRelatedArticle"
+        QUALNAME = "ftmgram.raw.base.PageRelatedArticle"
         __union_types__ = Union[raw.types.PageRelatedArticle]
 
         def __init__(self):

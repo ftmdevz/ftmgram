@@ -48,7 +48,7 @@ else:
             MessagePeerVoteMultiple
         """
 
-        QUALNAME = "pyrogram.raw.base.MessagePeerVote"
+        QUALNAME = "ftmgram.raw.base.MessagePeerVote"
         __union_types__ = Union[raw.types.MessagePeerVote, raw.types.MessagePeerVoteInputOption, raw.types.MessagePeerVoteMultiple]
 
         def __init__(self):

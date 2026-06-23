@@ -60,7 +60,7 @@ else:
             InputInvoiceStars
         """
 
-        QUALNAME = "pyrogram.raw.base.InputInvoice"
+        QUALNAME = "ftmgram.raw.base.InputInvoice"
         __union_types__ = Union[raw.types.InputInvoiceBusinessBotTransferStars, raw.types.InputInvoiceChatInviteSubscription, raw.types.InputInvoiceMessage, raw.types.InputInvoicePremiumAuthCode, raw.types.InputInvoicePremiumGiftCode, raw.types.InputInvoicePremiumGiftStars, raw.types.InputInvoiceSlug, raw.types.InputInvoiceStarGift, raw.types.InputInvoiceStarGiftAuctionBid, raw.types.InputInvoiceStarGiftDropOriginalDetails, raw.types.InputInvoiceStarGiftPrepaidUpgrade, raw.types.InputInvoiceStarGiftResale, raw.types.InputInvoiceStarGiftTransfer, raw.types.InputInvoiceStarGiftUpgrade, raw.types.InputInvoiceStars]
 
         def __init__(self):

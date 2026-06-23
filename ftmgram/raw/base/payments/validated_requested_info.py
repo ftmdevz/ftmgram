@@ -56,7 +56,7 @@ else:
             payments.ValidateRequestedInfo
         """
 
-        QUALNAME = "pyrogram.raw.base.payments.ValidatedRequestedInfo"
+        QUALNAME = "ftmgram.raw.base.payments.ValidatedRequestedInfo"
         __union_types__ = Union[raw.types.payments.ValidatedRequestedInfo]
 
         def __init__(self):

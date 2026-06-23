@@ -57,7 +57,7 @@ else:
             stats.GetStoryPublicForwards
         """
 
-        QUALNAME = "pyrogram.raw.base.stats.PublicForwards"
+        QUALNAME = "ftmgram.raw.base.stats.PublicForwards"
         __union_types__ = Union[raw.types.stats.PublicForwards]
 
         def __init__(self):

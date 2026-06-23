@@ -46,7 +46,7 @@ else:
             MsgsAck
         """
 
-        QUALNAME = "pyrogram.raw.base.MsgsAck"
+        QUALNAME = "ftmgram.raw.base.MsgsAck"
         __union_types__ = Union[raw.types.MsgsAck]
 
         def __init__(self):

@@ -46,7 +46,7 @@ else:
             BotVerifierSettings
         """
 
-        QUALNAME = "pyrogram.raw.base.BotVerifierSettings"
+        QUALNAME = "ftmgram.raw.base.BotVerifierSettings"
         __union_types__ = Union[raw.types.BotVerifierSettings]
 
         def __init__(self):

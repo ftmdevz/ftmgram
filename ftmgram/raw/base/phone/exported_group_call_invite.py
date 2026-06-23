@@ -56,7 +56,7 @@ else:
             phone.ExportGroupCallInvite
         """
 
-        QUALNAME = "pyrogram.raw.base.phone.ExportedGroupCallInvite"
+        QUALNAME = "ftmgram.raw.base.phone.ExportedGroupCallInvite"
         __union_types__ = Union[raw.types.phone.ExportedGroupCallInvite]
 
         def __init__(self):

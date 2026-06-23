@@ -47,7 +47,7 @@ else:
             ChatParticipantsForbidden
         """
 
-        QUALNAME = "pyrogram.raw.base.ChatParticipants"
+        QUALNAME = "ftmgram.raw.base.ChatParticipants"
         __union_types__ = Union[raw.types.ChatParticipants, raw.types.ChatParticipantsForbidden]
 
         def __init__(self):

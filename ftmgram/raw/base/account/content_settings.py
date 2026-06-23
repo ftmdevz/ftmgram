@@ -56,7 +56,7 @@ else:
             account.GetContentSettings
         """
 
-        QUALNAME = "pyrogram.raw.base.account.ContentSettings"
+        QUALNAME = "ftmgram.raw.base.account.ContentSettings"
         __union_types__ = Union[raw.types.account.ContentSettings]
 
         def __init__(self):

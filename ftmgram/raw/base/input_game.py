@@ -47,7 +47,7 @@ else:
             InputGameShortName
         """
 
-        QUALNAME = "pyrogram.raw.base.InputGame"
+        QUALNAME = "ftmgram.raw.base.InputGame"
         __union_types__ = Union[raw.types.InputGameID, raw.types.InputGameShortName]
 
         def __init__(self):

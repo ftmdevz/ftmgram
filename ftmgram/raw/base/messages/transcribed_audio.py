@@ -56,7 +56,7 @@ else:
             messages.TranscribeAudio
         """
 
-        QUALNAME = "pyrogram.raw.base.messages.TranscribedAudio"
+        QUALNAME = "ftmgram.raw.base.messages.TranscribedAudio"
         __union_types__ = Union[raw.types.messages.TranscribedAudio]
 
         def __init__(self):

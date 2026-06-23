@@ -58,7 +58,7 @@ else:
             channels.JoinChannel
         """
 
-        QUALNAME = "pyrogram.raw.base.messages.ChatInviteJoinResult"
+        QUALNAME = "ftmgram.raw.base.messages.ChatInviteJoinResult"
         __union_types__ = Union[raw.types.messages.ChatInviteJoinResultOk, raw.types.messages.ChatInviteJoinResultWebView]
 
         def __init__(self):

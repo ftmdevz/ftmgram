@@ -46,7 +46,7 @@ else:
             FoundStory
         """
 
-        QUALNAME = "pyrogram.raw.base.FoundStory"
+        QUALNAME = "ftmgram.raw.base.FoundStory"
         __union_types__ = Union[raw.types.FoundStory]
 
         def __init__(self):

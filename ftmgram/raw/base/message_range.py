@@ -56,7 +56,7 @@ else:
             messages.GetSplitRanges
         """
 
-        QUALNAME = "pyrogram.raw.base.MessageRange"
+        QUALNAME = "ftmgram.raw.base.MessageRange"
         __union_types__ = Union[raw.types.MessageRange]
 
         def __init__(self):

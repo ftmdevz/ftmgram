@@ -56,7 +56,7 @@ else:
             messages.SendWebViewResultMessage
         """
 
-        QUALNAME = "pyrogram.raw.base.WebViewMessageSent"
+        QUALNAME = "ftmgram.raw.base.WebViewMessageSent"
         __union_types__ = Union[raw.types.WebViewMessageSent]
 
         def __init__(self):

@@ -57,7 +57,7 @@ else:
             messages.GetForumTopicsByID
         """
 
-        QUALNAME = "pyrogram.raw.base.messages.ForumTopics"
+        QUALNAME = "ftmgram.raw.base.messages.ForumTopics"
         __union_types__ = Union[raw.types.messages.ForumTopics]
 
         def __init__(self):

@@ -56,7 +56,7 @@ else:
             bots.ExportBotToken
         """
 
-        QUALNAME = "pyrogram.raw.base.bots.ExportedBotToken"
+        QUALNAME = "ftmgram.raw.base.bots.ExportedBotToken"
         __union_types__ = Union[raw.types.bots.ExportedBotToken]
 
         def __init__(self):

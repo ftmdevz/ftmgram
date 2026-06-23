@@ -59,7 +59,7 @@ else:
             channels.DeleteMessages
         """
 
-        QUALNAME = "pyrogram.raw.base.messages.AffectedMessages"
+        QUALNAME = "ftmgram.raw.base.messages.AffectedMessages"
         __union_types__ = Union[raw.types.messages.AffectedMessages]
 
         def __init__(self):

@@ -46,7 +46,7 @@ else:
             StatsGroupTopInviter
         """
 
-        QUALNAME = "pyrogram.raw.base.StatsGroupTopInviter"
+        QUALNAME = "ftmgram.raw.base.StatsGroupTopInviter"
         __union_types__ = Union[raw.types.StatsGroupTopInviter]
 
         def __init__(self):

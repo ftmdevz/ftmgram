@@ -47,7 +47,7 @@ else:
             InputThemeSlug
         """
 
-        QUALNAME = "pyrogram.raw.base.InputTheme"
+        QUALNAME = "ftmgram.raw.base.InputTheme"
         __union_types__ = Union[raw.types.InputTheme, raw.types.InputThemeSlug]
 
         def __init__(self):

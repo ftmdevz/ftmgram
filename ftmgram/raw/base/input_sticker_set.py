@@ -57,7 +57,7 @@ else:
             InputStickerSetTonGifts
         """
 
-        QUALNAME = "pyrogram.raw.base.InputStickerSet"
+        QUALNAME = "ftmgram.raw.base.InputStickerSet"
         __union_types__ = Union[raw.types.InputStickerSetAnimatedEmoji, raw.types.InputStickerSetAnimatedEmojiAnimations, raw.types.InputStickerSetDice, raw.types.InputStickerSetEmojiChannelDefaultStatuses, raw.types.InputStickerSetEmojiDefaultStatuses, raw.types.InputStickerSetEmojiDefaultTopicIcons, raw.types.InputStickerSetEmojiGenericAnimations, raw.types.InputStickerSetEmpty, raw.types.InputStickerSetID, raw.types.InputStickerSetPremiumGifts, raw.types.InputStickerSetShortName, raw.types.InputStickerSetTonGifts]
 
         def __init__(self):

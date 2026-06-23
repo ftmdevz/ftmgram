@@ -46,7 +46,7 @@ else:
             BusinessWeeklyOpen
         """
 
-        QUALNAME = "pyrogram.raw.base.BusinessWeeklyOpen"
+        QUALNAME = "ftmgram.raw.base.BusinessWeeklyOpen"
         __union_types__ = Union[raw.types.BusinessWeeklyOpen]
 
         def __init__(self):

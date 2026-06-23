@@ -46,7 +46,7 @@ else:
             ChatAdminRights
         """
 
-        QUALNAME = "pyrogram.raw.base.ChatAdminRights"
+        QUALNAME = "ftmgram.raw.base.ChatAdminRights"
         __union_types__ = Union[raw.types.ChatAdminRights]
 
         def __init__(self):

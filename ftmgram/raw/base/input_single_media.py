@@ -46,7 +46,7 @@ else:
             InputSingleMedia
         """
 
-        QUALNAME = "pyrogram.raw.base.InputSingleMedia"
+        QUALNAME = "ftmgram.raw.base.InputSingleMedia"
         __union_types__ = Union[raw.types.InputSingleMedia]
 
         def __init__(self):

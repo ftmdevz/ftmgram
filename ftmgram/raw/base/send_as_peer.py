@@ -46,7 +46,7 @@ else:
             SendAsPeer
         """
 
-        QUALNAME = "pyrogram.raw.base.SendAsPeer"
+        QUALNAME = "ftmgram.raw.base.SendAsPeer"
         __union_types__ = Union[raw.types.SendAsPeer]
 
         def __init__(self):

@@ -46,7 +46,7 @@ else:
             GeoPointAddress
         """
 
-        QUALNAME = "pyrogram.raw.base.GeoPointAddress"
+        QUALNAME = "ftmgram.raw.base.GeoPointAddress"
         __union_types__ = Union[raw.types.GeoPointAddress]
 
         def __init__(self):

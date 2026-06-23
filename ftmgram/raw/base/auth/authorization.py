@@ -64,7 +64,7 @@ else:
             auth.FinishPasskeyLogin
         """
 
-        QUALNAME = "pyrogram.raw.base.auth.Authorization"
+        QUALNAME = "ftmgram.raw.base.auth.Authorization"
         __union_types__ = Union[raw.types.auth.Authorization, raw.types.auth.AuthorizationSignUpRequired]
 
         def __init__(self):

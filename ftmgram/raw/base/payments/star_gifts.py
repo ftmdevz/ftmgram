@@ -57,7 +57,7 @@ else:
             payments.GetStarGifts
         """
 
-        QUALNAME = "pyrogram.raw.base.payments.StarGifts"
+        QUALNAME = "ftmgram.raw.base.payments.StarGifts"
         __union_types__ = Union[raw.types.payments.StarGifts, raw.types.payments.StarGiftsNotModified]
 
         def __init__(self):

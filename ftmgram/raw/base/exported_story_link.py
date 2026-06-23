@@ -56,7 +56,7 @@ else:
             stories.ExportStoryLink
         """
 
-        QUALNAME = "pyrogram.raw.base.ExportedStoryLink"
+        QUALNAME = "ftmgram.raw.base.ExportedStoryLink"
         __union_types__ = Union[raw.types.ExportedStoryLink]
 
         def __init__(self):

@@ -57,7 +57,7 @@ else:
             stories.GetAlbums
         """
 
-        QUALNAME = "pyrogram.raw.base.stories.Albums"
+        QUALNAME = "ftmgram.raw.base.stories.Albums"
         __union_types__ = Union[raw.types.stories.Albums, raw.types.stories.AlbumsNotModified]
 
         def __init__(self):

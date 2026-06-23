@@ -46,7 +46,7 @@ else:
             MessageFwdHeader
         """
 
-        QUALNAME = "pyrogram.raw.base.MessageFwdHeader"
+        QUALNAME = "ftmgram.raw.base.MessageFwdHeader"
         __union_types__ = Union[raw.types.MessageFwdHeader]
 
         def __init__(self):

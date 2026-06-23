@@ -56,7 +56,7 @@ else:
             auth.RequestPasswordRecovery
         """
 
-        QUALNAME = "pyrogram.raw.base.auth.PasswordRecovery"
+        QUALNAME = "ftmgram.raw.base.auth.PasswordRecovery"
         __union_types__ = Union[raw.types.auth.PasswordRecovery]
 
         def __init__(self):

@@ -46,7 +46,7 @@ else:
             BindAuthKeyInner
         """
 
-        QUALNAME = "pyrogram.raw.base.BindAuthKeyInner"
+        QUALNAME = "ftmgram.raw.base.BindAuthKeyInner"
         __union_types__ = Union[raw.types.BindAuthKeyInner]
 
         def __init__(self):

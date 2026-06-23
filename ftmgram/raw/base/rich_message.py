@@ -46,7 +46,7 @@ else:
             RichMessage
         """
 
-        QUALNAME = "pyrogram.raw.base.RichMessage"
+        QUALNAME = "ftmgram.raw.base.RichMessage"
         __union_types__ = Union[raw.types.RichMessage]
 
         def __init__(self):

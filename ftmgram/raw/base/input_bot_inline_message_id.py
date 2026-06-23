@@ -57,7 +57,7 @@ else:
             messages.SetBotGuestChatResult
         """
 
-        QUALNAME = "pyrogram.raw.base.InputBotInlineMessageID"
+        QUALNAME = "ftmgram.raw.base.InputBotInlineMessageID"
         __union_types__ = Union[raw.types.InputBotInlineMessageID, raw.types.InputBotInlineMessageID64]
 
         def __init__(self):

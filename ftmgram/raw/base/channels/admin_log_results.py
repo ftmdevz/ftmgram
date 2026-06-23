@@ -56,7 +56,7 @@ else:
             channels.GetAdminLog
         """
 
-        QUALNAME = "pyrogram.raw.base.channels.AdminLogResults"
+        QUALNAME = "ftmgram.raw.base.channels.AdminLogResults"
         __union_types__ = Union[raw.types.channels.AdminLogResults]
 
         def __init__(self):

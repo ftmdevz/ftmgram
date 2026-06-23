@@ -59,7 +59,7 @@ else:
             messages.GetAttachedStickers
         """
 
-        QUALNAME = "pyrogram.raw.base.StickerSetCovered"
+        QUALNAME = "ftmgram.raw.base.StickerSetCovered"
         __union_types__ = Union[raw.types.StickerSetCovered, raw.types.StickerSetFullCovered, raw.types.StickerSetMultiCovered, raw.types.StickerSetNoCovered]
 
         def __init__(self):

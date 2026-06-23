@@ -46,7 +46,7 @@ else:
             ConnectedBot
         """
 
-        QUALNAME = "pyrogram.raw.base.ConnectedBot"
+        QUALNAME = "ftmgram.raw.base.ConnectedBot"
         __union_types__ = Union[raw.types.ConnectedBot]
 
         def __init__(self):

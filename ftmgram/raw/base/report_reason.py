@@ -55,7 +55,7 @@ else:
             InputReportReasonViolence
         """
 
-        QUALNAME = "pyrogram.raw.base.ReportReason"
+        QUALNAME = "ftmgram.raw.base.ReportReason"
         __union_types__ = Union[raw.types.InputReportReasonChildAbuse, raw.types.InputReportReasonCopyright, raw.types.InputReportReasonFake, raw.types.InputReportReasonGeoIrrelevant, raw.types.InputReportReasonIllegalDrugs, raw.types.InputReportReasonOther, raw.types.InputReportReasonPersonalDetails, raw.types.InputReportReasonPornography, raw.types.InputReportReasonSpam, raw.types.InputReportReasonViolence]
 
         def __init__(self):

@@ -56,7 +56,7 @@ else:
             stats.GetMegagroupStats
         """
 
-        QUALNAME = "pyrogram.raw.base.stats.MegagroupStats"
+        QUALNAME = "ftmgram.raw.base.stats.MegagroupStats"
         __union_types__ = Union[raw.types.stats.MegagroupStats]
 
         def __init__(self):

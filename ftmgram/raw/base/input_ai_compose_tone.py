@@ -48,7 +48,7 @@ else:
             InputAiComposeToneSlug
         """
 
-        QUALNAME = "pyrogram.raw.base.InputAiComposeTone"
+        QUALNAME = "ftmgram.raw.base.InputAiComposeTone"
         __union_types__ = Union[raw.types.InputAiComposeToneDefault, raw.types.InputAiComposeToneID, raw.types.InputAiComposeToneSlug]
 
         def __init__(self):

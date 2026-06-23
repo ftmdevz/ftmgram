@@ -57,7 +57,7 @@ else:
             help.GetTimezonesList
         """
 
-        QUALNAME = "pyrogram.raw.base.help.TimezonesList"
+        QUALNAME = "ftmgram.raw.base.help.TimezonesList"
         __union_types__ = Union[raw.types.help.TimezonesList, raw.types.help.TimezonesListNotModified]
 
         def __init__(self):

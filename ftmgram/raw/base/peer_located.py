@@ -47,7 +47,7 @@ else:
             PeerSelfLocated
         """
 
-        QUALNAME = "pyrogram.raw.base.PeerLocated"
+        QUALNAME = "ftmgram.raw.base.PeerLocated"
         __union_types__ = Union[raw.types.PeerLocated, raw.types.PeerSelfLocated]
 
         def __init__(self):

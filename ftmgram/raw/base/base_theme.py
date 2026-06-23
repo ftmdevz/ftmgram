@@ -50,7 +50,7 @@ else:
             BaseThemeTinted
         """
 
-        QUALNAME = "pyrogram.raw.base.BaseTheme"
+        QUALNAME = "ftmgram.raw.base.BaseTheme"
         __union_types__ = Union[raw.types.BaseThemeArctic, raw.types.BaseThemeClassic, raw.types.BaseThemeDay, raw.types.BaseThemeNight, raw.types.BaseThemeTinted]
 
         def __init__(self):

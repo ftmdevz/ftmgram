@@ -46,7 +46,7 @@ else:
             ThemeSettings
         """
 
-        QUALNAME = "pyrogram.raw.base.ThemeSettings"
+        QUALNAME = "ftmgram.raw.base.ThemeSettings"
         __union_types__ = Union[raw.types.ThemeSettings]
 
         def __init__(self):

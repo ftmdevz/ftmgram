@@ -54,7 +54,7 @@ else:
             SecureValueErrorTranslationFiles
         """
 
-        QUALNAME = "pyrogram.raw.base.SecureValueError"
+        QUALNAME = "ftmgram.raw.base.SecureValueError"
         __union_types__ = Union[raw.types.SecureValueError, raw.types.SecureValueErrorData, raw.types.SecureValueErrorFile, raw.types.SecureValueErrorFiles, raw.types.SecureValueErrorFrontSide, raw.types.SecureValueErrorReverseSide, raw.types.SecureValueErrorSelfie, raw.types.SecureValueErrorTranslationFile, raw.types.SecureValueErrorTranslationFiles]
 
         def __init__(self):

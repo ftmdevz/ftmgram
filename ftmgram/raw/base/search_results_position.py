@@ -46,7 +46,7 @@ else:
             SearchResultPosition
         """
 
-        QUALNAME = "pyrogram.raw.base.SearchResultsPosition"
+        QUALNAME = "ftmgram.raw.base.SearchResultsPosition"
         __union_types__ = Union[raw.types.SearchResultPosition]
 
         def __init__(self):

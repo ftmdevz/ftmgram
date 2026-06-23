@@ -56,7 +56,7 @@ else:
             chatlists.GetChatlistUpdates
         """
 
-        QUALNAME = "pyrogram.raw.base.chatlists.ChatlistUpdates"
+        QUALNAME = "ftmgram.raw.base.chatlists.ChatlistUpdates"
         __union_types__ = Union[raw.types.chatlists.ChatlistUpdates]
 
         def __init__(self):

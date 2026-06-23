@@ -57,7 +57,7 @@ else:
             help.GetAppUpdate
         """
 
-        QUALNAME = "pyrogram.raw.base.help.AppUpdate"
+        QUALNAME = "ftmgram.raw.base.help.AppUpdate"
         __union_types__ = Union[raw.types.help.AppUpdate, raw.types.help.NoAppUpdate]
 
         def __init__(self):

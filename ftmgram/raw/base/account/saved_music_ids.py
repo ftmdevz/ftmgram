@@ -57,7 +57,7 @@ else:
             account.GetSavedMusicIds
         """
 
-        QUALNAME = "pyrogram.raw.base.account.SavedMusicIds"
+        QUALNAME = "ftmgram.raw.base.account.SavedMusicIds"
         __union_types__ = Union[raw.types.account.SavedMusicIds, raw.types.account.SavedMusicIdsNotModified]
 
         def __init__(self):

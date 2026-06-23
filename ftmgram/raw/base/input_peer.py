@@ -52,7 +52,7 @@ else:
             InputPeerUserFromMessage
         """
 
-        QUALNAME = "pyrogram.raw.base.InputPeer"
+        QUALNAME = "ftmgram.raw.base.InputPeer"
         __union_types__ = Union[raw.types.InputPeerChannel, raw.types.InputPeerChannelFromMessage, raw.types.InputPeerChat, raw.types.InputPeerEmpty, raw.types.InputPeerSelf, raw.types.InputPeerUser, raw.types.InputPeerUserFromMessage]
 
         def __init__(self):

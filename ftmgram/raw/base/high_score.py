@@ -46,7 +46,7 @@ else:
             HighScore
         """
 
-        QUALNAME = "pyrogram.raw.base.HighScore"
+        QUALNAME = "ftmgram.raw.base.HighScore"
         __union_types__ = Union[raw.types.HighScore]
 
         def __init__(self):

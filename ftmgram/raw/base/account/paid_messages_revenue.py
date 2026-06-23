@@ -56,7 +56,7 @@ else:
             account.GetPaidMessagesRevenue
         """
 
-        QUALNAME = "pyrogram.raw.base.account.PaidMessagesRevenue"
+        QUALNAME = "ftmgram.raw.base.account.PaidMessagesRevenue"
         __union_types__ = Union[raw.types.account.PaidMessagesRevenue]
 
         def __init__(self):

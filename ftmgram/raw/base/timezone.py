@@ -46,7 +46,7 @@ else:
             Timezone
         """
 
-        QUALNAME = "pyrogram.raw.base.Timezone"
+        QUALNAME = "ftmgram.raw.base.Timezone"
         __union_types__ = Union[raw.types.Timezone]
 
         def __init__(self):

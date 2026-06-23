@@ -57,7 +57,7 @@ else:
             upload.GetFile
         """
 
-        QUALNAME = "pyrogram.raw.base.upload.File"
+        QUALNAME = "ftmgram.raw.base.upload.File"
         __union_types__ = Union[raw.types.upload.File, raw.types.upload.FileCdnRedirect]
 
         def __init__(self):

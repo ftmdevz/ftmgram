@@ -46,7 +46,7 @@ else:
             NewSessionCreated
         """
 
-        QUALNAME = "pyrogram.raw.base.NewSession"
+        QUALNAME = "ftmgram.raw.base.NewSession"
         __union_types__ = Union[raw.types.NewSessionCreated]
 
         def __init__(self):

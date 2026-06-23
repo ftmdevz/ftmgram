@@ -50,7 +50,7 @@ else:
             PhoneCallDiscardReasonMissed
         """
 
-        QUALNAME = "pyrogram.raw.base.PhoneCallDiscardReason"
+        QUALNAME = "ftmgram.raw.base.PhoneCallDiscardReason"
         __union_types__ = Union[raw.types.PhoneCallDiscardReasonBusy, raw.types.PhoneCallDiscardReasonDisconnect, raw.types.PhoneCallDiscardReasonHangup, raw.types.PhoneCallDiscardReasonMigrateConferenceCall, raw.types.PhoneCallDiscardReasonMissed]
 
         def __init__(self):

@@ -46,7 +46,7 @@ else:
             AutoSaveException
         """
 
-        QUALNAME = "pyrogram.raw.base.AutoSaveException"
+        QUALNAME = "ftmgram.raw.base.AutoSaveException"
         __union_types__ = Union[raw.types.AutoSaveException]
 
         def __init__(self):

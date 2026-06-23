@@ -58,7 +58,7 @@ else:
             users.GetRequirementsToContact
         """
 
-        QUALNAME = "pyrogram.raw.base.RequirementToContact"
+        QUALNAME = "ftmgram.raw.base.RequirementToContact"
         __union_types__ = Union[raw.types.RequirementToContactEmpty, raw.types.RequirementToContactPaidMessages, raw.types.RequirementToContactPremium]
 
         def __init__(self):

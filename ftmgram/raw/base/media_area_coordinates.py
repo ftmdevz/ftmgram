@@ -46,7 +46,7 @@ else:
             MediaAreaCoordinates
         """
 
-        QUALNAME = "pyrogram.raw.base.MediaAreaCoordinates"
+        QUALNAME = "ftmgram.raw.base.MediaAreaCoordinates"
         __union_types__ = Union[raw.types.MediaAreaCoordinates]
 
         def __init__(self):

@@ -53,7 +53,7 @@ else:
             InputStorePaymentStarsTopup
         """
 
-        QUALNAME = "pyrogram.raw.base.InputStorePaymentPurpose"
+        QUALNAME = "ftmgram.raw.base.InputStorePaymentPurpose"
         __union_types__ = Union[raw.types.InputStorePaymentAuthCode, raw.types.InputStorePaymentGiftPremium, raw.types.InputStorePaymentPremiumGiftCode, raw.types.InputStorePaymentPremiumGiveaway, raw.types.InputStorePaymentPremiumSubscription, raw.types.InputStorePaymentStarsGift, raw.types.InputStorePaymentStarsGiveaway, raw.types.InputStorePaymentStarsTopup]
 
         def __init__(self):

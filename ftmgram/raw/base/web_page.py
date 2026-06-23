@@ -49,7 +49,7 @@ else:
             WebPagePending
         """
 
-        QUALNAME = "pyrogram.raw.base.WebPage"
+        QUALNAME = "ftmgram.raw.base.WebPage"
         __union_types__ = Union[raw.types.WebPage, raw.types.WebPageEmpty, raw.types.WebPageNotModified, raw.types.WebPagePending]
 
         def __init__(self):

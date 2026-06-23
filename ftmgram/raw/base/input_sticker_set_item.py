@@ -46,7 +46,7 @@ else:
             InputStickerSetItem
         """
 
-        QUALNAME = "pyrogram.raw.base.InputStickerSetItem"
+        QUALNAME = "ftmgram.raw.base.InputStickerSetItem"
         __union_types__ = Union[raw.types.InputStickerSetItem]
 
         def __init__(self):

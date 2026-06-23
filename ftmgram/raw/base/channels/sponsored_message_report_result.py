@@ -58,7 +58,7 @@ else:
             messages.ReportSponsoredMessage
         """
 
-        QUALNAME = "pyrogram.raw.base.channels.SponsoredMessageReportResult"
+        QUALNAME = "ftmgram.raw.base.channels.SponsoredMessageReportResult"
         __union_types__ = Union[raw.types.channels.SponsoredMessageReportResultAdsHidden, raw.types.channels.SponsoredMessageReportResultChooseOption, raw.types.channels.SponsoredMessageReportResultReported]
 
         def __init__(self):

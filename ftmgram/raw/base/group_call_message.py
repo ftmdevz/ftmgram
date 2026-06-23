@@ -46,7 +46,7 @@ else:
             GroupCallMessage
         """
 
-        QUALNAME = "pyrogram.raw.base.GroupCallMessage"
+        QUALNAME = "ftmgram.raw.base.GroupCallMessage"
         __union_types__ = Union[raw.types.GroupCallMessage]
 
         def __init__(self):

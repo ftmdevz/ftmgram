@@ -46,7 +46,7 @@ else:
             StickerKeyword
         """
 
-        QUALNAME = "pyrogram.raw.base.StickerKeyword"
+        QUALNAME = "ftmgram.raw.base.StickerKeyword"
         __union_types__ = Union[raw.types.StickerKeyword]
 
         def __init__(self):

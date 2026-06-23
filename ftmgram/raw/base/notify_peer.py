@@ -50,7 +50,7 @@ else:
             NotifyUsers
         """
 
-        QUALNAME = "pyrogram.raw.base.NotifyPeer"
+        QUALNAME = "ftmgram.raw.base.NotifyPeer"
         __union_types__ = Union[raw.types.NotifyBroadcasts, raw.types.NotifyChats, raw.types.NotifyForumTopic, raw.types.NotifyPeer, raw.types.NotifyUsers]
 
         def __init__(self):

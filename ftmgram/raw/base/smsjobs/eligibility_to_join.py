@@ -56,7 +56,7 @@ else:
             smsjobs.IsEligibleToJoin
         """
 
-        QUALNAME = "pyrogram.raw.base.smsjobs.EligibilityToJoin"
+        QUALNAME = "ftmgram.raw.base.smsjobs.EligibilityToJoin"
         __union_types__ = Union[raw.types.smsjobs.EligibleToJoin]
 
         def __init__(self):

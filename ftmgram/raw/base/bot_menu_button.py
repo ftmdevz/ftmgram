@@ -58,7 +58,7 @@ else:
             bots.GetBotMenuButton
         """
 
-        QUALNAME = "pyrogram.raw.base.BotMenuButton"
+        QUALNAME = "ftmgram.raw.base.BotMenuButton"
         __union_types__ = Union[raw.types.BotMenuButton, raw.types.BotMenuButtonCommands, raw.types.BotMenuButtonDefault]
 
         def __init__(self):

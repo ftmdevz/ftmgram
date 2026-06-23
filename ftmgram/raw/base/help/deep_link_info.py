@@ -57,7 +57,7 @@ else:
             help.GetDeepLinkInfo
         """
 
-        QUALNAME = "pyrogram.raw.base.help.DeepLinkInfo"
+        QUALNAME = "ftmgram.raw.base.help.DeepLinkInfo"
         __union_types__ = Union[raw.types.help.DeepLinkInfo, raw.types.help.DeepLinkInfoEmpty]
 
         def __init__(self):

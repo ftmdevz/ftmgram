@@ -50,7 +50,7 @@ else:
             AttachMenuPeerTypeSameBotPM
         """
 
-        QUALNAME = "pyrogram.raw.base.AttachMenuPeerType"
+        QUALNAME = "ftmgram.raw.base.AttachMenuPeerType"
         __union_types__ = Union[raw.types.AttachMenuPeerTypeBotPM, raw.types.AttachMenuPeerTypeBroadcast, raw.types.AttachMenuPeerTypeChat, raw.types.AttachMenuPeerTypePM, raw.types.AttachMenuPeerTypeSameBotPM]
 
         def __init__(self):

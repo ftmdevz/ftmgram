@@ -59,7 +59,7 @@ else:
             payments.EditConnectedStarRefBot
         """
 
-        QUALNAME = "pyrogram.raw.base.payments.ConnectedStarRefBots"
+        QUALNAME = "ftmgram.raw.base.payments.ConnectedStarRefBots"
         __union_types__ = Union[raw.types.payments.ConnectedStarRefBots]
 
         def __init__(self):

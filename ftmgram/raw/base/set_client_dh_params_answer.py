@@ -58,7 +58,7 @@ else:
             SetClientDHParams
         """
 
-        QUALNAME = "pyrogram.raw.base.SetClientDHParamsAnswer"
+        QUALNAME = "ftmgram.raw.base.SetClientDHParamsAnswer"
         __union_types__ = Union[raw.types.DhGenFail, raw.types.DhGenOk, raw.types.DhGenRetry]
 
         def __init__(self):

@@ -47,7 +47,7 @@ else:
             InputBotAppShortName
         """
 
-        QUALNAME = "pyrogram.raw.base.InputBotApp"
+        QUALNAME = "ftmgram.raw.base.InputBotApp"
         __union_types__ = Union[raw.types.InputBotAppID, raw.types.InputBotAppShortName]
 
         def __init__(self):

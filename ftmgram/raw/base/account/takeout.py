@@ -56,7 +56,7 @@ else:
             account.InitTakeoutSession
         """
 
-        QUALNAME = "pyrogram.raw.base.account.Takeout"
+        QUALNAME = "ftmgram.raw.base.account.Takeout"
         __union_types__ = Union[raw.types.account.Takeout]
 
         def __init__(self):

@@ -48,7 +48,7 @@ else:
             BusinessAwayMessageScheduleOutsideWorkHours
         """
 
-        QUALNAME = "pyrogram.raw.base.BusinessAwayMessageSchedule"
+        QUALNAME = "ftmgram.raw.base.BusinessAwayMessageSchedule"
         __union_types__ = Union[raw.types.BusinessAwayMessageScheduleAlways, raw.types.BusinessAwayMessageScheduleCustom, raw.types.BusinessAwayMessageScheduleOutsideWorkHours]
 
         def __init__(self):

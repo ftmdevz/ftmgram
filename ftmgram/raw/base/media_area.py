@@ -54,7 +54,7 @@ else:
             MediaAreaWeather
         """
 
-        QUALNAME = "pyrogram.raw.base.MediaArea"
+        QUALNAME = "ftmgram.raw.base.MediaArea"
         __union_types__ = Union[raw.types.InputMediaAreaChannelPost, raw.types.InputMediaAreaVenue, raw.types.MediaAreaChannelPost, raw.types.MediaAreaGeoPoint, raw.types.MediaAreaStarGift, raw.types.MediaAreaSuggestedReaction, raw.types.MediaAreaUrl, raw.types.MediaAreaVenue, raw.types.MediaAreaWeather]
 
         def __init__(self):

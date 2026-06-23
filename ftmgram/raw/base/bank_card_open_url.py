@@ -46,7 +46,7 @@ else:
             BankCardOpenUrl
         """
 
-        QUALNAME = "pyrogram.raw.base.BankCardOpenUrl"
+        QUALNAME = "ftmgram.raw.base.BankCardOpenUrl"
         __union_types__ = Union[raw.types.BankCardOpenUrl]
 
         def __init__(self):

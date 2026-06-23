@@ -46,7 +46,7 @@ else:
             FolderPeer
         """
 
-        QUALNAME = "pyrogram.raw.base.FolderPeer"
+        QUALNAME = "ftmgram.raw.base.FolderPeer"
         __union_types__ = Union[raw.types.FolderPeer]
 
         def __init__(self):

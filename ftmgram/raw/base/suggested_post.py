@@ -46,7 +46,7 @@ else:
             SuggestedPost
         """
 
-        QUALNAME = "pyrogram.raw.base.SuggestedPost"
+        QUALNAME = "ftmgram.raw.base.SuggestedPost"
         __union_types__ = Union[raw.types.SuggestedPost]
 
         def __init__(self):

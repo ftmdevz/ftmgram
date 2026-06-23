@@ -57,7 +57,7 @@ else:
             messages.GetDhConfig
         """
 
-        QUALNAME = "pyrogram.raw.base.messages.DhConfig"
+        QUALNAME = "ftmgram.raw.base.messages.DhConfig"
         __union_types__ = Union[raw.types.messages.DhConfig, raw.types.messages.DhConfigNotModified]
 
         def __init__(self):

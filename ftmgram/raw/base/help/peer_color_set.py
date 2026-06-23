@@ -47,7 +47,7 @@ else:
             help.PeerColorSet
         """
 
-        QUALNAME = "pyrogram.raw.base.help.PeerColorSet"
+        QUALNAME = "ftmgram.raw.base.help.PeerColorSet"
         __union_types__ = Union[raw.types.help.PeerColorProfileSet, raw.types.help.PeerColorSet]
 
         def __init__(self):

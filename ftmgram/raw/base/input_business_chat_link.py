@@ -46,7 +46,7 @@ else:
             InputBusinessChatLink
         """
 
-        QUALNAME = "pyrogram.raw.base.InputBusinessChatLink"
+        QUALNAME = "ftmgram.raw.base.InputBusinessChatLink"
         __union_types__ = Union[raw.types.InputBusinessChatLink]
 
         def __init__(self):

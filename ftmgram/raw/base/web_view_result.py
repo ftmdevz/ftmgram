@@ -59,7 +59,7 @@ else:
             messages.RequestMainWebView
         """
 
-        QUALNAME = "pyrogram.raw.base.WebViewResult"
+        QUALNAME = "ftmgram.raw.base.WebViewResult"
         __union_types__ = Union[raw.types.WebViewResultUrl]
 
         def __init__(self):

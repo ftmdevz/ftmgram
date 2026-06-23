@@ -56,7 +56,7 @@ else:
             messages.GetSearchCounters
         """
 
-        QUALNAME = "pyrogram.raw.base.messages.SearchCounter"
+        QUALNAME = "ftmgram.raw.base.messages.SearchCounter"
         __union_types__ = Union[raw.types.messages.SearchCounter]
 
         def __init__(self):

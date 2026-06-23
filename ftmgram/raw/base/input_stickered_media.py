@@ -47,7 +47,7 @@ else:
             InputStickeredMediaPhoto
         """
 
-        QUALNAME = "pyrogram.raw.base.InputStickeredMedia"
+        QUALNAME = "ftmgram.raw.base.InputStickeredMedia"
         __union_types__ = Union[raw.types.InputStickeredMediaDocument, raw.types.InputStickeredMediaPhoto]
 
         def __init__(self):

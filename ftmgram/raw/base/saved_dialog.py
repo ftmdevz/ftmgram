@@ -47,7 +47,7 @@ else:
             SavedDialog
         """
 
-        QUALNAME = "pyrogram.raw.base.SavedDialog"
+        QUALNAME = "ftmgram.raw.base.SavedDialog"
         __union_types__ = Union[raw.types.MonoForumDialog, raw.types.SavedDialog]
 
         def __init__(self):

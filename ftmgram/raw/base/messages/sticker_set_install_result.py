@@ -57,7 +57,7 @@ else:
             messages.InstallStickerSet
         """
 
-        QUALNAME = "pyrogram.raw.base.messages.StickerSetInstallResult"
+        QUALNAME = "ftmgram.raw.base.messages.StickerSetInstallResult"
         __union_types__ = Union[raw.types.messages.StickerSetInstallResultArchive, raw.types.messages.StickerSetInstallResultSuccess]
 
         def __init__(self):

@@ -46,7 +46,7 @@ else:
             WebAuthorization
         """
 
-        QUALNAME = "pyrogram.raw.base.WebAuthorization"
+        QUALNAME = "ftmgram.raw.base.WebAuthorization"
         __union_types__ = Union[raw.types.WebAuthorization]
 
         def __init__(self):

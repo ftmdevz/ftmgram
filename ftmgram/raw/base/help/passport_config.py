@@ -57,7 +57,7 @@ else:
             help.GetPassportConfig
         """
 
-        QUALNAME = "pyrogram.raw.base.help.PassportConfig"
+        QUALNAME = "ftmgram.raw.base.help.PassportConfig"
         __union_types__ = Union[raw.types.help.PassportConfig, raw.types.help.PassportConfigNotModified]
 
         def __init__(self):

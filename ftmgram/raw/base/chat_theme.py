@@ -47,7 +47,7 @@ else:
             ChatThemeUniqueGift
         """
 
-        QUALNAME = "pyrogram.raw.base.ChatTheme"
+        QUALNAME = "ftmgram.raw.base.ChatTheme"
         __union_types__ = Union[raw.types.ChatTheme, raw.types.ChatThemeUniqueGift]
 
         def __init__(self):

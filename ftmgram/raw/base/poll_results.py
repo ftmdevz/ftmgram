@@ -46,7 +46,7 @@ else:
             PollResults
         """
 
-        QUALNAME = "pyrogram.raw.base.PollResults"
+        QUALNAME = "ftmgram.raw.base.PollResults"
         __union_types__ = Union[raw.types.PollResults]
 
         def __init__(self):

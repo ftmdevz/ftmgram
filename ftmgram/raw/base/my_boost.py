@@ -46,7 +46,7 @@ else:
             MyBoost
         """
 
-        QUALNAME = "pyrogram.raw.base.MyBoost"
+        QUALNAME = "ftmgram.raw.base.MyBoost"
         __union_types__ = Union[raw.types.MyBoost]
 
         def __init__(self):

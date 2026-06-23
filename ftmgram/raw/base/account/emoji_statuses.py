@@ -60,7 +60,7 @@ else:
             account.GetCollectibleEmojiStatuses
         """
 
-        QUALNAME = "pyrogram.raw.base.account.EmojiStatuses"
+        QUALNAME = "ftmgram.raw.base.account.EmojiStatuses"
         __union_types__ = Union[raw.types.account.EmojiStatuses, raw.types.account.EmojiStatusesNotModified]
 
         def __init__(self):

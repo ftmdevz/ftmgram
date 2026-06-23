@@ -47,7 +47,7 @@ else:
             BotInlineResult
         """
 
-        QUALNAME = "pyrogram.raw.base.BotInlineResult"
+        QUALNAME = "ftmgram.raw.base.BotInlineResult"
         __union_types__ = Union[raw.types.BotInlineMediaResult, raw.types.BotInlineResult]
 
         def __init__(self):

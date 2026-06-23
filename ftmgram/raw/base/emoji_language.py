@@ -56,7 +56,7 @@ else:
             messages.GetEmojiKeywordsLanguages
         """
 
-        QUALNAME = "pyrogram.raw.base.EmojiLanguage"
+        QUALNAME = "ftmgram.raw.base.EmojiLanguage"
         __union_types__ = Union[raw.types.EmojiLanguage]
 
         def __init__(self):

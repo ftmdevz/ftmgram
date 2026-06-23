@@ -49,7 +49,7 @@ else:
             InputMessageReplyTo
         """
 
-        QUALNAME = "pyrogram.raw.base.InputMessage"
+        QUALNAME = "ftmgram.raw.base.InputMessage"
         __union_types__ = Union[raw.types.InputMessageCallbackQuery, raw.types.InputMessageID, raw.types.InputMessagePinned, raw.types.InputMessageReplyTo]
 
         def __init__(self):

@@ -47,7 +47,7 @@ else:
             SecurePlainPhone
         """
 
-        QUALNAME = "pyrogram.raw.base.SecurePlainData"
+        QUALNAME = "ftmgram.raw.base.SecurePlainData"
         __union_types__ = Union[raw.types.SecurePlainEmail, raw.types.SecurePlainPhone]
 
         def __init__(self):

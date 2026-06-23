@@ -46,7 +46,7 @@ else:
             AvailableReaction
         """
 
-        QUALNAME = "pyrogram.raw.base.AvailableReaction"
+        QUALNAME = "ftmgram.raw.base.AvailableReaction"
         __union_types__ = Union[raw.types.AvailableReaction]
 
         def __init__(self):

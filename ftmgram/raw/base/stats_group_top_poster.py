@@ -46,7 +46,7 @@ else:
             StatsGroupTopPoster
         """
 
-        QUALNAME = "pyrogram.raw.base.StatsGroupTopPoster"
+        QUALNAME = "ftmgram.raw.base.StatsGroupTopPoster"
         __union_types__ = Union[raw.types.StatsGroupTopPoster]
 
         def __init__(self):

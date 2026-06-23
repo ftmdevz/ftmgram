@@ -47,7 +47,7 @@ else:
             InputDialogPeerFolder
         """
 
-        QUALNAME = "pyrogram.raw.base.InputDialogPeer"
+        QUALNAME = "ftmgram.raw.base.InputDialogPeer"
         __union_types__ = Union[raw.types.InputDialogPeer, raw.types.InputDialogPeerFolder]
 
         def __init__(self):

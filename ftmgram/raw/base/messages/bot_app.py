@@ -56,7 +56,7 @@ else:
             messages.GetBotApp
         """
 
-        QUALNAME = "pyrogram.raw.base.messages.BotApp"
+        QUALNAME = "ftmgram.raw.base.messages.BotApp"
         __union_types__ = Union[raw.types.messages.BotApp]
 
         def __init__(self):

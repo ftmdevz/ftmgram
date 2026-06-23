@@ -56,7 +56,7 @@ else:
             messages.SummarizeText
         """
 
-        QUALNAME = "pyrogram.raw.base.TextWithEntities"
+        QUALNAME = "ftmgram.raw.base.TextWithEntities"
         __union_types__ = Union[raw.types.TextWithEntities]
 
         def __init__(self):

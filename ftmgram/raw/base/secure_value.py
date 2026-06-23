@@ -58,7 +58,7 @@ else:
             account.SaveSecureValue
         """
 
-        QUALNAME = "pyrogram.raw.base.SecureValue"
+        QUALNAME = "ftmgram.raw.base.SecureValue"
         __union_types__ = Union[raw.types.SecureValue]
 
         def __init__(self):

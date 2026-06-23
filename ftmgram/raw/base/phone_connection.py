@@ -47,7 +47,7 @@ else:
             PhoneConnectionWebrtc
         """
 
-        QUALNAME = "pyrogram.raw.base.PhoneConnection"
+        QUALNAME = "ftmgram.raw.base.PhoneConnection"
         __union_types__ = Union[raw.types.PhoneConnection, raw.types.PhoneConnectionWebrtc]
 
         def __init__(self):

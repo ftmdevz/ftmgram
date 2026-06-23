@@ -46,7 +46,7 @@ else:
             WebDomainException
         """
 
-        QUALNAME = "pyrogram.raw.base.WebDomainException"
+        QUALNAME = "ftmgram.raw.base.WebDomainException"
         __union_types__ = Union[raw.types.WebDomainException]
 
         def __init__(self):

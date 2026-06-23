@@ -46,7 +46,7 @@ else:
             Game
         """
 
-        QUALNAME = "pyrogram.raw.base.Game"
+        QUALNAME = "ftmgram.raw.base.Game"
         __union_types__ = Union[raw.types.Game]
 
         def __init__(self):

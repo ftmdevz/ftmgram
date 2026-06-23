@@ -76,7 +76,7 @@ else:
             channels.SearchPosts
         """
 
-        QUALNAME = "pyrogram.raw.base.messages.Messages"
+        QUALNAME = "ftmgram.raw.base.messages.Messages"
         __union_types__ = Union[raw.types.messages.ChannelMessages, raw.types.messages.Messages, raw.types.messages.MessagesNotModified, raw.types.messages.MessagesSlice]
 
         def __init__(self):

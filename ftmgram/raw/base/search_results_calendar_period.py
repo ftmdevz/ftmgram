@@ -46,7 +46,7 @@ else:
             SearchResultsCalendarPeriod
         """
 
-        QUALNAME = "pyrogram.raw.base.SearchResultsCalendarPeriod"
+        QUALNAME = "ftmgram.raw.base.SearchResultsCalendarPeriod"
         __union_types__ = Union[raw.types.SearchResultsCalendarPeriod]
 
         def __init__(self):

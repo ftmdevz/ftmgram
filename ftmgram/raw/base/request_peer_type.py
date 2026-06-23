@@ -49,7 +49,7 @@ else:
             RequestPeerTypeUser
         """
 
-        QUALNAME = "pyrogram.raw.base.RequestPeerType"
+        QUALNAME = "ftmgram.raw.base.RequestPeerType"
         __union_types__ = Union[raw.types.RequestPeerTypeBroadcast, raw.types.RequestPeerTypeChat, raw.types.RequestPeerTypeCreateBot, raw.types.RequestPeerTypeUser]
 
         def __init__(self):

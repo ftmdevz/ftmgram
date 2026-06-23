@@ -56,7 +56,7 @@ else:
             channels.GetParticipant
         """
 
-        QUALNAME = "pyrogram.raw.base.channels.ChannelParticipant"
+        QUALNAME = "ftmgram.raw.base.channels.ChannelParticipant"
         __union_types__ = Union[raw.types.channels.ChannelParticipant]
 
         def __init__(self):

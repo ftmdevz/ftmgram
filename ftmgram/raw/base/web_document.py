@@ -47,7 +47,7 @@ else:
             WebDocumentNoProxy
         """
 
-        QUALNAME = "pyrogram.raw.base.WebDocument"
+        QUALNAME = "ftmgram.raw.base.WebDocument"
         __union_types__ = Union[raw.types.WebDocument, raw.types.WebDocumentNoProxy]
 
         def __init__(self):

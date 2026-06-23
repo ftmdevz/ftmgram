@@ -46,7 +46,7 @@ else:
             MissingInvitee
         """
 
-        QUALNAME = "pyrogram.raw.base.MissingInvitee"
+        QUALNAME = "ftmgram.raw.base.MissingInvitee"
         __union_types__ = Union[raw.types.MissingInvitee]
 
         def __init__(self):

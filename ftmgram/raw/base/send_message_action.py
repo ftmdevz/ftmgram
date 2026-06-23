@@ -66,7 +66,7 @@ else:
             SpeakingInGroupCallAction
         """
 
-        QUALNAME = "pyrogram.raw.base.SendMessageAction"
+        QUALNAME = "ftmgram.raw.base.SendMessageAction"
         __union_types__ = Union[raw.types.InputSendMessageRichMessageDraftAction, raw.types.SendMessageCancelAction, raw.types.SendMessageChooseContactAction, raw.types.SendMessageChooseStickerAction, raw.types.SendMessageEmojiInteraction, raw.types.SendMessageEmojiInteractionSeen, raw.types.SendMessageGamePlayAction, raw.types.SendMessageGeoLocationAction, raw.types.SendMessageHistoryImportAction, raw.types.SendMessageRecordAudioAction, raw.types.SendMessageRecordRoundAction, raw.types.SendMessageRecordVideoAction, raw.types.SendMessageRichMessageDraftAction, raw.types.SendMessageTextDraftAction, raw.types.SendMessageTypingAction, raw.types.SendMessageUploadAudioAction, raw.types.SendMessageUploadDocumentAction, raw.types.SendMessageUploadPhotoAction, raw.types.SendMessageUploadRoundAction, raw.types.SendMessageUploadVideoAction, raw.types.SpeakingInGroupCallAction]
 
         def __init__(self):

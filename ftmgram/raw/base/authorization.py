@@ -56,7 +56,7 @@ else:
             auth.AcceptLoginToken
         """
 
-        QUALNAME = "pyrogram.raw.base.Authorization"
+        QUALNAME = "ftmgram.raw.base.Authorization"
         __union_types__ = Union[raw.types.Authorization]
 
         def __init__(self):

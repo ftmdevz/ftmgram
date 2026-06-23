@@ -57,7 +57,7 @@ else:
             messages.GetEmojiGameInfo
         """
 
-        QUALNAME = "pyrogram.raw.base.messages.EmojiGameInfo"
+        QUALNAME = "ftmgram.raw.base.messages.EmojiGameInfo"
         __union_types__ = Union[raw.types.messages.EmojiGameDiceInfo, raw.types.messages.EmojiGameUnavailable]
 
         def __init__(self):

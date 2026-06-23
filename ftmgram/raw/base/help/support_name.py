@@ -56,7 +56,7 @@ else:
             help.GetSupportName
         """
 
-        QUALNAME = "pyrogram.raw.base.help.SupportName"
+        QUALNAME = "ftmgram.raw.base.help.SupportName"
         __union_types__ = Union[raw.types.help.SupportName]
 
         def __init__(self):

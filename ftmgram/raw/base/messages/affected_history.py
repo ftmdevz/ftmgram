@@ -63,7 +63,7 @@ else:
             channels.DeleteParticipantHistory
         """
 
-        QUALNAME = "pyrogram.raw.base.messages.AffectedHistory"
+        QUALNAME = "ftmgram.raw.base.messages.AffectedHistory"
         __union_types__ = Union[raw.types.messages.AffectedHistory]
 
         def __init__(self):

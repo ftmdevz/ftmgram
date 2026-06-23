@@ -56,7 +56,7 @@ else:
             payments.GetPremiumGiftCodeOptions
         """
 
-        QUALNAME = "pyrogram.raw.base.PremiumGiftCodeOption"
+        QUALNAME = "ftmgram.raw.base.PremiumGiftCodeOption"
         __union_types__ = Union[raw.types.PremiumGiftCodeOption]
 
         def __init__(self):

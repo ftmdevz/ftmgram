@@ -47,7 +47,7 @@ else:
             PostInteractionCountersStory
         """
 
-        QUALNAME = "pyrogram.raw.base.PostInteractionCounters"
+        QUALNAME = "ftmgram.raw.base.PostInteractionCounters"
         __union_types__ = Union[raw.types.PostInteractionCountersMessage, raw.types.PostInteractionCountersStory]
 
         def __init__(self):

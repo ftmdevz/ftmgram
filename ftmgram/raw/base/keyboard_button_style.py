@@ -46,7 +46,7 @@ else:
             KeyboardButtonStyle
         """
 
-        QUALNAME = "pyrogram.raw.base.KeyboardButtonStyle"
+        QUALNAME = "ftmgram.raw.base.KeyboardButtonStyle"
         __union_types__ = Union[raw.types.KeyboardButtonStyle]
 
         def __init__(self):

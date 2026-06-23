@@ -46,7 +46,7 @@ else:
             InputMessageReadMetric
         """
 
-        QUALNAME = "pyrogram.raw.base.InputMessageReadMetric"
+        QUALNAME = "ftmgram.raw.base.InputMessageReadMetric"
         __union_types__ = Union[raw.types.InputMessageReadMetric]
 
         def __init__(self):

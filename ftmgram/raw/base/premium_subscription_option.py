@@ -46,7 +46,7 @@ else:
             PremiumSubscriptionOption
         """
 
-        QUALNAME = "pyrogram.raw.base.PremiumSubscriptionOption"
+        QUALNAME = "ftmgram.raw.base.PremiumSubscriptionOption"
         __union_types__ = Union[raw.types.PremiumSubscriptionOption]
 
         def __init__(self):

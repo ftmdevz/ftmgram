@@ -46,7 +46,7 @@ else:
             StoriesStealthMode
         """
 
-        QUALNAME = "pyrogram.raw.base.StoriesStealthMode"
+        QUALNAME = "ftmgram.raw.base.StoriesStealthMode"
         __union_types__ = Union[raw.types.StoriesStealthMode]
 
         def __init__(self):

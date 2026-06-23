@@ -58,7 +58,7 @@ else:
             phone.GetCallConfig
         """
 
-        QUALNAME = "pyrogram.raw.base.DataJSON"
+        QUALNAME = "ftmgram.raw.base.DataJSON"
         __union_types__ = Union[raw.types.DataJSON]
 
         def __init__(self):

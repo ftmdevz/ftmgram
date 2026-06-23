@@ -58,7 +58,7 @@ else:
             channels.InviteToChannel
         """
 
-        QUALNAME = "pyrogram.raw.base.messages.InvitedUsers"
+        QUALNAME = "ftmgram.raw.base.messages.InvitedUsers"
         __union_types__ = Union[raw.types.messages.InvitedUsers]
 
         def __init__(self):

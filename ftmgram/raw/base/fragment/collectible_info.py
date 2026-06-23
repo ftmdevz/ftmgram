@@ -56,7 +56,7 @@ else:
             fragment.GetCollectibleInfo
         """
 
-        QUALNAME = "pyrogram.raw.base.fragment.CollectibleInfo"
+        QUALNAME = "ftmgram.raw.base.fragment.CollectibleInfo"
         __union_types__ = Union[raw.types.fragment.CollectibleInfo]
 
         def __init__(self):

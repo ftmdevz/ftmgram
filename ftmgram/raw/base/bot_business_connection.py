@@ -46,7 +46,7 @@ else:
             BotBusinessConnection
         """
 
-        QUALNAME = "pyrogram.raw.base.BotBusinessConnection"
+        QUALNAME = "ftmgram.raw.base.BotBusinessConnection"
         __union_types__ = Union[raw.types.BotBusinessConnection]
 
         def __init__(self):

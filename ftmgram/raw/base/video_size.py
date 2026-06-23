@@ -48,7 +48,7 @@ else:
             VideoSizeStickerMarkup
         """
 
-        QUALNAME = "pyrogram.raw.base.VideoSize"
+        QUALNAME = "ftmgram.raw.base.VideoSize"
         __union_types__ = Union[raw.types.VideoSize, raw.types.VideoSizeEmojiMarkup, raw.types.VideoSizeStickerMarkup]
 
         def __init__(self):

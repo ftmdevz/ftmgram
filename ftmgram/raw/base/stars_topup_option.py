@@ -56,7 +56,7 @@ else:
             payments.GetStarsTopupOptions
         """
 
-        QUALNAME = "pyrogram.raw.base.StarsTopupOption"
+        QUALNAME = "ftmgram.raw.base.StarsTopupOption"
         __union_types__ = Union[raw.types.StarsTopupOption]
 
         def __init__(self):

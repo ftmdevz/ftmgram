@@ -57,7 +57,7 @@ else:
             help.GetCountriesList
         """
 
-        QUALNAME = "pyrogram.raw.base.help.CountriesList"
+        QUALNAME = "ftmgram.raw.base.help.CountriesList"
         __union_types__ = Union[raw.types.help.CountriesList, raw.types.help.CountriesListNotModified]
 
         def __init__(self):

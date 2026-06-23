@@ -58,7 +58,7 @@ else:
             chatlists.GetLeaveChatlistSuggestions
         """
 
-        QUALNAME = "pyrogram.raw.base.Peer"
+        QUALNAME = "ftmgram.raw.base.Peer"
         __union_types__ = Union[raw.types.PeerChannel, raw.types.PeerChat, raw.types.PeerUser]
 
         def __init__(self):

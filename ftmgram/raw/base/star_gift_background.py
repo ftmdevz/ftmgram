@@ -46,7 +46,7 @@ else:
             StarGiftBackground
         """
 
-        QUALNAME = "pyrogram.raw.base.StarGiftBackground"
+        QUALNAME = "ftmgram.raw.base.StarGiftBackground"
         __union_types__ = Union[raw.types.StarGiftBackground]
 
         def __init__(self):

@@ -59,7 +59,7 @@ else:
             stories.Report
         """
 
-        QUALNAME = "pyrogram.raw.base.ReportResult"
+        QUALNAME = "ftmgram.raw.base.ReportResult"
         __union_types__ = Union[raw.types.ReportResultAddComment, raw.types.ReportResultChooseOption, raw.types.ReportResultReported]
 
         def __init__(self):

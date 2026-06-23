@@ -58,7 +58,7 @@ else:
             upload.GetFileHashes
         """
 
-        QUALNAME = "pyrogram.raw.base.FileHash"
+        QUALNAME = "ftmgram.raw.base.FileHash"
         __union_types__ = Union[raw.types.FileHash]
 
         def __init__(self):

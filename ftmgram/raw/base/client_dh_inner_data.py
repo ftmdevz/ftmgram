@@ -46,7 +46,7 @@ else:
             ClientDHInnerData
         """
 
-        QUALNAME = "pyrogram.raw.base.ClientDHInnerData"
+        QUALNAME = "ftmgram.raw.base.ClientDHInnerData"
         __union_types__ = Union[raw.types.ClientDHInnerData]
 
         def __init__(self):

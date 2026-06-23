@@ -48,7 +48,7 @@ else:
             EmojiGroupPremium
         """
 
-        QUALNAME = "pyrogram.raw.base.EmojiGroup"
+        QUALNAME = "ftmgram.raw.base.EmojiGroup"
         __union_types__ = Union[raw.types.EmojiGroup, raw.types.EmojiGroupGreeting, raw.types.EmojiGroupPremium]
 
         def __init__(self):

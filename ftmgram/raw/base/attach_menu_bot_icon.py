@@ -46,7 +46,7 @@ else:
             AttachMenuBotIcon
         """
 
-        QUALNAME = "pyrogram.raw.base.AttachMenuBotIcon"
+        QUALNAME = "ftmgram.raw.base.AttachMenuBotIcon"
         __union_types__ = Union[raw.types.AttachMenuBotIcon]
 
         def __init__(self):

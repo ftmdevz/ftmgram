@@ -56,7 +56,7 @@ else:
             account.GetPassword
         """
 
-        QUALNAME = "pyrogram.raw.base.account.Password"
+        QUALNAME = "ftmgram.raw.base.account.Password"
         __union_types__ = Union[raw.types.account.Password]
 
         def __init__(self):

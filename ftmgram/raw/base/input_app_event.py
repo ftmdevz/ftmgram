@@ -46,7 +46,7 @@ else:
             InputAppEvent
         """
 
-        QUALNAME = "pyrogram.raw.base.InputAppEvent"
+        QUALNAME = "ftmgram.raw.base.InputAppEvent"
         __union_types__ = Union[raw.types.InputAppEvent]
 
         def __init__(self):

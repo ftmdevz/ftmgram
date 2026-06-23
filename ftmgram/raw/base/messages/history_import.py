@@ -56,7 +56,7 @@ else:
             messages.InitHistoryImport
         """
 
-        QUALNAME = "pyrogram.raw.base.messages.HistoryImport"
+        QUALNAME = "ftmgram.raw.base.messages.HistoryImport"
         __union_types__ = Union[raw.types.messages.HistoryImport]
 
         def __init__(self):

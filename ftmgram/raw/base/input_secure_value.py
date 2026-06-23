@@ -46,7 +46,7 @@ else:
             InputSecureValue
         """
 
-        QUALNAME = "pyrogram.raw.base.InputSecureValue"
+        QUALNAME = "ftmgram.raw.base.InputSecureValue"
         __union_types__ = Union[raw.types.InputSecureValue]
 
         def __init__(self):

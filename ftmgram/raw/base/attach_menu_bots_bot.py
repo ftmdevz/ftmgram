@@ -56,7 +56,7 @@ else:
             messages.GetAttachMenuBot
         """
 
-        QUALNAME = "pyrogram.raw.base.AttachMenuBotsBot"
+        QUALNAME = "ftmgram.raw.base.AttachMenuBotsBot"
         __union_types__ = Union[raw.types.AttachMenuBotsBot]
 
         def __init__(self):

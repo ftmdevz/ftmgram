@@ -46,7 +46,7 @@ else:
             KeyboardButtonRow
         """
 
-        QUALNAME = "pyrogram.raw.base.KeyboardButtonRow"
+        QUALNAME = "ftmgram.raw.base.KeyboardButtonRow"
         __union_types__ = Union[raw.types.KeyboardButtonRow]
 
         def __init__(self):

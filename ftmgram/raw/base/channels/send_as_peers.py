@@ -56,7 +56,7 @@ else:
             channels.GetSendAs
         """
 
-        QUALNAME = "pyrogram.raw.base.channels.SendAsPeers"
+        QUALNAME = "ftmgram.raw.base.channels.SendAsPeers"
         __union_types__ = Union[raw.types.channels.SendAsPeers]
 
         def __init__(self):

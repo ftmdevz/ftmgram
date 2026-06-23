@@ -52,7 +52,7 @@ else:
             WebPageAttributeUniqueStarGift
         """
 
-        QUALNAME = "pyrogram.raw.base.WebPageAttribute"
+        QUALNAME = "ftmgram.raw.base.WebPageAttribute"
         __union_types__ = Union[raw.types.WebPageAttributeAiComposeTone, raw.types.WebPageAttributeStarGiftAuction, raw.types.WebPageAttributeStarGiftCollection, raw.types.WebPageAttributeStickerSet, raw.types.WebPageAttributeStory, raw.types.WebPageAttributeTheme, raw.types.WebPageAttributeUniqueStarGift]
 
         def __init__(self):

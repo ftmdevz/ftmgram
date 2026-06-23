@@ -46,7 +46,7 @@ else:
             messages.EmojiGameOutcome
         """
 
-        QUALNAME = "pyrogram.raw.base.messages.EmojiGameOutcome"
+        QUALNAME = "ftmgram.raw.base.messages.EmojiGameOutcome"
         __union_types__ = Union[raw.types.messages.EmojiGameOutcome]
 
         def __init__(self):

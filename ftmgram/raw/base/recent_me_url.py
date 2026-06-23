@@ -50,7 +50,7 @@ else:
             RecentMeUrlUser
         """
 
-        QUALNAME = "pyrogram.raw.base.RecentMeUrl"
+        QUALNAME = "ftmgram.raw.base.RecentMeUrl"
         __union_types__ = Union[raw.types.RecentMeUrlChat, raw.types.RecentMeUrlChatInvite, raw.types.RecentMeUrlStickerSet, raw.types.RecentMeUrlUnknown, raw.types.RecentMeUrlUser]
 
         def __init__(self):

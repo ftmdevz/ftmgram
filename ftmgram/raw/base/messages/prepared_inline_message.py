@@ -56,7 +56,7 @@ else:
             messages.GetPreparedInlineMessage
         """
 
-        QUALNAME = "pyrogram.raw.base.messages.PreparedInlineMessage"
+        QUALNAME = "ftmgram.raw.base.messages.PreparedInlineMessage"
         __union_types__ = Union[raw.types.messages.PreparedInlineMessage]
 
         def __init__(self):

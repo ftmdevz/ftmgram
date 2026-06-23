@@ -56,7 +56,7 @@ else:
             phone.GetGroupCallJoinAs
         """
 
-        QUALNAME = "pyrogram.raw.base.phone.JoinAsPeers"
+        QUALNAME = "ftmgram.raw.base.phone.JoinAsPeers"
         __union_types__ = Union[raw.types.phone.JoinAsPeers]
 
         def __init__(self):

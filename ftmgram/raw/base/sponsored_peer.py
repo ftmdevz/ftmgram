@@ -46,7 +46,7 @@ else:
             SponsoredPeer
         """
 
-        QUALNAME = "pyrogram.raw.base.SponsoredPeer"
+        QUALNAME = "ftmgram.raw.base.SponsoredPeer"
         __union_types__ = Union[raw.types.SponsoredPeer]
 
         def __init__(self):

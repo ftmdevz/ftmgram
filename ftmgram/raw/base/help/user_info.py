@@ -58,7 +58,7 @@ else:
             help.EditUserInfo
         """
 
-        QUALNAME = "pyrogram.raw.base.help.UserInfo"
+        QUALNAME = "ftmgram.raw.base.help.UserInfo"
         __union_types__ = Union[raw.types.help.UserInfo, raw.types.help.UserInfoEmpty]
 
         def __init__(self):

@@ -57,7 +57,7 @@ else:
             ReqDHParams
         """
 
-        QUALNAME = "pyrogram.raw.base.ServerDHParams"
+        QUALNAME = "ftmgram.raw.base.ServerDHParams"
         __union_types__ = Union[raw.types.ServerDHParamsFail, raw.types.ServerDHParamsOk]
 
         def __init__(self):

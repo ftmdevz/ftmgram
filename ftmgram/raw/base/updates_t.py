@@ -191,7 +191,7 @@ else:
             stories.StartLive
         """
 
-        QUALNAME = "pyrogram.raw.base.Updates"
+        QUALNAME = "ftmgram.raw.base.Updates"
         __union_types__ = Union[raw.types.UpdateShort, raw.types.UpdateShortChatMessage, raw.types.UpdateShortMessage, raw.types.UpdateShortSentMessage, raw.types.Updates, raw.types.UpdatesCombined, raw.types.UpdatesTooLong]
 
         def __init__(self):

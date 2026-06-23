@@ -46,7 +46,7 @@ else:
             GroupCallStreamChannel
         """
 
-        QUALNAME = "pyrogram.raw.base.GroupCallStreamChannel"
+        QUALNAME = "ftmgram.raw.base.GroupCallStreamChannel"
         __union_types__ = Union[raw.types.GroupCallStreamChannel]
 
         def __init__(self):

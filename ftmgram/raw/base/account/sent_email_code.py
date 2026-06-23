@@ -56,7 +56,7 @@ else:
             account.SendVerifyEmailCode
         """
 
-        QUALNAME = "pyrogram.raw.base.account.SentEmailCode"
+        QUALNAME = "ftmgram.raw.base.account.SentEmailCode"
         __union_types__ = Union[raw.types.account.SentEmailCode]
 
         def __init__(self):

@@ -57,7 +57,7 @@ else:
             contacts.GetSponsoredPeers
         """
 
-        QUALNAME = "pyrogram.raw.base.contacts.SponsoredPeers"
+        QUALNAME = "ftmgram.raw.base.contacts.SponsoredPeers"
         __union_types__ = Union[raw.types.contacts.SponsoredPeers, raw.types.contacts.SponsoredPeersEmpty]
 
         def __init__(self):

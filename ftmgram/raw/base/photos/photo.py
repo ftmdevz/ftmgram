@@ -58,7 +58,7 @@ else:
             photos.UploadContactProfilePhoto
         """
 
-        QUALNAME = "pyrogram.raw.base.photos.Photo"
+        QUALNAME = "ftmgram.raw.base.photos.Photo"
         __union_types__ = Union[raw.types.photos.Photo]
 
         def __init__(self):

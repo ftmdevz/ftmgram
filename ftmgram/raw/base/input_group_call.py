@@ -48,7 +48,7 @@ else:
             InputGroupCallSlug
         """
 
-        QUALNAME = "pyrogram.raw.base.InputGroupCall"
+        QUALNAME = "ftmgram.raw.base.InputGroupCall"
         __union_types__ = Union[raw.types.InputGroupCall, raw.types.InputGroupCallInviteMessage, raw.types.InputGroupCallSlug]
 
         def __init__(self):

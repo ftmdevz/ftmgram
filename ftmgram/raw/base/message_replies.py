@@ -46,7 +46,7 @@ else:
             MessageReplies
         """
 
-        QUALNAME = "pyrogram.raw.base.MessageReplies"
+        QUALNAME = "ftmgram.raw.base.MessageReplies"
         __union_types__ = Union[raw.types.MessageReplies]
 
         def __init__(self):

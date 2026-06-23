@@ -57,7 +57,7 @@ else:
             PrivacyValueDisallowUsers
         """
 
-        QUALNAME = "pyrogram.raw.base.PrivacyRule"
+        QUALNAME = "ftmgram.raw.base.PrivacyRule"
         __union_types__ = Union[raw.types.PrivacyValueAllowAll, raw.types.PrivacyValueAllowBots, raw.types.PrivacyValueAllowChatParticipants, raw.types.PrivacyValueAllowCloseFriends, raw.types.PrivacyValueAllowContacts, raw.types.PrivacyValueAllowPremium, raw.types.PrivacyValueAllowUsers, raw.types.PrivacyValueDisallowAll, raw.types.PrivacyValueDisallowBots, raw.types.PrivacyValueDisallowChatParticipants, raw.types.PrivacyValueDisallowContacts, raw.types.PrivacyValueDisallowUsers]
 
         def __init__(self):

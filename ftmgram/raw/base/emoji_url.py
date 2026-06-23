@@ -56,7 +56,7 @@ else:
             messages.GetEmojiURL
         """
 
-        QUALNAME = "pyrogram.raw.base.EmojiURL"
+        QUALNAME = "ftmgram.raw.base.EmojiURL"
         __union_types__ = Union[raw.types.EmojiURL]
 
         def __init__(self):

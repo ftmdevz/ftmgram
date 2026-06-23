@@ -56,7 +56,7 @@ else:
             messages.GetPeerSettings
         """
 
-        QUALNAME = "pyrogram.raw.base.messages.PeerSettings"
+        QUALNAME = "ftmgram.raw.base.messages.PeerSettings"
         __union_types__ = Union[raw.types.messages.PeerSettings]
 
         def __init__(self):

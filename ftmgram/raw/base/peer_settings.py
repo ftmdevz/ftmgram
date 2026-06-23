@@ -46,7 +46,7 @@ else:
             PeerSettings
         """
 
-        QUALNAME = "pyrogram.raw.base.PeerSettings"
+        QUALNAME = "ftmgram.raw.base.PeerSettings"
         __union_types__ = Union[raw.types.PeerSettings]
 
         def __init__(self):

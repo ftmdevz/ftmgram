@@ -47,7 +47,7 @@ else:
             EmojiKeywordDeleted
         """
 
-        QUALNAME = "pyrogram.raw.base.EmojiKeyword"
+        QUALNAME = "ftmgram.raw.base.EmojiKeyword"
         __union_types__ = Union[raw.types.EmojiKeyword, raw.types.EmojiKeywordDeleted]
 
         def __init__(self):

@@ -46,7 +46,7 @@ else:
             StoryFwdHeader
         """
 
-        QUALNAME = "pyrogram.raw.base.StoryFwdHeader"
+        QUALNAME = "ftmgram.raw.base.StoryFwdHeader"
         __union_types__ = Union[raw.types.StoryFwdHeader]
 
         def __init__(self):

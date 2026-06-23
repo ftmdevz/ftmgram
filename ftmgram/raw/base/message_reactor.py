@@ -46,7 +46,7 @@ else:
             MessageReactor
         """
 
-        QUALNAME = "pyrogram.raw.base.MessageReactor"
+        QUALNAME = "ftmgram.raw.base.MessageReactor"
         __union_types__ = Union[raw.types.MessageReactor]
 
         def __init__(self):

@@ -56,7 +56,7 @@ else:
             bots.GetAccessSettings
         """
 
-        QUALNAME = "pyrogram.raw.base.bots.AccessSettings"
+        QUALNAME = "ftmgram.raw.base.bots.AccessSettings"
         __union_types__ = Union[raw.types.bots.AccessSettings]
 
         def __init__(self):

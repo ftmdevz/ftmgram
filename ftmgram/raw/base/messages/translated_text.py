@@ -56,7 +56,7 @@ else:
             messages.TranslateText
         """
 
-        QUALNAME = "pyrogram.raw.base.messages.TranslatedText"
+        QUALNAME = "ftmgram.raw.base.messages.TranslatedText"
         __union_types__ = Union[raw.types.messages.TranslateResult]
 
         def __init__(self):

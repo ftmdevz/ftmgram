@@ -46,7 +46,7 @@ else:
             InputBusinessAwayMessage
         """
 
-        QUALNAME = "pyrogram.raw.base.InputBusinessAwayMessage"
+        QUALNAME = "ftmgram.raw.base.InputBusinessAwayMessage"
         __union_types__ = Union[raw.types.InputBusinessAwayMessage]
 
         def __init__(self):

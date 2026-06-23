@@ -56,7 +56,7 @@ else:
             messages.GetFactCheck
         """
 
-        QUALNAME = "pyrogram.raw.base.FactCheck"
+        QUALNAME = "ftmgram.raw.base.FactCheck"
         __union_types__ = Union[raw.types.FactCheck]
 
         def __init__(self):

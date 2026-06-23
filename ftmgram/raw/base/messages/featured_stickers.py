@@ -59,7 +59,7 @@ else:
             messages.GetFeaturedEmojiStickers
         """
 
-        QUALNAME = "pyrogram.raw.base.messages.FeaturedStickers"
+        QUALNAME = "ftmgram.raw.base.messages.FeaturedStickers"
         __union_types__ = Union[raw.types.messages.FeaturedStickers, raw.types.messages.FeaturedStickersNotModified]
 
         def __init__(self):

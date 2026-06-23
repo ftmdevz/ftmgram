@@ -46,7 +46,7 @@ else:
             MessagePeerReaction
         """
 
-        QUALNAME = "pyrogram.raw.base.MessagePeerReaction"
+        QUALNAME = "ftmgram.raw.base.MessagePeerReaction"
         __union_types__ = Union[raw.types.MessagePeerReaction]
 
         def __init__(self):

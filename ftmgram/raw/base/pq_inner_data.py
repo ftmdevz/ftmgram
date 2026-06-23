@@ -49,7 +49,7 @@ else:
             PQInnerDataTempDc
         """
 
-        QUALNAME = "pyrogram.raw.base.PQInnerData"
+        QUALNAME = "ftmgram.raw.base.PQInnerData"
         __union_types__ = Union[raw.types.PQInnerData, raw.types.PQInnerDataDc, raw.types.PQInnerDataTemp, raw.types.PQInnerDataTempDc]
 
         def __init__(self):

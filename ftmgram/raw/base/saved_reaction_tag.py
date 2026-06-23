@@ -46,7 +46,7 @@ else:
             SavedReactionTag
         """
 
-        QUALNAME = "pyrogram.raw.base.SavedReactionTag"
+        QUALNAME = "ftmgram.raw.base.SavedReactionTag"
         __union_types__ = Union[raw.types.SavedReactionTag]
 
         def __init__(self):

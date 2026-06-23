@@ -56,7 +56,7 @@ else:
             bots.GetPopularAppBots
         """
 
-        QUALNAME = "pyrogram.raw.base.bots.PopularAppBots"
+        QUALNAME = "ftmgram.raw.base.bots.PopularAppBots"
         __union_types__ = Union[raw.types.bots.PopularAppBots]
 
         def __init__(self):

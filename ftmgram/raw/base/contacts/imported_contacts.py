@@ -56,7 +56,7 @@ else:
             contacts.ImportContacts
         """
 
-        QUALNAME = "pyrogram.raw.base.contacts.ImportedContacts"
+        QUALNAME = "ftmgram.raw.base.contacts.ImportedContacts"
         __union_types__ = Union[raw.types.contacts.ImportedContacts]
 
         def __init__(self):

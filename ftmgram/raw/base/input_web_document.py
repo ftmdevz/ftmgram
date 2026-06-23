@@ -46,7 +46,7 @@ else:
             InputWebDocument
         """
 
-        QUALNAME = "pyrogram.raw.base.InputWebDocument"
+        QUALNAME = "ftmgram.raw.base.InputWebDocument"
         __union_types__ = Union[raw.types.InputWebDocument]
 
         def __init__(self):

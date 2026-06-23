@@ -46,7 +46,7 @@ else:
             InlineBotSwitchPM
         """
 
-        QUALNAME = "pyrogram.raw.base.InlineBotSwitchPM"
+        QUALNAME = "ftmgram.raw.base.InlineBotSwitchPM"
         __union_types__ = Union[raw.types.InlineBotSwitchPM]
 
         def __init__(self):

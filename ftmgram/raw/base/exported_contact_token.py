@@ -56,7 +56,7 @@ else:
             contacts.ExportContactToken
         """
 
-        QUALNAME = "pyrogram.raw.base.ExportedContactToken"
+        QUALNAME = "ftmgram.raw.base.ExportedContactToken"
         __union_types__ = Union[raw.types.ExportedContactToken]
 
         def __init__(self):

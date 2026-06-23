@@ -56,7 +56,7 @@ else:
             messages.GetPollVotes
         """
 
-        QUALNAME = "pyrogram.raw.base.messages.VotesList"
+        QUALNAME = "ftmgram.raw.base.messages.VotesList"
         __union_types__ = Union[raw.types.messages.VotesList]
 
         def __init__(self):

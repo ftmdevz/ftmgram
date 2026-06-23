@@ -58,7 +58,7 @@ else:
             messages.CheckChatInvite
         """
 
-        QUALNAME = "pyrogram.raw.base.ChatInvite"
+        QUALNAME = "ftmgram.raw.base.ChatInvite"
         __union_types__ = Union[raw.types.ChatInvite, raw.types.ChatInviteAlready, raw.types.ChatInvitePeek]
 
         def __init__(self):

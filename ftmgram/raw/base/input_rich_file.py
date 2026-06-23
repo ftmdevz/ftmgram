@@ -47,7 +47,7 @@ else:
             InputRichFilePhoto
         """
 
-        QUALNAME = "pyrogram.raw.base.InputRichFile"
+        QUALNAME = "ftmgram.raw.base.InputRichFile"
         __union_types__ = Union[raw.types.InputRichFileDocument, raw.types.InputRichFilePhoto]
 
         def __init__(self):

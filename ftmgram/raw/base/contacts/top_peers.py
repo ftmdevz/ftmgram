@@ -58,7 +58,7 @@ else:
             contacts.GetTopPeers
         """
 
-        QUALNAME = "pyrogram.raw.base.contacts.TopPeers"
+        QUALNAME = "ftmgram.raw.base.contacts.TopPeers"
         __union_types__ = Union[raw.types.contacts.TopPeers, raw.types.contacts.TopPeersDisabled, raw.types.contacts.TopPeersNotModified]
 
         def __init__(self):

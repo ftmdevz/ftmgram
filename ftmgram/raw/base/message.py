@@ -48,7 +48,7 @@ else:
             MessageService
         """
 
-        QUALNAME = "pyrogram.raw.base.Message"
+        QUALNAME = "ftmgram.raw.base.Message"
         __union_types__ = Union[raw.types.Message, raw.types.MessageEmpty, raw.types.MessageService]
 
         def __init__(self):

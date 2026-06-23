@@ -58,7 +58,7 @@ else:
             phone.ConfirmCall
         """
 
-        QUALNAME = "pyrogram.raw.base.phone.PhoneCall"
+        QUALNAME = "ftmgram.raw.base.phone.PhoneCall"
         __union_types__ = Union[raw.types.phone.PhoneCall]
 
         def __init__(self):

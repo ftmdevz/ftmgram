@@ -56,7 +56,7 @@ else:
             upload.GetWebFile
         """
 
-        QUALNAME = "pyrogram.raw.base.upload.WebFile"
+        QUALNAME = "ftmgram.raw.base.upload.WebFile"
         __union_types__ = Union[raw.types.upload.WebFile]
 
         def __init__(self):

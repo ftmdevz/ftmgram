@@ -56,7 +56,7 @@ else:
             messages.GetInlineBotResults
         """
 
-        QUALNAME = "pyrogram.raw.base.messages.BotResults"
+        QUALNAME = "ftmgram.raw.base.messages.BotResults"
         __union_types__ = Union[raw.types.messages.BotResults]
 
         def __init__(self):

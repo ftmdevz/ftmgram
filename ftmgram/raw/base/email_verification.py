@@ -48,7 +48,7 @@ else:
             EmailVerificationGoogle
         """
 
-        QUALNAME = "pyrogram.raw.base.EmailVerification"
+        QUALNAME = "ftmgram.raw.base.EmailVerification"
         __union_types__ = Union[raw.types.EmailVerificationApple, raw.types.EmailVerificationCode, raw.types.EmailVerificationGoogle]
 
         def __init__(self):

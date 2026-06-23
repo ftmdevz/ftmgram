@@ -48,7 +48,7 @@ else:
             InputChatUploadedPhoto
         """
 
-        QUALNAME = "pyrogram.raw.base.InputChatPhoto"
+        QUALNAME = "ftmgram.raw.base.InputChatPhoto"
         __union_types__ = Union[raw.types.InputChatPhoto, raw.types.InputChatPhotoEmpty, raw.types.InputChatUploadedPhoto]
 
         def __init__(self):

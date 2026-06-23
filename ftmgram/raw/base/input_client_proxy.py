@@ -46,7 +46,7 @@ else:
             InputClientProxy
         """
 
-        QUALNAME = "pyrogram.raw.base.InputClientProxy"
+        QUALNAME = "ftmgram.raw.base.InputClientProxy"
         __union_types__ = Union[raw.types.InputClientProxy]
 
         def __init__(self):

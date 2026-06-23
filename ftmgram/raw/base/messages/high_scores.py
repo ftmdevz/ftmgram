@@ -57,7 +57,7 @@ else:
             messages.GetInlineGameHighScores
         """
 
-        QUALNAME = "pyrogram.raw.base.messages.HighScores"
+        QUALNAME = "ftmgram.raw.base.messages.HighScores"
         __union_types__ = Union[raw.types.messages.HighScores]
 
         def __init__(self):

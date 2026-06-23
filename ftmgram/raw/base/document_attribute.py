@@ -53,7 +53,7 @@ else:
             DocumentAttributeVideo
         """
 
-        QUALNAME = "pyrogram.raw.base.DocumentAttribute"
+        QUALNAME = "ftmgram.raw.base.DocumentAttribute"
         __union_types__ = Union[raw.types.DocumentAttributeAnimated, raw.types.DocumentAttributeAudio, raw.types.DocumentAttributeCustomEmoji, raw.types.DocumentAttributeFilename, raw.types.DocumentAttributeHasStickers, raw.types.DocumentAttributeImageSize, raw.types.DocumentAttributeSticker, raw.types.DocumentAttributeVideo]
 
         def __init__(self):

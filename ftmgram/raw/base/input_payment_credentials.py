@@ -49,7 +49,7 @@ else:
             InputPaymentCredentialsSaved
         """
 
-        QUALNAME = "pyrogram.raw.base.InputPaymentCredentials"
+        QUALNAME = "ftmgram.raw.base.InputPaymentCredentials"
         __union_types__ = Union[raw.types.InputPaymentCredentials, raw.types.InputPaymentCredentialsApplePay, raw.types.InputPaymentCredentialsGooglePay, raw.types.InputPaymentCredentialsSaved]
 
         def __init__(self):

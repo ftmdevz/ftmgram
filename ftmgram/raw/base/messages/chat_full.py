@@ -57,7 +57,7 @@ else:
             channels.GetFullChannel
         """
 
-        QUALNAME = "pyrogram.raw.base.messages.ChatFull"
+        QUALNAME = "ftmgram.raw.base.messages.ChatFull"
         __union_types__ = Union[raw.types.messages.ChatFull]
 
         def __init__(self):

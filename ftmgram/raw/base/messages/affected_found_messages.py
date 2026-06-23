@@ -56,7 +56,7 @@ else:
             messages.DeletePhoneCallHistory
         """
 
-        QUALNAME = "pyrogram.raw.base.messages.AffectedFoundMessages"
+        QUALNAME = "ftmgram.raw.base.messages.AffectedFoundMessages"
         __union_types__ = Union[raw.types.messages.AffectedFoundMessages]
 
         def __init__(self):

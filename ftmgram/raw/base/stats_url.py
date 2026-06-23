@@ -46,7 +46,7 @@ else:
             StatsURL
         """
 
-        QUALNAME = "pyrogram.raw.base.StatsURL"
+        QUALNAME = "ftmgram.raw.base.StatsURL"
         __union_types__ = Union[raw.types.StatsURL]
 
         def __init__(self):

@@ -56,7 +56,7 @@ else:
             messages.ReceivedMessages
         """
 
-        QUALNAME = "pyrogram.raw.base.ReceivedNotifyMessage"
+        QUALNAME = "ftmgram.raw.base.ReceivedNotifyMessage"
         __union_types__ = Union[raw.types.ReceivedNotifyMessage]
 
         def __init__(self):

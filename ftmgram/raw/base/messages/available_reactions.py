@@ -57,7 +57,7 @@ else:
             messages.GetAvailableReactions
         """
 
-        QUALNAME = "pyrogram.raw.base.messages.AvailableReactions"
+        QUALNAME = "ftmgram.raw.base.messages.AvailableReactions"
         __union_types__ = Union[raw.types.messages.AvailableReactions, raw.types.messages.AvailableReactionsNotModified]
 
         def __init__(self):

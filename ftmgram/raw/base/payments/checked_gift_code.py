@@ -56,7 +56,7 @@ else:
             payments.CheckGiftCode
         """
 
-        QUALNAME = "pyrogram.raw.base.payments.CheckedGiftCode"
+        QUALNAME = "ftmgram.raw.base.payments.CheckedGiftCode"
         __union_types__ = Union[raw.types.payments.CheckedGiftCode]
 
         def __init__(self):

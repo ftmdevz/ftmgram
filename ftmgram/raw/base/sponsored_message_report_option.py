@@ -46,7 +46,7 @@ else:
             SponsoredMessageReportOption
         """
 
-        QUALNAME = "pyrogram.raw.base.SponsoredMessageReportOption"
+        QUALNAME = "ftmgram.raw.base.SponsoredMessageReportOption"
         __union_types__ = Union[raw.types.SponsoredMessageReportOption]
 
         def __init__(self):

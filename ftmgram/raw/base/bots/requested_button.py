@@ -56,7 +56,7 @@ else:
             bots.RequestWebViewButton
         """
 
-        QUALNAME = "pyrogram.raw.base.bots.RequestedButton"
+        QUALNAME = "ftmgram.raw.base.bots.RequestedButton"
         __union_types__ = Union[raw.types.bots.RequestedButton]
 
         def __init__(self):

@@ -57,7 +57,7 @@ else:
             messages.GetAvailableEffects
         """
 
-        QUALNAME = "pyrogram.raw.base.messages.AvailableEffects"
+        QUALNAME = "ftmgram.raw.base.messages.AvailableEffects"
         __union_types__ = Union[raw.types.messages.AvailableEffects, raw.types.messages.AvailableEffectsNotModified]
 
         def __init__(self):

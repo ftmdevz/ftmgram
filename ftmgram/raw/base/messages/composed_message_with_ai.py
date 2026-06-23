@@ -56,7 +56,7 @@ else:
             messages.ComposeMessageWithAI
         """
 
-        QUALNAME = "pyrogram.raw.base.messages.ComposedMessageWithAI"
+        QUALNAME = "ftmgram.raw.base.messages.ComposedMessageWithAI"
         __union_types__ = Union[raw.types.messages.ComposedMessageWithAI]
 
         def __init__(self):

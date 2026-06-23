@@ -46,7 +46,7 @@ else:
             MsgsStateReq
         """
 
-        QUALNAME = "pyrogram.raw.base.MsgsStateReq"
+        QUALNAME = "ftmgram.raw.base.MsgsStateReq"
         __union_types__ = Union[raw.types.MsgsStateReq]
 
         def __init__(self):

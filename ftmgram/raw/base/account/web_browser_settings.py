@@ -59,7 +59,7 @@ else:
             account.DeleteWebBrowserSettingsExceptions
         """
 
-        QUALNAME = "pyrogram.raw.base.account.WebBrowserSettings"
+        QUALNAME = "ftmgram.raw.base.account.WebBrowserSettings"
         __union_types__ = Union[raw.types.account.WebBrowserSettings, raw.types.account.WebBrowserSettingsNotModified]
 
         def __init__(self):

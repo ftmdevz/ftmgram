@@ -48,7 +48,7 @@ else:
             InputChannelFromMessage
         """
 
-        QUALNAME = "pyrogram.raw.base.InputChannel"
+        QUALNAME = "ftmgram.raw.base.InputChannel"
         __union_types__ = Union[raw.types.InputChannel, raw.types.InputChannelEmpty, raw.types.InputChannelFromMessage]
 
         def __init__(self):

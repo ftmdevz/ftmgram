@@ -57,7 +57,7 @@ else:
             messages.GetEmojiKeywordsDifference
         """
 
-        QUALNAME = "pyrogram.raw.base.EmojiKeywordsDifference"
+        QUALNAME = "ftmgram.raw.base.EmojiKeywordsDifference"
         __union_types__ = Union[raw.types.EmojiKeywordsDifference]
 
         def __init__(self):

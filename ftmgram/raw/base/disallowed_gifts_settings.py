@@ -46,7 +46,7 @@ else:
             DisallowedGiftsSettings
         """
 
-        QUALNAME = "pyrogram.raw.base.DisallowedGiftsSettings"
+        QUALNAME = "ftmgram.raw.base.DisallowedGiftsSettings"
         __union_types__ = Union[raw.types.DisallowedGiftsSettings]
 
         def __init__(self):

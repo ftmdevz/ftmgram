@@ -46,7 +46,7 @@ else:
             RpcError
         """
 
-        QUALNAME = "pyrogram.raw.base.RpcError"
+        QUALNAME = "ftmgram.raw.base.RpcError"
         __union_types__ = Union[raw.types.RpcError]
 
         def __init__(self):

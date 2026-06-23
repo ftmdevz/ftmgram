@@ -46,7 +46,7 @@ else:
             QuickReply
         """
 
-        QUALNAME = "pyrogram.raw.base.QuickReply"
+        QUALNAME = "ftmgram.raw.base.QuickReply"
         __union_types__ = Union[raw.types.QuickReply]
 
         def __init__(self):

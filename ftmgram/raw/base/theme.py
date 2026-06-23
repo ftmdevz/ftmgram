@@ -58,7 +58,7 @@ else:
             account.GetTheme
         """
 
-        QUALNAME = "pyrogram.raw.base.Theme"
+        QUALNAME = "ftmgram.raw.base.Theme"
         __union_types__ = Union[raw.types.Theme]
 
         def __init__(self):

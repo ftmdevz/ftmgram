@@ -56,7 +56,7 @@ else:
             account.GetAutoSaveSettings
         """
 
-        QUALNAME = "pyrogram.raw.base.account.AutoSaveSettings"
+        QUALNAME = "ftmgram.raw.base.account.AutoSaveSettings"
         __union_types__ = Union[raw.types.account.AutoSaveSettings]
 
         def __init__(self):

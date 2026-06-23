@@ -59,7 +59,7 @@ else:
             updates.GetDifference
         """
 
-        QUALNAME = "pyrogram.raw.base.updates.Difference"
+        QUALNAME = "ftmgram.raw.base.updates.Difference"
         __union_types__ = Union[raw.types.updates.Difference, raw.types.updates.DifferenceEmpty, raw.types.updates.DifferenceSlice, raw.types.updates.DifferenceTooLong]
 
         def __init__(self):

@@ -56,7 +56,7 @@ else:
             help.GetRecentMeUrls
         """
 
-        QUALNAME = "pyrogram.raw.base.help.RecentMeUrls"
+        QUALNAME = "ftmgram.raw.base.help.RecentMeUrls"
         __union_types__ = Union[raw.types.help.RecentMeUrls]
 
         def __init__(self):

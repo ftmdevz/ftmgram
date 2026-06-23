@@ -49,7 +49,7 @@ else:
             InputEmojiStatusCollectible
         """
 
-        QUALNAME = "pyrogram.raw.base.EmojiStatus"
+        QUALNAME = "ftmgram.raw.base.EmojiStatus"
         __union_types__ = Union[raw.types.EmojiStatus, raw.types.EmojiStatusCollectible, raw.types.EmojiStatusEmpty, raw.types.InputEmojiStatusCollectible]
 
         def __init__(self):

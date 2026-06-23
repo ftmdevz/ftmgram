@@ -56,7 +56,7 @@ else:
             premium.GetBoostsStatus
         """
 
-        QUALNAME = "pyrogram.raw.base.premium.BoostsStatus"
+        QUALNAME = "ftmgram.raw.base.premium.BoostsStatus"
         __union_types__ = Union[raw.types.premium.BoostsStatus]
 
         def __init__(self):

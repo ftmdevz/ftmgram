@@ -49,7 +49,7 @@ else:
             NotificationSoundRingtone
         """
 
-        QUALNAME = "pyrogram.raw.base.NotificationSound"
+        QUALNAME = "ftmgram.raw.base.NotificationSound"
         __union_types__ = Union[raw.types.NotificationSoundDefault, raw.types.NotificationSoundLocal, raw.types.NotificationSoundNone, raw.types.NotificationSoundRingtone]
 
         def __init__(self):

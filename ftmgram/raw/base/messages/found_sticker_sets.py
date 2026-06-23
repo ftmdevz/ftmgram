@@ -58,7 +58,7 @@ else:
             messages.SearchEmojiStickerSets
         """
 
-        QUALNAME = "pyrogram.raw.base.messages.FoundStickerSets"
+        QUALNAME = "ftmgram.raw.base.messages.FoundStickerSets"
         __union_types__ = Union[raw.types.messages.FoundStickerSets, raw.types.messages.FoundStickerSetsNotModified]
 
         def __init__(self):

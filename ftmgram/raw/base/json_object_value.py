@@ -46,7 +46,7 @@ else:
             JsonObjectValue
         """
 
-        QUALNAME = "pyrogram.raw.base.JSONObjectValue"
+        QUALNAME = "ftmgram.raw.base.JSONObjectValue"
         __union_types__ = Union[raw.types.JsonObjectValue]
 
         def __init__(self):

@@ -56,7 +56,7 @@ else:
             phone.GetGroupParticipants
         """
 
-        QUALNAME = "pyrogram.raw.base.phone.GroupParticipants"
+        QUALNAME = "ftmgram.raw.base.phone.GroupParticipants"
         __union_types__ = Union[raw.types.phone.GroupParticipants]
 
         def __init__(self):

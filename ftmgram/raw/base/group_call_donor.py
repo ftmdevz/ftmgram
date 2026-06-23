@@ -46,7 +46,7 @@ else:
             GroupCallDonor
         """
 
-        QUALNAME = "pyrogram.raw.base.GroupCallDonor"
+        QUALNAME = "ftmgram.raw.base.GroupCallDonor"
         __union_types__ = Union[raw.types.GroupCallDonor]
 
         def __init__(self):

@@ -56,7 +56,7 @@ else:
             account.GetWebAuthorizations
         """
 
-        QUALNAME = "pyrogram.raw.base.account.WebAuthorizations"
+        QUALNAME = "ftmgram.raw.base.account.WebAuthorizations"
         __union_types__ = Union[raw.types.account.WebAuthorizations]
 
         def __init__(self):

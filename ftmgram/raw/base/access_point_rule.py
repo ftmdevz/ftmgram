@@ -46,7 +46,7 @@ else:
             AccessPointRule
         """
 
-        QUALNAME = "pyrogram.raw.base.AccessPointRule"
+        QUALNAME = "ftmgram.raw.base.AccessPointRule"
         __union_types__ = Union[raw.types.AccessPointRule]
 
         def __init__(self):

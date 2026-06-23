@@ -57,7 +57,7 @@ else:
             payments.GetPaymentReceipt
         """
 
-        QUALNAME = "pyrogram.raw.base.payments.PaymentReceipt"
+        QUALNAME = "ftmgram.raw.base.payments.PaymentReceipt"
         __union_types__ = Union[raw.types.payments.PaymentReceipt, raw.types.payments.PaymentReceiptStars]
 
         def __init__(self):

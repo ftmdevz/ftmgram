@@ -47,7 +47,7 @@ else:
             InputSecureFileUploaded
         """
 
-        QUALNAME = "pyrogram.raw.base.InputSecureFile"
+        QUALNAME = "ftmgram.raw.base.InputSecureFile"
         __union_types__ = Union[raw.types.InputSecureFile, raw.types.InputSecureFileUploaded]
 
         def __init__(self):
