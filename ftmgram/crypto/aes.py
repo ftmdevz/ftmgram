@@ -53,8 +53,8 @@ except ImportError:
 
     log.warning(
         "TgCrypto is missing! "
-        "Pyrogram will work the same, but at a much slower speed. "
-        "More info: https://docs.ftmgram.org/topics/speedups"
+        "FTMGram will work the same, but at a much slower speed. "
+        "Install it with: pip install tgcrypto"
     )
 
 

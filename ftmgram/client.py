@@ -272,7 +272,7 @@ class Client(Methods):
     # Interval of seconds in which the updates watchdog will kick in
     UPDATES_WATCHDOG_INTERVAL = 15 * 60
 
-    MAX_CONCURRENT_TRANSMISSIONS = 1
+    MAX_CONCURRENT_TRANSMISSIONS = 5
     MAX_MESSAGE_CACHE_SIZE = 1000
     MAX_TOPIC_CACHE_SIZE = 1000
 

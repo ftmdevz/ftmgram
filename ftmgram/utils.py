@@ -39,7 +39,15 @@ from ftmgram.types.messages_and_media.message import Str
 
 def get_event_loop() -> asyncio.AbstractEventLoop:
     try:
+        import uvloop
+        asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
+    except ImportError:
+        pass
+
+    try:
         loop = asyncio.get_event_loop()
+        if loop.is_closed():
+            raise RuntimeError
     except RuntimeError:
         loop = asyncio.new_event_loop()
         asyncio.set_event_loop(loop)
