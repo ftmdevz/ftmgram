@@ -63,9 +63,15 @@ class SendCode:
                 await self.session.stop()
 
                 await self.storage.dc_id(e.value)
+                dc_option = await self.get_dc_option(e.value, ipv6=self.ipv6)
+                await self.storage.server_address(dc_option.ip_address)
+                await self.storage.port(dc_option.port)
                 await self.storage.auth_key(
                     await Auth(
-                        self, await self.storage.dc_id(),
+                        self,
+                        await self.storage.dc_id(),
+                        await self.storage.server_address(),
+                        await self.storage.port(),
                         await self.storage.test_mode()
                     ).create()
                 )
