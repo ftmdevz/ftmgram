@@ -23,6 +23,7 @@ from ftmgram import raw
 from ftmgram import types
 from ftmgram.errors import PhoneMigrate, NetworkMigrate
 from ftmgram.session import Session, Auth
+from ftmgram.storage.sqlite_storage import PROD
 
 log = logging.getLogger(__name__)
 
@@ -62,22 +63,33 @@ class SendCode:
             except (PhoneMigrate, NetworkMigrate) as e:
                 await self.session.stop()
 
-                await self.storage.dc_id(e.value)
-                dc_option = await self.get_dc_option(e.value, ipv6=self.ipv6)
-                await self.storage.server_address(dc_option.ip_address)
-                await self.storage.port(dc_option.port)
-                await self.storage.auth_key(
-                    await Auth(
-                        self,
-                        await self.storage.dc_id(),
-                        await self.storage.server_address(),
-                        await self.storage.port(),
-                        await self.storage.test_mode()
-                    ).create()
-                )
+                target_dc = e.value
+                await self.storage.dc_id(target_dc)
+
+                server_address = PROD.get(target_dc)
+                if server_address is None:
+                    raise ValueError(f"Unknown DC{target_dc}")
+                port = 443
+
+                await self.storage.server_address(server_address)
+                await self.storage.port(port)
+                
+                auth_key = await Auth(
+                    self,
+                    target_dc,
+                    server_address,
+                    port,
+                    await self.storage.test_mode()
+                ).create()
+                await self.storage.auth_key(auth_key)
+                
                 self.session = Session(
-                    self, await self.storage.dc_id(),
-                    await self.storage.auth_key(), await self.storage.test_mode()
+                    self,
+                    target_dc,
+                    server_address,
+                    port,
+                    auth_key,
+                    await self.storage.test_mode()
                 )
 
                 await self.session.start()
