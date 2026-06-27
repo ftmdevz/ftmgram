@@ -6,8 +6,8 @@ sys.path.insert(0, os.path.abspath(".."))
 project = "FTMGram"
 copyright = "2024-2026, FTM DEVELOPERZ"
 author = "FTM DEVELOPERZ"
-release = "3.0.25"
-version = "3.0.25"
+release = "3.1.0"
+version = "3.1.0"
 
 extensions = [
     "sphinx.ext.autodoc",
