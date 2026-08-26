@@ -26,9 +26,11 @@ from .bot_command_scope_chat import BotCommandScopeChat
 from .bot_command_scope_chat_administrators import BotCommandScopeChatAdministrators
 from .bot_command_scope_chat_member import BotCommandScopeChatMember
 from .bot_command_scope_default import BotCommandScopeDefault
+from .bot_subscription_updated import BotSubscriptionUpdated
 from .callback_game import CallbackGame
 from .callback_query import CallbackQuery
 from .chat_boost_updated import ChatBoostUpdated
+from .disabled_button import DisabledButton
 from .force_reply import ForceReply
 from .game_high_score import GameHighScore
 from .inline_keyboard_button import InlineKeyboardButton
@@ -63,9 +65,11 @@ from .web_app_info import WebAppInfo
 
 __all__ = [
     "BotAccessSettings",
+    "BotSubscriptionUpdated",
     "CallbackGame",
     "CallbackQuery",
     "ChatBoostUpdated",
+    "DisabledButton",
     "ForceReply",
     "GameHighScore",
     "InlineKeyboardButton",

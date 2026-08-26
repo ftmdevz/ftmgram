@@ -16,7 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
-from typing import Optional
+from typing import List, Optional, Union
 
 from ftmgram import raw
 
@@ -24,7 +24,7 @@ from ..object import Object
 
 
 class InputRichMessage(Object):
-    """Describes a checklist to create.
+    """Describes a rich message to send (Bot API 10.1 - 10.3).
 
     Parameters:
         html (``str``, *optional*):
@@ -34,6 +34,12 @@ class InputRichMessage(Object):
         markdown (``str``, *optional*):
             Content of the rich message to send described using Markdown formatting.
             See `rich message formatting options <https://core.telegram.org/bots/api#rich-message-formatting-options>`__ for more details.
+
+        blocks (List of :obj:`~ftmgram.types.InputRichBlock`, *optional*):
+            List of rich blocks to format the message (Bot API 10.2).
+
+        media (List of :obj:`~ftmgram.types.InputRichMessageMedia`, *optional*):
+            List of media objects used in the rich message (Bot API 10.2).
 
         is_rtl (``bool``, *optional*):
             Pass *True* if the rich message must be shown right-to-left.
@@ -47,6 +53,8 @@ class InputRichMessage(Object):
         self,
         html: Optional[str] = None,
         markdown: Optional[str] = None,
+        blocks: Optional[List["InputRichBlock"]] = None,
+        media: Optional[List["InputRichMessageMedia"]] = None,
         is_rtl: Optional[bool] = None,
         skip_entity_detection: Optional[bool] = None,
     ):
@@ -54,6 +62,8 @@ class InputRichMessage(Object):
 
         self.html = html
         self.markdown = markdown
+        self.blocks = blocks
+        self.media = media
         self.is_rtl = is_rtl
         self.skip_entity_detection = skip_entity_detection
 
@@ -71,6 +81,6 @@ class InputRichMessage(Object):
                 noautolink=self.skip_entity_detection
             )
         else:
-            raise ValueError("You must provide either markdown or html in the rich message")
+            raise ValueError("You must provide markdown, html, or blocks in the rich message")
 
         return input_rich_message

@@ -106,7 +106,8 @@ class InlineKeyboardButton(Object):
         pay: Optional[bool] = None,
         copy_text: Optional[str] = None,
         icon_custom_emoji_id: Optional[str] = None,
-        style: "enums.ButtonStyle" = enums.ButtonStyle.DEFAULT
+        style: "enums.ButtonStyle" = enums.ButtonStyle.DEFAULT,
+        disabled: Optional[Union[bool, "types.DisabledButton"]] = None,
     ):
         super().__init__()
 
@@ -124,6 +125,7 @@ class InlineKeyboardButton(Object):
         self.copy_text = copy_text
         self.icon_custom_emoji_id = icon_custom_emoji_id
         self.style = style
+        self.disabled = disabled
 
     @staticmethod
     def read(b: "raw.base.KeyboardButton"):

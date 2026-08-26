@@ -29,11 +29,16 @@ from .count_public_messages_by_tag import CountPublicMessagesByTag
 from .decline_suggested_post import DeclineSuggestedPost
 from .delete_chat_history import DeleteChatHistory
 from .delete_direct_messages_chat_topic_history import DeleteDirectMessagesChatTopicHistory
+from .delete_ephemeral_message import DeleteEphemeralMessage
 from .delete_message import DeleteMessage
 from .delete_messages import DeleteMessages
 from .delete_poll_option import DeletePollOption
 from .download_media import DownloadMedia
 from .edit_cached_media import EditCachedMedia
+from .edit_ephemeral_message_caption import EditEphemeralMessageCaption
+from .edit_ephemeral_message_media import EditEphemeralMessageMedia
+from .edit_ephemeral_message_reply_markup import EditEphemeralMessageReplyMarkup
+from .edit_ephemeral_message_text import EditEphemeralMessageText
 from .edit_inline_caption import EditInlineCaption
 from .edit_inline_media import EditInlineMedia
 from .edit_inline_reply_markup import EditInlineReplyMarkup
@@ -134,11 +139,16 @@ class Messages(
     DeclineSuggestedPost,
     DeleteChatHistory,
     DeleteDirectMessagesChatTopicHistory,
+    DeleteEphemeralMessage,
     DeleteMessage,
     DeleteMessages,
     DeletePollOption,
     DownloadMedia,
     EditCachedMedia,
+    EditEphemeralMessageCaption,
+    EditEphemeralMessageMedia,
+    EditEphemeralMessageReplyMarkup,
+    EditEphemeralMessageText,
     EditInlineCaption,
     EditInlineMedia,
     EditInlineReplyMarkup,

@@ -752,6 +752,9 @@ class RichBlockTable(RichBlock):
         is_striped (``bool``, *optional*):
             True, if the table is striped.
 
+        is_compact (``bool``, *optional*):
+            True, if the table has a compact layout (Bot API 10.3).
+
         caption (:obj:`~ftmgram.types.RichBlockCaption`, *optional*):
             Caption of the block.
     """
@@ -761,6 +764,7 @@ class RichBlockTable(RichBlock):
         cells: List[List["types.RichBlockTableCell"]],
         is_bordered: Optional[bool] = None,
         is_striped: Optional[bool] = None,
+        is_compact: Optional[bool] = None,
         caption: Optional["types.RichBlockCaption"] = None,
     ):
         super().__init__()
@@ -768,6 +772,7 @@ class RichBlockTable(RichBlock):
         self.cells = cells
         self.is_bordered = is_bordered
         self.is_striped = is_striped
+        self.is_compact = is_compact
         self.caption = caption
 
     @staticmethod
@@ -997,3 +1002,75 @@ class RichBlockThinking(RichBlock):
         super().__init__()
 
         self.text = text
+
+
+class RichBlockExpandableBlockQuotation(RichBlock):
+    """An expandable block quotation (Bot API 10.3).
+
+    Parameters:
+        text (:obj:`~ftmgram.types.RichText`):
+            Text of the quotation.
+
+        caption (:obj:`~ftmgram.types.RichBlockCaption`, *optional*):
+            Caption of the block.
+
+        is_expanded (``bool``, *optional*):
+            True, if the quotation is expanded by default.
+    """
+
+    def __init__(
+        self,
+        text: "types.RichText",
+        caption: Optional["types.RichBlockCaption"] = None,
+        is_expanded: Optional[bool] = None,
+    ):
+        super().__init__()
+
+        self.text = text
+        self.caption = caption
+        self.is_expanded = is_expanded
+
+
+class RichBlockDocument(RichBlock):
+    """A block containing a document/file (Bot API 10.3).
+
+    Parameters:
+        document (:obj:`~ftmgram.types.Document`):
+            The document.
+
+        caption (:obj:`~ftmgram.types.RichBlockCaption`, *optional*):
+            Caption of the block.
+
+        has_spoiler (``bool``, *optional*):
+            True, if the document preview is covered by a spoiler animation.
+    """
+
+    def __init__(
+        self,
+        document: "types.Document",
+        caption: Optional["types.RichBlockCaption"] = None,
+        has_spoiler: Optional[bool] = None,
+    ):
+        super().__init__()
+
+        self.document = document
+        self.caption = caption
+        self.has_spoiler = has_spoiler
+
+
+class RichBlockButtons(RichBlock):
+    """A block containing inline buttons within a rich message (Bot API 10.3).
+
+    Parameters:
+        buttons (List of List of :obj:`~ftmgram.types.RichMessageButton`):
+            List of button rows.
+    """
+
+    def __init__(
+        self,
+        buttons: List[List["types.RichMessageButton"]],
+    ):
+        super().__init__()
+
+        self.buttons = buttons
+

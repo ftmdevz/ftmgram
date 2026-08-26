@@ -690,3 +690,21 @@ class RichTextReferenceLink(RichText):
 
         self.text = text
         self.reference_name = reference_name
+
+
+class RichTextButton(RichText):
+    """A button in rich formatted text (Bot API 10.3).
+
+    Parameters:
+        text (:obj:`~ftmgram.types.RichText` | ``str``):
+            The text of the button.
+
+        button (:obj:`~ftmgram.types.RichMessageButton`):
+            The button configuration.
+    """
+
+    def __init__(self, text: Union["types.RichText", str], button: "types.RichMessageButton"):
+        super().__init__()
+
+        self.text = text
+        self.button = button

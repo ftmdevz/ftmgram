@@ -16,23 +16,27 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
-__version__ = "3.3.0"
-__license__ = "GNU Lesser General Public License v3.0 (LGPL-3.0)"
-__copyright__ = "Copyright (C) 2024-present FTM DEVELOPERZ <https://github.com/ftmdevz> <ftmdeveloperz@gmail.com>"
+from typing import Union
+
+import ftmgram
 
 
-class StopTransmission(Exception):
-    pass
+class DeleteEphemeralMessage:
+    async def delete_ephemeral_message(
+        self: "ftmgram.Client",
+        chat_id: Union[int, str],
+        message_id: int,
+    ) -> bool:
+        """Delete an ephemeral message (Bot API 10.2).
 
+        Parameters:
+            chat_id (``int`` | ``str``):
+                Unique identifier (int) or username (str) of the target chat.
 
-class StopPropagation(StopAsyncIteration):
-    pass
+            message_id (``int``):
+                Ephemeral message identifier.
 
-
-class ContinuePropagation(StopAsyncIteration):
-    pass
-
-
-from . import raw, types, filters, handlers, enums
-from .client import Client
-from .sync import idle, compose
+        Returns:
+            ``bool``: On success, True is returned.
+        """
+        return bool(await self.delete_messages(chat_id=chat_id, message_ids=[message_id]))

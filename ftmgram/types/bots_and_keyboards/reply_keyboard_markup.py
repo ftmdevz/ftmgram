@@ -63,7 +63,8 @@ class ReplyKeyboardMarkup(Object):
         resize_keyboard: bool = None,
         one_time_keyboard: bool = None,
         selective: bool = None,
-        placeholder: str = None
+        placeholder: str = None,
+        force_reply: bool = None,
     ):
         super().__init__()
 
@@ -73,6 +74,7 @@ class ReplyKeyboardMarkup(Object):
         self.one_time_keyboard = one_time_keyboard
         self.selective = selective
         self.placeholder = placeholder
+        self.force_reply = force_reply
 
     @staticmethod
     def read(kb: "raw.base.ReplyMarkup"):

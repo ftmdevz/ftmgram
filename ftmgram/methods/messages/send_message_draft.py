@@ -31,6 +31,8 @@ class SendMessageDraft:
         message_thread_id: Optional[int] = None,
         parse_mode: Optional["enums.ParseMode"] = None,
         entities: Optional[List["types.MessageEntity"]] = None,
+        can_stop: Optional[bool] = None,
+        keep_on_stop: Optional[bool] = None,
     ) -> bool:
         """Use this method to stream a partial message to a user while the message is being generated.
 
@@ -62,6 +64,12 @@ class SendMessageDraft:
 
             entities (List of :obj:`~ftmgram.types.MessageEntity`):
                 List of special entities that appear in message text, which can be specified instead of *parse_mode*.
+
+            can_stop (``bool``, *optional*):
+                Pass True if the user can stop the generation (Bot API 10.3).
+
+            keep_on_stop (``bool``, *optional*):
+                Pass True to keep the draft message when generation is stopped (Bot API 10.3).
 
         Returns:
             ``bool``: On success, True is returned.

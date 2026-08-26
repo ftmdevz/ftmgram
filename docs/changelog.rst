@@ -1,7 +1,7 @@
 Changelog
 =========
 
-v3.0.0 — June 2026
+v3.3.0 — June 2026
 -------------------
 
 **Bot API 10.1 (June 11, 2026) — Full Coverage**

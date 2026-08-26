@@ -16,23 +16,20 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
-__version__ = "3.3.0"
-__license__ = "GNU Lesser General Public License v3.0 (LGPL-3.0)"
-__copyright__ = "Copyright (C) 2024-present FTM DEVELOPERZ <https://github.com/ftmdevz> <ftmdeveloperz@gmail.com>"
+from typing import Optional
+
+from ..object import Object
 
 
-class StopTransmission(Exception):
-    pass
+class DisabledButton(Object):
+    """Represents a disabled button in an inline keyboard (Bot API 10.3).
 
+    Parameters:
+        disabled_text (``str``, *optional*):
+            Optional explanation text shown when user attempts to press the disabled button.
+    """
 
-class StopPropagation(StopAsyncIteration):
-    pass
+    def __init__(self, disabled_text: Optional[str] = None):
+        super().__init__()
 
-
-class ContinuePropagation(StopAsyncIteration):
-    pass
-
-
-from . import raw, types, filters, handlers, enums
-from .client import Client
-from .sync import idle, compose
+        self.disabled_text = disabled_text

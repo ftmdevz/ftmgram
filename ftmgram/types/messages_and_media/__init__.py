@@ -36,6 +36,9 @@ from .checklist import Checklist
 from .checklist_task import ChecklistTask
 from .checklist_tasks_added import ChecklistTasksAdded
 from .checklist_tasks_done import ChecklistTasksDone
+from .community_chat_added import CommunityChatAdded
+from .community_chat_joined import CommunityChatJoined
+from .community_chat_removed import CommunityChatRemoved
 from .contact import Contact
 from .contact_registered import ContactRegistered
 from .craft_gift_result import CraftGiftResult, CraftGiftResultFail, CraftGiftResultSuccess
@@ -43,11 +46,14 @@ from .dice import Dice
 from .direct_message_price_changed import DirectMessagePriceChanged
 from .direct_messages_topic import DirectMessagesTopic
 from .document import Document
+from .ephemeral_message_parameters import EphemeralMessageParameters
 from .external_reply_info import ExternalReplyInfo
 from .fact_check import FactCheck
 from .formatted_text import FormattedText
 from .forum_topic import ForumTopic
 from .forum_topic_closed import ForumTopicClosed
+from .message_generation_stopped import MessageGenerationStopped
+from .rich_message_button import RichMessageButton
 from .forum_topic_created import ForumTopicCreated
 from .forum_topic_edited import ForumTopicEdited
 from .forum_topic_reopened import ForumTopicReopened
@@ -118,10 +124,13 @@ from .rich_block import (
     RichBlockAnimation,
     RichBlockAudio,
     RichBlockBlockQuotation,
+    RichBlockButtons,
     RichBlockCaption,
     RichBlockCollage,
     RichBlockDetails,
     RichBlockDivider,
+    RichBlockDocument,
+    RichBlockExpandableBlockQuotation,
     RichBlockFooter,
     RichBlockList,
     RichBlockListItem,
@@ -148,6 +157,7 @@ from .rich_text import (
     RichTextBankCardNumber,
     RichTextBold,
     RichTextBotCommand,
+    RichTextButton,
     RichTextCashtag,
     RichTextCode,
     RichTextCustomEmoji,
@@ -236,12 +246,19 @@ __all__ = [
     "ChecklistTask",
     "ChecklistTasksAdded",
     "ChecklistTasksDone",
+    "CommunityChatAdded",
+    "CommunityChatJoined",
+    "CommunityChatRemoved",
     "Contact",
     "ContactRegistered",
     "CraftGiftResult",
     "CraftGiftResultFail",
     "CraftGiftResultSuccess",
     "Dice",
+    "DirectMessagePriceChanged",
+    "DirectMessagesTopic",
+    "Document",
+    "EphemeralMessageParameters",
     "DirectMessagePriceChanged",
     "DirectMessagesTopic",
     "Document",
@@ -314,6 +331,7 @@ __all__ = [
     "ProximityAlertTriggered",
     "Reaction",
     "RefundedPayment",
+    "MessageGenerationStopped",
     "ReplyParameters",
     "RestrictionReason",
     "RichBlock",
@@ -321,10 +339,13 @@ __all__ = [
     "RichBlockAnimation",
     "RichBlockAudio",
     "RichBlockBlockQuotation",
+    "RichBlockButtons",
     "RichBlockCaption",
     "RichBlockCollage",
     "RichBlockDetails",
     "RichBlockDivider",
+    "RichBlockDocument",
+    "RichBlockExpandableBlockQuotation",
     "RichBlockFooter",
     "RichBlockList",
     "RichBlockListItem",
@@ -343,12 +364,14 @@ __all__ = [
     "RichBlockVideo",
     "RichBlockVoiceNote",
     "RichMessage",
+    "RichMessageButton",
     "RichText",
     "RichTextAnchor",
     "RichTextAnchorLink",
     "RichTextBankCardNumber",
     "RichTextBold",
     "RichTextBotCommand",
+    "RichTextButton",
     "RichTextCashtag",
     "RichTextCode",
     "RichTextCustomEmoji",

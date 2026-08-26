@@ -41,7 +41,7 @@ app.run()
 
 ---
 
-### What's New in v3.0.0 — Bot API 10.1
+### What's New in v3.3.0 — Bot API 10.1
 
 | Feature | Status |
 |---|---|

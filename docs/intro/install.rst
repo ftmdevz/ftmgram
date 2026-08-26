@@ -42,7 +42,7 @@ Verify Installation
 .. code-block:: python
 
    import ftmgram
-   print(ftmgram.__version__)  # 3.0.0
+   print(ftmgram.__version__)  # 3.3.0
 
 Optional Dependencies
 ---------------------

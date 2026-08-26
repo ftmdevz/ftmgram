@@ -16,23 +16,33 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
-__version__ = "3.3.0"
-__license__ = "GNU Lesser General Public License v3.0 (LGPL-3.0)"
-__copyright__ = "Copyright (C) 2024-present FTM DEVELOPERZ <https://github.com/ftmdevz> <ftmdeveloperz@gmail.com>"
+from typing import BinaryIO, Optional, Union
+
+from ..object import Object
 
 
-class StopTransmission(Exception):
-    pass
+class InputRichMessageMedia(Object):
+    """Explicitly specifies media used in markdown or html formatting when sending a rich message (Bot API 10.2).
 
+    Parameters:
+        media (``str`` | ``BinaryIO``):
+            File to send or file_id / URL.
 
-class StopPropagation(StopAsyncIteration):
-    pass
+        type (``str``, *optional*):
+            Type of the media (e.g. "photo", "video", "document", "audio", "voice", "animation").
 
+        file_name (``str``, *optional*):
+            File name for documents.
+    """
 
-class ContinuePropagation(StopAsyncIteration):
-    pass
+    def __init__(
+        self,
+        media: Union[str, BinaryIO],
+        type: str = "auto",
+        file_name: Optional[str] = None,
+    ):
+        super().__init__()
 
-
-from . import raw, types, filters, handlers, enums
-from .client import Client
-from .sync import idle, compose
+        self.media = media
+        self.type = type
+        self.file_name = file_name

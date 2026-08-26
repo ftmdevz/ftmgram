@@ -29,6 +29,8 @@ class SendRichMessageDraft:
         draft_id: int,
         rich_message: "types.InputRichMessage",
         message_thread_id: Optional[int] = None,
+        can_stop: Optional[bool] = None,
+        keep_on_stop: Optional[bool] = None,
     ) -> bool:
         """Use this method to stream a partial rich message to a user while the message is being generated.
 
@@ -52,6 +54,12 @@ class SendRichMessageDraft:
 
             message_thread_id (``int``, *optional*):
                 Unique identifier for the target message thread.
+
+            can_stop (``bool``, *optional*):
+                Pass True if the user can stop the generation (Bot API 10.3).
+
+            keep_on_stop (``bool``, *optional*):
+                Pass True to keep the draft message when generation is stopped (Bot API 10.3).
 
         Returns:
             ``bool``: On success, True is returned.

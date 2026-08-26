@@ -63,8 +63,38 @@ from .input_privacy_rule_disallow_bots import InputPrivacyRuleDisallowBots
 from .input_privacy_rule_disallow_chats import InputPrivacyRuleDisallowChats
 from .input_privacy_rule_disallow_contacts import InputPrivacyRuleDisallowContacts
 from .input_privacy_rule_disallow_users import InputPrivacyRuleDisallowUsers
+from .input_media_voice_note import InputMediaVoiceNote
 from .input_rich_message import InputRichMessage
+from .input_rich_message_media import InputRichMessageMedia
 from .input_rich_message_content import InputRichMessageContent
+from .input_rich_block import (
+    InputRichBlock,
+    InputRichBlockParagraph,
+    InputRichBlockSectionHeading,
+    InputRichBlockPreformatted,
+    InputRichBlockFooter,
+    InputRichBlockDivider,
+    InputRichBlockMathematicalExpression,
+    InputRichBlockAnchor,
+    InputRichBlockListItem,
+    InputRichBlockList,
+    InputRichBlockBlockQuotation,
+    InputRichBlockExpandableBlockQuotation,
+    InputRichBlockPullQuotation,
+    InputRichBlockCollage,
+    InputRichBlockSlideshow,
+    InputRichBlockTable,
+    InputRichBlockDetails,
+    InputRichBlockMap,
+    InputRichBlockAnimation,
+    InputRichBlockAudio,
+    InputRichBlockPhoto,
+    InputRichBlockVideo,
+    InputRichBlockVoiceNote,
+    InputRichBlockDocument,
+    InputRichBlockThinking,
+    InputRichBlockButtons,
+)
 from .input_text_message_content import InputTextMessageContent
 from .input_venue_message_content import InputVenueMessageContent
 
@@ -96,6 +126,7 @@ __all__ = [
     "InputMediaSticker",
     "InputMediaVenue",
     "InputMediaVideo",
+    "InputMediaVoiceNote",
     "InputMessageContent",
     "InputPhoneContact",
     "InputPollMedia",
@@ -114,8 +145,35 @@ __all__ = [
     "InputPrivacyRuleDisallowChats",
     "InputPrivacyRuleDisallowContacts",
     "InputPrivacyRuleDisallowUsers",
+    "InputRichBlock",
+    "InputRichBlockParagraph",
+    "InputRichBlockSectionHeading",
+    "InputRichBlockPreformatted",
+    "InputRichBlockFooter",
+    "InputRichBlockDivider",
+    "InputRichBlockMathematicalExpression",
+    "InputRichBlockAnchor",
+    "InputRichBlockListItem",
+    "InputRichBlockList",
+    "InputRichBlockBlockQuotation",
+    "InputRichBlockExpandableBlockQuotation",
+    "InputRichBlockPullQuotation",
+    "InputRichBlockCollage",
+    "InputRichBlockSlideshow",
+    "InputRichBlockTable",
+    "InputRichBlockDetails",
+    "InputRichBlockMap",
+    "InputRichBlockAnimation",
+    "InputRichBlockAudio",
+    "InputRichBlockPhoto",
+    "InputRichBlockVideo",
+    "InputRichBlockVoiceNote",
+    "InputRichBlockDocument",
+    "InputRichBlockThinking",
+    "InputRichBlockButtons",
     "InputRichMessage",
     "InputRichMessageContent",
+    "InputRichMessageMedia",
     "InputTextMessageContent",
     "InputVenueMessageContent"
 ]
