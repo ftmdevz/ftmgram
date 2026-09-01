@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%">
+  <defs>
+    <linearGradient id="flameGrad" x1="0%" y1="100%" x2="70%" y2="0%">
+      <stop offset="0%" stop-color="#ff3b00" />
+      <stop offset="50%" stop-color="#ff7300" />
+      <stop offset="100%" stop-color="#ffaa00" />
+    </linearGradient>
+
+    <linearGradient id="coreGrad" x1="20%" y1="100%" x2="80%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#ffe8d6" />
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(10, 5)">
+    <!-- Outer Vibrant Flame -->
+    <path d="M 50 5 C 72 35 95 55 95 80 C 95 104 75 115 50 115 C 25 115 5 104 5 80 C 5 55 28 35 50 5 Z" fill="url(#flameGrad)" />
+    
+    <!-- Inner Core Wing -->
+    <path d="M 50 30 C 60 48 74 62 74 80 C 74 94 62 100 50 100 C 38 100 26 94 26 80 C 26 62 40 48 50 30 Z" fill="url(#coreGrad)" opacity="0.95" />
+
+    <!-- Keel Cut -->
+    <path d="M 50 48 L 62 84 L 50 75 L 38 84 Z" fill="#ff4d00" />
+  </g>
+</svg>

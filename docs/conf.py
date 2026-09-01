@@ -43,7 +43,7 @@ highlight_language = "python3"
 copybutton_prompt_text = "$ "
 suppress_warnings = ["image.not_readable"]
 
-html_title = f"FTMGram {version}"
+html_title = "FTMGram"
 html_theme = "furo"
 html_static_path = [os.path.abspath("docs/static") if os.path.exists("docs/static") else os.path.abspath("static")]
 
@@ -53,8 +53,8 @@ html_css_files = [
 ]
 html_show_sourcelink = False
 html_show_copyright = False
-html_logo = "static/img/ftmgram_logo_transparent.svg"
-html_favicon = "static/img/ftmgram_logo_transparent.svg"
+html_logo = "static/img/ftmgram_icon.svg"
+html_favicon = "static/img/ftmgram_icon.svg"
 
 html_theme_options = {
     "navigation_with_keys": True,

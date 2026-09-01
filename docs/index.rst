@@ -1,12 +1,12 @@
 Welcome to FTMGram
 ==================
 
-.. image:: static/img/ftmgram_hero.svg
-   :align: center
-   :width: 320px
-   :alt: FTMGramFTMGramFTMGram
-
 .. raw:: html
+
+   <div class="ftm-hero-wrapper">
+     <img src="_static/img/ftmgram_icon.svg" class="ftm-hero-logo" alt="FTMGram Logo" />
+     <span class="ftm-hero-title">FTMGram</span>
+   </div>
 
    <p align="center">
        <b>Telegram MTProto API Framework for Python</b>
