@@ -1,6 +1,6 @@
 <div align="center">
   <img src="https://raw.githubusercontent.com/ftmdevz/ftmgram/ftmdevz/docs/static/img/ftmgram_icon.svg" width="100" height="100" alt="FTMGram Logo" />
-  <h1>FTMGram v3.5.0</h1>
+  <h1>FTMGram v3.5.1</h1>
   <p><b>Next-Gen Telegram MTProto & Bot API 10.3 Framework for Python</b></p>
   <p>
     <a href="https://ftmgram.ftmbotzx.dev"><img src="https://img.shields.io/badge/docs-ftmgram.ftmbotzx.dev-orange?style=flat-square" alt="Docs"></a>
@@ -12,16 +12,20 @@
 
 ---
 
-**FTMGram** is a high-performance, asynchronous Telegram MTProto client library and Bot API framework for Python. It supercharges both user accounts and bots with modern features like **In-Message Buttons**, **AI Response Token Streaming**, **Bot Chat History Scanning**, **Turbo Multi-Worker Transfers**, **Ephemeral Overlays**, and **Telegram Stars 2.0**.
+**FTMGram** is a rock-solid, high-performance, asynchronous Telegram MTProto client library and Bot API framework for Python. It supercharges both user accounts and bots with modern features like **Turbo Multi-Worker Transfers (Upload & Download)**, **In-Message Buttons**, **AI Response Token Streaming**, **Bot Chat History Scanning**, and **Telegram Stars 2.0**.
 
 ---
 
-## ⚡ Key Highlights in v3.5.0
+## ⚡ Key Highlights in v3.5.1
 
+* **🛡️ 100% Rock-Solid Stability**:
+  Zero file descriptor leaks on Linux / `uvloop` containers (`[Errno 24] Too many open files` completely eliminated).
+* **⚡ Turbo Multi-Worker Upload Engine (`fast_upload`)**:
+  Upload videos, documents, and large files up to 2GB/4GB at maximum speed using concurrent multi-worker chunk streaming.
+* **⚡ Turbo Multi-Worker Download Engine (`fast_download`)**:
+  Download media files concurrently with parallel chunk workers for gigabit saturation.
 * **🤖 Bot Chat History (`get_bot_chat_history`)**:
   Allows bots to retrieve message history across private chats and groups using safe, high-speed 100-ID batch scanning.
-* **⚡ Turbo Multi-Worker Media Engine (`fast_download`)**:
-  Download photos, videos, and large files at maximum network saturation with parallel chunk workers.
 * **🎨 Fluent `RichMessageBuilder` DSL**:
   Construct structured rich messages with in-message buttons (`<tg-button-row>`), expandable quotes, tables, and paragraphs effortlessly in Python.
 * **🧠 Real-Time AI Streaming (`stream_text` & `thinking`)**:
@@ -51,18 +55,23 @@ pip install -U "ftmgram[fast]"
 
 ## 🚀 Quick Examples
 
-### 1. Echo Bot with Filters
+### 1. Fast Upload & Fast Download (Turbo Transfers)
 
 ```python
-from ftmgram import Client, filters
+from ftmgram import Client
 
-app = Client("my_bot", bot_token="123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11")
+app = Client("my_bot", bot_token="TOKEN")
 
-@app.on_message(filters.text & filters.private)
-async def echo(client, message):
-    await message.reply(f"You said: {message.text}")
+async def upload_and_download():
+    async with app:
+        # Fast Upload with 8 parallel workers
+        uploaded_file = await app.fast_upload("large_video.mp4", workers=8)
+        msg = await app.send_video(123456789, video=uploaded_file, caption="Sent via Turbo Upload! 🚀")
 
-app.run()
+        # Fast Download with 8 parallel workers
+        await app.fast_download(msg, file_name="downloads/", workers=8)
+
+app.run(upload_and_download())
 ```
 
 ---
@@ -95,31 +104,7 @@ app.run(send_menu(123456789))
 
 ---
 
-### 3. Real-Time AI Token Streaming
-
-```python
-from ftmgram import Client
-
-app = Client("my_bot", bot_token="TOKEN")
-
-async def fake_ai_stream():
-    for word in ["Generating ", "answers ", "with ", "FTMGram ", "v3.5.0! 🚀"]:
-        yield word
-
-async def main():
-    async with app:
-        await app.stream_text(
-            chat_id=123456789,
-            stream=fake_ai_stream(),
-            placeholder="AI is reasoning..."
-        )
-
-app.run(main())
-```
-
----
-
-### 4. Bot Chat History Retrieval
+### 3. Bot Chat History Retrieval
 
 ```python
 from ftmgram import Client
@@ -142,8 +127,7 @@ Visit the official documentation portal: **[https://ftmgram.ftmbotzx.dev/](https
 
 * **[Getting Started](https://ftmgram.ftmbotzx.dev/intro/quickstart.html)**
 * **[Methods Index](https://ftmgram.ftmbotzx.dev/api/methods/index.html)**
-* **[Types Reference](https://ftmgram.ftmbotzx.dev/api/types/index.html)**
-* **[Bot API 10.3 Topics](https://ftmgram.ftmbotzx.dev/topics/rich-messages.html)**
+* **[Releases & Changelog](https://ftmgram.ftmbotzx.dev/releases/index.html)**
 
 ---
 

@@ -28,7 +28,6 @@ from ftmgram.methods.utilities import idle as idle_module, compose as compose_mo
 
 def async_to_sync(obj, name):
     function = getattr(obj, name)
-    main_loop = utils.get_event_loop()
 
     def async_to_sync_gen(agen, loop, is_main_thread):
         async def anext(agen):
@@ -54,7 +53,7 @@ def async_to_sync(obj, name):
 
         loop = utils.get_event_loop()
 
-        if threading.current_thread() is threading.main_thread() or not main_loop.is_running():
+        if threading.current_thread() is threading.main_thread() or not loop.is_running():
             if loop.is_running():
                 return coroutine
             else:
@@ -67,19 +66,20 @@ def async_to_sync(obj, name):
             if inspect.iscoroutine(coroutine):
                 if loop.is_running():
                     async def coro_wrapper():
-                        return await asyncio.wrap_future(asyncio.run_coroutine_threadsafe(coroutine, main_loop))
+                        return await asyncio.wrap_future(asyncio.run_coroutine_threadsafe(coroutine, loop))
 
                     return coro_wrapper()
                 else:
-                    return asyncio.run_coroutine_threadsafe(coroutine, main_loop).result()
+                    return asyncio.run_coroutine_threadsafe(coroutine, loop).result()
 
             if inspect.isasyncgen(coroutine):
                 if loop.is_running():
                     return coroutine
                 else:
-                    return async_to_sync_gen(coroutine, main_loop, False)
+                    return async_to_sync_gen(coroutine, loop, False)
 
     setattr(obj, name, async_to_sync_wrap)
+
 
 
 def wrap(source):

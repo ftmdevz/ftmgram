@@ -37,22 +37,33 @@ from ftmgram.file_id import DOCUMENT_TYPES, PHOTO_TYPES, FileId, FileType
 from ftmgram.types.messages_and_media.message import Str
 
 
+_policy_set = False
+
+
 def get_event_loop() -> asyncio.AbstractEventLoop:
-    try:
-        import uvloop
-        asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
-    except ImportError:
-        pass
+    global _policy_set
+    if not _policy_set:
+        try:
+            import uvloop
+            asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
+        except (ImportError, AttributeError):
+            pass
+        _policy_set = True
 
     try:
-        loop = asyncio.get_event_loop()
-        if loop.is_closed():
-            raise RuntimeError
+        return asyncio.get_running_loop()
     except RuntimeError:
-        loop = asyncio.new_event_loop()
-        asyncio.set_event_loop(loop)
+        try:
+            loop = asyncio.get_event_loop()
+            if loop.is_closed():
+                loop = asyncio.new_event_loop()
+                asyncio.set_event_loop(loop)
+            return loop
+        except RuntimeError:
+            loop = asyncio.new_event_loop()
+            asyncio.set_event_loop(loop)
+            return loop
 
-    return loop
 
 
 async def ainput(prompt: str = "", *, hide: bool = False, loop: Optional[asyncio.AbstractEventLoop] = None):

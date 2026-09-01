@@ -40,6 +40,7 @@ Messages
    * :meth:`~ftmgram.Client.search_messages`
    * :meth:`~ftmgram.Client.download_media`
    * :meth:`~ftmgram.Client.fast_download`
+   * :meth:`~ftmgram.Client.fast_upload`
    * :meth:`~ftmgram.Client.send_chat_action`
    * :meth:`~ftmgram.Client.translate_message_text`
 
@@ -79,6 +80,7 @@ Messages
    search_messages
    download_media
    fast_download
+   fast_upload
    send_chat_action
    translate_message_text
 

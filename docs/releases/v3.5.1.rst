@@ -1,0 +1,27 @@
+Version 3.5.1
+=============
+
+**Released on 2026-09-01**
+
+FTMGram v3.5.1 is a rock-solid performance and stability release that resolves import-time file handle exhaustion on Linux/uvloop environments and introduces Turbo Parallel File Uploads.
+
+Highlights
+----------
+
+* **Bugfix: Linux `Too many open files` [Errno 24] Resolved**:
+  Fixed an issue in `sync.py` and `utils.py` where event loops were repeatedly created during import wrapping. Event loop retrieval is now fully lazy and safe on multi-threaded and uvloop container environments.
+
+* **⚡ Turbo Multi-Worker Media Uploads (`fast_upload`)**:
+  Upload large files (videos, documents, archives) at maximum speed by streaming 1MB chunk parts concurrently across 8-16 parallel workers using `upload.saveBigFilePart`.
+
+* **⚡ Turbo Multi-Worker Media Downloads (`fast_download`)**:
+  Download media files concurrently with chunk worker saturation.
+
+* **🤖 Bot Chat History Retrieval (`get_bot_chat_history`)**:
+  Safe 100-ID batch scanning for bots in private chats and groups without ban risk.
+
+* **🎨 Fluent `RichMessageBuilder` DSL**:
+  Construct structured rich messages with `<tg-button-row>`, expandable quotes, tables, and paragraphs effortlessly in Python.
+
+* **🧠 Real-Time AI Streaming (`stream_text` & `thinking`)**:
+  Stream LLM tokens directly to chat drafts with animated placeholders.

@@ -13,16 +13,16 @@ Welcome to FTMGram
        <br>
        <a href="https://ftmgram.ftmbotzx.dev">Homepage</a> •
        <a href="https://github.com/ftmdevz/ftmgram">Development</a> •
-       <a href="releases/v3.5.0.html">v3.5.0 Release</a> •
+       <a href="releases/v3.5.1.html">v3.5.1 Release</a> •
        <a href="releases/index.html">All Releases</a> •
        <a href="https://t.me/ftmdeveloperz">News</a>
    </p>
 
 .. note::
 
-   **🎉 FTMGram v3.5.0 Released!**
+   **🎉 FTMGram v3.5.1 Released!**
    Featuring **Bot Chat History Scanning** (``get_bot_chat_history``), **Turbo Multi-Worker Media Engine** (``fast_download``), **In-Message Buttons** (``<tg-button-row>``), **AI Token Streaming** (``stream_text``), **Fluent RichMessageBuilder DSL**, **Batch Purge Admin Tools**, and **Checklists**.
-   Read the :doc:`releases/v3.5.0` release notes for full details!
+   Read the :doc:`releases/v3.5.1` release notes for full details!
 
 .. code-block:: python
 
@@ -32,7 +32,7 @@ Welcome to FTMGram
 
    @app.on_message(filters.private)
    async def hello(client, message):
-       await message.reply("Hello from FTMGram v3.5.0!")
+       await message.reply("Hello from FTMGram v3.5.1!")
 
    app.run()
 
@@ -97,7 +97,7 @@ How the Documentation is Organized
 
 * **Releases & Changelog**
 
-  * :doc:`releases/v3.5.0` — Highlights and new methods in v3.5.0.
+  * :doc:`releases/v3.5.1` — Highlights and new methods in v3.5.1.
   * :doc:`releases/index` — Full historical release notes and changelog.
 
 * **Meta**
@@ -174,7 +174,7 @@ How the Documentation is Organized
    :maxdepth: 2
    :caption: Releases & Changelog
 
-   releases/v3.5.0
+   releases/v3.5.1
    releases/index
 
 .. toctree::
