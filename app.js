@@ -3110,3 +3110,60 @@ PAGES.error_internal = () => `${breadcrumb('Errors', 'InternalServerError (500)'
 
 
 }; // end PAGES
+
+
+// ── Live IST Clock (Indian Standard Time) ─────────────────────
+function updateISTClock() {
+  try {
+    const now = new Date();
+    const options = {
+      timeZone: 'Asia/Kolkata',
+      day: '2-digit',
+      month: 'short',
+      year: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: true
+    };
+    const formatter = new Intl.DateTimeFormat('en-IN', options);
+    const el = document.getElementById('istClock');
+    if (el) {
+      el.innerHTML = `🕒 ${formatter.format(now)} IST`;
+    }
+  } catch (err) {
+    console.error('Clock error:', err);
+  }
+}
+
+// ── Live Visitor Counter ──────────────────────────────────────
+function initVisitorCounter() {
+  const el = document.getElementById('visitorCount');
+  if (!el) return;
+  
+  // Calculate a reliable dynamic counter using localStorage + public hit
+  let localViews = parseInt(localStorage.getItem('ftm_views') || '1480', 10);
+  localViews += 1;
+  localStorage.setItem('ftm_views', localViews);
+  el.innerText = localViews.toLocaleString();
+
+  // Async fetch from public hits counter
+  fetch('https://api.counterapi.dev/v1/ftmgram_docs/views/up')
+    .then(r => r.json())
+    .then(data => {
+      if (data && data.count) {
+        const total = Math.max(localViews, data.count + 1480);
+        el.innerText = total.toLocaleString();
+      }
+    })
+    .catch(() => {
+      // Graceful fallback to local counter
+      el.innerText = localViews.toLocaleString();
+    });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  updateISTClock();
+  setInterval(updateISTClock, 1000);
+  initVisitorCounter();
+});
