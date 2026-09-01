@@ -248,8 +248,8 @@ class Client(Methods):
             For now, only the tz_offset field is supported, for specifying timezone offset in seconds.
     """
 
-    APP_VERSION = f"Pyrogram {__version__}"
-    DEVICE_MODEL = f"{platform.python_implementation()} {platform.python_version()}"
+    APP_VERSION = f"FTMGram {__version__}"
+    DEVICE_MODEL = f"FTMGram ({platform.python_implementation()} {platform.python_version()})"
     SYSTEM_VERSION = f"{platform.system()} {platform.release()}"
 
     LANG_PACK = ""
@@ -475,8 +475,8 @@ class Client(Methods):
         if self.bot_token:
             return await self.sign_in_bot(self.bot_token)
 
-        print(f"Welcome to Pyrogram (version {__version__})")
-        print(f"Pyrogram is free software and comes with ABSOLUTELY NO WARRANTY. Licensed\n"
+        print(f"Welcome to FTMGram (version {__version__})")
+        print(f"FTMGram is free software and comes with ABSOLUTELY NO WARRANTY. Licensed\n"
               f"under the terms of the {__license__}.\n")
 
         while True:
@@ -651,8 +651,8 @@ class Client(Methods):
             try:
                 print(
                     "\x1b[2J\n"
-                    f"Welcome to Pyrogram (version {__version__})\n"
-                    "Pyrogram is free software and comes with ABSOLUTELY NO WARRANTY. Licensed\n"
+                    f"Welcome to FTMGram (version {__version__})\n"
+                    "FTMGram is free software and comes with ABSOLUTELY NO WARRANTY. Licensed\n"
                     f"under the terms of the {__license__}.\n"
                     "Scan the QR code below to login\n"
                     "Settings -> Privacy and Security -> Active Sessions -> Scan QR Code.",

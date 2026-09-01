@@ -63,6 +63,97 @@ function copyCode(btn) {
 
 // ── Search ────────────────────────────────────────────────────
 const SEARCH_INDEX = [
+  {
+    "name": "What's New in v3.3",
+    "cat": "Introduction",
+    "page": "whats_new"
+  },
+  {
+    "name": "Checklists & Task Lists",
+    "cat": "Topics & Guides",
+    "page": "topic_checklists"
+  },
+  {
+    "name": "Star Payments",
+    "cat": "Topics & Guides",
+    "page": "topic_star_payments"
+  },
+  {
+    "name": "Session Management",
+    "cat": "Topics & Guides",
+    "page": "topic_sessions"
+  },
+  {
+    "name": "Raw MTProto API",
+    "cat": "Topics & Guides",
+    "page": "topic_raw_mtproto"
+  },
+  {
+    "name": "Message.reply",
+    "cat": "Bound Methods",
+    "page": "bound_message_reply"
+  },
+  {
+    "name": "Message.edit_text",
+    "cat": "Bound Methods",
+    "page": "bound_message_edit"
+  },
+  {
+    "name": "Message.delete",
+    "cat": "Bound Methods",
+    "page": "bound_message_delete"
+  },
+  {
+    "name": "Message.click",
+    "cat": "Bound Methods",
+    "page": "bound_message_click"
+  },
+  {
+    "name": "CallbackQuery.answer",
+    "cat": "Bound Methods",
+    "page": "bound_callback_query_answer"
+  },
+  {
+    "name": "Chat.ban_member",
+    "cat": "Bound Methods",
+    "page": "bound_chat_ban_member"
+  },
+  {
+    "name": "User.block",
+    "cat": "Bound Methods",
+    "page": "bound_user_block"
+  },
+  {
+    "name": "RPCError",
+    "cat": "Errors",
+    "page": "error_rpc"
+  },
+  {
+    "name": "FloodWait (420)",
+    "cat": "Errors",
+    "page": "error_flood_wait"
+  },
+  {
+    "name": "BadRequest (400)",
+    "cat": "Errors",
+    "page": "error_bad_request"
+  },
+  {
+    "name": "Unauthorized (401)",
+    "cat": "Errors",
+    "page": "error_unauthorized"
+  },
+  {
+    "name": "Forbidden (403)",
+    "cat": "Errors",
+    "page": "error_forbidden"
+  },
+  {
+    "name": "InternalServerError (500)",
+    "cat": "Errors",
+    "page": "error_internal"
+  }
+,
   // Overview
   { name: 'Home', cat: 'Overview', page: 'home' },
   { name: 'Installation', cat: 'Overview', page: 'install' },
@@ -2750,6 +2841,272 @@ PAGES.type_Community = () => typePage('Community', 'Types', 'Represents a Telegr
   { name: 'title', type: 'str', desc: 'Community title.' },
   { name: 'description', type: 'str', desc: 'Community description.' },
 ]);
+
+
+
+// ── What's New in v3.3.0 ─────────────────────────────────────
+PAGES.whats_new = () => `${breadcrumb('Introduction', "What's New in v3.3.0")}
+<div class="method-header">
+  <h1>What's New in FTMGram v3.3.0 🚀</h1>
+  <p>FTMGram v3.3.0 is a major milestone release delivering native Telegram Bot API 10.3 & 10.2 MTProto support, live AI token streaming, in-message buttons, ephemeral user overlays, star payments, and zero breaking changes for existing Pyrogram/Kurigram projects.</p>
+  <div class="method-tags">
+    <span class="tag tag-new">v3.3.0 Release</span>
+    <span class="tag tag-async">Telegram Layer 198+</span>
+    <span class="tag tag-bot">Bot API 10.3</span>
+  </div>
+</div>
+
+<div class="sec-title">🌟 Key Highlights</div>
+<div class="cards-grid">
+  <div class="card" onclick="navigate('topic_intext_buttons')">
+    <div class="card-icon">🔘</div>
+    <div class="card-title">In-Message Buttons</div>
+    <div class="card-desc">Native pill buttons embedded directly inside message bubbles with <code>&lt;tg-button-row&gt;</code> and <code>&lt;tg-button&gt;</code> tags.</div>
+  </div>
+  <div class="card" onclick="navigate('topic_streaming_drafts')">
+    <div class="card-icon">🌊</div>
+    <div class="card-title">Live AI Draft Streaming</div>
+    <div class="card-desc">Stream text responses token-by-token using <code>send_rich_message_draft</code> with native Stop button and zero flood waits.</div>
+  </div>
+  <div class="card" onclick="navigate('topic_ephemeral')">
+    <div class="card-icon">👻</div>
+    <div class="card-title">Ephemeral Messages</div>
+    <div class="card-desc">Send temporary in-place overlay messages visible exclusively to the user interacting with a button.</div>
+  </div>
+  <div class="card" onclick="navigate('topic_tables_quotes')">
+    <div class="card-icon">📊</div>
+    <div class="card-title">Compact Tables & Quotes</div>
+    <div class="card-desc">Collapsible blockquotes (<code>&lt;blockquote expandable&gt;</code>) and compact responsive data tables.</div>
+  </div>
+  <div class="card" onclick="navigate('topic_disabled_buttons')">
+    <div class="card-icon">🔒</div>
+    <div class="card-title">Disabled Buttons</div>
+    <div class="card-desc">Attach unclickable buttons with custom explanatory popup reasons using <code>DisabledButton</code>.</div>
+  </div>
+  <div class="card" onclick="navigate('topic_checklists')">
+    <div class="card-icon">📋</div>
+    <div class="card-title">Checklists & Task Lists</div>
+    <div class="card-desc">Interactive todo lists and checklist media via <code>send_checklist()</code> and <code>Checklist</code> type.</div>
+  </div>
+</div>
+
+<div class="sec-title">Detailed Changelog (v3.3.0)</div>
+<div class="table-wrap">
+  <table class="doc-table">
+    <thead><tr><th>Component</th><th>Changes & Features</th></tr></thead>
+    <tbody>
+      <tr><td><b>Rich Messages</b></td><td>Added <code>send_rich_message</code>, <code>send_rich_message_draft</code>, <code>InputRichMessage</code>, <code>RichMessageButton</code>, <code>InputRichBlockButtons</code>, <code>InputRichBlockTable</code>, <code>InputRichBlockExpandableBlockQuotation</code>, and <code>InputRichBlockDocument</code>.</td></tr>
+      <tr><td><b>AI Streaming</b></td><td>Added <code>sendMessageTextDraftAction</code> via <code>messages.setTyping</code> with <code>can_stop=True</code>, <code>draft_id</code> animation, and <code>MessageGenerationStopped</code> handler.</td></tr>
+      <tr><td><b>Ephemeral Overlays</b></td><td>Added <code>EphemeralMessageParameters</code>, <code>edit_ephemeral_message_text</code>, <code>edit_ephemeral_message_caption</code>, <code>edit_ephemeral_message_media</code>, and <code>delete_ephemeral_message</code>.</td></tr>
+      <tr><td><b>Session Identity</b></td><td>Client login session branding updated to <code>FTMGram v3.3.0</code> in Telegram Active Sessions & Devices.</td></tr>
+      <tr><td><b>Telegram Stars</b></td><td>Added <code>get_owned_star_count</code> and <code>refund_star_payment</code> methods.</td></tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+// ── Additional Topics ─────────────────────────────────────────
+PAGES.topic_checklists = () => `${breadcrumb('Topics & Guides', 'Checklists & Task Lists')}
+<div class="method-header">
+  <h1>Checklists & Task Lists 📋</h1>
+  <p>Send interactive task lists where users can check off completed items in real-time.</p>
+</div>
+${exampleBox(`from ftmgram import Client
+from ftmgram.types import Checklist, ChecklistTask
+
+app = Client("my_bot", bot_token="TOKEN")
+
+async def main():
+    async with app:
+        await app.send_checklist(
+            chat_id=123456789,
+            title="🚀 FTMGram v3.3 Release Tasks",
+            tasks=[
+                ChecklistTask(id=1, text="Compile Bot API 10.3 MTProto Layer", is_completed=True),
+                ChecklistTask(id=2, text="Deploy Documentation Portal", is_completed=True),
+                ChecklistTask(id=3, text="Publish PyPI Release", is_completed=False),
+            ]
+        )
+
+app.run(main())`, "Sending Checklists")}`;
+
+PAGES.topic_star_payments = () => `${breadcrumb('Topics & Guides', 'Telegram Star Payments')}
+<div class="method-header">
+  <h1>Telegram Star Payments & Balances ⭐</h1>
+  <p>Accept Telegram Star payments, query owned star balances, and process refunds.</p>
+</div>
+${exampleBox(`from ftmgram import Client
+
+app = Client("my_bot", bot_token="TOKEN")
+
+async def main():
+    async with app:
+        # Check total Stars owned by this bot
+        stars = await app.get_owned_star_count()
+        print("Total Stars balance:", stars.star_count)
+
+app.run(main())`, "Checking Star Balance")}`;
+
+PAGES.topic_sessions = () => `${breadcrumb('Topics & Guides', 'Session Management')}
+<div class="method-header">
+  <h1>Session Strings & Storage 💾</h1>
+  <p>FTMGram supports file-based SQLite sessions, in-memory sessions, and exportable <code>session_string</code> format for serverless / cloud deployments.</p>
+</div>
+${exampleBox(`from ftmgram import Client
+
+# 1. File session
+app1 = Client("my_account", api_id=12345, api_hash="hash")
+
+# 2. In-Memory temporary session
+app2 = Client("temp_bot", bot_token="TOKEN", in_memory=True)
+
+# 3. String session (Heroku / Render / Serverless)
+session_str = "1BVtsOMQBu..."
+app3 = Client("cloud_bot", session_string=session_str, api_id=12345, api_hash="hash")`, "Session Initialization Options")}`;
+
+PAGES.topic_raw_mtproto = () => `${breadcrumb('Topics & Guides', 'Raw MTProto API')}
+<div class="method-header">
+  <h1>Invoking Raw MTProto Functions ⚡</h1>
+  <p>FTMGram exposes Telegram's raw Type-Language (TL) schema via <code>raw.functions</code> and <code>raw.types</code> through <code>app.invoke()</code>.</p>
+</div>
+${exampleBox(`from ftmgram import Client, raw
+
+app = Client("my_account")
+
+async def main():
+    async with app:
+        # Direct raw MTProto invoke
+        result = await app.invoke(
+            raw.functions.help.GetConfig()
+        )
+        print("Telegram Data Center DC ID:", result.this_dc)
+
+app.run(main())`, "Raw MTProto Invoke")}`;
+
+// ── Bound Methods Pages ───────────────────────────────────────
+PAGES.bound_message_reply = () => `${breadcrumb('Bound Methods', 'Message.reply')}
+<div class="method-header">
+  <h1><code>Message.reply()</code> / <code>Message.reply_text()</code></h1>
+  <p>Bound method to reply directly to a message.</p>
+</div>
+${exampleBox(`@app.on_message()
+async def echo(client, message):
+    # Directly call .reply() on the Message object
+    await message.reply(f"Echo: {message.text}")`)}`;
+
+PAGES.bound_message_edit = () => `${breadcrumb('Bound Methods', 'Message.edit_text')}
+<div class="method-header">
+  <h1><code>Message.edit_text()</code></h1>
+  <p>Bound method to edit the text of an outgoing message or bot message.</p>
+</div>
+${exampleBox(`@app.on_message()
+async def process(client, message):
+    msg = await message.reply("⏳ Processing...")
+    await asyncio.sleep(2)
+    await msg.edit_text("✅ Done!")`)}`;
+
+PAGES.bound_message_delete = () => `${breadcrumb('Bound Methods', 'Message.delete')}
+<div class="method-header">
+  <h1><code>Message.delete()</code></h1>
+  <p>Bound method to delete a message.</p>
+</div>
+${exampleBox(`@app.on_message()
+async def auto_clean(client, message):
+    await asyncio.sleep(60)
+    await message.delete()`)}`;
+
+PAGES.bound_message_click = () => `${breadcrumb('Bound Methods', 'Message.click')}
+<div class="method-header">
+  <h1><code>Message.click()</code></h1>
+  <p>Bound method to simulate clicking an inline button (for userbots).</p>
+</div>
+${exampleBox(`@app.on_message()
+async def click_first_btn(client, message):
+    # Click button by row/column index or by callback text
+    await message.click(0, 0)`)}`;
+
+PAGES.bound_callback_query_answer = () => `${breadcrumb('Bound Methods', 'CallbackQuery.answer')}
+<div class="method-header">
+  <h1><code>CallbackQuery.answer()</code></h1>
+  <p>Bound method to answer an incoming callback query.</p>
+</div>
+${exampleBox(`@app.on_callback_query()
+async def on_click(client, query):
+    # Answer callback with toast alert
+    await query.answer("Button clicked successfully!", show_alert=True)`)}`;
+
+PAGES.bound_chat_ban_member = () => `${breadcrumb('Bound Methods', 'Chat.ban_member')}
+<div class="method-header">
+  <h1><code>Chat.ban_member()</code></h1>
+  <p>Bound method on Chat object to ban a member.</p>
+</div>
+${exampleBox(`@app.on_message()
+async def ban_spammer(client, message):
+    await message.chat.ban_member(message.from_user.id)`)}`;
+
+PAGES.bound_user_block = () => `${breadcrumb('Bound Methods', 'User.block')}
+<div class="method-header">
+  <h1><code>User.block()</code></h1>
+  <p>Bound method on User object to block a user.</p>
+</div>
+${exampleBox(`@app.on_message()
+async def block_pm(client, message):
+    await message.from_user.block()`)}`;
+
+// ── Error & Exception Pages ───────────────────────────────────
+PAGES.error_rpc = () => `${breadcrumb('Errors', 'RPCError')}
+<div class="method-header">
+  <h1>Telegram RPC Errors Overview ⚠️</h1>
+  <p>All Telegram server exceptions inherit from <code>ftmgram.errors.RPCError</code>.</p>
+</div>
+${exampleBox(`from ftmgram.errors import RPCError, FloodWait, BadRequest
+
+try:
+    await app.send_message(chat_id, "Hello")
+except FloodWait as e:
+    print(f"Must wait {e.value} seconds")
+except BadRequest as e:
+    print(f"Bad Request: {e.MESSAGE}")
+except RPCError as e:
+    print(f"Telegram error: {e}")`)}`;
+
+PAGES.error_flood_wait = () => `${breadcrumb('Errors', 'FloodWait (420)')}
+<div class="method-header">
+  <h1><code>FloodWait (420)</code> ⏳</h1>
+  <p>Raised when you make too many requests in a short period of time. Contains the exact number of seconds you must wait in <code>e.value</code>.</p>
+</div>
+${exampleBox(`from ftmgram.errors import FloodWait
+
+try:
+    await app.send_message(chat_id, "Hello")
+except FloodWait as e:
+    print(f"Rate limited! Sleeping for {e.value} seconds...")
+    await asyncio.sleep(e.value)
+    await app.send_message(chat_id, "Hello")`)}`;
+
+PAGES.error_bad_request = () => `${breadcrumb('Errors', 'BadRequest (400)')}
+<div class="method-header">
+  <h1><code>BadRequest (400)</code> ❌</h1>
+  <p>Raised when a method request has invalid parameters (e.g. <code>MessageEmpty</code>, <code>PeerIdInvalid</code>, <code>ChatAdminRequired</code>).</p>
+</div>`;
+
+PAGES.error_unauthorized = () => `${breadcrumb('Errors', 'Unauthorized (401)')}
+<div class="method-header">
+  <h1><code>Unauthorized (401)</code> 🔒</h1>
+  <p>Raised when the bot token or session auth key is invalid (e.g. <code>AuthKeyUnregistered</code>, <code>SessionRevoked</code>, <code>UserDeactivated</code>).</p>
+</div>`;
+
+PAGES.error_forbidden = () => `${breadcrumb('Errors', 'Forbidden (403)')}
+<div class="method-header">
+  <h1><code>Forbidden (403)</code> 🚫</h1>
+  <p>Raised when the bot was blocked by the user (<code>UserIsBlocked</code>) or lacks rights in a chat.</p>
+</div>`;
+
+PAGES.error_internal = () => `${breadcrumb('Errors', 'InternalServerError (500)')}
+<div class="method-header">
+  <h1><code>InternalServerError (500)</code> ⚠️</h1>
+  <p>Raised when Telegram servers experience temporary internal issues (e.g. <code>RpcCallFail</code>, <code>InterdcCallError</code>). Safe to retry after a short delay.</p>
+</div>`;
 
 
 }; // end PAGES

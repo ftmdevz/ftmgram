@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FTMGram — Modern Asynchronous Telegram Framework</title>
-<meta name="description" content="Official documentation for FTMGram — Elegant, modern and asynchronous Telegram MTProto & Bot API 10.3 framework in Python for users and bots.">
+<title>FTMGram Documentation — Elegant Asynchronous Telegram Framework</title>
+<meta name="description" content="Official documentation for FTMGram v3.3.0 — Elegant, modern and asynchronous Telegram MTProto & Bot API 10.3 framework in Python for users and bots.">
 <link rel="icon" href="assets/logo.png">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" id="hljs-dark">
@@ -64,32 +64,36 @@
 <aside class="sidebar" id="sidebar">
   <div class="sidebar-inner">
 
-    <!-- 1. Overview -->
+    <!-- 1. Introduction -->
     <div class="sidebar-section">
-      <div class="sidebar-heading">Overview & Setup</div>
-      <a class="sidebar-link" onclick="navigate('home')">🏠 Home</a>
+      <div class="sidebar-heading">Introduction</div>
+      <a class="sidebar-link" onclick="navigate('home')">🏠 Welcome</a>
+      <a class="sidebar-link" onclick="navigate('whats_new')">🚀 What's New in v3.3</a>
       <a class="sidebar-link" onclick="navigate('install')">📦 Installation</a>
-      <a class="sidebar-link" onclick="navigate('quickstart')">🚀 Quick Start</a>
-      <a class="sidebar-link" onclick="navigate('client')">⚙️ Client Configuration</a>
+      <a class="sidebar-link" onclick="navigate('quickstart')">⚡ Quick Start</a>
+      <a class="sidebar-link" onclick="navigate('client')">⚙️ Client & Session Setup</a>
       <a class="sidebar-link" onclick="navigate('migration')">🔄 Pyrogram Migration</a>
     </div>
 
-    <!-- 2. Bot API 10.3 Features -->
+    <!-- 2. Topics & Guides -->
     <div class="sidebar-section">
       <div class="sidebar-heading collapsible" onclick="toggleSection(this)">
-        <span>✨ Bot API 10.3 & 10.2</span><span class="chevron">▾</span>
+        <span>📚 Topics & Guides</span><span class="chevron">▾</span>
       </div>
       <div class="sidebar-children">
-        <a class="sidebar-link" onclick="navigate('topic_rich_messages')">Rich Messages Guide 🌟</a>
-        <a class="sidebar-link" onclick="navigate('topic_intext_buttons')">In-Message Buttons 🔘</a>
-        <a class="sidebar-link" onclick="navigate('topic_streaming_drafts')">AI Response Streaming 🌊</a>
-        <a class="sidebar-link" onclick="navigate('topic_ephemeral')">Ephemeral Messages 👻</a>
-        <a class="sidebar-link" onclick="navigate('topic_tables_quotes')">Compact Tables & Quotes 📊</a>
-        <a class="sidebar-link" onclick="navigate('topic_disabled_buttons')">Disabled Buttons 🔒</a>
+        <a class="sidebar-link" onclick="navigate('topic_rich_messages')">Rich Messages & In-Text Buttons</a>
+        <a class="sidebar-link" onclick="navigate('topic_streaming_drafts')">AI Response Streaming & Drafts</a>
+        <a class="sidebar-link" onclick="navigate('topic_ephemeral')">Ephemeral Messages & Overlays</a>
+        <a class="sidebar-link" onclick="navigate('topic_tables_quotes')">Compact Tables & Quotes</a>
+        <a class="sidebar-link" onclick="navigate('topic_disabled_buttons')">Disabled Buttons in Keyboards</a>
+        <a class="sidebar-link" onclick="navigate('topic_checklists')">Checklists & Task Lists</a>
+        <a class="sidebar-link" onclick="navigate('topic_star_payments')">Telegram Star Payments</a>
+        <a class="sidebar-link" onclick="navigate('topic_sessions')">Session Strings & Storage</a>
+        <a class="sidebar-link" onclick="navigate('topic_raw_mtproto')">Invoking Raw MTProto API</a>
       </div>
     </div>
 
-    <!-- 3. Messages -->
+    <!-- 3. Client Methods -->
     <div class="sidebar-section">
       <div class="sidebar-heading collapsible" onclick="toggleSection(this)">
         <span>📨 Messages Methods</span><span class="chevron">▾</span>
@@ -183,7 +187,7 @@
       </div>
     </div>
 
-    <!-- 6. Bots & Inline -->
+    <!-- 6. Bots -->
     <div class="sidebar-section">
       <div class="sidebar-heading collapsible" onclick="toggleSection(this)">
         <span>🤖 Bots & Inline</span><span class="chevron">▾</span>
@@ -205,7 +209,7 @@
       </div>
     </div>
 
-    <!-- 7. Stars & Payments -->
+    <!-- 7. Stars -->
     <div class="sidebar-section">
       <div class="sidebar-heading collapsible" onclick="toggleSection(this)">
         <span>⭐ Stars & Payments</span><span class="chevron">▾</span>
@@ -220,7 +224,7 @@
       </div>
     </div>
 
-    <!-- 8. Stickers & Reactions -->
+    <!-- 8. Stickers -->
     <div class="sidebar-section">
       <div class="sidebar-heading collapsible" onclick="toggleSection(this)">
         <span>🏷️ Stickers & Reactions</span><span class="chevron">▾</span>
@@ -253,7 +257,23 @@
       </div>
     </div>
 
-    <!-- 10. Handlers -->
+    <!-- 10. Bound Methods -->
+    <div class="sidebar-section">
+      <div class="sidebar-heading collapsible" onclick="toggleSection(this)">
+        <span>🔗 Bound Methods</span><span class="chevron">▾</span>
+      </div>
+      <div class="sidebar-children">
+        <a class="sidebar-link" onclick="navigate('bound_message_reply')">Message.reply</a>
+        <a class="sidebar-link" onclick="navigate('bound_message_edit')">Message.edit_text</a>
+        <a class="sidebar-link" onclick="navigate('bound_message_delete')">Message.delete</a>
+        <a class="sidebar-link" onclick="navigate('bound_message_click')">Message.click</a>
+        <a class="sidebar-link" onclick="navigate('bound_callback_query_answer')">CallbackQuery.answer</a>
+        <a class="sidebar-link" onclick="navigate('bound_chat_ban_member')">Chat.ban_member</a>
+        <a class="sidebar-link" onclick="navigate('bound_user_block')">User.block</a>
+      </div>
+    </div>
+
+    <!-- 11. Handlers -->
     <div class="sidebar-section">
       <div class="sidebar-heading collapsible" onclick="toggleSection(this)">
         <span>🔔 Handlers & Decorators</span><span class="chevron">▾</span>
@@ -275,7 +295,7 @@
       </div>
     </div>
 
-    <!-- 11. Filters -->
+    <!-- 12. Filters -->
     <div class="sidebar-section">
       <div class="sidebar-heading collapsible" onclick="toggleSection(this)">
         <span>🎯 Filters Reference</span><span class="chevron">▾</span>
@@ -311,7 +331,7 @@
       </div>
     </div>
 
-    <!-- 12. Enums -->
+    <!-- 13. Enums -->
     <div class="sidebar-section">
       <div class="sidebar-heading collapsible" onclick="toggleSection(this)">
         <span>🔷 Enums Reference</span><span class="chevron">▾</span>
@@ -342,7 +362,7 @@
       </div>
     </div>
 
-    <!-- 13. Types -->
+    <!-- 14. Types -->
     <div class="sidebar-section">
       <div class="sidebar-heading collapsible" onclick="toggleSection(this)">
         <span>📦 Types & Models</span><span class="chevron">▾</span>
@@ -368,6 +388,21 @@
         <a class="sidebar-link" onclick="navigate('type_InlineQuery')">InlineQuery</a>
         <a class="sidebar-link" onclick="navigate('type_Checklist')">Checklist ✨</a>
         <a class="sidebar-link" onclick="navigate('type_Link')">Link ✨</a>
+      </div>
+    </div>
+
+    <!-- 15. Errors -->
+    <div class="sidebar-section">
+      <div class="sidebar-heading collapsible" onclick="toggleSection(this)">
+        <span>⚠️ Errors & Exceptions</span><span class="chevron">▾</span>
+      </div>
+      <div class="sidebar-children">
+        <a class="sidebar-link" onclick="navigate('error_rpc')">RPCError Overview</a>
+        <a class="sidebar-link" onclick="navigate('error_flood_wait')">FloodWait (420)</a>
+        <a class="sidebar-link" onclick="navigate('error_bad_request')">BadRequest (400)</a>
+        <a class="sidebar-link" onclick="navigate('error_unauthorized')">Unauthorized (401)</a>
+        <a class="sidebar-link" onclick="navigate('error_forbidden')">Forbidden (403)</a>
+        <a class="sidebar-link" onclick="navigate('error_internal')">InternalServerError (500)</a>
       </div>
     </div>
 
