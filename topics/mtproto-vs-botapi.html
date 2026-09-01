@@ -3,11 +3,11 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html">
+<link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="Debugging" href="debugging.html"><link rel="prev" title="Advanced Usage" href="advanced-usage.html">
         <link rel="prefetch" href="../_static/ftmgram_icon.svg" as="image">
 
     <link rel="shortcut icon" href="../_static/ftmgram_icon.svg"><!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
-        <title>MTProto vs. Bot API - FTMGram</title>
+        <title>MTProto vs Bot API - FTMGram</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=7bdb33bb" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -220,14 +220,139 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../start/setup.html">Project Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../start/auth.html">Authorization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../start/invoking.html">Invoking Methods</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../start/updates.html">Handling Updates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../start/errors.html">Error Handling</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../start/examples/index.html">Examples</a><input aria-label="Toggle navigation of Examples" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../start/examples/hello_world.html">hello_world</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../start/examples/echo_bot.html">echo_bot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../start/examples/tg_business_echo_bot.html">business_echo_bot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../start/examples/welcome_bot.html">welcome_bot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../start/examples/get_chat_history.html">get_history</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../start/examples/get_chat_members.html">get_chat_members</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../start/examples/get_dialogs.html">get_dialogs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../start/examples/callback_queries.html">callback_queries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../start/examples/inline_queries.html">inline_queries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../start/examples/use_inline_bots.html">use_inline_bots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../start/examples/bot_keyboards.html">bot_keyboards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../start/examples/send_voice.html">send_voice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../start/examples/raw_updates.html">raw_updates</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../api/client.html">FTMGram Client</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../api/types/index.html">Types</a><input aria-label="Toggle navigation of Types" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../api/methods/index.html">Methods</a><input aria-label="Toggle navigation of Methods" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/send_message.html">send_message()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/send_rich_message.html">send_rich_message()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/send_rich_message_draft.html">send_rich_message_draft()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/send_message_draft.html">send_message_draft()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/send_photo.html">send_photo()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/send_audio.html">send_audio()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/send_video.html">send_video()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/send_document.html">send_document()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/send_animation.html">send_animation()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/send_sticker.html">send_sticker()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/send_voice.html">send_voice()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/send_video_note.html">send_video_note()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/send_location.html">send_location()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/send_contact.html">send_contact()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/send_poll.html">send_poll()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/send_dice.html">send_dice()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/send_media_group.html">send_media_group()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/send_checklist.html">send_checklist()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/forward_messages.html">forward_messages()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/copy_message.html">copy_message()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/copy_media_group.html">copy_media_group()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/edit_message_text.html">edit_message_text()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/edit_message_caption.html">edit_message_caption()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/edit_message_media.html">edit_message_media()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/edit_message_reply_markup.html">edit_message_reply_markup()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/edit_ephemeral_message_text.html">edit_ephemeral_message_text()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/delete_ephemeral_message.html">delete_ephemeral_message()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/delete_messages.html">delete_messages()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/get_messages.html">get_messages()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/get_chat_history.html">get_chat_history()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/search_messages.html">search_messages()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/download_media.html">download_media()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/fast_download.html">fast_download()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/send_chat_action.html">send_chat_action()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/translate_message_text.html">translate_message_text()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/get_chat.html">get_chat()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/get_bot_chat_history.html">get_bot_chat_history()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/get_dialogs.html">get_dialogs()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/join_chat.html">join_chat()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/leave_chat.html">leave_chat()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/create_group.html">create_group()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/create_channel.html">create_channel()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/create_supergroup.html">create_supergroup()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/get_chat_members.html">get_chat_members()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/get_chat_member.html">get_chat_member()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/ban_chat_member.html">ban_chat_member()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/unban_chat_member.html">unban_chat_member()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/restrict_chat_member.html">restrict_chat_member()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/promote_chat_member.html">promote_chat_member()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/set_chat_title.html">set_chat_title()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/set_chat_description.html">set_chat_description()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/set_chat_photo.html">set_chat_photo()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/delete_chat_photo.html">delete_chat_photo()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/pin_chat_message.html">pin_chat_message()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/unpin_chat_message.html">unpin_chat_message()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/get_chat_invite_link.html">get_chat_invite_link()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/create_chat_invite_link.html">create_chat_invite_link()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/archive_chats.html">archive_chats()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/set_slow_mode.html">set_slow_mode()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/set_chat_permissions.html">set_chat_permissions()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/get_forum_topics.html">get_forum_topics()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/create_forum_topic.html">create_forum_topic()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/get_me.html">get_me()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/get_users.html">get_users()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/get_user_profile_photos.html">get_user_profile_photos()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/block_user.html">block_user()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/unblock_user.html">unblock_user()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/update_profile.html">update_profile()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/set_profile_photo.html">set_profile_photo()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/get_common_chats.html">get_common_chats()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/answer_callback_query.html">answer_callback_query()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/answer_inline_query.html">answer_inline_query()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/answer_web_app_query.html">answer_web_app_query()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/set_bot_commands.html">set_bot_commands()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/get_bot_commands.html">get_bot_commands()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/delete_bot_commands.html">delete_bot_commands()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/set_chat_menu_button.html">set_chat_menu_button()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/get_chat_menu_button.html">get_chat_menu_button()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/answer_chat_join_request_query.html">answer_chat_join_request_query()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/send_chat_join_request_web_app.html">send_chat_join_request_web_app()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/get_business_connection.html">get_business_connection()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/verify_user.html">verify_user()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/create_bot.html">create_bot()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/get_owned_star_count.html">get_owned_star_count()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/send_invoice.html">send_invoice()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/create_invoice_link.html">create_invoice_link()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/answer_shipping_query.html">answer_shipping_query()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/answer_pre_checkout_query.html">answer_pre_checkout_query()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/refund_star_payment.html">refund_star_payment()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/send_reaction.html">send_reaction()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/get_custom_emoji_stickers.html">get_custom_emoji_stickers()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/get_sticker_set.html">get_sticker_set()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/create_new_sticker_set.html">create_new_sticker_set()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/add_sticker_to_set.html">add_sticker_to_set()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/set_sticker_position_in_set.html">set_sticker_position_in_set()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/delete_sticker_from_set.html">delete_sticker_from_set()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/start.html">start()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/stop.html">stop()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/run.html">run()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/idle.html">idle()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/add_handler.html">add_handler()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/remove_handler.html">remove_handler()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/export_session_string.html">export_session_string()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/methods/invoke.html">invoke()</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../api/types/index.html">Types</a><input aria-label="Toggle navigation of Types" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../api/types/Message.html">Message</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/types/Chat.html">Chat</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/types/User.html">User</a></li>
@@ -276,7 +401,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../api/types/Story.html">Story</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../api/bound-methods/index.html">Bound Methods</a><input aria-label="Toggle navigation of Bound Methods" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../api/bound-methods/index.html">Bound Methods</a><input aria-label="Toggle navigation of Bound Methods" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../api/bound-methods/Message.reply.html">Message.reply()</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/bound-methods/Message.reply_text.html">Message.reply_text()</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/bound-methods/Message.reply_photo.html">Message.reply_photo()</a></li>
@@ -320,7 +445,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../api/bound-methods/User.unarchive.html">User.unarchive()</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../api/enums/index.html">Enumerations</a><input aria-label="Toggle navigation of Enumerations" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../api/enums/index.html">Enumerations</a><input aria-label="Toggle navigation of Enumerations" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../api/enums/ChatType.html">ChatType</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/enums/ParseMode.html">ParseMode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/enums/ButtonStyle.html">ButtonStyle</a></li>
@@ -348,7 +473,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../api/handlers.html">Update Handlers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../api/decorators.html">Decorators</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../api/filters.html">Update Filters</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../api/errors/index.html">RPC Errors</a><input aria-label="Toggle navigation of RPC Errors" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../api/errors/index.html">RPC Errors</a><input aria-label="Toggle navigation of RPC Errors" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../api/errors/see-other.html">303 - SeeOther</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/errors/bad-request.html">400 - BadRequest</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/errors/unauthorized.html">401 - Unauthorized</a></li>
@@ -360,7 +485,7 @@
 </li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Topic Guides</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="intext-buttons.html">In-Message Buttons</a></li>
 <li class="toctree-l1"><a class="reference internal" href="streaming-drafts.html">AI Response Streaming &amp; Drafts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ephemeral.html">Ephemeral Messages</a></li>
@@ -368,10 +493,97 @@
 <li class="toctree-l1"><a class="reference internal" href="text-formatting.html">Text Formatting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="smart-plugins.html">Smart Plugins</a></li>
 <li class="toctree-l1"><a class="reference internal" href="storage-engines.html">Storage Engines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="create-filters.html">Creating Filters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="use-filters.html">Using Filters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more-on-updates.html">More on Updates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="client-settings.html">Client Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="speedups.html">Speedups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="proxy.html">Proxy Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scheduling.html">Scheduling Tasks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced-usage.html">Advanced Usage</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">MTProto vs Bot API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debugging.html">Debugging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test-servers.html">Test Servers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="voice-calls.html">Voice Calls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="serializing.html">Object Serialization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="synchronous.html">Synchronous Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="message-identifiers.html">Message identifiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="comparison-with-other-forks.html">Comparison with Other FTMGram Forks</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Releases &amp; Changelog</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../releases/v3.5.0.html">Version 3.5.0</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../releases/index.html">Release Notes</a><input aria-label="Toggle navigation of Release Notes" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v3.5.0.html">Version 3.5.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.2.24.html">FTMGram v2.2.24</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.2.23.html">FTMGram v2.2.23</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.2.22.html">FTMGram v2.2.22</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.2.21.html">FTMGram v2.2.21</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.2.18.html">FTMGram v2.2.18</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.2.17.html">FTMGram v2.2.17</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.2.16.html">FTMGram v2.2.16</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.2.15.html">FTMGram v2.2.15</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.2.14.html">FTMGram v2.2.14</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.2.13.html">FTMGram v2.2.13</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.2.12.html">FTMGram v2.2.12</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.2.11.html">FTMGram v2.2.11</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.2.10.html">FTMGram v2.2.10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.2.9.html">FTMGram v2.2.9</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.2.8.html">FTMGram v2.2.8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.2.7.html">FTMGram v2.2.7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.2.6.html">FTMGram v2.2.6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.2.5.html">FTMGram v2.2.5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.2.4.html">FTMGram v2.2.4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.2.2.html">FTMGram v2.2.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.2.1.html">FTMGram v2.2.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.1.37.html">FTMGram v2.1.37</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.1.36.html">FTMGram v2.1.36</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.1.35.html">FTMGram v2.1.35</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.1.34.html">FTMGram v2.1.34</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.1.33.13.html">FTMGram v2.1.33.13</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.1.33.12.html">FTMGram v2.1.33.12</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.1.33.11.html">FTMGram v2.1.33.11</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.1.33.10.html">FTMGram v2.1.33.10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.1.33.9.html">FTMGram v2.1.33.9</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.1.33.8.html">FTMGram v2.1.33.8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.1.33.7.html">FTMGram v2.1.33.7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.1.33.4.html">FTMGram v2.1.33.4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.1.33.3.html">FTMGram v2.1.33.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.1.33.2.html">FTMGram v2.1.33.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.1.33.1.html">FTMGram v2.1.33.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.1.32.15.html">FTMGram v2.1.32.15</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.1.32.14.html">FTMGram v2.1.32.14</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.1.32.13.html">FTMGram v2.1.32.13</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.1.32.12.html">FTMGram v2.1.32.12</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.1.32.11.html">FTMGram v2.1.32.11</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.1.32.10.html">FTMGram v2.1.32.10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.1.32.9.html">FTMGram v2.1.32.9</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.1.32.8.html">FTMGram v2.1.32.8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.1.32.7.html">FTMGram v2.1.32.7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.1.32.6.html">FTMGram v2.1.32.6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.1.32.4.html">FTMGram v2.1.32.4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.1.32.3.html">FTMGram v2.1.32.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.1.32.2.html">FTMGram v2.1.32.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.1.32.1.html">FTMGram v2.1.32.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.1.31.html">FTMGram v2.1.31</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.1.30.html">FTMGram v2.1.30</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.1.29.html">FTMGram v2.1.29</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.1.28.html">FTMGram v2.1.28</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.1.27.html">FTMGram v2.1.27</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.1.26.html">FTMGram v2.1.26</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.1.25.html">FTMGram v2.1.25</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.1.23.html">FTMGram v2.1.23</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.1.22.html">FTMGram v2.1.22</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.1.21.html">FTMGram v2.1.21</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.1.20.html">FTMGram v2.1.20</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.1.19.html">FTMGram v2.1.19</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../releases/v2.1.18.html">FTMGram v2.1.18</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Meta</span></p>
 <ul>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../faq/index.html">Frequently Asked Questions</a><input aria-label="Toggle navigation of Frequently Asked Questions" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../faq/index.html">Frequently Asked Questions</a><input aria-label="Toggle navigation of Frequently Asked Questions" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../faq/why-is-the-api-key-needed-for-bots.html">Why is the API key needed for bots?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../faq/how-to-use-webhooks.html">How to use webhooks?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../faq/using-the-same-file-id-across-different-accounts.html">Using the same file_id across different accounts</a></li>
@@ -427,84 +639,18 @@
         </div>
         <article role="main" id="furo-main-content">
           <section id="mtproto-vs-bot-api">
-<h1>MTProto vs. Bot API<a class="headerlink" href="#mtproto-vs-bot-api" title="Link to this heading">¶</a></h1>
-<p>FTMGram is a framework written from the ground up that acts as a fully-fledged Telegram client based on the MTProto
-API. This means that FTMGram is able to execute any official client and bot API action and more. This page will
-therefore show you why FTMGram might be a better choice for your project by comparing the two APIs, but first, let’s
-make it clear what actually is the MTProto and the Bot API.</p>
-<hr class="docutils" />
-<section id="what-is-the-mtproto-api">
-<h2>What is the MTProto API?<a class="headerlink" href="#what-is-the-mtproto-api" title="Link to this heading">¶</a></h2>
-<p><a class="reference external" href="https://core.telegram.org/mtproto">MTProto</a>, took alone, is the name of the custom-made, open and encrypted communication protocol created by Telegram
-itself — it’s the only protocol used to exchange information between a client and the actual Telegram servers.</p>
-<p>The MTProto API on the other hand, is what people for convenience call the main Telegram API in order to distinguish it
-from the Bot API. The main Telegram API is able to authorize both users and bots and is built on top of the MTProto
-encryption protocol by means of <a class="reference external" href="https://core.telegram.org/mtproto/serialize">binary data serialized</a> in a specific way, as described by the <a class="reference external" href="https://core.telegram.org/mtproto/TL">TL language</a>, and
-delivered using UDP, TCP or even HTTP as transport-layer protocol. Clients that make use of Telegram’s main API, such as
-FTMGram, implement all these details.</p>
-</section>
-<section id="what-is-the-bot-api">
-<h2>What is the Bot API?<a class="headerlink" href="#what-is-the-bot-api" title="Link to this heading">¶</a></h2>
-<p>The <a class="reference external" href="https://core.telegram.org/bots/api">Bot API</a> is an HTTP(S) interface for building normal bots using a sub-set of the main Telegram API. Bots are
-special accounts that are authorized via tokens instead of phone numbers. The Bot API is built yet again on top of the
-main Telegram API, but runs on an intermediate server application that in turn communicates with the actual Telegram
-servers using MTProto.</p>
-<figure class="align-center">
-<img alt="//_static/img/mtproto-vs-bot-api.png" src="//_static/img/mtproto-vs-bot-api.png" />
-</figure>
-</section>
-<section id="advantages-of-the-mtproto-api">
-<h2>Advantages of the MTProto API<a class="headerlink" href="#advantages-of-the-mtproto-api" title="Link to this heading">¶</a></h2>
-<p>Here is a non-exhaustive list of all the advantages in using MTProto-based libraries – such as FTMGram – instead of
-the official HTTP Bot API. Using FTMGram you can:</p>
-<table class="hlist"><tr><td><ul class="simple">
-<li><p><span class="guilabel">+</span> <strong>Authorize both user and bot identities</strong></p></li>
-<li><p><span class="guilabel">–</span> The Bot API only allows bot accounts</p></li>
-</ul>
-</td></tr></table>
-<table class="hlist"><tr><td><ul class="simple">
-<li><p><span class="guilabel">+</span> <strong>Upload &amp; download any file, up to 2000 MiB each (~2 GB)</strong></p></li>
-<li><p><span class="guilabel">–</span> The Bot API allows uploads and downloads of files only up to 50 MB / 20 MB in size (respectively).</p></li>
-</ul>
-</td></tr></table>
-<table class="hlist"><tr><td><ul class="simple">
-<li><p><span class="guilabel">+</span> <strong>Has less overhead due to direct connections to Telegram</strong></p></li>
-<li><p><span class="guilabel">–</span> The Bot API uses an intermediate server to handle HTTP requests before they are sent to the actual
-Telegram servers.</p></li>
-</ul>
-</td></tr></table>
-<table class="hlist"><tr><td><ul class="simple">
-<li><p><span class="guilabel">+</span> <strong>Run multiple sessions at once (for both user and bot identities)</strong></p></li>
-<li><p><span class="guilabel">–</span> The Bot API intermediate server will terminate any other session in case you try to use the same
-bot again in a parallel connection.</p></li>
-</ul>
-</td></tr></table>
-<table class="hlist"><tr><td><ul class="simple">
-<li><p><span class="guilabel">+</span> <strong>Has much more detailed types and powerful methods</strong></p></li>
-<li><p><span class="guilabel">–</span> The Bot API types often miss some useful information about Telegram entities and some of the
-methods are limited as well.</p></li>
-</ul>
-</td></tr></table>
-<table class="hlist"><tr><td><ul class="simple">
-<li><p><span class="guilabel">+</span> <strong>Obtain information about any message existing in a chat using their ids</strong></p></li>
-<li><p><span class="guilabel">–</span> The Bot API simply doesn’t support this</p></li>
-</ul>
-</td></tr></table>
-<table class="hlist"><tr><td><ul class="simple">
-<li><p><span class="guilabel">+</span> <strong>Retrieve the whole chat members list of either public or private chats</strong></p></li>
-<li><p><span class="guilabel">–</span> The Bot API simply doesn’t support this</p></li>
-</ul>
-</td></tr></table>
-<table class="hlist"><tr><td><ul class="simple">
-<li><p><span class="guilabel">+</span> <strong>Receive extra updates, such as the one about a user name change</strong></p></li>
-<li><p><span class="guilabel">–</span> The Bot API simply doesn’t support this</p></li>
-</ul>
-</td></tr></table>
-<table class="hlist"><tr><td><ul class="simple">
-<li><p><span class="guilabel">+</span> <strong>Has more meaningful errors in case something went wrong</strong></p></li>
-<li><p><span class="guilabel">–</span> The Bot API reports less detailed errors</p></li>
-</ul>
-</td></tr></table>
+<h1>MTProto vs Bot API<a class="headerlink" href="#mtproto-vs-bot-api" title="Link to this heading">¶</a></h1>
+<p>MTProto is Telegram’s native binary protocol used by official apps and FTMGram to communicate
+directly with Telegram core servers with maximum speed, zero intermediate proxies, and full feature access.</p>
+<a class="reference internal image-reference" href="../_images/mtproto-vs-bot-api.svg"><img alt="../_images/mtproto-vs-bot-api.svg" class="align-center" src="../_images/mtproto-vs-bot-api.svg" style="width: 100%;" />
+</a>
+<section id="key-differences">
+<h2>Key Differences<a class="headerlink" href="#key-differences" title="Link to this heading">¶</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Direct Connection</strong>: FTMGram connects directly to Telegram MTProto datacenters via TCP / WebSocket.</p></li>
+<li><p><strong>Speed &amp; Latency</strong>: MTProto avoids the intermediate Bot API HTTP proxy layer.</p></li>
+<li><p><strong>Full MTProto Layer Access</strong>: Call raw MTProto functions and access features before they arrive on HTTP Bot API.</p></li>
+</ol>
 </section>
 </section>
 
@@ -513,8 +659,26 @@ methods are limited as well.</p></li>
       <footer>
         
         <div class="related-pages">
-          
-          
+          <a class="next-page" href="debugging.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Debugging</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="advanced-usage.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Advanced Usage</div>
+                
+              </div>
+            </a>
         </div>
         <div class="bottom-of-page">
           <div class="left-details">
@@ -546,10 +710,8 @@ methods are limited as well.</p></li>
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">MTProto vs. Bot API</a><ul>
-<li><a class="reference internal" href="#what-is-the-mtproto-api">What is the MTProto API?</a></li>
-<li><a class="reference internal" href="#what-is-the-bot-api">What is the Bot API?</a></li>
-<li><a class="reference internal" href="#advantages-of-the-mtproto-api">Advantages of the MTProto API</a></li>
+<li><a class="reference internal" href="#">MTProto vs Bot API</a><ul>
+<li><a class="reference internal" href="#key-differences">Key Differences</a></li>
 </ul>
 </li>
 </ul>
