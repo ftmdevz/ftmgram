@@ -1,10 +1,10 @@
 Welcome to FTMGram
 ==================
 
-.. image:: _static/logo.png
+.. image:: static/img/ftmgram_hero.svg
    :align: center
-   :width: 160px
-   :alt: FTMGram
+   :width: 270px
+   :alt: FTMGramFTMGram
 
 .. raw:: html
 

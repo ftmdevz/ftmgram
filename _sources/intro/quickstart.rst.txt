@@ -139,7 +139,7 @@ Listening for Updates
 Next Steps
 ----------
 
-- :doc:`../intro/migration` — switch from FTMGram/KuriGram
+- :doc:`../intro/migration` — switch from FTMGram/FTMGram
 - :doc:`../api/client` — full Client method reference
 - :doc:`../topics/rich-messages` — send structured article messages
 - :doc:`../topics/checklists` — send interactive checklists

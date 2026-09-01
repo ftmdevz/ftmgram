@@ -16,7 +16,7 @@ Get FTMGram Real Fast
 
 0. Activate the Virtual Environment with ``source ./venv/bin/activate``.
 
-1. Install FTMGram with ``pip uninstall -y ftmgram && pip install pyrotgfork``.
+1. Install FTMGram with ``pip uninstall -y ftmgram && pip install ftmgram``.
 
 2. Get your own Telegram API key from https://my.telegram.org/apps.
 

@@ -104,11 +104,11 @@ data-aria-dark="Switch to auto color mode">
       <i class="i-lucide close"></i>
     </button>
     <div class="sy-scrollbar sy-rside-inner px-6 xl:top-16 xl:sticky xl:pl-0 pt-6 pb-4"><div class="localtoc"><h3>On this page</h3><ul>
-<li><a class="reference internal" href="#from-pyrogram">From Pyrogram</a></li>
-<li><a class="reference internal" href="#from-kurigram">From KuriGram</a></li>
+<li><a class="reference internal" href="#from-ftmgram">From FTMGram</a></li>
+<li><a class="reference internal" href="#from-ftmgram">From FTMGram</a></li>
 <li><a class="reference internal" href="#bulk-replace-with-sed">Bulk Replace with sed</a></li>
 <li><a class="reference internal" href="#compatibility-notes">Compatibility Notes</a></li>
-<li><a class="reference internal" href="#what-s-new-vs-pyrogram">What&#8217;s New vs Pyrogram</a></li>
+<li><a class="reference internal" href="#what-s-new-vs-ftmgram">What&#8217;s New vs FTMGram</a></li>
 </ul>
 </div><div id="ethical-ad-placement" data-ea-publisher="readthedocs"></div></div>
   </aside>
@@ -145,13 +145,13 @@ data-aria-dark="Switch to auto color mode">
   <article class="yue" role="main">
           <section id="migrating-to-ftmgram">
 <h1>Migrating to FTMGram<a class="headerlink" href="#migrating-to-ftmgram" title="Link to this heading">#</a></h1>
-<p>FTMGram is a <strong>drop-in replacement</strong> for both <strong>Pyrogram</strong> and <strong>KuriGram</strong>.
+<p>FTMGram is a <strong>drop-in replacement</strong> for both <strong>FTMGram</strong> and <strong>FTMGram</strong>.
 Migration requires a single import change — no other code modifications needed.</p>
-<section id="from-pyrogram">
-<h2>From Pyrogram<a class="headerlink" href="#from-pyrogram" title="Link to this heading">#</a></h2>
+<section id="from-ftmgram">
+<h2>From FTMGram<a class="headerlink" href="#from-ftmgram" title="Link to this heading">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="c1"># Before</span>
-</span><span data-line="2"><span class="kn">from</span><span class="w"> </span><span class="nn">pyrogram</span><span class="w"> </span><span class="kn">import</span> <span class="n">Client</span><span class="p">,</span> <span class="n">filters</span>
-</span><span data-line="3"><span class="kn">from</span><span class="w"> </span><span class="nn">pyrogram.types</span><span class="w"> </span><span class="kn">import</span> <span class="n">Message</span>
+</span><span data-line="2"><span class="kn">from</span><span class="w"> </span><span class="nn">ftmgram</span><span class="w"> </span><span class="kn">import</span> <span class="n">Client</span><span class="p">,</span> <span class="n">filters</span>
+</span><span data-line="3"><span class="kn">from</span><span class="w"> </span><span class="nn">ftmgram.types</span><span class="w"> </span><span class="kn">import</span> <span class="n">Message</span>
 </span><span data-line="4">
 </span><span data-line="5"><span class="c1"># After</span>
 </span><span data-line="6"><span class="kn">from</span><span class="w"> </span><span class="nn">ftmgram</span><span class="w"> </span><span class="kn">import</span> <span class="n">Client</span><span class="p">,</span> <span class="n">filters</span>
@@ -159,11 +159,11 @@ Migration requires a single import change — no other code modifications needed
 </span></pre></div>
 </div>
 </section>
-<section id="from-kurigram">
-<h2>From KuriGram<a class="headerlink" href="#from-kurigram" title="Link to this heading">#</a></h2>
+<section id="from-ftmgram">
+<h2>From FTMGram<a class="headerlink" href="#from-ftmgram" title="Link to this heading">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="c1"># Before</span>
-</span><span data-line="2"><span class="kn">from</span><span class="w"> </span><span class="nn">kurigram</span><span class="w"> </span><span class="kn">import</span> <span class="n">Client</span><span class="p">,</span> <span class="n">filters</span>
-</span><span data-line="3"><span class="kn">from</span><span class="w"> </span><span class="nn">kurigram.types</span><span class="w"> </span><span class="kn">import</span> <span class="n">Message</span>
+</span><span data-line="2"><span class="kn">from</span><span class="w"> </span><span class="nn">ftmgram</span><span class="w"> </span><span class="kn">import</span> <span class="n">Client</span><span class="p">,</span> <span class="n">filters</span>
+</span><span data-line="3"><span class="kn">from</span><span class="w"> </span><span class="nn">ftmgram.types</span><span class="w"> </span><span class="kn">import</span> <span class="n">Message</span>
 </span><span data-line="4">
 </span><span data-line="5"><span class="c1"># After</span>
 </span><span data-line="6"><span class="kn">from</span><span class="w"> </span><span class="nn">ftmgram</span><span class="w"> </span><span class="kn">import</span> <span class="n">Client</span><span class="p">,</span> <span class="n">filters</span>
@@ -174,11 +174,11 @@ Migration requires a single import change — no other code modifications needed
 <section id="bulk-replace-with-sed">
 <h2>Bulk Replace with sed<a class="headerlink" href="#bulk-replace-with-sed" title="Link to this heading">#</a></h2>
 <p>Instantly update all files in your project:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="c1"># From Pyrogram</span>
-</span><span data-line="2">find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.py&quot;</span><span class="w"> </span>-exec<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/from pyrogram/from ftmgram/g; s/import pyrogram/import ftmgram/g&#39;</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span>+
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="c1"># From FTMGram</span>
+</span><span data-line="2">find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.py&quot;</span><span class="w"> </span>-exec<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/from ftmgram/from ftmgram/g; s/import ftmgram/import ftmgram/g&#39;</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span>+
 </span><span data-line="3">
-</span><span data-line="4"><span class="c1"># From KuriGram</span>
-</span><span data-line="5">find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.py&quot;</span><span class="w"> </span>-exec<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/from kurigram/from ftmgram/g; s/import kurigram/import ftmgram/g&#39;</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span>+
+</span><span data-line="4"><span class="c1"># From FTMGram</span>
+</span><span data-line="5">find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.py&quot;</span><span class="w"> </span>-exec<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/from ftmgram/from ftmgram/g; s/import ftmgram/import ftmgram/g&#39;</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span>+
 </span></pre></div>
 </div>
 </section>
@@ -196,13 +196,13 @@ Migration requires a single import change — no other code modifications needed
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>All Pyrogram methods</p></td>
+<tr class="row-even"><td><p>All FTMGram methods</p></td>
 <td><p>✅ Fully supported</p></td>
 </tr>
-<tr class="row-odd"><td><p>All Pyrogram types</p></td>
+<tr class="row-odd"><td><p>All FTMGram types</p></td>
 <td><p>✅ Fully supported</p></td>
 </tr>
-<tr class="row-even"><td><p>All Pyrogram filters</p></td>
+<tr class="row-even"><td><p>All FTMGram filters</p></td>
 <td><p>✅ Fully supported</p></td>
 </tr>
 <tr class="row-odd"><td><p>Session files (<code class="docutils literal notranslate"><span class="pre">.session</span></code>)</p></td>
@@ -221,9 +221,9 @@ Migration requires a single import change — no other code modifications needed
 </table>
 </div>
 </section>
-<section id="what-s-new-vs-pyrogram">
-<h2>What’s New vs Pyrogram<a class="headerlink" href="#what-s-new-vs-pyrogram" title="Link to this heading">#</a></h2>
-<p>FTMGram adds everything Pyrogram is missing:</p>
+<section id="what-s-new-vs-ftmgram">
+<h2>What’s New vs FTMGram<a class="headerlink" href="#what-s-new-vs-ftmgram" title="Link to this heading">#</a></h2>
+<p>FTMGram adds everything FTMGram is missing:</p>
 <ul class="simple">
 <li><p><strong>Rich Messages</strong> — <code class="docutils literal notranslate"><span class="pre">send_rich_message</span></code>, <code class="docutils literal notranslate"><span class="pre">send_rich_message_draft</span></code></p></li>
 <li><p><strong>Checklists</strong> — <code class="docutils literal notranslate"><span class="pre">append_checklist_tasks</span></code>, <code class="docutils literal notranslate"><span class="pre">toggle_checklist_task</span></code></p></li>

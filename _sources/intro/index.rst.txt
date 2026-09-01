@@ -22,7 +22,7 @@ Everything you need to go from zero to a working Telegram bot or user client.
       :link: migration
       :link-type: doc
 
-      Coming from FTMGram or KuriGram? It's a one-line change.
+      Coming from FTMGram or FTMGram? It's a one-line change.
 
 .. toctree::
    :maxdepth: 1

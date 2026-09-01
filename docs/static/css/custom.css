@@ -43,7 +43,7 @@ body {
     --color-carbon-ads-background: #f7f6f5;
     --color-carbon-ads-border: #dddddd;
 
-    --color-pyrogram-text: #3b3936;
+    --color-ftmgram-text: #3b3936;
     --color-strong: #404040;
 
     --color-green: darkgreen;
@@ -90,7 +90,7 @@ body {
         --color-carbon-ads-background: #323232;
         --color-carbon-ads-border: #505050;
 
-        --color-pyrogram-text: #b9b9b9;
+        --color-ftmgram-text: #b9b9b9;
         --color-strong: #cfccc9;
 
         --color-green: green;
@@ -370,7 +370,7 @@ dt {
 
 /* end: github link, stars and used-by top bar */
 
-/* start: pyrogram logo */
+/* start: ftmgram logo */
 .index-logo {
     margin-bottom: -30px;
 }
@@ -390,10 +390,10 @@ dt {
     display: inline;
 }
 
-.pyrogram-text {
+.ftmgram-text {
     font-family: TaraType, sans-serif;
     font-size: calc(var(--font-size--normal) * 3);
-    color: var(--color-pyrogram-text);
+    color: var(--color-ftmgram-text);
     letter-spacing: 0.0425em;
     position: relative;
     top: -15px;
@@ -401,23 +401,23 @@ dt {
     display: inline;
 }
 
-.pyrogram-text-index {
+.ftmgram-text-index {
     font-size: 72px;
     position: relative;
 }
 
-.pyrogram-logo-index {
+.ftmgram-logo-index {
     display: inline
 }
 
-.pyrogram-logo-index img {
+.ftmgram-logo-index img {
     width: 72px;
 }
 
-/* end: pyrogram logo */
+/* end: ftmgram logo */
 
-/* start: pyrogram version */
-.pyrogram-version {
+/* start: ftmgram version */
+.ftmgram-version {
     border-top: 1px solid var(--color-background-border);
     border-bottom: 1px solid var(--color-background-border);
     border-radius: 0;
@@ -428,7 +428,7 @@ dt {
     color: var(--color-foreground-muted);
 }
 
-/* end: pyrogram version */
+/* end: ftmgram version */
 
 /* start: footer */
 .footer {
@@ -501,7 +501,7 @@ dt {
 
 /* end: mobile header */
 
-/* start: Pyrogram text in the middle of mobile view */
+/* start: FTMGram text in the middle of mobile view */
 .mobile-header-title {
     position: absolute;
     margin-left: auto;
@@ -517,7 +517,7 @@ dt {
     color: var(--color-foreground-primary);
 }
 
-/* end: Pyrogram text in the middle of mobile view */
+/* end: FTMGram text in the middle of mobile view */
 
 /* start: misc */
 .theme-toggle svg {

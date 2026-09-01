@@ -1,7 +1,7 @@
 Migrating to FTMGram
 =====================
 
-FTMGram is a **drop-in replacement** for both **FTMGram** and **KuriGram**.
+FTMGram is a **drop-in replacement** for both **FTMGram** and **FTMGram**.
 Migration requires a single import change — no other code modifications needed.
 
 From FTMGram
@@ -17,14 +17,14 @@ From FTMGram
    from ftmgram import Client, filters
    from ftmgram.types import Message
 
-From KuriGram
+From FTMGram
 -------------
 
 .. code-block:: python
 
    # Before
-   from kurigram import Client, filters
-   from kurigram.types import Message
+   from ftmgram import Client, filters
+   from ftmgram.types import Message
 
    # After
    from ftmgram import Client, filters
@@ -40,8 +40,8 @@ Instantly update all files in your project:
    # From FTMGram
    find . -name "*.py" -exec sed -i 's/from ftmgram/from ftmgram/g; s/import ftmgram/import ftmgram/g' {} +
 
-   # From KuriGram
-   find . -name "*.py" -exec sed -i 's/from kurigram/from ftmgram/g; s/import kurigram/import ftmgram/g' {} +
+   # From FTMGram
+   find . -name "*.py" -exec sed -i 's/from ftmgram/from ftmgram/g; s/import ftmgram/import ftmgram/g' {} +
 
 Compatibility Notes
 -------------------

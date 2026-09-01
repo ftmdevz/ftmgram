@@ -5,8 +5,8 @@ FTMGram v2.2.17
 Scheme layer used: 220
 ------------------------
 
-- fix: set description correctly in :obj:`~ftmgram.types.InlineQueryResultAnimation` (contributed by @Krau in `#262 <https://github.com/KurimuzonAkuma/kurigram/pull/262>`__).
-- Add generic return type for :meth:`~ftmgram.Client.invoke` (contributed by @ZeN220 in `#252 <https://github.com/KurimuzonAkuma/kurigram/pull/252>`__).
+- fix: set description correctly in :obj:`~ftmgram.types.InlineQueryResultAnimation` (contributed by @Krau in `#262 <https://github.com/KurimuzonAkuma/ftmgram/pull/262>`__).
+- Add generic return type for :meth:`~ftmgram.Client.invoke` (contributed by @ZeN220 in `#252 <https://github.com/KurimuzonAkuma/ftmgram/pull/252>`__).
 - fix: :meth:`~ftmgram.Client.copy_message` and :meth:`~ftmgram.types.Message.copy` (contributed by @beepsound in `#210 <https://github.com/TelegramPlayground/FTMGram/pull/210>`__).
 - fix: file pointer position before returning file (contributed by @anonymousx97)
 - Add ``offset_date`` and ``offset_message_id`` in :meth:`~ftmgram.Client.get_dialogs` and :meth:`~ftmgram.Client.search_global`.

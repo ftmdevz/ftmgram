@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 220" width="100%" height="100%">
+  <defs>
+    <!-- Vibrant Flame / Energy Gradient -->
+    <linearGradient id="heroFlame" x1="0%" y1="100%" x2="70%" y2="0%">
+      <stop offset="0%" stop-color="#ff3b00" />
+      <stop offset="50%" stop-color="#ff7300" />
+      <stop offset="100%" stop-color="#ffaa00" />
+    </linearGradient>
+
+    <linearGradient id="heroCore" x1="20%" y1="100%" x2="80%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#ffe8d6" />
+    </linearGradient>
+
+    <linearGradient id="heroText" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f8fafc" />
+    </linearGradient>
+  </defs>
+
+  <!-- Centered Clean Transparent Logo (Pyrogram Style) -->
+  <g transform="translate(40, 20)">
+    <!-- Outer Flame -->
+    <path d="M 60 5 C 80 35 105 55 105 85 C 105 112 85 125 60 125 C 35 125 15 112 15 85 C 15 58 40 30 60 5 Z" fill="url(#heroFlame)" />
+    
+    <!-- Inner Core -->
+    <path d="M 60 30 C 70 50 85 65 85 85 C 85 100 72 108 60 108 C 48 108 35 100 35 85 C 35 68 50 48 60 30 Z" fill="url(#heroCore)" opacity="0.95" />
+
+    <!-- Dynamic Keel -->
+    <path d="M 60 50 L 74 90 L 60 80 L 46 90 Z" fill="#ff4d00" />
+  </g>
+
+  <!-- Big Bold Typography -->
+  <text x="175" y="115" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="78" font-weight="800" fill="url(#heroText)" letter-spacing="-2px">FTMGram</text>
+</svg>

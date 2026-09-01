@@ -53,8 +53,8 @@ html_css_files = [
 ]
 html_show_sourcelink = False
 html_show_copyright = False
-html_logo = "_static/logo.png" if os.path.exists("docs/_static/logo.png") else "static/img/ftmgram.png"
-html_favicon = "_static/logo.png" if os.path.exists("docs/_static/logo.png") else "static/img/favicon.ico"
+html_logo = "static/img/ftmgram_logo_transparent.svg"
+html_favicon = "static/img/ftmgram_logo_transparent.svg"
 
 html_theme_options = {
     "navigation_with_keys": True,

@@ -74,4 +74,4 @@ Bug Fixes
 v2.2.23 and earlier
 --------------------
 
-See `KuriGram releases <https://github.com/ftmdevz/ftmgram/releases>`_ for prior history.
+See `FTMGram releases <https://github.com/ftmdevz/ftmgram/releases>`_ for prior history.
