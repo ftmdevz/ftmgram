@@ -1,0 +1,8 @@
+FTMGram v2.2.2
+==================
+
+
+Scheme layer used: 195
+------------------------
+
+- Bug Fixes <https://github.com/TelegramPlayground/FTMGram/issues/123>

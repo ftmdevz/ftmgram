@@ -1,0 +1,9 @@
+FTMGram v2.1.32.3
+==================
+
+
+Scheme layer used: 181
+------------------------
+
+- Added the ``fetch_replies`` parameter to :obj:`~ftmgram.Client`.
+- Added the :meth:`~ftmgram.Client.get_message_effects`.

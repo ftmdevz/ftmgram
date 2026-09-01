@@ -1,62 +1,86 @@
+# FTMGram - Telegram MTProto API Client Library for Python
+# Copyright (C) 2024-2026 FTM DEVELOPERZ <https://github.com/ftmdevz/ftmgram>
+
 import os
 import sys
+import subprocess
 
 sys.path.insert(0, os.path.abspath(".."))
+
+from ftmgram import __version__
+from ftmgram.raw.all import layer
 
 project = "FTMGram"
 copyright = "2024-2026, FTM DEVELOPERZ"
 author = "FTM DEVELOPERZ"
-release = "3.3.0"
-version = "3.3.0"
-version = "3.3.0"
+version = f"{__version__} (Layer {layer})"
+release = __version__
 
 extensions = [
     "sphinx.ext.autodoc",
     "sphinx.ext.napoleon",
-    "sphinx.ext.viewcode",
+    "sphinx.ext.autosummary",
     "sphinx.ext.intersphinx",
     "sphinx_copybutton",
-    "sphinx_design",
 ]
 
-templates_path = ["_templates"]
-exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
-
-autodoc_member_order = "bysource"
-autodoc_typehints = "description"
-autodoc_default_options = {
-    "members": True,
-    "undoc-members": False,
-    "show-inheritance": True,
-}
-napoleon_google_docstring = True
-napoleon_numpy_docstring = False
-
 intersphinx_mapping = {
-    "python": ("https://docs.python.org/3", None),
+    "python": ("https://docs.python.org/3", None)
 }
 
-html_theme = "shibuya"
-html_static_path = ["_static"]
-html_logo = "_static/logo.png"
-html_favicon = "_static/logo.png"
-html_title = "FTMGram"
+master_doc = "index"
+source_suffix = ".rst"
+autodoc_member_order = "bysource"
+
+templates_path = ["_templates"]
+html_copy_source = False
+
+napoleon_use_rtype = False
+napoleon_use_param = False
+
+pygments_style = "sphinx"
+highlight_language = "python3"
+copybutton_prompt_text = "$ "
+suppress_warnings = ["image.not_readable"]
+
+html_title = f"FTMGram {version}"
+html_theme = "furo"
+html_static_path = [os.path.abspath("docs/static") if os.path.exists("docs/static") else os.path.abspath("static")]
+
+html_css_files = [
+    "css/all.min.css",
+    "css/custom.css",
+]
+html_show_sourcelink = False
+html_show_copyright = False
+html_logo = "_static/logo.png" if os.path.exists("docs/_static/logo.png") else "static/img/ftmgram.png"
+html_favicon = "_static/logo.png" if os.path.exists("docs/_static/logo.png") else "static/img/favicon.ico"
 
 html_theme_options = {
-    "logo_target": "/",
-    "github_url": "https://github.com/ftmdevz/ftmgram",
-    "accent_color": "orange",
-    "nav_links": [
-        {"title": "Guide", "url": "intro/index"},
-        {"title": "API Reference", "url": "api/index"},
-        {"title": "Topics", "url": "topics/index"},
-        {"title": "Changelog", "url": "changelog"},
+    "navigation_with_keys": True,
+    "footer_icons": [
+        {
+            "name": "GitHub",
+            "url": "https://github.com/ftmdevz/ftmgram",
+            "class": "fa-brands fa-solid fa-github fa-2x",
+        },
+        {
+            "name": "Telegram",
+            "url": "https://t.me/ftmdeveloperz",
+            "class": "fa-brands fa-solid fa-telegram fa-2x",
+        },
     ],
-    "og_image_url": "https://raw.githubusercontent.com/ftmdevz/ftmgram/ftmdevz/logo.png",
-}
-
-html_context = {
-    "telegram_channel": "https://t.me/ftmdeveloperz",
-    "telegram_chat": "https://t.me/ftmdevz",
-    "pypi_url": "https://pypi.org/project/ftmgram/",
+    "dark_css_variables": {
+        "color-brand-primary": "#f97316",
+        "color-brand-content": "#fb923c",
+        "color-sidebar-background": "#0d1117",
+        "color-sidebar-background-border": "#30363d",
+        "color-background-primary": "#0d1117",
+        "color-background-secondary": "#161b22",
+        "color-background-border": "#30363d",
+    },
+    "light_css_variables": {
+        "color-brand-primary": "#ea580c",
+        "color-brand-content": "#c2410c",
+    },
 }

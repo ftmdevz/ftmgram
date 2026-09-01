@@ -1,0 +1,8 @@
+FTMGram v2.1.33.2
+===================
+
+
+Scheme layer used: 185
+------------------------
+
+- Added :meth:`~ftmgram.Client.terminate_session`, :meth:`~ftmgram.types.ActiveSession.terminate`, and :meth:`~ftmgram.Client.terminate_all_other_sessions`.

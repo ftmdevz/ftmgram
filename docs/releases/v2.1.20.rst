@@ -1,0 +1,12 @@
+FTMGram v2.1.20
+==================
+
+
+Scheme layer used: 177
+------------------------
+
+- Added :meth:`~ftmgram.Client.get_stickers`.
+- Try to return the service message (when applicable) in the methods :meth:`~ftmgram.Client.add_chat_members`, :meth:`~ftmgram.Client.promote_chat_member`.
+- Added ``gifted_premium`` service message to :obj:`~ftmgram.types.Message`.
+- Added the field ``origin`` of type :obj:`~ftmgram.types.MessageOrigin` in the class :obj:`~ftmgram.types.ExternalReplyInfo`.
+- Added the class :obj:`~ftmgram.types.MessageOrigin` and replaced the fields ``forward_from``, ``forward_from_chat``, ``forward_from_message_id``, ``forward_signature``, ``forward_sender_name``, and ``forward_date`` with the field ``forward_origin`` of type :obj:`~ftmgram.types.MessageOrigin` in the class :obj:`~ftmgram.types.Message`.

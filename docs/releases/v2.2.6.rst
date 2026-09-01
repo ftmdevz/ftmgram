@@ -1,0 +1,10 @@
+FTMGram v2.2.6
+==================
+
+
+Scheme layer used: 198
+------------------------
+
+- Updated :doc:`Text Formatting <../../topics/text-formatting>` documentation.
+- Added the parameter ``pinned`` and made the parameter ``chat_id`` optional in :meth:`~ftmgram.Client.get_messages`. **NOTE**: Please be aware about using the correct :doc:`Message Identifiers <../../topics/message-identifiers>`, when using this method.
+- Added ``message.content`` property.

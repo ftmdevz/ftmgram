@@ -3,12 +3,12 @@ Frequently Asked Questions
 
 What is FTMGram?
 ----------------
-FTMGram is an actively maintained, modernized fork of Pyrogram with native **Bot API 10.3** support,
+FTMGram is an actively maintained, modernized fork of FTMGram with native **Bot API 10.3** support,
 live AI token streaming, in-message buttons, ephemeral messages, star payments, and pure MTProto speed.
 
-Is FTMGram backward-compatible with Pyrogram?
+Is FTMGram backward-compatible with FTMGram?
 ---------------------------------------------
-Yes, 100%. All existing Pyrogram code works without modification by replacing ``import pyrogram`` with ``import ftmgram``.
+Yes, 100%. All existing FTMGram code works without modification by replacing ``import ftmgram`` with ``import ftmgram``.
 
 How do I install TgCrypto for maximum speed?
 --------------------------------------------

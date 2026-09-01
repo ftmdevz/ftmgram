@@ -1,0 +1,11 @@
+FTMGram v2.1.27
+==================
+
+
+Scheme layer used: 179
+------------------------
+
+- Added ``revoke_messages`` parameter to :meth:`~ftmgram.Client.ban_chat_member` and :meth:`~ftmgram.types.Chat.ban_member`.
+- Added :meth:`~ftmgram.Client.get_collectible_item_info`.
+- Added ``full_name`` to :obj:`~ftmgram.types.Chat` and :obj:`~ftmgram.types.User` only for :obj:`~ftmgram.enums.ChatType.PRIVATE`.
+- Added ``reverse`` parameter to :meth:`~ftmgram.Client.get_chat_history`. (`855e69e <https://github.com/ftmgram/ftmgram/blob/855e69e3f881c8140781c1d5e42e3098b2134dd2/ftmgram/methods/messages/get_history.py>`_, `a086b49 <https://github.com/dyanashek/ftmgram/commit/a086b492039687dd1b807969f9202061ce5305da>`_)

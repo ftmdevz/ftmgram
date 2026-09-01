@@ -1,0 +1,12 @@
+FTMGram v2.1.19
+==================
+
+
+Scheme layer used: 177
+------------------------
+
+- Added the method :meth:`~ftmgram.Client.get_created_chats`.
+- Added the class :obj:`~ftmgram.types.ForumTopic` and the methods :meth:`~ftmgram.Client.get_forum_topics`, :meth:`~ftmgram.Client.get_forum_topic`.
+- Install the version, from PyPI, using ``pip uninstall -y ftmgram && pip install pyrotgfork==2.1.17``.
+- Added ``accent_color``, ``profile_color``, ``emoji_status``, ``is_close_friend`` to :obj:`~ftmgram.types.Chat` and :obj:`~ftmgram.types.User`.
+- View `new and changed <https://telegramplayground.github.io/TG-APIs/TL/diff/tdlib.html?from=176&to=177>`__ `raw API methods <https://telegramplayground.github.io/TG-APIs/TL/diff/tdesktop.html?from=176&to=177>`__.

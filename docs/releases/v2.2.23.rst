@@ -1,0 +1,9 @@
+FTMGram v2.2.23
+==================
+
+
+Scheme layer used: 224
+------------------------
+
+- drop while loop in favour of asyncio.Event only for non-Windows and greater than 3.10 versions
+- Update Unknown Error DB

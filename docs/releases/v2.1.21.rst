@@ -1,0 +1,9 @@
+FTMGram v2.1.21
+==================
+
+
+Scheme layer used: 177
+------------------------
+
+- Added ``callback_data_with_password`` to :obj:`~ftmgram.types.InlineKeyboardButton` and added support in :meth:`~ftmgram.types.Message.click` for such buttons.
+- PR from upstream: `1391 <https://github.com/ftmgram/ftmgram/pull/1391>`_ without attribution.

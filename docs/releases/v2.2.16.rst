@@ -1,0 +1,26 @@
+FTMGram v2.2.16
+==================
+
+
+Scheme layer used: 214
+------------------------
+
+- `fix get_chat_photos <https://github.com/TelegramPlayground/FTMGram/pull/203>`.
+- `support filters.regex for ChosenInlineResult <https://github.com/TelegramPlayground/FTMGram/pull/198>`__.
+- Update :meth:`~ftmgram.types.Message.reply_game`, :meth:`~ftmgram.types.Message.reply_text`, :meth:`~ftmgram.types.Message.reply_animation`, :meth:`~ftmgram.types.Message.reply_audio`, :meth:`~ftmgram.types.Message.reply_contact`, :meth:`~ftmgram.types.Message.reply_document`, :meth:`~ftmgram.types.Message.reply_location`, :meth:`~ftmgram.types.Message.reply_media_group`, :meth:`~ftmgram.types.Message.reply_photo`, :meth:`~ftmgram.types.Message.reply_poll`, :meth:`~ftmgram.types.Message.reply_sticker`, :meth:`~ftmgram.types.Message.reply_venue`, :meth:`~ftmgram.types.Message.reply_video`, :meth:`~ftmgram.types.Message.reply_video_note`, :meth:`~ftmgram.types.Message.reply_voice`, :meth:`~ftmgram.types.Message.reply_invoice`, :meth:`~ftmgram.types.Message.forward`, :meth:`~ftmgram.types.Message.copy`, :meth:`~ftmgram.types.Message.reply_cached_media` methods to support direct_messages_topic_id.
+- `Fix get_dialogs <https://github.com/TelegramPlayground/FTMGram/pull/195>`__.
+- `Fix timestamp_to_datetime to correctly handle timezone conversion <https://github.com/TelegramPlayground/FTMGram/commit/fc838cf>`__.
+- View `new and changed <https://telegramplayground.github.io/TG-APIs/TL/diff/tdlib.html?from=211&to=214>`__ `raw API methods <https://telegramplayground.github.io/TG-APIs/TL/diff/tdesktop.html?from=211&to=214>`__.
+
+
+Scheme layer used: 211
+------------------------
+
+- Rename direct_message_topic_id to ``direct_messages_topic_id`` in :obj:`~ftmgram.types.ReplyParameters`. This parameter can be used to send a message to a direct messages chat topic.
+- Added the field ``checklist_task_id`` to the class :obj:`~ftmgram.types.ReplyParameters`, allowing bots to reply to a specific checklist task.
+- Added the field ``reply_to_checklist_task_id`` to the class :obj:`~ftmgram.types.Message`.
+- Added the field ``can_manage_direct_messages`` to :obj:`~ftmgram.types.ChatPrivileges`.
+- Added the field ``is_direct_messages`` to the classes :obj:`~ftmgram.types.Chat` which can be used to identify supergroups that are used as channel direct messages chats.
+- Added the fields ``parent_chat`` and ``direct_messages_chat_id`` to the class :obj:`~ftmgram.types.Chat` which indicates the parent channel chat for a channel direct messages chat.
+- Added the class :obj:`~ftmgram.types.DirectMessagesTopic` and the field ``direct_messages_topic`` to the class :obj:`~ftmgram.types.Message`, describing a topic of a direct messages chat.
+- Added :meth:`~ftmgram.Client.get_direct_messages_topics_by_id`, :meth:`~ftmgram.Client.get_direct_messages_topics`, :meth:`~ftmgram.Client.set_chat_direct_messages_group`.

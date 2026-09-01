@@ -1,0 +1,20 @@
+FTMGram v2.2.12
+==================
+
+
+Scheme layer used: 203
+------------------------
+
+- View `new and changed <https://telegramplayground.github.io/TG-APIs/TL/diff/tdlib.html?from=202&to=205>`__ `raw API methods <https://telegramplayground.github.io/TG-APIs/TL/diff/tdesktop.html?from=202&to=203>`__.
+
+Scheme layer used: 202
+------------------------
+
+- Added the method :meth:`~ftmgram.Client.post_story` allowing bots to post a story on behalf of a managed business account.
+- Added the method :meth:`~ftmgram.Client.edit_story` and :meth:`~ftmgram.Client.edit_business_story`, allowing bots to edit stories they had previously posted on behalf of a managed business account.
+- Added the methods :meth:`~ftmgram.Client.delete_stories` and :meth:`~ftmgram.Client.delete_business_story`, allowing bots to delete stories they had previously posted on behalf of a managed business account.
+- Added the classes :obj:`~ftmgram.types.InputStoryContentPhoto` and :obj:`~ftmgram.types.InputStoryContentVideo` representing the content of a story to post.
+- Added the classes :obj:`~ftmgram.types.StoryArea`, :obj:`~ftmgram.types.StoryAreaPosition`, :obj:`~ftmgram.types.LocationAddress`, :obj:`~ftmgram.types.StoryAreaTypeLocation`, :obj:`~ftmgram.types.StoryAreaTypeSuggestedReaction`, :obj:`~ftmgram.types.StoryAreaTypeLink`, :obj:`~ftmgram.types.StoryAreaTypeWeather`, :obj:`~ftmgram.types.StoryAreaTypeUniqueGift`, :obj:`~ftmgram.types.StoryAreaTypeFoundVenue` and :obj:`~ftmgram.types.StoryAreaTypeMessage` describing clickable active areas on stories.
+- Added the classes :obj:`~ftmgram.types.StoryPrivacySettings`, :obj:`~ftmgram.types.StoryPrivacySettingsEveryone`, :obj:`~ftmgram.types.StoryPrivacySettingsContacts`, :obj:`~ftmgram.types.StoryPrivacySettingsCloseFriends`, :obj:`~ftmgram.types.StoryPrivacySettingsSelectedUsers` to describe the privacy settings of a story.
+- Added the methods :meth:`~ftmgram.Client.can_post_story`, :meth:`~ftmgram.Client.hide_my_story_view`, :meth:`~ftmgram.Client.forward_story`,  :meth:`~ftmgram.Client.toggle_story_is_posted_to_chat_page`,  :meth:`~ftmgram.Client.get_chat_active_stories`,  :meth:`~ftmgram.Client.get_chat_archived_stories`.
+- Add support for parsing story links in :meth:`~ftmgram.Client.get_messages`.

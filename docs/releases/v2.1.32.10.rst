@@ -1,0 +1,10 @@
+FTMGram v2.1.32.10
+====================
+
+
+Scheme layer used: 183
+------------------------
+
+- Added the field ``can_send_paid_media`` to the class :obj:`~ftmgram.types.Chat`.
+- Added support for launching Web Apps via ``t.me`` link in the class :obj:`~ftmgram.types.MenuButtonWebApp`.
+- `View new and changed raw API methods <https://telegramplayground.github.io/TG-APIs/TL/diff/tdesktop.html?from=181&to=183>`__.

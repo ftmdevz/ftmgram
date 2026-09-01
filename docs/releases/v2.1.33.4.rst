@@ -1,0 +1,10 @@
+FTMGram v2.1.33.4
+===================
+
+
+Scheme layer used: 186
+------------------------
+
+- Added the field ``can_enable_paid_reaction`` to the class :obj:`~ftmgram.types.Chat`.
+- Added ``link`` property to :obj:`~ftmgram.types.Story` and fixed the ``link`` property in :obj:`~ftmgram.types.Message`.
+- Introduced :obj:`~ftmgram.types.DraftMessage` type.

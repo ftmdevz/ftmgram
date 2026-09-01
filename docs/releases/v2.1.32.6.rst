@@ -1,0 +1,12 @@
+FTMGram v2.1.32.6
+==================
+
+
+Scheme layer used: 181
+------------------------
+
+- Added the types :obj:`~ftmgram.types.LabeledPrice`, :obj:`~ftmgram.types.OrderInfo`, :obj:`~ftmgram.types.PreCheckoutQuery`, :obj:`~ftmgram.types.ShippingAddress`, :obj:`~ftmgram.types.ShippingOption`, :obj:`~ftmgram.types.ShippingQuery` and :obj:`~ftmgram.types.SuccessfulPayment`.
+- Added the ``successful_payment`` parameter to the :obj:`~ftmgram.types.Message`. Added the filter :obj:`~ftmgram.filters.successful_payment` to detect service messages of Successful Payment type.
+- Added the methods :meth:`~ftmgram.Client.send_invoice`, :meth:`~ftmgram.Client.answer_pre_checkout_query` (:meth:`~ftmgram.types.PreCheckoutQuery.answer`), :meth:`~ftmgram.Client.answer_shipping_query` (:meth:`~ftmgram.types.ShippingQuery.answer`), :meth:`~ftmgram.Client.refund_star_payment` and :meth:`~ftmgram.Client.create_invoice_link`.
+- Added the :meth:`~ftmgram.Client.send_web_app_custom_request`.
+- Added the :meth:`~ftmgram.Client.search_public_messages_by_tag` and :meth:`~ftmgram.Client.count_public_messages_by_tag`.

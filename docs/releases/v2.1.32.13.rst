@@ -1,0 +1,9 @@
+FTMGram v2.1.32.13
+====================
+
+
+Scheme layer used: 184
+------------------------
+
+- Dynamic session ReStart + restart optimizations (`#56 <https://github.com/TelegramPlayGround/FTMGram/pull/56>`__)
+- Added the :meth:`~ftmgram.Client.delete_account`, :meth:`~ftmgram.Client.transfer_chat_ownership`, :meth:`~ftmgram.Client.update_status` (`#49 <https://github.com/TelegramPlayGround/FTMGram/pull/49>`__, `#51 <https://github.com/TelegramPlayGround/FTMGram/pull/51>`__)

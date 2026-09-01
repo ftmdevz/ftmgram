@@ -1,0 +1,18 @@
+FTMGram v2.2.21
+==================
+
+
+Scheme layer used: 223
+------------------------
+
+- Added the :obj:`~ftmgram.types.MessageEntity` type :obj:`~ftmgram.enums.MessageEntityType.DATE_TIME`, allowing to show a formatted date and time to the user.
+- Added the fields ``chat_owner_left``, ``chat_owner_changed``, ``chat_has_protected_content_toggled`` and ``chat_has_protected_content_disable_requested`` to the class :obj:`~ftmgram.types.Message`.
+- Added the field ``can_edit_tag`` to the class :obj:`~ftmgram.types.ChatPermissions`.
+- Added the field ``tag`` to the class :obj:`~ftmgram.types.ChatMember`.
+- Added the field ``can_manage_tags`` to the class :obj:`~ftmgram.types.ChatPrivileges`.
+- Added the methods :meth:`~ftmgram.Client.set_chat_member_tag` and :meth:`~ftmgram.Client.process_chat_protected_content_disable_request`. Updated the method :meth:`~ftmgram.Client.set_chat_protected_content` to return the appropriate service message, if available.
+- Added the field ``sender_tag`` to the class :obj:`~ftmgram.types.Message`.
+- Add ``location`` in :obj:`~ftmgram.types.Chat` and add missing parameters in :meth:`~ftmgram.Client.create_supergroup`.
+- fix: :meth:`~ftmgram.Client.get_media_group` concurrent logic (contributed by @Alekzum).
+- properly implement in_memory arg in client to support session string. (contributed by @anonymousx97 in `#222 <https://github.com/KurimuzonAkuma/kurigram/pull/222>`__).
+- View `new and changed <https://telegramplayground.github.io/TG-APIs/TL/diff/tdlib.html?from=222&to=223>`__ `raw API methods <https://telegramplayground.github.io/TG-APIs/TL/diff/tdesktop.html?from=222&to=223>`__.

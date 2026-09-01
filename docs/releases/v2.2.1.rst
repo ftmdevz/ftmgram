@@ -1,0 +1,8 @@
+FTMGram v2.2.1
+==================
+
+
+Scheme layer used: 195
+------------------------
+
+- Added the :meth:`~ftmgram.Client.get_owned_bots` to return the list of owned by the current user bots.

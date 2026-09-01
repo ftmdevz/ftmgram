@@ -1,0 +1,14 @@
+FTMGram v2.1.32.4
+==================
+
+
+Scheme layer used: 181
+------------------------
+
+- faster-ftmgram is not polished or documented for anyone else's use. We don't have the capacity to support `faster-ftmgram <https://github.com/TelegramPlayGround/FTMGram/pull/6>`_ as an independent open-source project, nor any desire for it to become an alternative to FTMGram. Our goal in making this code available is a unified faster FTMGram. `... <https://github.com/cavallium/faster-ftmgram/blob/b781909/README.md#L28>`_
+- Lock-free and asynchronous implementation of the sqlite session.
+- The possibility of turning off journaling and vacuum when starting a session.
+- Improved implementation of rle_encode.
+- Implementation of _parse_channel_chat without getattr, in some scenarios.
+- Cache of FileId and UniqueFileId instances and of their string-coded versions.
+- Use of tcp abridged instead of tcp obfuscated as the default protocol.

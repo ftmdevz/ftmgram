@@ -20,7 +20,7 @@ Welcome to FTMGram
 .. note::
 
    **FTMGram v3.3.0** is an elegant, modern and asynchronous Telegram MTProto API framework
-   delivering full **Bot API 10.3** support (In-Message Buttons, AI Draft Streaming, Ephemeral Overlays, Checklists, Stars) with zero breaking changes for existing Pyrogram/Kurigram projects.
+   delivering full **Bot API 10.3** support (In-Message Buttons, AI Draft Streaming, Ephemeral Overlays, Checklists, Stars) with zero breaking changes for existing FTMGram/Kurigram projects.
 
 .. code-block:: python
 
@@ -45,7 +45,7 @@ How the Documentation is Organized
 
   * :doc:`intro/quickstart` — A quick overview showing the first steps to take.
   * :doc:`intro/install` — Detailed instructions on how to install FTMGram.
-  * :doc:`intro/migration` — Migrating from Pyrogram or Kurigram in under 1 minute.
+  * :doc:`intro/migration` — Migrating from FTMGram or Kurigram in under 1 minute.
   * :doc:`intro/client` — Configuring the Client and managing session storage.
 
 * **API Reference**

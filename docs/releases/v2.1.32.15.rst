@@ -1,0 +1,9 @@
+FTMGram v2.1.32.15
+====================
+
+
+Scheme layer used: 184
+------------------------
+
+- Updated :obj:`~ftmgram.filters.via_bot`, to optionally support filtering invalid bot ``user_id``.
+- Added the :meth:`~ftmgram.Client.get_active_sessions`.

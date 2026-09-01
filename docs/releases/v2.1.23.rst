@@ -1,0 +1,10 @@
+FTMGram v2.1.23
+==================
+
+
+Scheme layer used: 177
+------------------------
+
+- **BOTS ONLY**: Updated :obj:`~ftmgram.handlers.ChatMemberUpdatedHandler` to handle updates when the bot is blocked or unblocked by a user.
+- Added missing parameters in :meth:`~ftmgram.Client.create_group`, :meth:`~ftmgram.Client.create_supergroup`, :meth:`~ftmgram.Client.create_channel`.
+- Added ``emoji_message_interaction`` parameter to :meth:`~ftmgram.Client.send_chat_action` and :meth:`~ftmgram.types.Message.reply_chat_action`.

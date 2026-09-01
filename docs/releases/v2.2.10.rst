@@ -1,0 +1,24 @@
+FTMGram v2.2.10
+==================
+
+
+Scheme layer used: 201
+------------------------
+
+- Renamed the field ``paid_message_star_count`` to ``paid_star_count`` in the :obj:`~ftmgram.types.Message`, containing the number of Telegram Stars that were paid to send the message.
+- Added the classes :obj:`~ftmgram.types.PaidMessagePriceChanged` and :obj:`~ftmgram.types.PaidMessagesRefunded` and the fields ``paid_message_price_changed`` and ``paid_messages_refunded`` to the :obj:`~ftmgram.types.Message`, describing the appropriate service message.
+- Added the :meth:`~ftmgram.Client.get_business_account_star_balance`, allowing bots to check the current Telegram Star balance of a managed business account.
+- Added the :obj:`~ftmgram.types.BusinessBotRights` and replaced the field ``can_reply`` with the field ``rights`` of the type :obj:`~ftmgram.types.BusinessBotRights` in the :obj:`~ftmgram.types.BusinessConnection`.
+- View `new and changed <https://telegramplayground.github.io/TG-APIs/TL/diff/tdlib.html?from=200&to=201>`__ `raw API methods <https://telegramplayground.github.io/TG-APIs/TL/diff/tdesktop.html?from=200&to=201>`__.
+
+Scheme layer used: 200
+------------------------
+
+- Added ``sizes`` to :obj:`~ftmgram.types.Photo` to return all available sizes.
+- Add :meth:`~ftmgram.Client.send_screenshot_notification`.
+- Add ``media`` in :obj:`~ftmgram.types.ExternalReplyInfo`.
+- Add :obj:`~ftmgram.enums.MessageOriginType` as enum instead of str, and updated the appropriate filters.
+- Document about `the issue #161 <https://github.com/TelegramPlayGround/FTMGram/issues/161>`__.
+- Make `User.block/unblock/get_common_chats async <https://github.com/KurimuzonAkuma/ftmgram/commit/7cab86a9eee4bd57ac96a1713f9bd37a7fc0ac09>`__, `Fix examples <https://github.com/KurimuzonAkuma/ftmgram/commit/f7f83de4331d6358332dbd0458755e28d59ec0f0>`__ and `Fix docs <https://github.com/KurimuzonAkuma/ftmgram/commit/f98b92765634f862310b21783b186fce66877a24>`__.
+- Try to return the service message (when applicable) in the method :meth:`~ftmgram.Client.set_chat_title`.
+- Added :meth:`~ftmgram.Client.delete_chat_history`.

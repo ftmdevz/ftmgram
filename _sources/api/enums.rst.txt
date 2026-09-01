@@ -92,7 +92,7 @@ Controls how message text is parsed.
    * - Value
      - Description
    * - ``ParseMode.MARKDOWN``
-     - Pyrogram Markdown syntax (default)
+     - FTMGram Markdown syntax (default)
    * - ``ParseMode.HTML``
      - HTML tags (``<b>``, ``<i>``, ``<code>``, etc.)
    * - ``ParseMode.DISABLED``

@@ -1,0 +1,17 @@
+FTMGram v2.2.24
+==================
+
+
+Scheme layer used: 225
+------------------------
+
+- Added ``is_high_quality`` in :obj:`~ftmgram.types.InputMediaPhoto` and replaced the parameter ``photo`` in :meth:`~ftmgram.Client.send_photo` and :meth:`~ftmgram.types.Message.reply_photo`.
+- fix in :obj:`~ftmgram.types.Venue`. (contributed in `#282774 <https://t.me/c/1999755950/282774>`__).
+- fix in :obj:`~ftmgram.types.Dialog`. (contributed by @gurland in `#236 <https://github.com/TelegramPlayground/FTMGram/pull/236>`__).
+- Migrated `documentation <https://github.com/TelegramPlayground/ftmgram>`__, `source code <https://github.com/TelegramPlayground/FTMGram>`__ and `PyTGCrypto <https://github.com/TelegramPlayground/ftmgram-tgcrypto>`__ to separate repositories. 
+- View `new and changed <https://telegramplayground.github.io/TG-APIs/TL/diff/tdlib.html?from=224&to=225>`__ `raw API methods <https://telegramplayground.github.io/TG-APIs/TL/diff/tdesktop.html?from=224&to=225>`__.
+
+Scheme layer used: 224
+------------------------
+
+- Added the method :meth:`~ftmgram.Client.get_option` to retrive client specific configuration.

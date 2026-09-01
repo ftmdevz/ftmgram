@@ -1,0 +1,13 @@
+FTMGram v2.1.30
+==================
+
+
+Scheme layer used: 179
+------------------------
+
+- Added the field ``question_entities`` to the class :obj:`~ftmgram.types.Poll`.
+- Added the field ``text_entities`` to the class :obj:`~ftmgram.types.PollOption`.
+- Added the parameters ``question_parse_mode`` and ``question_entities`` to the method :meth:`~ftmgram.Client.send_poll`.
+- Added the class :obj:`~ftmgram.types.InputPollOption` and changed the type of the parameter ``options`` in the method :meth:`~ftmgram.Client.send_poll` to Array of :obj:`~ftmgram.types.InputPollOption`.
+- Added the field ``max_reaction_count`` to the class :obj:`~ftmgram.types.Chat`.
+- Added the field ``via_join_request`` to the class :obj:`~ftmgram.types.ChatMemberUpdated`.

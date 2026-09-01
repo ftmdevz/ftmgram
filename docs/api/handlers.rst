@@ -1,51 +1,86 @@
-Handlers & Decorators
-=====================
+Update Handlers
+===============
 
-Handlers process incoming Telegram updates. You can register handlers using client decorators or through ``app.add_handler()``.
-
-Available Handlers
-------------------
-
-.. list-table::
-   :widths: 35 65
-   :header-rows: 1
-
-   * - Decorator / Handler
-     - Description
-   * - ``@app.on_message(filters)``
-     - Handles new incoming or outgoing messages.
-   * - ``@app.on_callback_query(filters)``
-     - Handles inline button clicks.
-   * - ``@app.on_inline_query(filters)``
-     - Handles inline search queries.
-   * - ``@app.on_chosen_inline_result(filters)``
-     - Handles chosen inline results.
-   * - ``@app.on_edited_message(filters)``
-     - Handles message edits.
-   * - ``@app.on_deleted_messages()``
-     - Handles message deletion events.
-   * - ``@app.on_chat_member_updated()``
-     - Handles member join, leave, promotion, and demotion events.
-   * - ``@app.on_chat_join_request()``
-     - Handles join requests in private channels/groups.
-   * - ``@app.on_message_generation_stopped()``
-     - Handles when a user taps Stop during live AI text streaming.
-   * - ``@app.on_raw_update()``
-     - Low-level handler receiving unprocessed MTProto updates.
-
-Example
--------
+Handlers are used to instruct FTMGram about which kind of updates you'd like to handle with your callback functions.
+For a much more convenient way of registering callback functions have a look at :doc:`Decorators <decorators>` instead.
 
 .. code-block:: python
 
-   from ftmgram import Client, filters
+    from ftmgram import Client
+    from ftmgram.handlers import MessageHandler
 
-   app = Client("my_bot")
+    app = Client("my_account")
 
-   @app.on_message(filters.command("start"))
-   async def start_handler(client, message):
-       await message.reply("Welcome to FTMGram!")
 
-   @app.on_callback_query()
-   async def callback_handler(client, query):
-       await query.answer("Received click!")
+    def dump(client, message):
+        print(message)
+
+
+    app.add_handler(MessageHandler(dump))
+
+    app.run()
+
+
+-----
+
+.. currentmodule:: ftmgram.handlers
+
+Index
+-----
+
+.. hlist::
+    :columns: 3
+
+    - :class:`MessageHandler`
+    - :class:`EditedMessageHandler`
+    - :class:`BusinessBotConnectionHandler`
+    - :class:`MessageReactionUpdatedHandler`
+    - :class:`MessageReactionCountUpdatedHandler`
+    - :class:`InlineQueryHandler`
+    - :class:`ChosenInlineResultHandler`
+    - :class:`CallbackQueryHandler`
+    - :class:`ShippingQueryHandler`
+    - :class:`PreCheckoutQueryHandler`
+    - :class:`PurchasedPaidMediaHandler`
+    - :class:`PollHandler`
+
+    - :class:`ChatMemberUpdatedHandler`
+    - :class:`ChatJoinRequestHandler`
+
+
+    - :class:`ManagedBotUpdateHandler`
+    - :class:`DeletedMessagesHandler`
+    - :class:`UserStatusHandler`
+    - :class:`DisconnectHandler`
+    - :class:`StoryHandler`
+    - :class:`RawUpdateHandler`
+
+-----
+
+Details
+-------
+
+.. Handlers
+.. autoclass:: MessageHandler()
+.. autoclass:: EditedMessageHandler()
+.. autoclass:: BusinessBotConnectionHandler()
+.. autoclass:: MessageReactionUpdatedHandler()
+.. autoclass:: MessageReactionCountUpdatedHandler()
+.. autoclass:: InlineQueryHandler()
+.. autoclass:: ChosenInlineResultHandler()
+.. autoclass:: CallbackQueryHandler()
+.. autoclass:: ShippingQueryHandler()
+.. autoclass:: PreCheckoutQueryHandler()
+.. autoclass:: PurchasedPaidMediaHandler()
+.. autoclass:: PollHandler()
+
+.. autoclass:: ChatMemberUpdatedHandler()
+.. autoclass:: ChatJoinRequestHandler()
+
+
+.. autoclass:: ManagedBotUpdateHandler()
+.. autoclass:: DeletedMessagesHandler()
+.. autoclass:: UserStatusHandler()
+.. autoclass:: DisconnectHandler()
+.. autoclass:: StoryHandler()
+.. autoclass:: RawUpdateHandler()

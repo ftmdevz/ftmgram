@@ -1,0 +1,18 @@
+FTMGram v2.1.33.7
+===================
+
+
+Scheme layer used: 187
+------------------------
+
+- Added the field ``prize_star_count`` to the classes :obj:`~ftmgram.types.GiveawayCreated`, :obj:`~ftmgram.types.Giveaway`, :obj:`~ftmgram.types.GiveawayWinners`.
+- Added the field ``is_star_giveaway`` to the class :obj:`~ftmgram.types.GiveawayCompleted`.
+- Added the ability to specify a payload in :meth:`~ftmgram.Client.send_paid_media` that is unused currently.
+- View `new and changed <https://telegramplayground.github.io/TG-APIs/TL/diff/tdlib.html?from=186&to=187>`__ `raw API methods <https://telegramplayground.github.io/TG-APIs/TL/diff/tdesktop.html?from=186&to=187>`__.
+
+Scheme layer used: 186
+------------------------
+
+- Try to return the service message (when applicable) in the methods :meth:`~ftmgram.Client.set_chat_photo`, :meth:`~ftmgram.types.Chat.set_photo`.
+- Added the methods :meth:`~ftmgram.Client.get_payment_form` and :meth:`~ftmgram.Client.send_payment_form` `#89 <https://github.com/TelegramPlayGround/FTMGram/pull/89>`__.
+- Added the fields ``expired_member_count``, ``subscription_period`` and ``subscription_price`` to the class :obj:`~ftmgram.types.ChatInviteLink`.

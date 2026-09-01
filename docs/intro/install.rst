@@ -1,69 +1,40 @@
-Installation
-============
+Install Guide
+=============
 
-Requirements
-------------
+Being a modern Python framework, FTMGram requires an up to date version of Python to be installed in your system.
+We recommend using the latest versions of both Python 3 and pip.
 
-- **Python 3.8** or higher
-- **pip** (bundled with Python)
 
-Stable Release — PyPI
----------------------
+-----
 
-Install the latest stable release from PyPI:
+Install FTMGram
+----------------
 
-.. code-block:: bash
+Bleeding Edge
+-------------
 
-   pip install ftmgram
+You can install the development version from the git appropriate branch using this command:
 
-Install with optional speed extras (TgCrypto C-extension + uvloop):
+    .. code-block:: text
 
-.. code-block:: bash
+        $ pip uninstall -y ftmgram && pip install pyrotgfork
 
-   pip install "ftmgram[fast]"
+-   or, with :doc:`TgCrypto <../topics/speedups>` as extra requirement (recommended):
 
-.. note::
+    .. code-block:: text
 
-   ``tgcrypto`` significantly speeds up encryption/decryption. It is highly
-   recommended for production bots and user clients.
+        $ pip install pyrotgfork[fast]
 
-Latest from GitHub
-------------------
-
-Install directly from the ``ftmdevz`` development branch:
-
-.. code-block:: bash
-
-   pip install https://github.com/ftmdevz/ftmgram/archive/ftmdevz.zip --force-reinstall
-
-Verify Installation
--------------------
-
-.. code-block:: python
-
-   import ftmgram
-   print(ftmgram.__version__)  # 3.3.0
-
-Optional Dependencies
----------------------
-
-.. list-table::
-   :widths: 20 20 60
-   :header-rows: 1
-
-   * - Extra
-     - Package
-     - Description
-   * - ``fast``
-     - ``tgcrypto``
-     - C-level AES/IGE crypto — much faster than pure Python
-   * - ``fast``
-     - ``uvloop``
-     - High-performance asyncio event loop (Linux/macOS only)
-
-Upgrading
+Verifying
 ---------
 
-.. code-block:: bash
+To verify that FTMGram is correctly installed, open a Python shell and import it.
+If no error shows up you are good to go.
 
-   pip install -U ftmgram
+.. parsed-literal::
+
+    >>> from ftmgram import __version__
+    >>> __version__
+    '2.0.106-TL-158'
+
+.. _`Github repo`: http://github.com/TelegramPlayGround/FTMGram

@@ -1,0 +1,14 @@
+FTMGram v2.2.18
+==================
+
+
+Scheme layer used: 222
+------------------------
+
+- Added the field ``first_profile_audio`` to the class :obj:`~ftmgram.types.Chat` and the methods :meth:`~ftmgram.Client.get_chat_audios`, :meth:`~ftmgram.Client.get_chat_audios_count`, :meth:`~ftmgram.Client.add_profile_audio`, :meth:`~ftmgram.Client.remove_profile_audio`, :meth:`~ftmgram.Client.set_profile_audio_position`.
+- Removed the methods :meth:`~ftmgram.Client.get_received_gifts`, :meth:`~ftmgram.Client.sell_gift`, :meth:`~ftmgram.Client.send_gift`, :meth:`~ftmgram.Client.toggle_gift_is_saved` and the :obj:`~ftmgram.types.ReceivedGift`.
+- Removed the field ``alternative_videos`` from the class :obj:`~ftmgram.types.Message` and added the class :obj:`~ftmgram.types.VideoQuality` and the field ``qualities`` to the class :obj:`~ftmgram.types.Video` allowing to get information about other available qualities of a video.
+- Added the fields ``icon_custom_emoji_id`` and ``style`` to the classes :obj:`~ftmgram.types.InlineKeyboardButton` and :obj:`~ftmgram.types.KeyboardButton`.
+- Added the fields ``has_topics_enabled`` and ``allows_users_to_create_topics`` to the class :obj:`~ftmgram.types.User`, which can be used to determine whether forum topic mode is enabled for the bot in private chats.
+- Added the field ``is_name_implicit`` to the classes :obj:`~ftmgram.types.ForumTopic` and :obj:`~ftmgram.types.ForumTopicCreated`.
+- View `new and changed <https://telegramplayground.github.io/TG-APIs/TL/diff/tdlib.html?from=220&to=222>`__ `raw API methods <https://telegramplayground.github.io/TG-APIs/TL/diff/tdesktop.html?from=220&to=222>`__.

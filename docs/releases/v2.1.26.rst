@@ -1,0 +1,17 @@
+FTMGram v2.1.26
+==================
+
+
+Scheme layer used: 179
+------------------------
+
+- `View new and changed raw API methods <https://telegramplayground.github.io/TG-APIs/TL/diff/tdesktop.html?from=178&to=179>`__.
+
+Scheme layer used: 178
+------------------------
+
+- Steal `d51eef3 <https://github.com/FTMGramMod/FTMGramMod/commit/d51eef31dc28724405ff473e45ca21b7d835d8b4>`_ without attribution.
+- Added :meth:`~ftmgram.Client.edit_cached_media` and :meth:`~ftmgram.types.Message.edit_cached_media`.
+- Added :meth:`~ftmgram.Client.get_bot_name`, :meth:`~ftmgram.Client.get_bot_info_description`, :meth:`~ftmgram.Client.get_bot_info_short_description`, :meth:`~ftmgram.Client.set_bot_name`, :meth:`~ftmgram.Client.set_bot_info_description`, :meth:`~ftmgram.Client.set_bot_info_short_description`.
+- Added :meth:`~ftmgram.Client.search_chats`.
+- View `new and changed <https://telegramplayground.github.io/TG-APIs/TL/diff/tdlib.html?from=177&to=178>`__ `raw API methods <https://telegramplayground.github.io/TG-APIs/TL/diff/tdesktop.html?from=177&to=178>`__.

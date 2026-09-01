@@ -1,0 +1,9 @@
+FTMGram v2.1.33.9
+==================
+
+
+Scheme layer used: 189
+------------------------
+
+- Added :meth:`~ftmgram.types.Message.star` bound method to the :obj:`~ftmgram.types.Message`.
+- Introduced support for Python 3.13.

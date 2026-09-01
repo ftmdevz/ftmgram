@@ -1,0 +1,21 @@
+FTMGram v2.1.32.2
+===================
+
+
+Scheme layer used: 181
+------------------------
+
+- Added the parameter ``message_effect_id`` to the methods :meth:`~ftmgram.Client.send_message`, :meth:`~ftmgram.Client.send_photo`, :meth:`~ftmgram.Client.send_video`, :meth:`~ftmgram.Client.send_animation`, :meth:`~ftmgram.Client.send_audio`, :meth:`~ftmgram.Client.send_document`, :meth:`~ftmgram.Client.send_sticker`, :meth:`~ftmgram.Client.send_video_note`, :meth:`~ftmgram.Client.send_voice`, :meth:`~ftmgram.Client.send_location`, :meth:`~ftmgram.Client.send_venue`, :meth:`~ftmgram.Client.send_contact`, :meth:`~ftmgram.Client.send_poll`, :meth:`~ftmgram.Client.send_dice`, :meth:`~ftmgram.Client.send_game`, and :meth:`~ftmgram.Client.send_media_group`, and the corresponding ``reply_*`` methods in the class :obj:`~ftmgram.types.Message`.
+- Added the field ``effect_id`` to the class :obj:`~ftmgram.types.Message`.
+- Added the field ``show_caption_above_media`` to the classes :obj:`~ftmgram.types.Message`, :obj:`~ftmgram.types.InputMediaAnimation`, :obj:`~ftmgram.types.InputMediaPhoto`, :obj:`~ftmgram.types.InputMediaVideo`, :obj:`~ftmgram.types.InlineQueryResultAnimation`, :obj:`~ftmgram.types.InlineQueryResultCachedAnimation`,  :obj:`~ftmgram.types.InlineQueryResultPhoto`, :obj:`~ftmgram.types.InlineQueryResultCachedPhoto`, :obj:`~ftmgram.types.InlineQueryResultVideo`, :obj:`~ftmgram.types.InlineQueryResultCachedVideo`, :meth:`~ftmgram.Client.send_cached_media`, :meth:`~ftmgram.Client.send_animation`, :meth:`~ftmgram.Client.send_photo`, :meth:`~ftmgram.Client.send_video`, :meth:`~ftmgram.Client.copy_message` and :meth:`~ftmgram.Client.edit_message_caption`, and the corresponding ``reply_*`` methods.
+- Added support for :obj:`~ftmgram.enums.MessageEntityType.EXPANDABLE_BLOCKQUOTE` entities in received messages.
+- Added support for :obj:`~ftmgram.enums.MessageEntityType.EXPANDABLE_BLOCKQUOTE` entity parsing in :obj:`~ftmgram.enums.ParseMode.HTML` parse mode.
+- Allowed to explicitly specify :obj:`~ftmgram.enums.MessageEntityType.EXPANDABLE_BLOCKQUOTE` entities in formatted texts.
+- `View new and changed raw API methods <https://telegramplayground.github.io/TG-APIs/TL/diff/tdesktop.html?from=178&to=181>`__.
+
+
+Scheme layer used: 179
+------------------------
+
+- Add ``invoice`` to :obj:`~ftmgram.types.Message` and :obj:`~ftmgram.types.ExternalReplyInfo`.
+- Add ``link_preview_options`` to :obj:`~ftmgram.Client`.

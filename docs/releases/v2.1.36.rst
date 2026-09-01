@@ -1,0 +1,8 @@
+FTMGram v2.1.36
+==================
+
+
+Scheme layer used: 194
+------------------------
+
+- Added the field ``schedule_date`` and changed the return type of the :meth:`~ftmgram.Client.send_inline_bot_result`.

@@ -1,0 +1,11 @@
+FTMGram v2.1.32.1
+==================
+
+
+Scheme layer used: 179
+------------------------
+
+- Support for the updated Channel ID format. `#28 <https://github.com/TelegramPlayGround/FTMGram/pull/28>`_
+- Improvements to :meth:`~ftmgram.Client.save_file` and :meth:`~ftmgram.Client.get_file` to handle the new `FLOOD_PREMIUM_WAIT <https://t.me/swiftgram/72>`_ errors.
+- Added ``has_animation``, ``is_personal``, ``minithumbnail`` parameters to :obj:`~ftmgram.types.ChatPhoto`.
+- Changed return type of :meth:`~ftmgram.Client.get_chat_photos` to return :obj:`~ftmgram.types.Photo` or :obj:`~ftmgram.types.Animation`.

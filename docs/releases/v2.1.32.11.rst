@@ -1,0 +1,12 @@
+FTMGram v2.1.32.11
+====================
+
+
+Scheme layer used: 183
+------------------------
+
+- Added the classes :obj:`~ftmgram.types.PaidMedia`, :obj:`~ftmgram.types.PaidMediaInfo`, :obj:`~ftmgram.types.PaidMediaPreview`, :obj:`~ftmgram.types.PaidMediaPhoto` and :obj:`~ftmgram.types.PaidMediaVideo`, containing information about paid media.
+- Added the method :meth:`~ftmgram.Client.send_paid_media` and the classes :obj:`~ftmgram.types.InputPaidMedia`, :obj:`~ftmgram.types.InputPaidMediaPhoto` and :obj:`~ftmgram.types.InputPaidMediaVideo`, to support sending paid media.
+- Added the field ``paid_media`` to the classes :obj:`~ftmgram.types.Message` and :obj:`~ftmgram.types.ExternalReplyInfo`.
+- Added :meth:`~ftmgram.Client.get_stories`.
+- Added filters :obj:`~ftmgram.filters.thread` and :obj:`~ftmgram.filters.self_destruct`.

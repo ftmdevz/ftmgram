@@ -1,0 +1,8 @@
+FTMGram v2.1.29
+==================
+
+
+Scheme layer used: 179
+------------------------
+
+- Added the class :obj:`~ftmgram.types.TextQuote` and the field ``quote`` of type :obj:`~ftmgram.types.TextQuote` to the class :obj:`~ftmgram.types.Message`, which contains the part of the replied message text or caption that is quoted in the current message.

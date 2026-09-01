@@ -65,7 +65,7 @@ New Enums
 Bug Fixes
 ~~~~~~~~~
 
-- Fixed all generated ``ftmgram/raw/`` files incorrectly importing from ``pyrogram`` instead of ``ftmgram``
+- Fixed all generated ``ftmgram/raw/`` files incorrectly importing from ``ftmgram`` instead of ``ftmgram``
 - Removed duplicate ``get_business_account_star_balance`` method
 - Removed deprecated ``send_reaction`` alias
 

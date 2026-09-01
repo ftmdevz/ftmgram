@@ -1,145 +1,60 @@
 Quick Start
 ===========
 
-This guide takes you from a fresh install to a working Telegram bot in minutes.
+The next few steps serve as a quick start to see FTMGram in action as fast as possible.
 
-Obtain API Credentials
------------------------
+Get FTMGram Real Fast
+----------------------
 
-Before writing any code you need a Telegram **API ID** and **API Hash**:
+.. admonition :: Cloud Credits
+    :class: tip
 
-1. Log in at `my.telegram.org <https://my.telegram.org/auth>`_
-2. Go to **API development tools**
-3. Create a new application — copy your ``api_id`` and ``api_hash``
+    If you need a cloud server to host your applications, try Hetzner Cloud. You can sign up with
+    `this link <https://hetzner.cloud/?ref=sKhf0eiXDgUT>`_ to get €20 in cloud credits.
 
-Your First Bot
---------------
+0. Create a Virtual Environment with ``python3 -m venv venv``.
 
-A minimal echo bot that replies to every private text message:
+0. Activate the Virtual Environment with ``source ./venv/bin/activate``.
 
-.. code-block:: python
+1. Install FTMGram with ``pip uninstall -y ftmgram && pip install pyrotgfork``.
 
-   from ftmgram import Client, filters
+2. Get your own Telegram API key from https://my.telegram.org/apps.
 
-   app = Client(
-       "my_bot",
-       api_id=YOUR_API_ID,
-       api_hash="YOUR_API_HASH",
-       bot_token="YOUR_BOT_TOKEN",
-   )
+3.  Open the text editor of your choice and paste the following:
 
-   @app.on_message(filters.private & filters.text)
-   async def echo(client, message):
-       await message.reply(message.text)
+    .. code-block:: python
 
-   app.run()
+        import asyncio
+        from ftmgram import Client
 
-Your First User Client
------------------------
+        api_id = 12345
+        api_hash = "0123456789abcdef0123456789abcdef"
 
-Connect as a regular Telegram user account:
 
-.. code-block:: python
+        async def main():
+            async with Client("my_account", api_id, api_hash) as app:
+                await app.send_message(chat_id="me", text="Greetings from **FTMGram**!")
 
-   from ftmgram import Client
 
-   app = Client(
-       "my_account",
-       api_id=YOUR_API_ID,
-       api_hash="YOUR_API_HASH",
-   )
+        asyncio.run(main())
 
-   async def main():
-       async with app:
-           me = await app.get_me()
-           print(f"Logged in as: {me.first_name}")
+4. Replace *api_id* and *api_hash* values with your own.
 
-   app.run(main())
+5. Save the file as ``hello.py``.
 
-Using the ``async with`` Context Manager
------------------------------------------
+6. Run the script with ``python3 hello.py``
 
-The recommended pattern for scripts that run once:
+7. Follow the instructions on your terminal to login.
 
-.. code-block:: python
+8. Watch FTMGram send a message to yourself.
 
-   from ftmgram import Client
+Enjoy the API
+-------------
 
-   async def main():
-       async with Client("my_bot", bot_token="TOKEN") as app:
-           await app.send_message("me", "Hello!")
+That was just a quick overview. In the next few pages of the introduction, we'll take a much more in-depth look of what
+we have just done above.
 
-   import asyncio
-   asyncio.run(main())
+If you are feeling eager to continue you can take a shortcut to :doc:`../start/invoking` and come back
+later to learn some more details.
 
-Sending Messages
-----------------
-
-.. code-block:: python
-
-   # Plain text
-   await app.send_message(chat_id=123456789, text="Hello!")
-
-   # Markdown
-   await app.send_message(chat_id=123456789, text="**Bold** and __italic__")
-
-   # Photo
-   await app.send_photo(chat_id=123456789, photo="path/to/photo.jpg", caption="Look!")
-
-   # Document
-   await app.send_document(chat_id=123456789, document="path/to/file.pdf")
-
-Sending a Rich Message (Bot API 10.1)
---------------------------------------
-
-.. code-block:: python
-
-   from ftmgram import Client
-   from ftmgram.types import InputRichMessage, InputRichMessageContent, RichText
-
-   async def main():
-       async with Client("my_bot", bot_token="TOKEN") as app:
-           await app.send_rich_message(
-               chat_id=123456789,
-               rich_message=InputRichMessage(
-                   title=RichText.plain("My Article"),
-                   content=[
-                       InputRichMessageContent.paragraph(
-                           text=RichText.concat([
-                               RichText.bold("FTMGram"),
-                               RichText.plain(" supports Bot API 10.1!"),
-                           ])
-                       ),
-                   ],
-               ),
-           )
-
-Listening for Updates
----------------------
-
-.. code-block:: python
-
-   from ftmgram import Client, filters
-   from ftmgram.types import Message
-
-   app = Client("my_bot", bot_token="TOKEN")
-
-   # Any private message
-   @app.on_message(filters.private)
-   async def handle_private(client: Client, message: Message):
-       await message.reply("Private message received!")
-
-   # Only /start command
-   @app.on_message(filters.command("start"))
-   async def handle_start(client: Client, message: Message):
-       await message.reply("Welcome! I'm running on FTMGram 🚀")
-
-   app.run()
-
-Next Steps
-----------
-
-- :doc:`../intro/migration` — switch from Pyrogram/KuriGram
-- :doc:`../api/client` — full Client method reference
-- :doc:`../topics/rich-messages` — send structured article messages
-- :doc:`../topics/checklists` — send interactive checklists
+.. _community: https://FTMGram.t.me/2

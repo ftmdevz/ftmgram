@@ -1,0 +1,10 @@
+FTMGram v2.1.31
+==================
+
+
+Scheme layer used: 179
+------------------------
+
+- Added :meth:`~ftmgram.Client.get_chat_sponsored_messages` and the type :obj:`~ftmgram.types.SponsoredMessage`, by stealing unauthored changes from `KurimuzonAkuma/ftmgram#55 <https://github.com/KurimuzonAkuma/ftmgram/pull/55>`_.
+- Added :meth:`~ftmgram.Client.load_group_call_participants` and the type :obj:`~ftmgram.types.GroupCallParticipant`, by stealing unauthored changes from `6df467f <https://github.com/KurimuzonAkuma/ftmgram/commit/6df467f89c0f6fa513a3f56ff1b517574fd3d164>`_.
+- Added :meth:`~ftmgram.Client.view_messages` and the bound methods :meth:`~ftmgram.types.Message.read` and :meth:`~ftmgram.types.Message.view`.

@@ -1,0 +1,5 @@
+FTMGram v2.2.15
+==================
+
+
+Bug Fixes <https://github.com/TelegramPlayground/FTMGram/compare/v2.2.14...v2.2.15>

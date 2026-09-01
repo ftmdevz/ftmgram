@@ -1,0 +1,9 @@
+FTMGram v2.1.33.12
+====================
+
+
+Scheme layer used: 190
+------------------------
+
+- Added the methods :meth:`~ftmgram.Client.get_available_gifts`, :meth:`~ftmgram.Client.get_user_gifts`, :meth:`~ftmgram.Client.sell_gift`, :meth:`~ftmgram.Client.send_gift`, :meth:`~ftmgram.Client.toggle_gift_is_saved`, :meth:`~ftmgram.types.UserGift.toggle` and the types :obj:`~ftmgram.types.UserGift` and :obj:`~ftmgram.types.Gift`.
+- Added the parameter ``send_as`` in the appropriate methods and bound methods `PR 107 <https://github.com/TelegramPlayGround/FTMGram/pull/107>`_.

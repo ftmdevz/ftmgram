@@ -1,0 +1,19 @@
+FTMGram v2.1.32.8
+==================
+
+
+Scheme layer used: 182
+------------------------
+
+- Updated the parameter ``business_connection_id`` to the methods :meth:`~ftmgram.types.Message.edit_text`, :meth:`~ftmgram.types.Message.edit_media`, :meth:`~ftmgram.types.Message.edit_reply_markup`, :meth:`~ftmgram.types.CallbackQuery.edit_message_text`, :meth:`~ftmgram.types.CallbackQuery.edit_message_media`, :meth:`~ftmgram.types.CallbackQuery.edit_message_reply_markup`.
+- Added the parameter ``business_connection_id`` to the methods :meth:`~ftmgram.Client.edit_message_text`, :meth:`~ftmgram.Client.edit_message_media`, :meth:`~ftmgram.Client.edit_message_caption` and :meth:`~ftmgram.Client.edit_message_reply_markup`, allowing the bot to edit business messages.
+- Added the parameter ``business_connection_id`` to the method :meth:`~ftmgram.Client.stop_poll`, allowing the bot to stop polls it sent on behalf of a business account.
+- Added support for callback queries originating from a message sent on behalf of a business account.
+- `View new and changed raw API methods <https://telegramplayground.github.io/TG-APIs/TL/diff/tdesktop.html?from=181&to=182>`__.
+
+
+Scheme layer used: 181
+------------------------
+
+- Added the classes :obj:`~ftmgram.types.InputLocationMessageContent`, :obj:`~ftmgram.types.InputVenueMessageContent`, :obj:`~ftmgram.types.InputContactMessageContent`, :obj:`~ftmgram.types.InputInvoiceMessageContent`.`
+- Added ``background`` to :obj:`~ftmgram.types.Chat` (`#40 <https://github.com/TelegramPlayGround/FTMGram/pull/40>`_)

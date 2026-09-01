@@ -1,0 +1,22 @@
+FTMGram v2.2.9
+==================
+
+
+Scheme layer used: 200
+------------------------
+
+- Rename ``UserGift`` to :obj:`~ftmgram.types.ReceivedGift`, ``get_user_gifts`` to :meth:`~ftmgram.Client.get_received_gifts` and the corresponding fields appropriately.
+- Added the field ``paid_message_star_count`` to the classes :obj:`~ftmgram.types.Chat`, :obj:`~ftmgram.types.Message` and :obj:`~ftmgram.types.User`.
+- Added the parameter ``paid_message_star_count`` to the methods :meth:`~ftmgram.Client.copy_media_group`, :meth:`~ftmgram.Client.send_game`, :meth:`~ftmgram.Client.send_invoice`, :meth:`~ftmgram.Client.forward_messages`, :meth:`~ftmgram.Client.send_animation`, :meth:`~ftmgram.Client.send_audio`, :meth:`~ftmgram.Client.send_cached_media`, :meth:`~ftmgram.Client.send_contact`, :meth:`~ftmgram.Client.send_dice`, :meth:`~ftmgram.Client.send_document`, :meth:`~ftmgram.Client.send_location`, :meth:`~ftmgram.Client.send_media_group`, :meth:`~ftmgram.Client.send_message`, :meth:`~ftmgram.Client.send_paid_media`, :meth:`~ftmgram.Client.send_photo`, :meth:`~ftmgram.Client.send_poll`, :meth:`~ftmgram.Client.send_sticker`, :meth:`~ftmgram.Client.send_venue`, :meth:`~ftmgram.Client.send_video_note`, :meth:`~ftmgram.Client.send_video`, :meth:`~ftmgram.Client.send_voice` and the bound methods :meth:`~ftmgram.types.Message.forward` and :meth:`~ftmgram.types.Message.copy`.
+- View `new and changed <https://telegramplayground.github.io/TG-APIs/TL/diff/tdlib.html?from=199&to=200>`__ `raw API methods <https://telegramplayground.github.io/TG-APIs/TL/diff/tdesktop.html?from=199&to=200>`__.
+
+
+Scheme layer used: 199
+------------------------
+
+- Added the class :obj:`~ftmgram.types.InlineQueryResultGame`.
+- Added the bound methods :meth:`~ftmgram.types.ChosenInlineResult.edit_message_text`, :meth:`~ftmgram.types.ChosenInlineResult.edit_message_caption`, :meth:`~ftmgram.types.ChosenInlineResult.edit_message_media` and :meth:`~ftmgram.types.ChosenInlineResult.edit_message_reply_markup`.
+- Renamed the fields ``thumb_url``, ``thumb_width``, and ``thumb_height`` in the classes :obj:`~ftmgram.types.InlineQueryResultArticle`, :obj:`~ftmgram.types.InlineQueryResultContact`, :obj:`~ftmgram.types.InlineQueryResultDocument`, :obj:`~ftmgram.types.InlineQueryResultLocation`, and :obj:`~ftmgram.types.InlineQueryResultVenue` to ``thumbnail_url``, ``thumbnail_width``, and ``thumbnail_height`` respectively.
+- Renamed the field ``thumb_url`` in the classes :obj:`~ftmgram.types.InlineQueryResultPhoto` and :obj:`~ftmgram.types.InlineQueryResultVideo` to ``thumbnail_url``.
+- Added the field ``animation_mime_type`` and renamed the fields ``thumb_url`` and ``thumb_mime_type`` in the classes :obj:`~ftmgram.types.InlineQueryResultAnimation` to ``thumbnail_url`` and ``thumbnail_mime_type`` respectively.
+- Fixed a bug with ``_client`` being None in :obj:`~ftmgram.handlers.ChosenInlineResultHandler`.

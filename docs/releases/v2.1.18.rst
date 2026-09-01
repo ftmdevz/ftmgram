@@ -1,0 +1,182 @@
+FTMGram v2.1.18
+==================
+
+
+Scheme layer used: 177
+------------------------
+
+- Added ``filters.users_shared`` and ``filters.chat_shared``.
+- Added the classes :obj:`~ftmgram.types.BusinessOpeningHours` and :obj:`~ftmgram.types.BusinessOpeningHoursInterval` and the field       ``business_opening_hours`` to the class :obj:`~ftmgram.types.Chat`.
+- Added the class :obj:`~ftmgram.types.BusinessLocation` and the field ``business_location`` to the class :obj:`~ftmgram.types.Chat`.
+- Added the class :obj:`~ftmgram.types.BusinessIntro` and the field ``business_intro`` to the class :obj:`~ftmgram.types.Chat`.
+- Added the parameter ``business_connection_id`` to the methods :meth:`~ftmgram.Client.send_message`, :meth:`~ftmgram.Client.send_photo`, :meth:`~ftmgram.Client.send_video`, :meth:`~ftmgram.Client.send_animation`, :meth:`~ftmgram.Client.send_audio`, :meth:`~ftmgram.Client.send_document`, :meth:`~ftmgram.Client.send_sticker`, :meth:`~ftmgram.Client.send_video_note`, :meth:`~ftmgram.Client.send_voice`, :meth:`~ftmgram.Client.send_location`, :meth:`~ftmgram.Client.send_venue`, :meth:`~ftmgram.Client.send_contact`, :meth:`~ftmgram.Client.send_poll`, :meth:`~ftmgram.Client.send_game`, :meth:`~ftmgram.Client.send_media_group`, :meth:`~ftmgram.Client.send_dice`, :meth:`~ftmgram.Client.send_chat_action`, :meth:`~ftmgram.Client.send_cached_media` and :meth:`~ftmgram.Client.copy_message` and the corresponding reply_* methods.
+- Added :meth:`~ftmgram.Client.get_business_connection`.
+- Added ``active_usernames`` to :obj:`~ftmgram.types.Chat` and :obj:`~ftmgram.types.User`.
+- Added :obj:`~ftmgram.types.BusinessConnection`.
+- Added support for ``https://t.me/m/blah`` links in the ``link`` parameter of :meth:`~ftmgram.Client.get_messages`
+- Added the parameter ``message_thread_id`` to the :meth:`~ftmgram.Client.search_messages` and :meth:`~ftmgram.Client.search_messages_count`.
+- Added the parameter ``chat_list`` to :meth:`~ftmgram.Client.search_global` and :meth:`~ftmgram.Client.search_global_count`.
+- **BOTS ONLY**: Handled the parameter ``business_connection_id`` to the update handlers :obj:`~ftmgram.handlers.MessageHandler`, :obj:`~ftmgram.handlers.EditedMessageHandler`, :obj:`~ftmgram.handlers.DeletedMessagesHandler`.
+- Added the field ``business_connection_id`` to the class :obj:`~ftmgram.types.Message`.
+- Bug fix for the ``users_shared``, ``chat_shared`` logic in :obj:`~ftmgram.types.Message`.
+- Added :meth:`~ftmgram.Client.set_birthdate` and :meth:`~ftmgram.Client.set_personal_chat`, for user accounts only.
+- Added the field ``birthdate`` to the class :obj:`~ftmgram.types.Chat`.
+- Added the field ``is_from_offline`` to the class :obj:`~ftmgram.types.Message`.
+- Added the field ``sender_business_bot`` to the class :obj:`~ftmgram.types.Message`.
+- Added the fields ``users_shared``, ``chat_shared`` to the class :obj:`~ftmgram.types.Message`.
+- Added the field ``personal_chat`` to the class :obj:`~ftmgram.types.Chat`.
+- Added the field ``can_connect_to_business`` to the class :obj:`~ftmgram.types.User`.
+- Rearrange :meth:`~ftmgram.Client.send_sticker` parameter names.
+- Added the fields ``request_title``, ``request_username``, and ``request_photo`` to the class :obj:`~ftmgram.types.KeyboardButtonRequestChat`.
+- Added the fields ``request_name``, ``request_username``, and ``request_photo`` to the class :obj:`~ftmgram.types.KeyboardButtonRequestUsers`.
+- View `new and changed <https://telegramplayground.github.io/TG-APIs/TL/diff/tdlib.html?from=158&to=177>`__ `raw API methods <https://telegramplayground.github.io/TG-APIs/TL/diff/tdesktop.html?from=158&to=177>`__.
+
+
+Scheme layer used: 176
+------------------------
+
+- Add ``message_thread_id`` parameter to :meth:`~ftmgram.Client.unpin_all_chat_messages`.
+- Add :meth:`~ftmgram.Client.create_forum_topic`, :meth:`~ftmgram.Client.edit_forum_topic`, :meth:`~ftmgram.Client.close_forum_topic`, :meth:`~ftmgram.Client.reopen_forum_topic`, :meth:`~ftmgram.Client.hide_forum_topic`, :meth:`~ftmgram.Client.unhide_forum_topic`, :meth:`~ftmgram.Client.delete_forum_topic`, :meth:`~ftmgram.Client.get_forum_topic_icon_stickers`.
+- Add ``AioSQLiteStorage``, by stealing the following commits:
+    - `fded06e <https://github.com/KurimuzonAkuma/ftmgram/commit/fded06e7bdf8bb591fb5857d0f126986ccf357c8>`_
+- Add ``skip_updates`` parameter to :obj:`~ftmgram.Client` class, by stealing the following commits:
+    - `c16c83a <https://github.com/KurimuzonAkuma/ftmgram/commit/c16c83abc307e4646df0eba34aad6de42517c8bb>`_
+    - `55aa162 <https://github.com/KurimuzonAkuma/ftmgram/commit/55aa162a38831d79604d4c10df1a046c8a1c3ea6>`_
+- Add ``public``, ``for_my_bot`` to :meth:`~ftmgram.Client.delete_profile_photos`.
+- Make ``photo_ids`` parameter as optional in :meth:`~ftmgram.Client.delete_profile_photos`.
+- Add ``supergroup_chat_created`` to :obj:`~ftmgram.types.Message`.
+- Add ``forum_topic_created``, ``forum_topic_closed``, ``forum_topic_edited``, ``forum_topic_reopened``, ``general_forum_topic_hidden``, ``general_forum_topic_unhidden`` to :obj:`~ftmgram.types.Message`.
+- Add ``custom_action`` to :obj:`~ftmgram.types.Message`.
+- Add ``public``, ``for_my_bot``, ``photo_frame_start_timestamp`` to :meth:`~ftmgram.Client.set_profile_photo`.
+- Add ``inline_need_location``, ``can_be_edited`` to :obj:`~ftmgram.types.User`.
+- Add ``giveaway``, ``giveaway_created``, ``giveaway_completed`` and ``giveaway_winners`` in :obj:`~ftmgram.types.Message` and :obj:`~ftmgram.types.ExternalReplyInfo`.
+- Bug fix for :meth:`~ftmgram.Client.send_message` with the ``message_thread_id`` parameter.
+- Added ``request_users`` and ``request_chat`` to :obj:`~ftmgram.types.KeyboardButton`.
+- **NOTE**: using the ``scheduled`` parameter, please be aware about using the correct :doc:`Message Identifiers <../../topics/message-identifiers>`.
+    - Add ``is_scheduled`` parameter to :meth:`~ftmgram.Client.delete_messages`.
+    - Add ``schedule_date`` parameter to :meth:`~ftmgram.Client.edit_message_caption`, :meth:`~ftmgram.Client.edit_message_media`, :meth:`~ftmgram.Client.edit_message_text`.
+    - Added ``is_scheduled`` to :meth:`~ftmgram.Client.get_messages`.
+    - Added ``is_scheduled`` to :meth:`~ftmgram.Client.get_chat_history`.
+- Added new parameter ``client_platform`` to :obj:`~ftmgram.Client`.
+- PR from upstream: `1403 <https://github.com/ftmgram/ftmgram/pull/1403>`_.
+- Added ``story`` to :obj:`~ftmgram.types.ExternalReplyInfo`.
+- Added ``story_id`` to :obj:`~ftmgram.types.ReplyParameters`.
+- Added support for clicking (:obj:`~ftmgram.types.WebAppInfo`, :obj:`~ftmgram.types.LoginUrl`, ``user_id``, ``switch_inline_query_chosen_chat``) buttons in :meth:`~ftmgram.types.Message.click`.
+- Rewrote :meth:`~ftmgram.Client.download_media` to support Story, and also made it future proof.
+- `Fix bug in clicking UpdateBotCallbackQuery buttons <https://t.me/ftmgramchat/610636>`_
+- View `new and changed <https://telegramplayground.github.io/TG-APIs/TL/diff/tdlib.html?from=158&to=176>`__ `raw API methods <https://telegramplayground.github.io/TG-APIs/TL/diff/tdesktop.html?from=158&to=176>`__.
+
+
+PmOItrOAe
+----------
+
+- Renamed ``placeholder`` to ``input_field_placeholder`` in :obj:`~ftmgram.types.ForceReply` and :obj:`~ftmgram.types.ReplyKeyboardMarkup`.
+- Add ``link`` parameter in :meth:`~ftmgram.Client.get_messages`
+- `fix(filters): add type hints in filters.py <https://github.com/TelegramPlayGround/FTMGram/pull/8>`_
+- Documentation Builder Fixes
+- `faster-ftmgram <https://github.com/cavallium/faster-ftmgram>`__ is not polished or documented for anyone else's use. We don't have the capacity to support `faster-ftmgram <https://github.com/TelegramPlayGround/FTMGram/pull/6>`__ as an independent open-source project, nor any desire for it to become an alternative to FTMGram. Our goal in making this code available is a unified faster FTMGram. `... <https://github.com/cavallium/faster-ftmgram/blob/b781909/README.md#L28>`__
+
+
+Leaked Scheme Layers (2)
+-------------------------
+
+- `Add ttl_seconds attribute to Voice and VideoNote class <https://github.com/KurimuzonAkuma/ftmgram/commit/7556d3e3864215386f018692947cdf52a82cb420>`_
+- `#713 <https://github.com/ftmgram/ftmgram/pull/713>`_
+- Removed :obj:`~ftmgram.types.ChatPreview` class, and merged the parameters with the :obj:`~ftmgram.types.Chat` class.
+- Added ``description``, ``accent_color_id``, ``is_verified``, ``is_scam``, ``is_fake``, ``is_public``, ``join_by_request`` attributes to the class :obj:`~ftmgram.types.ChatPreview`.
+- Added ``force_full`` parameter to :meth:`~ftmgram.Client.get_chat`.
+- Bug Fix for :meth:`~ftmgram.Client.get_chat` and :meth:`~ftmgram.Client.join_chat` when ``https://t.me/username`` was passed.
+- Added missing attributes to the class :obj:`~ftmgram.types.Story` when it is available.
+- Added the field ``reply_to_story`` to the class :obj:`~ftmgram.types.Message`.
+- Added the field ``user_chat_id`` to the class :obj:`~ftmgram.types.ChatJoinRequest`.
+- Added the field ``switch_inline_query_chosen_chat`` of the type :obj:`~ftmgram.types.SwitchInlineQueryChosenChat` to the class :obj:`~ftmgram.types.InlineKeyboardButton`, which allows bots to switch to inline mode in a chosen chat of the given type.
+- Add support for ``pay`` in :obj:`~ftmgram.types.InlineKeyboardButton`
+- `#1345 <https://github.com/ftmgram/ftmgram/issues/1345>`_
+- `Add undocumented things <https://github.com/TelegramPlayGround/FTMGram/commit/8a72939d98f343eae1e07981f95769efaa741e4e>`_
+- `Add missing enums.SentCodeType <https://github.com/KurimuzonAkuma/ftmgram/commit/40ddcbca6062f13958f4ca2c9852f8d1c4d62f3c>`_
+- `#693 <https://github.com/KurimuzonAkuma/ftmgram/pull/693>`_
+- Revert `e678c05 <https://github.com/TelegramPlayGround/FTMGram/commit/e678c054d4aa0bbbb7d583eb426ca8753a4c9354>`_ and stole squashed unauthored changes from `bcd18d5 <https://github.com/Masterolic/ftmgram/commit/bcd18d5e04f18f949389a03f309816d6f0f9eabe>`_
+
+
+Scheme layer used: 174
+------------------------
+
+- Added the field ``story`` to the class :obj:`~ftmgram.types.Message` for messages with forwarded stories. Currently, it holds no information.
+- Added the class :obj:`~ftmgram.types.ChatBoostAdded` and the field ``boost_added`` to the class :obj:`~ftmgram.types.Message` for service messages about a user boosting a chat.
+- Added the field ``custom_emoji_sticker_set_name`` to the class :obj:`~ftmgram.types.Chat`.
+- Added the field ``unrestrict_boost_count`` to the class :obj:`~ftmgram.types.Chat`.
+- Added the field ``sender_boost_count`` to the class :obj:`~ftmgram.types.Message`.
+
+
+Scheme layer used: 173
+------------------------
+
+- Fix ConnectionResetError when only ping task (`#24 <https://github.com/KurimuzonAkuma/ftmgram/pull/24>`_)
+- Added ``is_topic_message`` to the :obj:`~ftmgram.types.Message` object.
+- Added ``has_visible_history``, ``has_hidden_members``, ``has_aggressive_anti_spam_enabled``, ``message_auto_delete_time``, ``slow_mode_delay``, ``slowmode_next_send_date``, ``is_forum`` to the :obj:`~ftmgram.types.Chat` object.
+- Added ``add_to_recent``, ``story_id`` parameters in :meth:`~ftmgram.Client.set_reaction`.
+- Bug fix in parsing ``Vector<Bool>`` (Thanks to `@AmarnathCJD <https://github.com/AmarnathCJD/>`_ and `@roj1512 <https://github.com/roj1512>`_).
+- Documentation Fix of ``max_concurrent_transmissions`` type hint.
+- Bug Fix in the ``get_file`` method. (Thanks to `@ALiwoto <https://github.com/ALiwoto>`_).
+- Added missing attributes to :obj:`~ftmgram.types.ChatPermissions` and :obj:`~ftmgram.types.ChatPrivileges`.
+- `Bug Fix for MIN_CHAT_ID <https://t.me/ftmgramchat/593090>`_.
+- Added new parameter ``no_joined_notifications`` to :obj:`~ftmgram.Client`.
+- Fix history TTL Service Message Parse.
+- Thanks to `... <https://t.me/ftmgramchat/607757>`_. If you want to change the location of the ``unknown_errors.txt`` file that is created by :obj:`~ftmgram.Client`, set the environment variable ``FTMGRAM_LOG_UNKNOWN_ERRORS_FILENAME`` value to the path where the file should get created.
+- Renamed ``force_document`` to ``disable_content_type_detection`` in :meth:`~ftmgram.Client.send_document` and :meth:`~ftmgram.types.Message.reply_document`.
+- Added missing attributes ``added_to_attachment_menu``, ``can_be_added_to_attachment_menu``, ``can_join_groups``, ``can_read_all_group_messages``, ``supports_inline_queries``, ``restricts_new_chats`` to the :obj:`~ftmgram.types.User`.
+- Migrate project to ``pyproject.toml`` from ``setup.py``.
+- PRs from upstream: `1366 <https://github.com/ftmgram/ftmgram/pull/1366>`_, `1305 <https://github.com/ftmgram/ftmgram/pull/1305>`_, `1288 <https://github.com/ftmgram/ftmgram/pull/1288>`_, `1262 <https://github.com/ftmgram/ftmgram/pull/1262>`_, `1253 <https://github.com/ftmgram/ftmgram/pull/1253>`_, `1234 <https://github.com/ftmgram/ftmgram/pull/1234>`_, `1210 <https://github.com/ftmgram/ftmgram/pull/1210>`_, `1201 <https://github.com/ftmgram/ftmgram/pull/1201>`_, `1197 <https://github.com/ftmgram/ftmgram/pull/1197>`_, `1143 <https://github.com/ftmgram/ftmgram/pull/1143>`_, `1059 <https://github.com/ftmgram/ftmgram/pull/1059>`_.
+- Bug fix for :meth:`~ftmgram.Client.send_audio` and :meth:`~ftmgram.Client.send_voice`. (Thanks to `... <https://t.me/c/1220993104/1360174>`_).
+- Add `waveform` parameter to :meth:`~ftmgram.Client.send_voice`.
+- Added `view_once` parameter to :meth:`~ftmgram.Client.send_photo`, :meth:`~ftmgram.Client.send_video`, :meth:`~ftmgram.Client.send_video_note`, :meth:`~ftmgram.Client.send_voice`.
+- Add missing parameters to :meth:`~ftmgram.types.Message.reply_photo`, :meth:`~ftmgram.types.Message.reply_video`, :meth:`~ftmgram.types.Message.reply_video_note`, :meth:`~ftmgram.types.Message.reply_voice`.
+
+
+Scheme layer used: 170
+------------------------
+
+- Stole documentation from `FTMGramMod <https://github.com/FTMGramMod/FTMGramMod>`_.
+- Renamed ``send_reaction`` to :meth:`~ftmgram.Client.set_reaction`.
+- Added support for :meth:`~ftmgram.Client.send_photo`, :meth:`~ftmgram.Client.send_video`, :meth:`~ftmgram.Client.send_animation`, :meth:`~ftmgram.Client.send_voice` messages that could be played once.
+- Added the field ``via_chat_folder_invite_link`` to the class :obj:`~ftmgram.types.ChatMemberUpdated`.
+- **BOTS ONLY**: Added updates about a reaction change on a message with non-anonymous reactions, represented by the class :obj:`~ftmgram.handlers.MessageReactionUpdatedHandler` and the field ``message_reaction`` in the class Update.
+- **BOTS ONLY**: Added updates about reaction changes on a message with anonymous reactions, represented by the class :obj:`~ftmgram.handlers.MessageReactionCountUpdatedHandler` and the field ``message_reaction_count`` in the class Update.
+- Replaced the parameter ``disable_web_page_preview`` with :obj:`~ftmgram.types.LinkPreviewOptions` in the methods :meth:`~ftmgram.Client.send_message` and :meth:`~ftmgram.Client.edit_message_text`.
+- Replaced the field ``disable_web_page_preview`` with :obj:`~ftmgram.types.LinkPreviewOptions` in the class :obj:`~ftmgram.types.InputTextMessageContent`.
+- Added missing parameters to :meth:`~ftmgram.Client.forward_messages`.
+- Added the class :obj:`~ftmgram.types.ReplyParameters` and replaced parameters ``reply_to_message_id`` in the methods :meth:`~ftmgram.Client.copy_message`, :meth:`~ftmgram.Client.send_message`, :meth:`~ftmgram.Client.send_photo`, :meth:`~ftmgram.Client.send_video`, :meth:`~ftmgram.Client.send_animation`, :meth:`~ftmgram.Client.send_audio`, :meth:`~ftmgram.Client.send_document`, :meth:`~ftmgram.Client.send_sticker`, :meth:`~ftmgram.Client.send_video_note`, :meth:`~ftmgram.Client.send_voice`, :meth:`~ftmgram.Client.send_location`, :meth:`~ftmgram.Client.send_venue`, :meth:`~ftmgram.Client.send_contact`, :meth:`~ftmgram.Client.send_poll`, :meth:`~ftmgram.Client.send_dice`, :meth:`~ftmgram.Client.send_game`, :meth:`~ftmgram.Client.send_media_group`, :meth:`~ftmgram.Client.copy_media_group`, :meth:`~ftmgram.Client.send_inline_bot_result`, :meth:`~ftmgram.Client.send_cached_media`, and the corresponding reply_* methods with the field ``reply_parameters`` of type :obj:`~ftmgram.types.ReplyParameters`.
+- Bug fixes for sending ``ttl_seconds`` and ``has_spoiler``.
+
+
+Scheme layer used: 169
+------------------------
+
+- Changed condition in :meth:`~ftmgram.Client.join_chat` and :meth:`~ftmgram.Client.get_chat`.
+- Added ``disable_content_type_detection`` parameter to :obj:`~ftmgram.types.InputMediaVideo`.
+- Added ``has_spoiler`` parameter to :meth:`~ftmgram.Client.copy_message`.
+- Improved :meth:`~ftmgram.Client.get_chat_history`: add ``min_id`` and ``max_id`` params.
+- `Prevent connection to dc every time in get_file <https://github.com/TelegramPlayGround/FTMGram/commit/f2581fd7ab84ada7685645a6f80475fbea5e743a>`_
+- Added ``_raw`` to the :obj:`~ftmgram.types.Chat`, :obj:`~ftmgram.types.Dialog`, :obj:`~ftmgram.types.Message` and :obj:`~ftmgram.types.User` objects.
+- Fix downloading media to ``WORKDIR`` when ``WORKDIR`` was not specified.
+- `Update multiple fragment chat usernames <https://github.com/TelegramPlayGround/FTMGram/commit/39aea4831ee18e5263bf6755306f0ca49f075bda>`_
+- `Custom Storage Engines <https://github.com/TelegramPlayGround/FTMGram/commit/cd937fff623759dcac8f437a8c524684868590a4>`_
+- Documentation fix for ``user.mention`` in :obj:`~ftmgram.types.User`.
+
+
+Scheme layer used: 167
+------------------------
+
+- Fixed the TL flags being Python reserved keywords: ``from`` and ``self``.
+
+
+Scheme layer used: 161
+------------------------
+
+- Added ``my_stories_from`` to the :meth:`~ftmgram.Client.block_user` and :meth:`~ftmgram.Client.unblock_user` methods.
+
+
+Scheme layer used: 160
+------------------------
+
+- Added ``message_thread_id`` to the methods :meth:`~ftmgram.Client.copy_message`, :meth:`~ftmgram.Client.forward_messages`, :meth:`~ftmgram.Client.send_message`, :meth:`~ftmgram.Client.send_photo`, :meth:`~ftmgram.Client.send_video`, :meth:`~ftmgram.Client.send_animation`, :meth:`~ftmgram.Client.send_audio`, :meth:`~ftmgram.Client.send_document`, :meth:`~ftmgram.Client.send_sticker`, :meth:`~ftmgram.Client.send_video_note`, :meth:`~ftmgram.Client.send_voice`, :meth:`~ftmgram.Client.send_location`, :meth:`~ftmgram.Client.send_venue`, :meth:`~ftmgram.Client.send_contact`, :meth:`~ftmgram.Client.send_poll`, :meth:`~ftmgram.Client.send_dice`, :meth:`~ftmgram.Client.send_game`, :meth:`~ftmgram.Client.send_media_group`, :meth:`~ftmgram.Client.copy_media_group`, :meth:`~ftmgram.Client.send_inline_bot_result`, :meth:`~ftmgram.Client.send_cached_media`.

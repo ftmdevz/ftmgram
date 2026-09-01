@@ -3,7 +3,7 @@ Welcome to FTMGram
 
 .. image:: _static/logo.png
    :align: center
-   :width: 170px
+   :width: 160px
    :alt: FTMGram
 
 .. raw:: html
@@ -13,14 +13,13 @@ Welcome to FTMGram
        <br>
        <a href="https://ftmgram.ftmbotzx.dev">Homepage</a> •
        <a href="https://github.com/ftmdevz/ftmgram">Development</a> •
-       <a href="changelog.html">Releases</a> •
+       <a href="releases/index.html">Releases</a> •
        <a href="https://t.me/ftmdeveloperz">News</a>
    </p>
 
 .. note::
 
-   **FTMGram v3.3.0** is an elegant, modern and asynchronous Telegram MTProto API framework
-   delivering full **Bot API 10.3** support (In-Message Buttons, AI Draft Streaming, Ephemeral Overlays, Checklists, Stars) with zero breaking changes for existing Pyrogram/Kurigram projects.
+   **FTMGram v3.3.0** is an elegant, modern and asynchronous MTProto API framework with full **Bot API 10.3** support (In-Message Buttons, AI Response Streaming, Ephemeral Overlays, Checklists, Stars).
 
 .. code-block:: python
 
@@ -41,49 +40,64 @@ API alternative) using Python.
 How the Documentation is Organized
 -----------------------------------
 
+* **Quick Start**
+
+  * :doc:`intro/quickstart` — An overview showing the first steps to take.
+  * :doc:`intro/install` — Detailed instructions on how to install FTMGram.
+
 * **Getting Started**
 
-  * :doc:`intro/quickstart` — A quick overview showing the first steps to take.
-  * :doc:`intro/install` — Detailed instructions on how to install FTMGram.
-  * :doc:`intro/migration` — Migrating from Pyrogram or Kurigram in under 1 minute.
-  * :doc:`intro/client` — Configuring the Client and managing session storage.
+  * :doc:`start/auth` — How to obtain your Telegram API ID and Hash.
+  * :doc:`start/invoking` — Calling Telegram methods with your Client.
+  * :doc:`start/updates` — Registering handlers and listening to updates.
+  * :doc:`start/filters` — Using and combining filters with ``&``, ``|``, ``~``.
+  * :doc:`start/examples` — Working code examples for common bot workflows.
 
 * **API Reference**
 
-  * :doc:`api/client` — Complete reference for all Client methods.
-  * :doc:`api/types` — Detailed descriptions of all Telegram data types and models.
-  * :doc:`api/bound-methods` — Methods directly bound to data types (e.g. ``Message.reply()``).
-  * :doc:`api/enums` — All Enumeration types.
-  * :doc:`api/handlers` — Update handler objects and decorators.
+  * :doc:`api/client` — Complete reference of all Client methods.
+  * :doc:`api/types/index` — Detailed list of all Telegram types and models.
+  * :doc:`api/bound-methods/index` — Convenience methods bound to types.
+  * :doc:`api/enums/index` — Enumerations used across the API.
+  * :doc:`api/handlers` — Update handlers.
+  * :doc:`api/decorators` — Decorators for registering callbacks.
   * :doc:`api/filters` — Built-in and custom update filters.
-  * :doc:`api/errors` — RPC and network error exceptions.
+  * :doc:`api/errors/index` — Telegram RPC and network errors.
 
 * **Topics & Guides**
 
   * :doc:`topics/rich-messages` — Structured Rich Messages (Bot API 10.3).
   * :doc:`topics/intext-buttons` — In-Message Buttons (``<tg-button-row>``).
   * :doc:`topics/streaming-drafts` — Live AI Response Token Streaming & Drafts.
-  * :doc:`topics/ephemeral` — Ephemeral Messages & In-place user overlays.
+  * :doc:`topics/ephemeral` — Ephemeral Messages & Overlays.
   * :doc:`topics/checklists` — Interactive Checklists & Task Lists.
-  * :doc:`topics/poll-media` — Link Poll Media.
-  * :doc:`topics/storage-engines` — File, In-Memory, and Session Strings.
-  * :doc:`topics/raw-mtproto` — Calling Telegram's Raw MTProto API directly.
+  * :doc:`topics/text-formatting` — Markdown, HTML, and Entities.
+  * :doc:`topics/smart-plugins` — Modular project layout for large bots.
+  * :doc:`topics/storage-engines` — File SQLite, In-Memory, and Session Strings.
 
 * **Meta**
 
-  * :doc:`changelog` — History of all releases and What's New in v3.3.0.
-  * :doc:`faq` — Frequently Asked Questions.
-  * :doc:`support` — Getting help and Telegram community.
+  * :doc:`faq/index` — Frequently asked questions.
+  * :doc:`support` — Support and Telegram community.
+
+.. toctree::
+   :hidden:
+   :maxdepth: 1
+   :caption: Introduction
+
+   intro/quickstart
+   intro/install
 
 .. toctree::
    :hidden:
    :maxdepth: 2
    :caption: Getting Started
 
-   intro/quickstart
-   intro/install
-   intro/migration
-   intro/client
+   start/auth
+   start/invoking
+   start/updates
+   start/filters
+   start/examples
 
 .. toctree::
    :hidden:
@@ -91,32 +105,32 @@ How the Documentation is Organized
    :caption: API Reference
 
    api/client
-   api/types
-   api/bound-methods
-   api/enums
+   api/types/index
+   api/bound-methods/index
+   api/enums/index
    api/handlers
+   api/decorators
    api/filters
-   api/errors
+   api/errors/index
 
 .. toctree::
    :hidden:
    :maxdepth: 2
-   :caption: Topics & Guides
+   :caption: Topic Guides
 
    topics/rich-messages
    topics/intext-buttons
    topics/streaming-drafts
    topics/ephemeral
    topics/checklists
-   topics/poll-media
+   topics/text-formatting
+   topics/smart-plugins
    topics/storage-engines
-   topics/raw-mtproto
 
 .. toctree::
    :hidden:
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Meta
 
-   changelog
-   faq
+   faq/index
    support

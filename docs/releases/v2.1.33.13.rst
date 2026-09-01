@@ -1,0 +1,8 @@
+FTMGram v2.1.33.13
+====================
+
+
+Scheme layer used: 190
+------------------------
+
+Changes <https://github.com/TelegramPlayground/FTMGram/compare/v2.1.33.12...v2.1.33.13>
