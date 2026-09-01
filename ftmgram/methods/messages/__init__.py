@@ -34,7 +34,9 @@ from .delete_message import DeleteMessage
 from .delete_messages import DeleteMessages
 from .delete_poll_option import DeletePollOption
 from .download_media import DownloadMedia
+from .download_media_to_memory import DownloadMediaToMemory
 from .edit_cached_media import EditCachedMedia
+
 from .edit_ephemeral_message_caption import EditEphemeralMessageCaption
 from .edit_ephemeral_message_media import EditEphemeralMessageMedia
 from .edit_ephemeral_message_reply_markup import EditEphemeralMessageReplyMarkup
@@ -144,7 +146,9 @@ class Messages(
     DeleteMessages,
     DeletePollOption,
     DownloadMedia,
+    DownloadMediaToMemory,
     EditCachedMedia,
+
     EditEphemeralMessageCaption,
     EditEphemeralMessageMedia,
     EditEphemeralMessageReplyMarkup,

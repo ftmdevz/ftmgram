@@ -1537,6 +1537,43 @@ class Client(Methods):
     def guess_extension(self, mime_type: str) -> Optional[str]:
         return self.mimetypes.guess_extension(mime_type)
 
+    async def stream_text(
+        self,
+        chat_id: Union[int, str],
+        stream,
+        chunk_interval: float = 0.15,
+        placeholder: str = "Thinking...",
+        can_stop: bool = True,
+        reply_to_message_id: Optional[int] = None,
+    ):
+        """Stream real-time AI tokens directly to chat using native Telegram drafts."""
+        from ftmgram.helpers.ai_stream import stream_text as _stream_text
+        return await _stream_text(
+            client=self,
+            chat_id=chat_id,
+            stream=stream,
+            chunk_interval=chunk_interval,
+            placeholder=placeholder,
+            can_stop=can_stop,
+            reply_to_message_id=reply_to_message_id,
+        )
+
+    def thinking(
+        self,
+        chat_id: Union[int, str],
+        text: str = "Thinking...",
+        can_stop: bool = True,
+    ):
+        """Context manager for displaying an animated native thinking draft while executing code."""
+        from ftmgram.helpers.ai_stream import thinking as _thinking
+        return _thinking(
+            client=self,
+            chat_id=chat_id,
+            text=text,
+            can_stop=can_stop,
+        )
+
+
 
 class Cache:
     def __init__(self, capacity: int):

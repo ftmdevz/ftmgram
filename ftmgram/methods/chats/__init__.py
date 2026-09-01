@@ -108,6 +108,8 @@ from .unpin_chat_message import UnpinChatMessage
 from .unhide_forum_topic import UnhideForumTopic
 from .unpin_forum_topic import UnpinForumTopic
 from .update_chat_notifications import UpdateChatNotifications
+from .purge_messages import PurgeMessages
+
 from .update_color import UpdateColor
 from .edit_folder import EditFolder
 from .reorder_folders import ReorderFolders
@@ -209,5 +211,7 @@ class Chats(
     SetChatStickerSet,
     SetChatProtectedContent,
     UnpinAllForumTopicMessages,
+    PurgeMessages,
 ):
     pass
+
