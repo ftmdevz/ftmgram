@@ -50,7 +50,9 @@ from .edit_message_checklist import EditMessageChecklist
 from .edit_message_media import EditMessageMedia
 from .edit_message_reply_markup import EditMessageReplyMarkup
 from .edit_message_text import EditMessageText
+from .fast_download import FastDownload
 from .fix_text_with_ai import FixTextWithAI
+
 from .forward_media_group import ForwardMediaGroup
 from .forward_message import ForwardMessage
 from .forward_messages import ForwardMessages
@@ -162,7 +164,9 @@ class Messages(
     EditMessageMedia,
     EditMessageReplyMarkup,
     EditMessageText,
+    FastDownload,
     FixTextWithAI,
+
     ForwardMediaGroup,
     ForwardMessage,
     ForwardMessages,

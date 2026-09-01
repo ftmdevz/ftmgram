@@ -13,8 +13,8 @@ from ftmgram.raw.all import layer
 project = "FTMGram"
 copyright = "2024-2026, FTM DEVELOPERZ"
 author = "FTM DEVELOPERZ"
-version = f"{__version__} (Layer {layer})"
-release = __version__
+version = "3.5.0"
+release = "3.5.0"
 
 extensions = [
     "sphinx.ext.autodoc",

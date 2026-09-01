@@ -39,6 +39,7 @@ Messages
    * :meth:`~ftmgram.Client.get_chat_history`
    * :meth:`~ftmgram.Client.search_messages`
    * :meth:`~ftmgram.Client.download_media`
+   * :meth:`~ftmgram.Client.fast_download`
    * :meth:`~ftmgram.Client.send_chat_action`
    * :meth:`~ftmgram.Client.translate_message_text`
 
@@ -77,6 +78,7 @@ Messages
    get_chat_history
    search_messages
    download_media
+   fast_download
    send_chat_action
    translate_message_text
 
@@ -87,6 +89,7 @@ Chats
    :columns: 3
 
    * :meth:`~ftmgram.Client.get_chat`
+   * :meth:`~ftmgram.Client.get_bot_chat_history`
    * :meth:`~ftmgram.Client.get_dialogs`
    * :meth:`~ftmgram.Client.join_chat`
    * :meth:`~ftmgram.Client.leave_chat`
@@ -117,6 +120,7 @@ Chats
    :hidden:
 
    get_chat
+   get_bot_chat_history
    get_dialogs
    join_chat
    leave_chat

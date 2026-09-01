@@ -1,0 +1,30 @@
+Version 3.5.0
+=============
+
+**Released on 2026-09-01**
+
+FTMGram v3.5.0 introduces supercharged performance enhancements, bot chat history retrieval, parallel turbo downloads, and native AI streaming helpers.
+
+Highlights
+----------
+
+* **Bot Chat History Retrieval (`get_bot_chat_history`)**:
+  Allows bots to retrieve message history across private chats and groups through high-speed 100-ID batch scanning.
+
+* **Turbo Parallel Media Transfers (`fast_download`)**:
+  Download large documents, videos, and photos at maximum network speed using multi-worker parallel chunk streaming.
+
+* **Fluent `RichMessageBuilder` DSL**:
+  Construct styled rich messages with `<tg-button-row>`, expandable quotes, tables, and paragraphs effortlessly in Python.
+
+* **AI Streaming Helpers (`stream_text` & `thinking`)**:
+  Real-time token streaming from OpenAI, Anthropic, Gemini, Groq, Ollama directly to Telegram drafts with animated thinking placeholders.
+
+* **Batch Purge Admin Tool (`purge_messages`)**:
+  High-speed batch message deletion with automatic RPC chunking and rate limit protection.
+
+* **In-Memory Media Buffer (`download_media_to_memory`)**:
+  Download media straight into an `io.BytesIO` memory buffer without disk overhead.
+
+* **Multi-Client Orchestrator (`MultiClient`)**:
+  Manage and run multiple bots and user accounts concurrently in a single event loop.

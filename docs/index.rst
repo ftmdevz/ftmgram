@@ -19,7 +19,7 @@ Welcome to FTMGram
 
 .. note::
 
-   **FTMGram v3.3.0** is an elegant, modern and asynchronous MTProto API framework with full **Bot API 10.3** support (In-Message Buttons, AI Response Streaming, Ephemeral Overlays, Checklists, Stars).
+   **FTMGram v3.5.0** is an elegant, modern and asynchronous MTProto API framework with full **Bot API 10.3** support (In-Message Buttons, AI Response Streaming, Ephemeral Overlays, Checklists, Stars).
 
 .. code-block:: python
 

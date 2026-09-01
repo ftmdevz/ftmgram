@@ -1,8 +1,33 @@
 Changelog
 =========
 
+v3.5.0 — September 2026
+-----------------------
+
+* **Bot Chat History Retrieval (`get_bot_chat_history`)**:
+  Allows bots to retrieve message history across private chats and groups through safe, high-speed 100-ID batch scanning.
+
+* **Turbo Multi-Worker Media Transfers (`fast_download`)**:
+  Download large files, videos, and documents at maximum network speed using multi-worker parallel chunk streaming.
+
+* **Fluent `RichMessageBuilder` DSL**:
+  Construct styled rich messages with `<tg-button-row>`, expandable quotes, tables, and paragraphs effortlessly in Python.
+
+* **AI Response Streaming (`stream_text` & `thinking`)**:
+  Stream LLM tokens in real-time directly to Telegram drafts with animated thinking placeholders and stop controls.
+
+* **Batch Purge Admin Tool (`purge_messages`)**:
+  High-speed batch message deletion with automatic RPC chunking and rate-limit handling.
+
+* **In-Memory Media Buffering (`download_media_to_memory`)**:
+  Download media straight into an in-memory `io.BytesIO` buffer without disk I/O bottlenecks.
+
+* **Multi-Client Orchestration (`MultiClient`)**:
+  Manage and run multiple bots and user accounts concurrently in a single event loop.
+
 v3.3.0 — June 2026
 -------------------
+
 
 **Bot API 10.1 (June 11, 2026) — Full Coverage**
 

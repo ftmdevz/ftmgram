@@ -1,138 +1,153 @@
-<p align="center">
-    <a href="https://github.com/ftmdevz/ftmgram">
-        <img src="https://raw.githubusercontent.com/ftmdevz/ftmgram/master/logo.png" alt="FTMGram" width="160">
-    </a>
-    <br>
-    <b>Telegram MTProto API Framework for Python</b>
-    <br><br>
-    <a href="https://pypi.python.org/pypi/ftmgram">
-        <img src="https://img.shields.io/pypi/v/ftmgram.svg?logo=pypi&logoColor=white&color=orange" alt="PyPI version">
-    </a>
-    <a href="https://pypi.python.org/pypi/ftmgram">
-        <img src="https://img.shields.io/pypi/l/ftmgram.svg?color=orange" alt="License">
-    </a>
-    <a href="https://pypi.python.org/pypi/ftmgram">
-        <img src="https://img.shields.io/pypi/pyversions/ftmgram.svg?logo=python&logoColor=white" alt="Python versions">
-    </a>
-    <a href="https://github.com/ftmdevz/ftmgram">
-        <img src="https://img.shields.io/github/stars/ftmdevz/ftmgram?style=flat&color=orange" alt="GitHub Stars">
-    </a>
-</p>
+<div align="center">
+  <img src="https://raw.githubusercontent.com/ftmdevz/ftmgram/ftmdevz/docs/static/img/ftmgram_icon.svg" width="100" height="100" alt="FTMGram Logo" />
+  <h1>FTMGram v3.5.0</h1>
+  <p><b>Next-Gen Telegram MTProto & Bot API 10.3 Framework for Python</b></p>
+  <p>
+    <a href="https://ftmgram.ftmbotzx.dev"><img src="https://img.shields.io/badge/docs-ftmgram.ftmbotzx.dev-orange?style=flat-square" alt="Docs"></a>
+    <a href="https://pypi.org/project/ftmgram/"><img src="https://img.shields.io/pypi/v/ftmgram.svg?style=flat-square" alt="PyPI"></a>
+    <a href="https://t.me/ftmdeveloperz"><img src="https://img.shields.io/badge/telegram-channel-blue?style=flat-square&logo=telegram" alt="Telegram"></a>
+    <a href="https://github.com/ftmdevz/ftmgram/blob/ftmdevz/LICENSE"><img src="https://img.shields.io/badge/license-LGPL--3.0-green?style=flat-square" alt="License"></a>
+  </p>
+</div>
 
 ---
 
-## FTMGram
+**FTMGram** is a high-performance, asynchronous Telegram MTProto client library and Bot API framework for Python. It supercharges both user accounts and bots with modern features like **In-Message Buttons**, **AI Response Token Streaming**, **Bot Chat History Scanning**, **Turbo Multi-Worker Transfers**, **Ephemeral Overlays**, and **Telegram Stars 2.0**.
 
-> Elegant, modern and asynchronous Telegram MTProto API framework in Python — for users and bots
+---
 
-**FTMGram** is an actively maintained, feature-complete fork of Pyrogram with full **Bot API 10.1** (June 2026) support. It is a drop-in replacement for Pyrogram and KuriGram with zero migration friction.
+## ⚡ Key Highlights in v3.5.0
+
+* **🤖 Bot Chat History (`get_bot_chat_history`)**:
+  Allows bots to retrieve message history across private chats and groups using safe, high-speed 100-ID batch scanning.
+* **⚡ Turbo Multi-Worker Media Engine (`fast_download`)**:
+  Download photos, videos, and large files at maximum network saturation with parallel chunk workers.
+* **🎨 Fluent `RichMessageBuilder` DSL**:
+  Construct structured rich messages with in-message buttons (`<tg-button-row>`), expandable quotes, tables, and paragraphs effortlessly in Python.
+* **🧠 Real-Time AI Streaming (`stream_text` & `thinking`)**:
+  Seamlessly stream LLM tokens (OpenAI, Anthropic, Gemini, Groq, Ollama) directly to chat drafts with animated thinking placeholders and stop buttons.
+* **🧹 Batch Chat Purge (`purge_messages`)**:
+  Safely delete hundreds of messages in seconds with automatic RPC chunking and rate-limit handling.
+* **💾 Memory Media Streaming (`download_media_to_memory`)**:
+  Download media straight into an in-memory `io.BytesIO` buffer without disk I/O bottlenecks.
+* **👥 Multi-Client Orchestrator (`MultiClient`)**:
+  Manage and run dozens of bots and user accounts concurrently in a single event loop.
+
+---
+
+## 📦 Installation
+
+```bash
+pip install -U ftmgram
+```
+
+Or install with fast cryptographic acceleration:
+
+```bash
+pip install -U "ftmgram[fast]"
+```
+
+---
+
+## 🚀 Quick Examples
+
+### 1. Echo Bot with Filters
 
 ```python
 from ftmgram import Client, filters
 
-app = Client("my_account")
+app = Client("my_bot", bot_token="123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11")
 
-@app.on_message(filters.private)
-async def hello(client, message):
-    await message.reply("Hello from FTMGram!")
+@app.on_message(filters.text & filters.private)
+async def echo(client, message):
+    await message.reply(f"You said: {message.text}")
 
 app.run()
 ```
 
 ---
 
-### What's New in v3.3.0 — Bot API 10.1
-
-| Feature | Status |
-|---|---|
-| **Rich Messages** — `sendRichMessage`, `sendRichMessageDraft`, `editMessageText` | ✅ |
-| **RichText** — 14 inline text types (Bold, Italic, Url, Code, Marked, …) | ✅ |
-| **RichBlock** — 19 block types (Paragraph, Photo, Video, Table, Slideshow, …) | ✅ |
-| **Checklist media** — `MessageMediaType.CHECKLIST`, `Checklist`, `ChecklistTask` | ✅ |
-| **Link poll media** — `MessageMediaType.LINK`, `Link` type | ✅ |
-| **Chat join request queries** — `answerChatJoinRequestQuery`, `sendChatJoinRequestWebApp` | ✅ |
-| `User.supports_join_request_queries`, `Chat.guard_bot`, `ChatJoinRequest.query_id` | ✅ |
-| **Owned star balance** — `get_owned_star_count` | ✅ |
-
----
-
-### Key Features
-
-- **Ready** — `pip install ftmgram` and start building immediately.
-- **Easy** — Clean, Pythonic API that hides MTProto complexity.
-- **Elegant** — Low-level details abstracted into intuitive high-level types.
-- **Fast** — Powered by [TgCrypto](https://github.com/pyrogram/tgcrypto), a C-level cryptography library.
-- **Type-hinted** — Full type annotations for excellent IDE/editor support.
-- **Async** — Fully asynchronous; synchronous usage also supported.
-- **Powerful** — Complete access to Telegram's API — every official client action and more.
-- **Bot API 10.1 complete** — Latest Telegram features covered on day one.
-
----
-
-### Installing
-
-**Stable (PyPI)**
-
-```bash
-pip install ftmgram
-```
-
-**Latest (GitHub)**
-
-```bash
-pip install https://github.com/ftmdevz/ftmgram/archive/ftmdevz.zip --force-reinstall
-```
-
----
-
-### Quick Example — Rich Message
+### 2. In-Message Buttons (Bot API 10.3)
 
 ```python
 from ftmgram import Client
-from ftmgram.types import InputRichMessage, InputRichMessageContent, RichText
+from ftmgram.helpers import RichMessageBuilder, Button
 
 app = Client("my_bot", bot_token="TOKEN")
 
-async def main():
-    await app.send_rich_message(
-        chat_id=123456,
-        rich_message=InputRichMessage(
-            title=RichText.plain("FTMGram Guide"),
-            content=[
-                InputRichMessageContent.paragraph(
-                    text=RichText.concat([
-                        RichText.bold("FTMGram"),
-                        RichText.plain(" supports full Bot API 10.1!"),
-                    ])
-                )
-            ]
+async def send_menu(chat_id: int):
+    async with app:
+        rich = (
+            RichMessageBuilder()
+            .title("💎 VIP Subscription")
+            .paragraph("Select your desired membership tier:")
+            .button_row(
+                Button("Starter ($5)", data="plan_starter", style="primary"),
+                Button("Pro ($15)", data="plan_pro", style="success"),
+                Button("VIP ($25)", data="plan_vip", style="danger")
+            )
+            .build()
         )
-    )
+        await app.send_rich_message(chat_id, rich)
+
+app.run(send_menu(123456789))
+```
+
+---
+
+### 3. Real-Time AI Token Streaming
+
+```python
+from ftmgram import Client
+
+app = Client("my_bot", bot_token="TOKEN")
+
+async def fake_ai_stream():
+    for word in ["Generating ", "answers ", "with ", "FTMGram ", "v3.5.0! 🚀"]:
+        yield word
+
+async def main():
+    async with app:
+        await app.stream_text(
+            chat_id=123456789,
+            stream=fake_ai_stream(),
+            placeholder="AI is reasoning..."
+        )
 
 app.run(main())
 ```
 
 ---
 
-### Support
+### 4. Bot Chat History Retrieval
 
-FTMGram is open source. Support its development:
+```python
+from ftmgram import Client
 
-- [contact me on telegram for donation by clicking here](https://t.me/ftmdevz)
+app = Client("my_bot", bot_token="TOKEN")
 
-Thank you ❤️
+async def scan_history(chat_id: int):
+    async with app:
+        async for msg in app.get_bot_chat_history(chat_id, start_message_id=1, limit=50):
+            print(f"[{msg.id}] {msg.text}")
 
----
-
-### Resources
-
-- [GitHub Repository](https://github.com/ftmdevz/ftmgram)
-- [PyPI Package](https://pypi.org/project/ftmgram/)
-- [Telegram Channel](https://t.me/ftmdeveloperz) — news & updates
-- [Telegram Chat](https://t.me/ftmdevz) — community support
+app.run(scan_history(123456789))
+```
 
 ---
 
-<p align="center">
-    <sub>FTMGram is a fork of <a href="https://github.com/pyrogram/pyrogram">Pyrogram</a> and <a href="https://github.com/ftmdevz/ftmgram">FTMGram</a>. Licensed under LGPLv3.</sub>
-</p>
+## 📚 Documentation
+
+Visit the official documentation portal: **[https://ftmgram.ftmbotzx.dev/](https://ftmgram.ftmbotzx.dev/)**
+
+* **[Getting Started](https://ftmgram.ftmbotzx.dev/intro/quickstart.html)**
+* **[Methods Index](https://ftmgram.ftmbotzx.dev/api/methods/index.html)**
+* **[Types Reference](https://ftmgram.ftmbotzx.dev/api/types/index.html)**
+* **[Bot API 10.3 Topics](https://ftmgram.ftmbotzx.dev/topics/rich-messages.html)**
+
+---
+
+## 📜 License
+
+FTMGram is licensed under the **GNU Lesser General Public License v3.0 (LGPL-3.0)**.
+Copyright (C) 2024-present [FTM DEVELOPERZ](https://github.com/ftmdevz).
