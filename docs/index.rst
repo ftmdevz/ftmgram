@@ -1,66 +1,26 @@
-:hide-toc:
-
-FTMGram
-=======
+Welcome to FTMGram
+==================
 
 .. image:: _static/logo.png
    :align: center
-   :width: 180px
+   :width: 170px
    :alt: FTMGram
 
 .. raw:: html
 
    <p align="center">
-     <a href="https://pypi.python.org/pypi/ftmgram"><img src="https://img.shields.io/pypi/v/ftmgram.svg?logo=pypi&logoColor=white&color=orange" alt="PyPI"></a>
-     &nbsp;
-     <a href="https://pypi.python.org/pypi/ftmgram"><img src="https://img.shields.io/pypi/pyversions/ftmgram.svg?logo=python&logoColor=white" alt="Python"></a>
-     &nbsp;
-     <a href="https://pypi.python.org/pypi/ftmgram"><img src="https://img.shields.io/pypi/l/ftmgram.svg?color=orange" alt="License"></a>
-     &nbsp;
-     <a href="https://github.com/ftmdevz/ftmgram"><img src="https://img.shields.io/github/stars/ftmdevz/ftmgram?style=flat&color=orange" alt="Stars"></a>
+       <b>Telegram MTProto API Framework for Python</b>
+       <br>
+       <a href="https://ftmgram.ftmbotzx.dev">Homepage</a> •
+       <a href="https://github.com/ftmdevz/ftmgram">Development</a> •
+       <a href="changelog.html">Releases</a> •
+       <a href="https://t.me/ftmdeveloperz">News</a>
    </p>
 
-|
+.. note::
 
-.. rst-class:: lead
-
-   **Elegant, modern and asynchronous Telegram MTProto API framework in Python — for users and bots.**
-
-   Built on top of Pyrogram's solid foundation, FTMGram delivers full **Bot API 10.1** support
-   with zero migration friction from Pyrogram or KuriGram.
-
-|
-
-.. grid:: 2
-   :gutter: 3
-
-   .. grid-item-card:: 🚀 Getting Started
-      :link: intro/index
-      :link-type: doc
-
-      Install FTMGram, run your first bot, and migrate from Pyrogram in minutes.
-
-   .. grid-item-card:: 📖 API Reference
-      :link: api/index
-      :link-type: doc
-
-      Complete reference for Client methods, Types, Filters, and Enums.
-
-   .. grid-item-card:: 📚 Topics & Guides
-      :link: topics/index
-      :link-type: doc
-
-      In-depth guides on Rich Messages, Checklists, and other advanced features.
-
-   .. grid-item-card:: 📋 Changelog
-      :link: changelog
-      :link-type: doc
-
-      Full history of every release with new features and bug fixes.
-
-----
-
-.. rubric:: A 30-Second Example
+   **FTMGram v3.3.0** is an elegant, modern and asynchronous Telegram MTProto API framework
+   delivering full **Bot API 10.3** support (In-Message Buttons, AI Draft Streaming, Ephemeral Overlays, Checklists, Stars) with zero breaking changes for existing Pyrogram/Kurigram projects.
 
 .. code-block:: python
 
@@ -68,117 +28,95 @@ FTMGram
 
    app = Client("my_account")
 
-   @app.on_message(filters.private & filters.text)
-   async def echo(client, message):
-       await message.reply(message.text)
+   @app.on_message(filters.private)
+   async def hello(client, message):
+       await message.reply("Hello from FTMGram!")
 
    app.run()
 
-----
+**FTMGram** is a modern, elegant and asynchronous MTProto API framework. It enables you to easily
+interact with the main Telegram API through a user account (custom client) or a bot identity (bot
+API alternative) using Python.
 
-.. rubric:: Why FTMGram?
+How the Documentation is Organized
+-----------------------------------
 
-.. grid:: 3
-   :gutter: 2
+* **Getting Started**
 
-   .. grid-item-card:: ⚡ Ready
-      :text-align: center
+  * :doc:`intro/quickstart` — A quick overview showing the first steps to take.
+  * :doc:`intro/install` — Detailed instructions on how to install FTMGram.
+  * :doc:`intro/migration` — Migrating from Pyrogram or Kurigram in under 1 minute.
+  * :doc:`intro/client` — Configuring the Client and managing session storage.
 
-      ``pip install ftmgram`` — no configuration needed to get started.
+* **API Reference**
 
-   .. grid-item-card:: 🔌 Drop-in
-      :text-align: center
+  * :doc:`api/client` — Complete reference for all Client methods.
+  * :doc:`api/types` — Detailed descriptions of all Telegram data types and models.
+  * :doc:`api/bound-methods` — Methods directly bound to data types (e.g. ``Message.reply()``).
+  * :doc:`api/enums` — All Enumeration types.
+  * :doc:`api/handlers` — Update handler objects and decorators.
+  * :doc:`api/filters` — Built-in and custom update filters.
+  * :doc:`api/errors` — RPC and network error exceptions.
 
-      Replace ``pyrogram`` or ``kurigram`` imports with ``ftmgram``. Zero other changes.
+* **Topics & Guides**
 
-   .. grid-item-card:: 🏆 Bot API 10.1
-      :text-align: center
+  * :doc:`topics/rich-messages` — Structured Rich Messages (Bot API 10.3).
+  * :doc:`topics/intext-buttons` — In-Message Buttons (``<tg-button-row>``).
+  * :doc:`topics/streaming-drafts` — Live AI Response Token Streaming & Drafts.
+  * :doc:`topics/ephemeral` — Ephemeral Messages & In-place user overlays.
+  * :doc:`topics/checklists` — Interactive Checklists & Task Lists.
+  * :doc:`topics/poll-media` — Link Poll Media.
+  * :doc:`topics/storage-engines` — File, In-Memory, and Session Strings.
+  * :doc:`topics/raw-mtproto` — Calling Telegram's Raw MTProto API directly.
 
-      Rich Messages, Checklists, Link media, Join-request queries — all covered.
+* **Meta**
 
-   .. grid-item-card:: 🔒 Type-hinted
-      :text-align: center
-
-      Full type annotations for excellent IDE and editor support.
-
-   .. grid-item-card:: ⚙️ Async-first
-      :text-align: center
-
-      Fully asynchronous. Synchronous usage is also supported out of the box.
-
-   .. grid-item-card:: 🧩 Extensible
-      :text-align: center
-
-      Custom filters, middleware, and raw API access for advanced use-cases.
-
-----
-
-.. rubric:: Bot API 10.1 Coverage
-
-.. list-table::
-   :widths: 75 25
-   :header-rows: 1
-
-   * - Feature
-     - Status
-   * - Rich Messages — ``send_rich_message``, ``send_rich_message_draft``, ``edit_message_text``
-     - ✅ Full
-   * - RichText — 14 inline types (Bold, Italic, Url, Code, Marked, …)
-     - ✅ Full
-   * - RichBlock — 19+ block types (Paragraph, Photo, Video, Table, Slideshow, …)
-     - ✅ Full
-   * - Checklist media — ``MessageMediaType.CHECKLIST``, ``Checklist``, ``ChecklistTask``
-     - ✅ Full
-   * - Link poll media — ``MessageMediaType.LINK``, ``Link`` type
-     - ✅ Full
-   * - Chat join request queries — ``answer_chat_join_request_query``, ``send_chat_join_request_web_app``
-     - ✅ Full
-   * - ``User.supports_join_request_queries``, ``Chat.guard_bot``, ``ChatJoinRequest.query_id``
-     - ✅ Full
-   * - Owned star balance — ``get_owned_star_count``
-     - ✅ Full
-
-----
-
-.. rubric:: Community
-
-.. grid:: 2
-   :gutter: 2
-
-   .. grid-item-card:: 📢 Telegram Channel
-      :link: https://t.me/ftmdeveloperz
-      :link-type: url
-
-      News, updates and releases — follow us on Telegram.
-
-   .. grid-item-card:: 💬 Telegram Chat
-      :link: https://t.me/ftmdevz
-      :link-type: url
-
-      Ask questions and get help from the community.
-
-----
+  * :doc:`changelog` — History of all releases and What's New in v3.3.0.
+  * :doc:`faq` — Frequently Asked Questions.
+  * :doc:`support` — Getting help and Telegram community.
 
 .. toctree::
    :hidden:
+   :maxdepth: 2
    :caption: Getting Started
 
-   intro/index
+   intro/quickstart
+   intro/install
+   intro/migration
+   intro/client
 
 .. toctree::
    :hidden:
+   :maxdepth: 2
    :caption: API Reference
 
-   api/index
+   api/client
+   api/types
+   api/bound-methods
+   api/enums
+   api/handlers
+   api/filters
+   api/errors
 
 .. toctree::
    :hidden:
-   :caption: Topics
+   :maxdepth: 2
+   :caption: Topics & Guides
 
-   topics/index
+   topics/rich-messages
+   topics/intext-buttons
+   topics/streaming-drafts
+   topics/ephemeral
+   topics/checklists
+   topics/poll-media
+   topics/storage-engines
+   topics/raw-mtproto
 
 .. toctree::
    :hidden:
+   :maxdepth: 2
    :caption: Meta
 
    changelog
+   faq
+   support
