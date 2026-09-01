@@ -3,8 +3,8 @@ Welcome to FTMGram
 
 .. image:: static/img/ftmgram_hero.svg
    :align: center
-   :width: 270px
-   :alt: FTMGramFTMGram
+   :width: 320px
+   :alt: FTMGramFTMGramFTMGram
 
 .. raw:: html
 
