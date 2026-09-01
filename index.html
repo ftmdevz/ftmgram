@@ -1,430 +1,388 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-accent-color="orange" data-content_root="./">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FTMGram Docs — Elegant Asynchronous Telegram Framework</title>
-<meta name="description" content="Official documentation for FTMGram v3.3.0 — Modern and asynchronous Telegram MTProto & Bot API 10.3 framework in Python for users and bots.">
-<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" id="hljs-dark">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-light.min.css" id="hljs-light" disabled>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/bash.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/json.min.js"></script>
-</head>
-<body>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>FTMGram</title><link rel="shortcut icon" href="_static/logo.png"/><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Getting Started" href="intro/index.html" /><script>
+    function setColorMode(t){let e=document.documentElement;e.setAttribute("data-color-mode",t);let a=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,s=t;"auto"===t&&(s=a?"dark":"light"),"light"===s?(e.classList.remove("dark"),e.classList.add("light")):(e.classList.remove("light"),e.classList.add("dark"))}
+    setColorMode(localStorage._theme||"auto");
+  </script><link rel="stylesheet" type="text/css" href="_static/pygments.css?v=e1a1ceaf" />
+    <link rel="stylesheet" type="text/css" href="_static/shibuya.css?v=2ceb65ce" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link media="print" rel="stylesheet" type="text/css" href="_static/print.css?v=20ff2c19" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sy-f-text: "Inter", var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
+  --sy-f-heading: "Inter", var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
+}
+</style>
+    
+  <meta property="og:type" content="website"/><meta property="og:title" content="FTMGram"/>
+  <meta property="og:image" content="https://raw.githubusercontent.com/ftmdevz/ftmgram/ftmdevz/logo.png"/>
+    <meta name="twitter:card" content="summary"/>
+  </head>
+<body><div class="sy-head">
+  <div class="sy-head-blur"></div>
+  <div class="sy-head-inner sy-container mx-auto">
+    <a class="sy-head-brand" href="/">
+      <img class="light-logo" src="_static/logo.png" alt="FTMGram" height="28" loading="lazy" />
+      <img class="dark-logo" src="_static/logo.png" alt="FTMGram" height="28" loading="lazy" />
+      <strong>FTMGram</strong>
+    </a>
+    <div class="sy-head-nav" id="head-nav">
+      <nav class="sy-head-links"><ul><li class="link"><a href="intro/index.html">Guide</a></li><li class="link"><a href="api/index.html">API Reference</a></li><li class="link"><a href="topics/index.html">Topics</a></li><li class="link"><a href="changelog.html">Changelog</a></li></ul></nav>
+      <div class="sy-head-extra flex items-center print:hidden"><form class="searchbox flex items-center" action="search.html" method="get">
+  <input type="text" name="q" placeholder="Search" />
+  <kbd>/</kbd>
+</form><div class="sy-head-socials">
+  <a href="https://github.com/ftmdevz/ftmgram" aria-label="GitHub">
+    <iconify-icon icon="simple-icons:github"></iconify-icon>
+  </a></div></div>
+    </div>
+    <div class="sy-head-actions flex items-center shrink-0 print:hidden"><button class="js-theme theme-switch flex items-center"
+data-aria-auto="Switch to light color mode"
+data-aria-light="Switch to dark color mode"
+data-aria-dark="Switch to auto color mode">
+<i class="i-lucide theme-icon"></i>
+</button><button class="md:hidden flex items-center js-menu" aria-label="Menu" type="button" aria-controls="head-nav" aria-expanded="false">
+        <div class="hamburger">
+          <span class="hamburger_1"></span>
+          <span class="hamburger_2"></span>
+          <span class="hamburger_3"></span>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+<div class="sy-page sy-container flex mx-auto">
+  <aside id="lside" class="sy-lside md:w-72 md:shrink-0 print:hidden">
+    <div class="sy-lside-inner md:sticky">
+      <div class="sy-scrollbar p-6">
+        <div class="globaltoc" data-expand-depth="0"><p class="caption" role="heading" aria-level="3"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="intro/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="intro/install.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro/quickstart.html">Quick Start</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro/migration.html">Migrating to FTMGram</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading" aria-level="3"><span class="caption-text">API Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/client.html">Client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/types.html">Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/filters.html">Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/enums.html">Enums</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading" aria-level="3"><span class="caption-text">Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="topics/index.html">Topics &amp; Guides</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="topics/rich-messages.html">Rich Messages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="topics/intext-buttons.html">In-Message Buttons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="topics/streaming-drafts.html">AI Response Streaming &amp; Drafts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="topics/ephemeral.html">Ephemeral Messages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="topics/checklists.html">Checklists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="topics/poll-media.html">Poll Option Media</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading" aria-level="3"><span class="caption-text">Meta</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
 
-<!-- Mobile overlay -->
-<div class="overlay" id="overlay" onclick="closeSidebar()"></div>
-
-<!-- Top navbar -->
-<nav class="topnav">
-  <div class="topnav-left">
-    <button class="hamburger" id="hamburger" onclick="toggleSidebar()" aria-label="Toggle Navigation">
-      <span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="lside-overlay js-menu" role="button" aria-label="Close left sidebar" aria-controls="lside" aria-expanded="false"></div>
+  <aside id="rside" class="sy-rside pb-3 w-64 shrink-0 order-last">
+    <button class="rside-close js-menu xl:hidden" aria-label="Close Table of Contents" type="button" aria-controls="rside" aria-expanded="false">
+      <i class="i-lucide close"></i>
     </button>
-    <a href="#home" class="brand" onclick="navigate('home')">
-      <img src="assets/logo.svg" alt="FTMGram" class="brand-logo">
-      <div class="brand-text">
-        <span class="brand-name">FTMGram</span>
-        <span class="brand-version">v3.3.0</span>
+    <div class="sy-scrollbar sy-rside-inner px-6 xl:top-16 xl:sticky xl:pl-0 pt-6 pb-4"><div id="ethical-ad-placement" data-ea-publisher="readthedocs"></div></div>
+  </aside>
+  <div class="rside-overlay js-menu" role="button" aria-label="Close Table of Contents" aria-controls="rside" aria-expanded="false"></div>
+  <main class="sy-main w-full max-sm:max-w-full print:pt-6">
+<div class="sy-breadcrumbs" role="navigation">
+  <div class="sy-breadcrumbs-inner flex items-center">
+    <div class="md:hidden mr-3">
+      <button class="js-menu" aria-label="Menu" type="button" aria-controls="lside" aria-expanded="false">
+        <i class="i-lucide menu"></i>
+      </button>
+    </div>
+    <ol class="flex-1" itemscope itemtype="https://schema.org/BreadcrumbList"><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="#"><span itemprop="name">FTMGram</span></a>
+        <meta itemprop="position" content="1" />
+      </li></ol>
+    <div class="xl:hidden ml-1">
+      <button class="js-menu" aria-label="Show table of contents" type="button" aria-controls="rside"
+        aria-expanded="false">
+        <i class="i-lucide outdent"></i>
+      </button>
+    </div>
+  </div>
+</div><div class="flex flex-col break-words justify-between">
+      <div class="relative min-w-0 max-w-6xl px-6 pb-6 pt-8 xl:px-12">
+  <article class="yue" role="main">
+          <section id="ftmgram">
+<h1>FTMGram<a class="headerlink" href="#ftmgram" title="Link to this heading">#</a></h1>
+<a class="reference internal image-reference" href="_images/logo.png"><img alt="FTMGram" class="align-center" src="_images/logo.png" style="width: 180px;" />
+</a>
+<p align="center">
+  <a href="https://pypi.python.org/pypi/ftmgram"><img src="https://img.shields.io/pypi/v/ftmgram.svg?logo=pypi&logoColor=white&color=orange" alt="PyPI"></a>
+  &nbsp;
+  <a href="https://pypi.python.org/pypi/ftmgram"><img src="https://img.shields.io/pypi/pyversions/ftmgram.svg?logo=python&logoColor=white" alt="Python"></a>
+  &nbsp;
+  <a href="https://pypi.python.org/pypi/ftmgram"><img src="https://img.shields.io/pypi/l/ftmgram.svg?color=orange" alt="License"></a>
+  &nbsp;
+  <a href="https://github.com/ftmdevz/ftmgram"><img src="https://img.shields.io/github/stars/ftmdevz/ftmgram?style=flat&color=orange" alt="Stars"></a>
+</p><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p class="lead"><strong>Elegant, modern and asynchronous Telegram MTProto API framework in Python — for users and bots.</strong></p>
+<p class="lead">Built on top of Pyrogram’s solid foundation, FTMGram delivers full <strong>Bot API 10.1</strong> support
+with zero migration friction from Pyrogram or KuriGram.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+🚀 Getting Started</div>
+<p class="sd-card-text">Install FTMGram, run your first bot, and migrate from Pyrogram in minutes.</p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference internal" href="intro/index.html"><span class="doc">Getting Started</span></a></div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+📖 API Reference</div>
+<p class="sd-card-text">Complete reference for Client methods, Types, Filters, and Enums.</p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference internal" href="api/index.html"><span class="doc">API Reference</span></a></div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+📚 Topics &amp; Guides</div>
+<p class="sd-card-text">In-depth guides on Rich Messages, Checklists, and other advanced features.</p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference internal" href="topics/index.html"><span class="doc">Topics &amp; Guides</span></a></div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+📋 Changelog</div>
+<p class="sd-card-text">Full history of every release with new features and bug fixes.</p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference internal" href="changelog.html"><span class="doc">Changelog</span></a></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<p class="rubric">A 30-Second Example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="kn">from</span><span class="w"> </span><span class="nn">ftmgram</span><span class="w"> </span><span class="kn">import</span> <span class="n">Client</span><span class="p">,</span> <span class="n">filters</span>
+</span><span data-line="2">
+</span><span data-line="3"><span class="n">app</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="s2">&quot;my_account&quot;</span><span class="p">)</span>
+</span><span data-line="4">
+</span><span data-line="5"><span class="nd">@app</span><span class="o">.</span><span class="n">on_message</span><span class="p">(</span><span class="n">filters</span><span class="o">.</span><span class="n">private</span> <span class="o">&amp;</span> <span class="n">filters</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</span><span data-line="6"><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">echo</span><span class="p">(</span><span class="n">client</span><span class="p">,</span> <span class="n">message</span><span class="p">):</span>
+</span><span data-line="7">    <span class="k">await</span> <span class="n">message</span><span class="o">.</span><span class="n">reply</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</span><span data-line="8">
+</span><span data-line="9"><span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</span></pre></div>
+</div>
+<hr class="docutils" />
+<p class="rubric">Why FTMGram?</p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-2 sd-g-xs-2 sd-g-sm-2 sd-g-md-2 sd-g-lg-2 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-text-center docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+⚡ Ready</div>
+<p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">ftmgram</span></code> — no configuration needed to get started.</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-text-center docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+🔌 Drop-in</div>
+<p class="sd-card-text">Replace <code class="docutils literal notranslate"><span class="pre">pyrogram</span></code> or <code class="docutils literal notranslate"><span class="pre">kurigram</span></code> imports with <code class="docutils literal notranslate"><span class="pre">ftmgram</span></code>. Zero other changes.</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-text-center docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+🏆 Bot API 10.1</div>
+<p class="sd-card-text">Rich Messages, Checklists, Link media, Join-request queries — all covered.</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-text-center docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+🔒 Type-hinted</div>
+<p class="sd-card-text">Full type annotations for excellent IDE and editor support.</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-text-center docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+⚙️ Async-first</div>
+<p class="sd-card-text">Fully asynchronous. Synchronous usage is also supported out of the box.</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-text-center docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+🧩 Extensible</div>
+<p class="sd-card-text">Custom filters, middleware, and raw API access for advanced use-cases.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<p class="rubric">Bot API 10.1 Coverage</p>
+<div class="table-wrapper colwidths-given docutils container">
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 75.0%" />
+<col style="width: 25.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Feature</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Rich Messages — <code class="docutils literal notranslate"><span class="pre">send_rich_message</span></code>, <code class="docutils literal notranslate"><span class="pre">send_rich_message_draft</span></code>, <code class="docutils literal notranslate"><span class="pre">edit_message_text</span></code></p></td>
+<td><p>✅ Full</p></td>
+</tr>
+<tr class="row-odd"><td><p>RichText — 14 inline types (Bold, Italic, Url, Code, Marked, …)</p></td>
+<td><p>✅ Full</p></td>
+</tr>
+<tr class="row-even"><td><p>RichBlock — 19+ block types (Paragraph, Photo, Video, Table, Slideshow, …)</p></td>
+<td><p>✅ Full</p></td>
+</tr>
+<tr class="row-odd"><td><p>Checklist media — <code class="docutils literal notranslate"><span class="pre">MessageMediaType.CHECKLIST</span></code>, <code class="docutils literal notranslate"><span class="pre">Checklist</span></code>, <code class="docutils literal notranslate"><span class="pre">ChecklistTask</span></code></p></td>
+<td><p>✅ Full</p></td>
+</tr>
+<tr class="row-even"><td><p>Link poll media — <code class="docutils literal notranslate"><span class="pre">MessageMediaType.LINK</span></code>, <code class="docutils literal notranslate"><span class="pre">Link</span></code> type</p></td>
+<td><p>✅ Full</p></td>
+</tr>
+<tr class="row-odd"><td><p>Chat join request queries — <code class="docutils literal notranslate"><span class="pre">answer_chat_join_request_query</span></code>, <code class="docutils literal notranslate"><span class="pre">send_chat_join_request_web_app</span></code></p></td>
+<td><p>✅ Full</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">User.supports_join_request_queries</span></code>, <code class="docutils literal notranslate"><span class="pre">Chat.guard_bot</span></code>, <code class="docutils literal notranslate"><span class="pre">ChatJoinRequest.query_id</span></code></p></td>
+<td><p>✅ Full</p></td>
+</tr>
+<tr class="row-odd"><td><p>Owned star balance — <code class="docutils literal notranslate"><span class="pre">get_owned_star_count</span></code></p></td>
+<td><p>✅ Full</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<p class="rubric">Community</p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-2 sd-g-xs-2 sd-g-sm-2 sd-g-md-2 sd-g-lg-2 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+📢 Telegram Channel</div>
+<p class="sd-card-text">News, updates and releases — follow us on Telegram.</p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://t.me/ftmdeveloperz"><span>https://t.me/ftmdeveloperz</span></a></div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+💬 Telegram Chat</div>
+<p class="sd-card-text">Ask questions and get help from the community.</p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://t.me/ftmdevz"><span>https://t.me/ftmdevz</span></a></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+        </article><button class="back-to-top" type="button">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+  </svg>
+  <span>Back to top</span>
+</button><div class="navigation flex print:hidden"><div class="navigation-next">
+    <a href="intro/index.html">
+      <div class="page-info">
+        <span>Next</span>
+        <div class="title">Getting Started</div>
       </div>
+      <i class="i-lucide chevron-right"></i>
     </a>
-  </div>
-
-  <div class="topnav-center">
-    <div class="search-wrap">
-      <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-      <input type="text" id="searchInput" placeholder="Search methods, types, enums, filters (Ctrl + K)..." autocomplete="off" oninput="handleSearch(this.value)" onfocus="showSearchDropdown()" onblur="hideSearchDropdown()">
-      <kbd class="search-kbd">Ctrl K</kbd>
-      <div class="search-dropdown" id="searchDropdown"></div>
+  </div></div></div>
+    </div>
+  </main>
+</div>
+<footer class="sy-foot">
+  <div class="sy-foot-inner sy-container mx-auto">
+    <div class="sy-foot-reserved md:flex justify-between items-center">
+      <div class="sy-foot-copyright"><p>2024-2026, FTM DEVELOPERZ</p>
+  
+  <p>
+    Made with
+    
+    <a href="https://www.sphinx-doc.org/">Sphinx</a> and
+    
+    <a href="https://shibuya.lepture.com">Shibuya theme</a>.
+  </p>
+</div>
+      <div class="sy-foot-socials">
+  <a href="https://github.com/ftmdevz/ftmgram" aria-label="GitHub">
+    <iconify-icon icon="simple-icons:github"></iconify-icon>
+  </a></div>
     </div>
   </div>
-
-  <div class="topnav-right">
-    <!-- Live IST Clock -->
-    <div class="nav-badge time-badge" id="istClock" title="Current Time in Indian Standard Time (IST)">
-      🕒 Loading IST...
-    </div>
-
-    <!-- Live Visitor Counter -->
-    <div class="nav-badge visitor-badge" id="visitorBadge" title="Total Website Views">
-      👁️ <span id="visitorCount">1,480</span> Views
-    </div>
-
-    <a href="https://t.me/ftmdeveloperz" target="_blank" class="nav-link telegram-btn" title="Telegram Channel">
-      <svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.121l-6.87 4.326-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.832.942z"/></svg>
-      Community
-    </a>
-    <a href="https://github.com/ftmdevz/ftmgram" target="_blank" class="nav-link github-btn" title="GitHub Repository">
-      <svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-      GitHub
-    </a>
-    <button class="theme-btn" onclick="toggleTheme()" title="Toggle Dark / Light Theme" aria-label="Toggle Theme">
-      <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-      <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-    </button>
-  </div>
-</nav>
-
-<!-- Sidebar -->
-<aside class="sidebar" id="sidebar">
-  <div class="sidebar-inner">
-
-    <!-- 1. Introduction -->
-    <div class="sidebar-section">
-      <div class="sidebar-heading">Introduction</div>
-      <a class="sidebar-link" onclick="navigate('home')">🏠 Welcome</a>
-      <a class="sidebar-link" onclick="navigate('whats_new')">🚀 What's New in v3.3</a>
-      <a class="sidebar-link" onclick="navigate('install')">📦 Installation</a>
-      <a class="sidebar-link" onclick="navigate('quickstart')">⚡ Quick Start</a>
-      <a class="sidebar-link" onclick="navigate('client')">⚙️ Client & Session Setup</a>
-      <a class="sidebar-link" onclick="navigate('migration')">🔄 Pyrogram Migration</a>
-    </div>
-
-    <!-- 2. Topics & Guides -->
-    <div class="sidebar-section">
-      <div class="sidebar-heading collapsible" onclick="toggleSection(this)">
-        <span>📚 Topics & Guides</span><span class="chevron">▾</span>
-      </div>
-      <div class="sidebar-children">
-        <a class="sidebar-link" onclick="navigate('topic_rich_messages')">Rich Messages & In-Text Buttons</a>
-        <a class="sidebar-link" onclick="navigate('topic_streaming_drafts')">AI Response Streaming & Drafts</a>
-        <a class="sidebar-link" onclick="navigate('topic_ephemeral')">Ephemeral Messages & Overlays</a>
-        <a class="sidebar-link" onclick="navigate('topic_tables_quotes')">Compact Tables & Quotes</a>
-        <a class="sidebar-link" onclick="navigate('topic_disabled_buttons')">Disabled Buttons in Keyboards</a>
-        <a class="sidebar-link" onclick="navigate('topic_checklists')">Checklists & Task Lists</a>
-        <a class="sidebar-link" onclick="navigate('topic_star_payments')">Telegram Star Payments</a>
-        <a class="sidebar-link" onclick="navigate('topic_sessions')">Session Strings & Storage</a>
-        <a class="sidebar-link" onclick="navigate('topic_raw_mtproto')">Invoking Raw MTProto API</a>
-      </div>
-    </div>
-
-    <!-- 3. Client Methods -->
-    <div class="sidebar-section">
-      <div class="sidebar-heading collapsible" onclick="toggleSection(this)">
-        <span>📨 Messages Methods</span><span class="chevron">▾</span>
-      </div>
-      <div class="sidebar-children">
-        <a class="sidebar-link" onclick="navigate('send_message')">send_message</a>
-        <a class="sidebar-link" onclick="navigate('send_rich_message')">send_rich_message ✨</a>
-        <a class="sidebar-link" onclick="navigate('send_rich_message_draft')">send_rich_message_draft ✨</a>
-        <a class="sidebar-link" onclick="navigate('send_message_draft')">send_message_draft ✨</a>
-        <a class="sidebar-link" onclick="navigate('send_photo')">send_photo</a>
-        <a class="sidebar-link" onclick="navigate('send_audio')">send_audio</a>
-        <a class="sidebar-link" onclick="navigate('send_video')">send_video</a>
-        <a class="sidebar-link" onclick="navigate('send_document')">send_document</a>
-        <a class="sidebar-link" onclick="navigate('send_animation')">send_animation</a>
-        <a class="sidebar-link" onclick="navigate('send_sticker')">send_sticker</a>
-        <a class="sidebar-link" onclick="navigate('send_voice')">send_voice</a>
-        <a class="sidebar-link" onclick="navigate('send_video_note')">send_video_note</a>
-        <a class="sidebar-link" onclick="navigate('send_location')">send_location</a>
-        <a class="sidebar-link" onclick="navigate('send_contact')">send_contact</a>
-        <a class="sidebar-link" onclick="navigate('send_poll')">send_poll</a>
-        <a class="sidebar-link" onclick="navigate('send_dice')">send_dice</a>
-        <a class="sidebar-link" onclick="navigate('send_media_group')">send_media_group</a>
-        <a class="sidebar-link" onclick="navigate('send_checklist')">send_checklist ✨</a>
-        <a class="sidebar-link" onclick="navigate('forward_message')">forward_message</a>
-        <a class="sidebar-link" onclick="navigate('copy_message')">copy_message</a>
-        <a class="sidebar-link" onclick="navigate('edit_message_text')">edit_message_text</a>
-        <a class="sidebar-link" onclick="navigate('edit_message_caption')">edit_message_caption</a>
-        <a class="sidebar-link" onclick="navigate('edit_message_media')">edit_message_media</a>
-        <a class="sidebar-link" onclick="navigate('edit_message_reply_markup')">edit_message_reply_markup</a>
-        <a class="sidebar-link" onclick="navigate('edit_ephemeral_message_text')">edit_ephemeral_message_text ✨</a>
-        <a class="sidebar-link" onclick="navigate('delete_ephemeral_message')">delete_ephemeral_message ✨</a>
-        <a class="sidebar-link" onclick="navigate('delete_message')">delete_message</a>
-        <a class="sidebar-link" onclick="navigate('get_messages')">get_messages</a>
-        <a class="sidebar-link" onclick="navigate('get_chat_history')">get_chat_history</a>
-        <a class="sidebar-link" onclick="navigate('search_messages')">search_messages</a>
-        <a class="sidebar-link" onclick="navigate('download_media')">download_media</a>
-        <a class="sidebar-link" onclick="navigate('send_chat_action')">send_chat_action</a>
-        <a class="sidebar-link" onclick="navigate('translate_message_text')">translate_message_text</a>
-      </div>
-    </div>
-
-    <!-- 4. Chats -->
-    <div class="sidebar-section">
-      <div class="sidebar-heading collapsible" onclick="toggleSection(this)">
-        <span>💬 Chats Methods</span><span class="chevron">▾</span>
-      </div>
-      <div class="sidebar-children">
-        <a class="sidebar-link" onclick="navigate('get_chat')">get_chat</a>
-        <a class="sidebar-link" onclick="navigate('get_dialogs')">get_dialogs</a>
-        <a class="sidebar-link" onclick="navigate('join_chat')">join_chat</a>
-        <a class="sidebar-link" onclick="navigate('leave_chat')">leave_chat</a>
-        <a class="sidebar-link" onclick="navigate('create_group')">create_group</a>
-        <a class="sidebar-link" onclick="navigate('create_channel')">create_channel</a>
-        <a class="sidebar-link" onclick="navigate('create_supergroup')">create_supergroup</a>
-        <a class="sidebar-link" onclick="navigate('get_chat_members')">get_chat_members</a>
-        <a class="sidebar-link" onclick="navigate('get_chat_member')">get_chat_member</a>
-        <a class="sidebar-link" onclick="navigate('ban_chat_member')">ban_chat_member</a>
-        <a class="sidebar-link" onclick="navigate('unban_chat_member')">unban_chat_member</a>
-        <a class="sidebar-link" onclick="navigate('restrict_chat_member')">restrict_chat_member</a>
-        <a class="sidebar-link" onclick="navigate('promote_chat_member')">promote_chat_member</a>
-        <a class="sidebar-link" onclick="navigate('set_chat_title')">set_chat_title</a>
-        <a class="sidebar-link" onclick="navigate('set_chat_description')">set_chat_description</a>
-        <a class="sidebar-link" onclick="navigate('set_chat_photo')">set_chat_photo</a>
-        <a class="sidebar-link" onclick="navigate('delete_chat_photo')">delete_chat_photo</a>
-        <a class="sidebar-link" onclick="navigate('pin_chat_message')">pin_chat_message</a>
-        <a class="sidebar-link" onclick="navigate('unpin_chat_message')">unpin_chat_message</a>
-        <a class="sidebar-link" onclick="navigate('get_chat_invite_link')">get_chat_invite_link</a>
-        <a class="sidebar-link" onclick="navigate('create_chat_invite_link')">create_chat_invite_link</a>
-        <a class="sidebar-link" onclick="navigate('archive_chats')">archive_chats</a>
-        <a class="sidebar-link" onclick="navigate('set_slow_mode')">set_slow_mode</a>
-        <a class="sidebar-link" onclick="navigate('set_chat_permissions')">set_chat_permissions</a>
-        <a class="sidebar-link" onclick="navigate('get_forum_topics')">get_forum_topics ✨</a>
-        <a class="sidebar-link" onclick="navigate('create_forum_topic')">create_forum_topic ✨</a>
-      </div>
-    </div>
-
-    <!-- 5. Users -->
-    <div class="sidebar-section">
-      <div class="sidebar-heading collapsible" onclick="toggleSection(this)">
-        <span>👤 Users Methods</span><span class="chevron">▾</span>
-      </div>
-      <div class="sidebar-children">
-        <a class="sidebar-link" onclick="navigate('get_me')">get_me</a>
-        <a class="sidebar-link" onclick="navigate('get_users')">get_users</a>
-        <a class="sidebar-link" onclick="navigate('get_user_profile_photos')">get_user_profile_photos</a>
-        <a class="sidebar-link" onclick="navigate('block_user')">block_user</a>
-        <a class="sidebar-link" onclick="navigate('unblock_user')">unblock_user</a>
-        <a class="sidebar-link" onclick="navigate('update_profile')">update_profile</a>
-        <a class="sidebar-link" onclick="navigate('set_profile_photo')">set_profile_photo</a>
-        <a class="sidebar-link" onclick="navigate('get_common_chats')">get_common_chats</a>
-      </div>
-    </div>
-
-    <!-- 6. Bots -->
-    <div class="sidebar-section">
-      <div class="sidebar-heading collapsible" onclick="toggleSection(this)">
-        <span>🤖 Bots & Inline</span><span class="chevron">▾</span>
-      </div>
-      <div class="sidebar-children">
-        <a class="sidebar-link" onclick="navigate('answer_callback_query')">answer_callback_query</a>
-        <a class="sidebar-link" onclick="navigate('answer_inline_query')">answer_inline_query</a>
-        <a class="sidebar-link" onclick="navigate('answer_web_app_query')">answer_web_app_query</a>
-        <a class="sidebar-link" onclick="navigate('set_bot_commands')">set_bot_commands</a>
-        <a class="sidebar-link" onclick="navigate('get_bot_commands')">get_bot_commands</a>
-        <a class="sidebar-link" onclick="navigate('delete_bot_commands')">delete_bot_commands</a>
-        <a class="sidebar-link" onclick="navigate('set_chat_menu_button')">set_chat_menu_button</a>
-        <a class="sidebar-link" onclick="navigate('get_chat_menu_button')">get_chat_menu_button</a>
-        <a class="sidebar-link" onclick="navigate('answer_chat_join_request_query')">answer_chat_join_request_query ✨</a>
-        <a class="sidebar-link" onclick="navigate('send_chat_join_request_web_app')">send_chat_join_request_web_app ✨</a>
-        <a class="sidebar-link" onclick="navigate('get_business_connection')">get_business_connection ✨</a>
-        <a class="sidebar-link" onclick="navigate('verify_user')">verify_user</a>
-        <a class="sidebar-link" onclick="navigate('create_bot')">create_bot</a>
-      </div>
-    </div>
-
-    <!-- 7. Stars -->
-    <div class="sidebar-section">
-      <div class="sidebar-heading collapsible" onclick="toggleSection(this)">
-        <span>⭐ Stars & Payments</span><span class="chevron">▾</span>
-      </div>
-      <div class="sidebar-children">
-        <a class="sidebar-link" onclick="navigate('get_owned_star_count')">get_owned_star_count ✨</a>
-        <a class="sidebar-link" onclick="navigate('send_invoice')">send_invoice</a>
-        <a class="sidebar-link" onclick="navigate('create_invoice_link')">create_invoice_link</a>
-        <a class="sidebar-link" onclick="navigate('answer_shipping_query')">answer_shipping_query</a>
-        <a class="sidebar-link" onclick="navigate('answer_pre_checkout_query')">answer_pre_checkout_query</a>
-        <a class="sidebar-link" onclick="navigate('refund_star_payment')">refund_star_payment ✨</a>
-      </div>
-    </div>
-
-    <!-- 8. Stickers -->
-    <div class="sidebar-section">
-      <div class="sidebar-heading collapsible" onclick="toggleSection(this)">
-        <span>🏷️ Stickers & Reactions</span><span class="chevron">▾</span>
-      </div>
-      <div class="sidebar-children">
-        <a class="sidebar-link" onclick="navigate('send_reaction')">send_reaction</a>
-        <a class="sidebar-link" onclick="navigate('get_custom_emoji_stickers')">get_custom_emoji_stickers</a>
-        <a class="sidebar-link" onclick="navigate('get_sticker_set')">get_sticker_set</a>
-        <a class="sidebar-link" onclick="navigate('create_new_sticker_set')">create_new_sticker_set</a>
-        <a class="sidebar-link" onclick="navigate('add_sticker_to_set')">add_sticker_to_set</a>
-        <a class="sidebar-link" onclick="navigate('set_sticker_position_in_set')">set_sticker_position_in_set</a>
-        <a class="sidebar-link" onclick="navigate('delete_sticker_from_set')">delete_sticker_from_set</a>
-      </div>
-    </div>
-
-    <!-- 9. Utilities -->
-    <div class="sidebar-section">
-      <div class="sidebar-heading collapsible" onclick="toggleSection(this)">
-        <span>⚡ Utilities & Lifecycle</span><span class="chevron">▾</span>
-      </div>
-      <div class="sidebar-children">
-        <a class="sidebar-link" onclick="navigate('start')">start</a>
-        <a class="sidebar-link" onclick="navigate('stop')">stop</a>
-        <a class="sidebar-link" onclick="navigate('run')">run</a>
-        <a class="sidebar-link" onclick="navigate('idle')">idle</a>
-        <a class="sidebar-link" onclick="navigate('add_handler')">add_handler</a>
-        <a class="sidebar-link" onclick="navigate('remove_handler')">remove_handler</a>
-        <a class="sidebar-link" onclick="navigate('export_session_string')">export_session_string</a>
-        <a class="sidebar-link" onclick="navigate('invoke')">invoke (Raw MTProto)</a>
-      </div>
-    </div>
-
-    <!-- 10. Bound Methods -->
-    <div class="sidebar-section">
-      <div class="sidebar-heading collapsible" onclick="toggleSection(this)">
-        <span>🔗 Bound Methods</span><span class="chevron">▾</span>
-      </div>
-      <div class="sidebar-children">
-        <a class="sidebar-link" onclick="navigate('bound_message_reply')">Message.reply</a>
-        <a class="sidebar-link" onclick="navigate('bound_message_edit')">Message.edit_text</a>
-        <a class="sidebar-link" onclick="navigate('bound_message_delete')">Message.delete</a>
-        <a class="sidebar-link" onclick="navigate('bound_message_click')">Message.click</a>
-        <a class="sidebar-link" onclick="navigate('bound_callback_query_answer')">CallbackQuery.answer</a>
-        <a class="sidebar-link" onclick="navigate('bound_chat_ban_member')">Chat.ban_member</a>
-        <a class="sidebar-link" onclick="navigate('bound_user_block')">User.block</a>
-      </div>
-    </div>
-
-    <!-- 11. Handlers -->
-    <div class="sidebar-section">
-      <div class="sidebar-heading collapsible" onclick="toggleSection(this)">
-        <span>🔔 Handlers & Decorators</span><span class="chevron">▾</span>
-      </div>
-      <div class="sidebar-children">
-        <a class="sidebar-link" onclick="navigate('message_handler')">MessageHandler (@on_message)</a>
-        <a class="sidebar-link" onclick="navigate('callback_query_handler')">CallbackQueryHandler</a>
-        <a class="sidebar-link" onclick="navigate('inline_query_handler')">InlineQueryHandler</a>
-        <a class="sidebar-link" onclick="navigate('chosen_inline_result_handler')">ChosenInlineResultHandler</a>
-        <a class="sidebar-link" onclick="navigate('edited_message_handler')">EditedMessageHandler</a>
-        <a class="sidebar-link" onclick="navigate('deleted_messages_handler')">DeletedMessagesHandler</a>
-        <a class="sidebar-link" onclick="navigate('chat_member_updated_handler')">ChatMemberUpdatedHandler</a>
-        <a class="sidebar-link" onclick="navigate('chat_join_request_handler')">ChatJoinRequestHandler</a>
-        <a class="sidebar-link" onclick="navigate('poll_handler')">PollHandler</a>
-        <a class="sidebar-link" onclick="navigate('story_handler')">StoryHandler</a>
-        <a class="sidebar-link" onclick="navigate('message_generation_stopped_handler')">MessageGenerationStoppedHandler ✨</a>
-        <a class="sidebar-link" onclick="navigate('raw_update_handler')">RawUpdateHandler</a>
-        <a class="sidebar-link" onclick="navigate('error_handler')">ErrorHandler</a>
-      </div>
-    </div>
-
-    <!-- 12. Filters -->
-    <div class="sidebar-section">
-      <div class="sidebar-heading collapsible" onclick="toggleSection(this)">
-        <span>🎯 Filters Reference</span><span class="chevron">▾</span>
-      </div>
-      <div class="sidebar-children">
-        <a class="sidebar-link" onclick="navigate('filter_all')">filters.all</a>
-        <a class="sidebar-link" onclick="navigate('filter_text')">filters.text</a>
-        <a class="sidebar-link" onclick="navigate('filter_command')">filters.command</a>
-        <a class="sidebar-link" onclick="navigate('filter_private')">filters.private</a>
-        <a class="sidebar-link" onclick="navigate('filter_group')">filters.group</a>
-        <a class="sidebar-link" onclick="navigate('filter_channel')">filters.channel</a>
-        <a class="sidebar-link" onclick="navigate('filter_user')">filters.user</a>
-        <a class="sidebar-link" onclick="navigate('filter_chat')">filters.chat</a>
-        <a class="sidebar-link" onclick="navigate('filter_me')">filters.me</a>
-        <a class="sidebar-link" onclick="navigate('filter_bot')">filters.bot</a>
-        <a class="sidebar-link" onclick="navigate('filter_incoming')">filters.incoming</a>
-        <a class="sidebar-link" onclick="navigate('filter_outgoing')">filters.outgoing</a>
-        <a class="sidebar-link" onclick="navigate('filter_photo')">filters.photo</a>
-        <a class="sidebar-link" onclick="navigate('filter_audio')">filters.audio</a>
-        <a class="sidebar-link" onclick="navigate('filter_video')">filters.video</a>
-        <a class="sidebar-link" onclick="navigate('filter_document')">filters.document</a>
-        <a class="sidebar-link" onclick="navigate('filter_sticker')">filters.sticker</a>
-        <a class="sidebar-link" onclick="navigate('filter_animation')">filters.animation</a>
-        <a class="sidebar-link" onclick="navigate('filter_voice')">filters.voice</a>
-        <a class="sidebar-link" onclick="navigate('filter_video_note')">filters.video_note</a>
-        <a class="sidebar-link" onclick="navigate('filter_contact')">filters.contact</a>
-        <a class="sidebar-link" onclick="navigate('filter_location')">filters.location</a>
-        <a class="sidebar-link" onclick="navigate('filter_poll')">filters.poll</a>
-        <a class="sidebar-link" onclick="navigate('filter_dice')">filters.dice</a>
-        <a class="sidebar-link" onclick="navigate('filter_media')">filters.media</a>
-        <a class="sidebar-link" onclick="navigate('filter_regex')">filters.regex</a>
-        <a class="sidebar-link" onclick="navigate('filter_create')">filters.create (Custom)</a>
-      </div>
-    </div>
-
-    <!-- 13. Enums -->
-    <div class="sidebar-section">
-      <div class="sidebar-heading collapsible" onclick="toggleSection(this)">
-        <span>🔷 Enums Reference</span><span class="chevron">▾</span>
-      </div>
-      <div class="sidebar-children">
-        <a class="sidebar-link" onclick="navigate('enum_ChatType')">ChatType</a>
-        <a class="sidebar-link" onclick="navigate('enum_ParseMode')">ParseMode</a>
-        <a class="sidebar-link" onclick="navigate('enum_ButtonStyle')">ButtonStyle ✨</a>
-        <a class="sidebar-link" onclick="navigate('enum_MessageMediaType')">MessageMediaType</a>
-        <a class="sidebar-link" onclick="navigate('enum_ChatMemberStatus')">ChatMemberStatus</a>
-        <a class="sidebar-link" onclick="navigate('enum_ChatAction')">ChatAction</a>
-        <a class="sidebar-link" onclick="navigate('enum_MessageEntityType')">MessageEntityType</a>
-        <a class="sidebar-link" onclick="navigate('enum_SentCodeType')">SentCodeType</a>
-        <a class="sidebar-link" onclick="navigate('enum_NextCodeType')">NextCodeType</a>
-        <a class="sidebar-link" onclick="navigate('enum_MessagesFilter')">MessagesFilter</a>
-        <a class="sidebar-link" onclick="navigate('enum_ChatMembersFilter')">ChatMembersFilter</a>
-        <a class="sidebar-link" onclick="navigate('enum_StickerType')">StickerType</a>
-        <a class="sidebar-link" onclick="navigate('enum_ChatJoinType')">ChatJoinType</a>
-        <a class="sidebar-link" onclick="navigate('enum_GiftType')">GiftType</a>
-        <a class="sidebar-link" onclick="navigate('enum_PollType')">PollType</a>
-        <a class="sidebar-link" onclick="navigate('enum_UserStatus')">UserStatus</a>
-        <a class="sidebar-link" onclick="navigate('enum_BlockList')">BlockList</a>
-        <a class="sidebar-link" onclick="navigate('enum_ChatEventAction')">ChatEventAction</a>
-        <a class="sidebar-link" onclick="navigate('enum_FolderColor')">FolderColor</a>
-        <a class="sidebar-link" onclick="navigate('enum_MediaAreaType')">MediaAreaType</a>
-        <a class="sidebar-link" onclick="navigate('enum_PrivacyKey')">PrivacyKey</a>
-        <a class="sidebar-link" onclick="navigate('enum_StoriesPrivacyRules')">StoriesPrivacyRules</a>
-      </div>
-    </div>
-
-    <!-- 14. Types -->
-    <div class="sidebar-section">
-      <div class="sidebar-heading collapsible" onclick="toggleSection(this)">
-        <span>📦 Types & Models</span><span class="chevron">▾</span>
-      </div>
-      <div class="sidebar-children">
-        <a class="sidebar-link" onclick="navigate('type_Message')">Message</a>
-        <a class="sidebar-link" onclick="navigate('type_Chat')">Chat</a>
-        <a class="sidebar-link" onclick="navigate('type_User')">User</a>
-        <a class="sidebar-link" onclick="navigate('type_InputRichMessage')">InputRichMessage ✨</a>
-        <a class="sidebar-link" onclick="navigate('type_InputRichBlockButtons')">InputRichBlockButtons ✨</a>
-        <a class="sidebar-link" onclick="navigate('type_RichMessageButton')">RichMessageButton ✨</a>
-        <a class="sidebar-link" onclick="navigate('type_InputRichBlockParagraph')">InputRichBlockParagraph ✨</a>
-        <a class="sidebar-link" onclick="navigate('type_InputRichBlockTable')">InputRichBlockTable ✨</a>
-        <a class="sidebar-link" onclick="navigate('type_InputRichBlockExpandableBlockQuotation')">InputRichBlockExpandableBlockQuotation ✨</a>
-        <a class="sidebar-link" onclick="navigate('type_EphemeralMessageParameters')">EphemeralMessageParameters ✨</a>
-        <a class="sidebar-link" onclick="navigate('type_DisabledButton')">DisabledButton ✨</a>
-        <a class="sidebar-link" onclick="navigate('type_Community')">Community ✨</a>
-        <a class="sidebar-link" onclick="navigate('type_InlineKeyboardMarkup')">InlineKeyboardMarkup</a>
-        <a class="sidebar-link" onclick="navigate('type_InlineKeyboardButton')">InlineKeyboardButton</a>
-        <a class="sidebar-link" onclick="navigate('type_ReplyKeyboardMarkup')">ReplyKeyboardMarkup</a>
-        <a class="sidebar-link" onclick="navigate('type_KeyboardButton')">KeyboardButton</a>
-        <a class="sidebar-link" onclick="navigate('type_CallbackQuery')">CallbackQuery</a>
-        <a class="sidebar-link" onclick="navigate('type_InlineQuery')">InlineQuery</a>
-        <a class="sidebar-link" onclick="navigate('type_Checklist')">Checklist ✨</a>
-        <a class="sidebar-link" onclick="navigate('type_Link')">Link ✨</a>
-      </div>
-    </div>
-
-    <!-- 15. Errors -->
-    <div class="sidebar-section">
-      <div class="sidebar-heading collapsible" onclick="toggleSection(this)">
-        <span>⚠️ Errors & Exceptions</span><span class="chevron">▾</span>
-      </div>
-      <div class="sidebar-children">
-        <a class="sidebar-link" onclick="navigate('error_rpc')">RPCError Overview</a>
-        <a class="sidebar-link" onclick="navigate('error_flood_wait')">FloodWait (420)</a>
-        <a class="sidebar-link" onclick="navigate('error_bad_request')">BadRequest (400)</a>
-        <a class="sidebar-link" onclick="navigate('error_unauthorized')">Unauthorized (401)</a>
-        <a class="sidebar-link" onclick="navigate('error_forbidden')">Forbidden (403)</a>
-        <a class="sidebar-link" onclick="navigate('error_internal')">InternalServerError (500)</a>
-      </div>
-    </div>
-
-  </div>
-</aside>
-
-<!-- Main content -->
-<main class="main" id="main">
-  <div class="content" id="content">
-    <!-- Rendered dynamically by app.js -->
-  </div>
-</main>
-
-<script src="app.js"></script>
-</body>
+</footer>
+      <script src="_static/documentation_options.js?v=3eb8911e"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="_static/copybutton.js?v=f281be69"></script>
+      <script src="_static/design-tabs.js?v=f930bc37"></script>
+      <script src="_static/shibuya.js?v=50760d75"></script></body>
 </html>

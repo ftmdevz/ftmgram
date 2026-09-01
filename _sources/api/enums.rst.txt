@@ -1,0 +1,139 @@
+Enums
+=====
+
+Enumeration types used across the FTMGram API.
+All enums are in :mod:`ftmgram.enums`.
+
+.. code-block:: python
+
+   from ftmgram.enums import MessageMediaType, ChatType, ParseMode
+
+----
+
+ChatType
+--------
+
+The type of a :class:`~ftmgram.types.Chat`.
+
+.. list-table::
+   :widths: 30 70
+   :header-rows: 1
+
+   * - Value
+     - Description
+   * - ``ChatType.PRIVATE``
+     - Direct message / private chat
+   * - ``ChatType.GROUP``
+     - Legacy group
+   * - ``ChatType.SUPERGROUP``
+     - Supergroup
+   * - ``ChatType.CHANNEL``
+     - Broadcast channel
+   * - ``ChatType.BOT``
+     - Bot DM
+
+MessageMediaType
+----------------
+
+The type of media attached to a :class:`~ftmgram.types.Message`.
+
+.. list-table::
+   :widths: 30 70
+   :header-rows: 1
+
+   * - Value
+     - Description
+   * - ``AUDIO``
+     - Audio file
+   * - ``DOCUMENT``
+     - Generic document
+   * - ``PHOTO``
+     - Photo
+   * - ``STICKER``
+     - Sticker
+   * - ``VIDEO``
+     - Video
+   * - ``ANIMATION``
+     - GIF or animation
+   * - ``VOICE``
+     - Voice note
+   * - ``VIDEO_NOTE``
+     - Round video
+   * - ``CONTACT``
+     - Contact card
+   * - ``LOCATION``
+     - Location pin
+   * - ``VENUE``
+     - Venue/place
+   * - ``POLL``
+     - Poll
+   * - ``DICE``
+     - Dice
+   * - ``WEB_PAGE``
+     - Link preview
+   * - ``GIVEAWAY``
+     - Giveaway
+   * - ``INVOICE``
+     - Invoice / Stars purchase
+   * - ``CHECKLIST``
+     - Checklist *(Bot API 10.1)*
+   * - ``LINK``
+     - Link poll media *(Bot API 10.1)*
+
+ParseMode
+---------
+
+Controls how message text is parsed.
+
+.. list-table::
+   :widths: 30 70
+   :header-rows: 1
+
+   * - Value
+     - Description
+   * - ``ParseMode.MARKDOWN``
+     - Pyrogram Markdown syntax (default)
+   * - ``ParseMode.HTML``
+     - HTML tags (``<b>``, ``<i>``, ``<code>``, etc.)
+   * - ``ParseMode.DISABLED``
+     - No parsing — plain text only
+
+ChatMemberStatus
+----------------
+
+The status of a member within a chat.
+
+.. list-table::
+   :widths: 30 70
+   :header-rows: 1
+
+   * - Value
+     - Description
+   * - ``OWNER``
+     - Chat creator
+   * - ``ADMINISTRATOR``
+     - Admin
+   * - ``MEMBER``
+     - Regular member
+   * - ``RESTRICTED``
+     - Restricted member
+   * - ``LEFT``
+     - Left the chat
+   * - ``BANNED``
+     - Banned / kicked
+
+StorageType
+-----------
+
+Backend storage type for sessions.
+
+.. list-table::
+   :widths: 30 70
+   :header-rows: 1
+
+   * - Value
+     - Description
+   * - ``StorageType.FILE``
+     - SQLite file-based storage (default)
+   * - ``StorageType.MEMORY``
+     - In-memory storage (ephemeral)

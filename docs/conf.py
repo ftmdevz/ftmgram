@@ -8,6 +8,7 @@ copyright = "2024-2026, FTM DEVELOPERZ"
 author = "FTM DEVELOPERZ"
 release = "3.3.0"
 version = "3.3.0"
+version = "3.3.0"
 
 extensions = [
     "sphinx.ext.autodoc",
