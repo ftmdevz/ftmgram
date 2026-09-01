@@ -1,13 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FTMGram Docs</title>
+<title>FTMGram — Modern Asynchronous Telegram Framework</title>
+<meta name="description" content="Official documentation for FTMGram — Elegant, modern and asynchronous Telegram MTProto & Bot API 10.3 framework in Python for users and bots.">
 <link rel="icon" href="assets/logo.png">
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" id="hljs-dark">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-light.min.css" id="hljs-light" disabled>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/bash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/json.min.js"></script>
 </head>
 <body>
 
@@ -17,27 +22,38 @@
 <!-- Top navbar -->
 <nav class="topnav">
   <div class="topnav-left">
-    <button class="hamburger" id="hamburger" onclick="toggleSidebar()">
+    <button class="hamburger" id="hamburger" onclick="toggleSidebar()" aria-label="Toggle Navigation">
       <span></span><span></span><span></span>
     </button>
     <a href="#home" class="brand" onclick="navigate('home')">
       <img src="assets/logo.png" alt="FTMGram" class="brand-logo">
-      <span class="brand-name">FTMGram</span>
+      <div class="brand-text">
+        <span class="brand-name">FTMGram</span>
+        <span class="brand-version">v3.3.0</span>
+      </div>
     </a>
   </div>
   <div class="topnav-center">
     <div class="search-wrap">
       <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-      <input type="text" id="searchInput" placeholder="Search methods, types, enums…" autocomplete="off" oninput="handleSearch(this.value)" onfocus="showSearchDropdown()" onblur="hideSearchDropdown()">
+      <input type="text" id="searchInput" placeholder="Search methods, types, enums, filters (Ctrl + K)..." autocomplete="off" oninput="handleSearch(this.value)" onfocus="showSearchDropdown()" onblur="hideSearchDropdown()">
+      <kbd class="search-kbd">Ctrl K</kbd>
       <div class="search-dropdown" id="searchDropdown"></div>
     </div>
   </div>
   <div class="topnav-right">
-    <a href="https://github.com/ftmdevz/ftmgram" target="_blank" class="nav-link github-btn">
+    <a href="https://ftmgram.ftmbotzx.dev" class="nav-badge domain-badge" target="_blank" title="Custom Domain">
+      🌐 ftmgram.ftmbotzx.dev
+    </a>
+    <a href="https://t.me/ftmdeveloperz" target="_blank" class="nav-link telegram-btn" title="Telegram Channel">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.121l-6.87 4.326-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.832.942z"/></svg>
+      Community
+    </a>
+    <a href="https://github.com/ftmdevz/ftmgram" target="_blank" class="nav-link github-btn" title="GitHub Repository">
       <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
       GitHub
     </a>
-    <button class="theme-btn" onclick="toggleTheme()" title="Toggle theme">
+    <button class="theme-btn" onclick="toggleTheme()" title="Toggle Dark / Light Theme" aria-label="Toggle Theme">
       <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
       <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
     </button>
@@ -48,20 +64,41 @@
 <aside class="sidebar" id="sidebar">
   <div class="sidebar-inner">
 
+    <!-- 1. Overview -->
     <div class="sidebar-section">
-      <div class="sidebar-heading">Getting Started</div>
+      <div class="sidebar-heading">Overview & Setup</div>
       <a class="sidebar-link" onclick="navigate('home')">🏠 Home</a>
       <a class="sidebar-link" onclick="navigate('install')">📦 Installation</a>
       <a class="sidebar-link" onclick="navigate('quickstart')">🚀 Quick Start</a>
-      <a class="sidebar-link" onclick="navigate('client')">⚙️ Client</a>
+      <a class="sidebar-link" onclick="navigate('client')">⚙️ Client Configuration</a>
+      <a class="sidebar-link" onclick="navigate('migration')">🔄 Pyrogram Migration</a>
     </div>
 
+    <!-- 2. Bot API 10.3 Features -->
     <div class="sidebar-section">
       <div class="sidebar-heading collapsible" onclick="toggleSection(this)">
-        <span>📨 Messages</span><span class="chevron">▾</span>
+        <span>✨ Bot API 10.3 & 10.2</span><span class="chevron">▾</span>
+      </div>
+      <div class="sidebar-children">
+        <a class="sidebar-link" onclick="navigate('topic_rich_messages')">Rich Messages Guide 🌟</a>
+        <a class="sidebar-link" onclick="navigate('topic_intext_buttons')">In-Message Buttons 🔘</a>
+        <a class="sidebar-link" onclick="navigate('topic_streaming_drafts')">AI Response Streaming 🌊</a>
+        <a class="sidebar-link" onclick="navigate('topic_ephemeral')">Ephemeral Messages 👻</a>
+        <a class="sidebar-link" onclick="navigate('topic_tables_quotes')">Compact Tables & Quotes 📊</a>
+        <a class="sidebar-link" onclick="navigate('topic_disabled_buttons')">Disabled Buttons 🔒</a>
+      </div>
+    </div>
+
+    <!-- 3. Messages -->
+    <div class="sidebar-section">
+      <div class="sidebar-heading collapsible" onclick="toggleSection(this)">
+        <span>📨 Messages Methods</span><span class="chevron">▾</span>
       </div>
       <div class="sidebar-children">
         <a class="sidebar-link" onclick="navigate('send_message')">send_message</a>
+        <a class="sidebar-link" onclick="navigate('send_rich_message')">send_rich_message ✨</a>
+        <a class="sidebar-link" onclick="navigate('send_rich_message_draft')">send_rich_message_draft ✨</a>
+        <a class="sidebar-link" onclick="navigate('send_message_draft')">send_message_draft ✨</a>
         <a class="sidebar-link" onclick="navigate('send_photo')">send_photo</a>
         <a class="sidebar-link" onclick="navigate('send_audio')">send_audio</a>
         <a class="sidebar-link" onclick="navigate('send_video')">send_video</a>
@@ -75,11 +112,15 @@
         <a class="sidebar-link" onclick="navigate('send_poll')">send_poll</a>
         <a class="sidebar-link" onclick="navigate('send_dice')">send_dice</a>
         <a class="sidebar-link" onclick="navigate('send_media_group')">send_media_group</a>
-        <a class="sidebar-link" onclick="navigate('send_rich_message')">send_rich_message ✨</a>
         <a class="sidebar-link" onclick="navigate('send_checklist')">send_checklist ✨</a>
         <a class="sidebar-link" onclick="navigate('forward_message')">forward_message</a>
         <a class="sidebar-link" onclick="navigate('copy_message')">copy_message</a>
         <a class="sidebar-link" onclick="navigate('edit_message_text')">edit_message_text</a>
+        <a class="sidebar-link" onclick="navigate('edit_message_caption')">edit_message_caption</a>
+        <a class="sidebar-link" onclick="navigate('edit_message_media')">edit_message_media</a>
+        <a class="sidebar-link" onclick="navigate('edit_message_reply_markup')">edit_message_reply_markup</a>
+        <a class="sidebar-link" onclick="navigate('edit_ephemeral_message_text')">edit_ephemeral_message_text ✨</a>
+        <a class="sidebar-link" onclick="navigate('delete_ephemeral_message')">delete_ephemeral_message ✨</a>
         <a class="sidebar-link" onclick="navigate('delete_message')">delete_message</a>
         <a class="sidebar-link" onclick="navigate('get_messages')">get_messages</a>
         <a class="sidebar-link" onclick="navigate('get_chat_history')">get_chat_history</a>
@@ -90,9 +131,10 @@
       </div>
     </div>
 
+    <!-- 4. Chats -->
     <div class="sidebar-section">
       <div class="sidebar-heading collapsible" onclick="toggleSection(this)">
-        <span>💬 Chats</span><span class="chevron">▾</span>
+        <span>💬 Chats Methods</span><span class="chevron">▾</span>
       </div>
       <div class="sidebar-children">
         <a class="sidebar-link" onclick="navigate('get_chat')">get_chat</a>
@@ -101,18 +143,33 @@
         <a class="sidebar-link" onclick="navigate('leave_chat')">leave_chat</a>
         <a class="sidebar-link" onclick="navigate('create_group')">create_group</a>
         <a class="sidebar-link" onclick="navigate('create_channel')">create_channel</a>
+        <a class="sidebar-link" onclick="navigate('create_supergroup')">create_supergroup</a>
         <a class="sidebar-link" onclick="navigate('get_chat_members')">get_chat_members</a>
+        <a class="sidebar-link" onclick="navigate('get_chat_member')">get_chat_member</a>
         <a class="sidebar-link" onclick="navigate('ban_chat_member')">ban_chat_member</a>
+        <a class="sidebar-link" onclick="navigate('unban_chat_member')">unban_chat_member</a>
+        <a class="sidebar-link" onclick="navigate('restrict_chat_member')">restrict_chat_member</a>
         <a class="sidebar-link" onclick="navigate('promote_chat_member')">promote_chat_member</a>
         <a class="sidebar-link" onclick="navigate('set_chat_title')">set_chat_title</a>
+        <a class="sidebar-link" onclick="navigate('set_chat_description')">set_chat_description</a>
+        <a class="sidebar-link" onclick="navigate('set_chat_photo')">set_chat_photo</a>
+        <a class="sidebar-link" onclick="navigate('delete_chat_photo')">delete_chat_photo</a>
         <a class="sidebar-link" onclick="navigate('pin_chat_message')">pin_chat_message</a>
-        <a class="sidebar-link" onclick="navigate('get_chat_event_log')">get_chat_event_log</a>
+        <a class="sidebar-link" onclick="navigate('unpin_chat_message')">unpin_chat_message</a>
+        <a class="sidebar-link" onclick="navigate('get_chat_invite_link')">get_chat_invite_link</a>
+        <a class="sidebar-link" onclick="navigate('create_chat_invite_link')">create_chat_invite_link</a>
+        <a class="sidebar-link" onclick="navigate('archive_chats')">archive_chats</a>
+        <a class="sidebar-link" onclick="navigate('set_slow_mode')">set_slow_mode</a>
+        <a class="sidebar-link" onclick="navigate('set_chat_permissions')">set_chat_permissions</a>
+        <a class="sidebar-link" onclick="navigate('get_forum_topics')">get_forum_topics ✨</a>
+        <a class="sidebar-link" onclick="navigate('create_forum_topic')">create_forum_topic ✨</a>
       </div>
     </div>
 
+    <!-- 5. Users -->
     <div class="sidebar-section">
       <div class="sidebar-heading collapsible" onclick="toggleSection(this)">
-        <span>👤 Users</span><span class="chevron">▾</span>
+        <span>👤 Users Methods</span><span class="chevron">▾</span>
       </div>
       <div class="sidebar-children">
         <a class="sidebar-link" onclick="navigate('get_me')">get_me</a>
@@ -122,29 +179,67 @@
         <a class="sidebar-link" onclick="navigate('unblock_user')">unblock_user</a>
         <a class="sidebar-link" onclick="navigate('update_profile')">update_profile</a>
         <a class="sidebar-link" onclick="navigate('set_profile_photo')">set_profile_photo</a>
+        <a class="sidebar-link" onclick="navigate('get_common_chats')">get_common_chats</a>
       </div>
     </div>
 
+    <!-- 6. Bots & Inline -->
     <div class="sidebar-section">
       <div class="sidebar-heading collapsible" onclick="toggleSection(this)">
-        <span>🤖 Bots</span><span class="chevron">▾</span>
+        <span>🤖 Bots & Inline</span><span class="chevron">▾</span>
       </div>
       <div class="sidebar-children">
         <a class="sidebar-link" onclick="navigate('answer_callback_query')">answer_callback_query</a>
         <a class="sidebar-link" onclick="navigate('answer_inline_query')">answer_inline_query</a>
+        <a class="sidebar-link" onclick="navigate('answer_web_app_query')">answer_web_app_query</a>
         <a class="sidebar-link" onclick="navigate('set_bot_commands')">set_bot_commands</a>
         <a class="sidebar-link" onclick="navigate('get_bot_commands')">get_bot_commands</a>
-        <a class="sidebar-link" onclick="navigate('send_invoice')">send_invoice</a>
-        <a class="sidebar-link" onclick="navigate('answer_pre_checkout_query')">answer_pre_checkout_query</a>
+        <a class="sidebar-link" onclick="navigate('delete_bot_commands')">delete_bot_commands</a>
+        <a class="sidebar-link" onclick="navigate('set_chat_menu_button')">set_chat_menu_button</a>
+        <a class="sidebar-link" onclick="navigate('get_chat_menu_button')">get_chat_menu_button</a>
         <a class="sidebar-link" onclick="navigate('answer_chat_join_request_query')">answer_chat_join_request_query ✨</a>
+        <a class="sidebar-link" onclick="navigate('send_chat_join_request_web_app')">send_chat_join_request_web_app ✨</a>
+        <a class="sidebar-link" onclick="navigate('get_business_connection')">get_business_connection ✨</a>
         <a class="sidebar-link" onclick="navigate('verify_user')">verify_user</a>
         <a class="sidebar-link" onclick="navigate('create_bot')">create_bot</a>
       </div>
     </div>
 
+    <!-- 7. Stars & Payments -->
     <div class="sidebar-section">
       <div class="sidebar-heading collapsible" onclick="toggleSection(this)">
-        <span>⚡ Utilities</span><span class="chevron">▾</span>
+        <span>⭐ Stars & Payments</span><span class="chevron">▾</span>
+      </div>
+      <div class="sidebar-children">
+        <a class="sidebar-link" onclick="navigate('get_owned_star_count')">get_owned_star_count ✨</a>
+        <a class="sidebar-link" onclick="navigate('send_invoice')">send_invoice</a>
+        <a class="sidebar-link" onclick="navigate('create_invoice_link')">create_invoice_link</a>
+        <a class="sidebar-link" onclick="navigate('answer_shipping_query')">answer_shipping_query</a>
+        <a class="sidebar-link" onclick="navigate('answer_pre_checkout_query')">answer_pre_checkout_query</a>
+        <a class="sidebar-link" onclick="navigate('refund_star_payment')">refund_star_payment ✨</a>
+      </div>
+    </div>
+
+    <!-- 8. Stickers & Reactions -->
+    <div class="sidebar-section">
+      <div class="sidebar-heading collapsible" onclick="toggleSection(this)">
+        <span>🏷️ Stickers & Reactions</span><span class="chevron">▾</span>
+      </div>
+      <div class="sidebar-children">
+        <a class="sidebar-link" onclick="navigate('send_reaction')">send_reaction</a>
+        <a class="sidebar-link" onclick="navigate('get_custom_emoji_stickers')">get_custom_emoji_stickers</a>
+        <a class="sidebar-link" onclick="navigate('get_sticker_set')">get_sticker_set</a>
+        <a class="sidebar-link" onclick="navigate('create_new_sticker_set')">create_new_sticker_set</a>
+        <a class="sidebar-link" onclick="navigate('add_sticker_to_set')">add_sticker_to_set</a>
+        <a class="sidebar-link" onclick="navigate('set_sticker_position_in_set')">set_sticker_position_in_set</a>
+        <a class="sidebar-link" onclick="navigate('delete_sticker_from_set')">delete_sticker_from_set</a>
+      </div>
+    </div>
+
+    <!-- 9. Utilities -->
+    <div class="sidebar-section">
+      <div class="sidebar-heading collapsible" onclick="toggleSection(this)">
+        <span>⚡ Utilities & Lifecycle</span><span class="chevron">▾</span>
       </div>
       <div class="sidebar-children">
         <a class="sidebar-link" onclick="navigate('start')">start</a>
@@ -152,44 +247,88 @@
         <a class="sidebar-link" onclick="navigate('run')">run</a>
         <a class="sidebar-link" onclick="navigate('idle')">idle</a>
         <a class="sidebar-link" onclick="navigate('add_handler')">add_handler</a>
+        <a class="sidebar-link" onclick="navigate('remove_handler')">remove_handler</a>
         <a class="sidebar-link" onclick="navigate('export_session_string')">export_session_string</a>
+        <a class="sidebar-link" onclick="navigate('invoke')">invoke (Raw MTProto)</a>
       </div>
     </div>
 
+    <!-- 10. Handlers -->
     <div class="sidebar-section">
       <div class="sidebar-heading collapsible" onclick="toggleSection(this)">
-        <span>🔔 Handlers</span><span class="chevron">▾</span>
+        <span>🔔 Handlers & Decorators</span><span class="chevron">▾</span>
       </div>
       <div class="sidebar-children">
-        <a class="sidebar-link" onclick="navigate('message_handler')">MessageHandler</a>
+        <a class="sidebar-link" onclick="navigate('message_handler')">MessageHandler (@on_message)</a>
         <a class="sidebar-link" onclick="navigate('callback_query_handler')">CallbackQueryHandler</a>
         <a class="sidebar-link" onclick="navigate('inline_query_handler')">InlineQueryHandler</a>
+        <a class="sidebar-link" onclick="navigate('chosen_inline_result_handler')">ChosenInlineResultHandler</a>
         <a class="sidebar-link" onclick="navigate('edited_message_handler')">EditedMessageHandler</a>
+        <a class="sidebar-link" onclick="navigate('deleted_messages_handler')">DeletedMessagesHandler</a>
         <a class="sidebar-link" onclick="navigate('chat_member_updated_handler')">ChatMemberUpdatedHandler</a>
         <a class="sidebar-link" onclick="navigate('chat_join_request_handler')">ChatJoinRequestHandler</a>
         <a class="sidebar-link" onclick="navigate('poll_handler')">PollHandler</a>
         <a class="sidebar-link" onclick="navigate('story_handler')">StoryHandler</a>
-        <a class="sidebar-link" onclick="navigate('error_handler')">ErrorHandler</a>
+        <a class="sidebar-link" onclick="navigate('message_generation_stopped_handler')">MessageGenerationStoppedHandler ✨</a>
         <a class="sidebar-link" onclick="navigate('raw_update_handler')">RawUpdateHandler</a>
+        <a class="sidebar-link" onclick="navigate('error_handler')">ErrorHandler</a>
       </div>
     </div>
 
+    <!-- 11. Filters -->
     <div class="sidebar-section">
       <div class="sidebar-heading collapsible" onclick="toggleSection(this)">
-        <span>🔷 Enums</span><span class="chevron">▾</span>
+        <span>🎯 Filters Reference</span><span class="chevron">▾</span>
+      </div>
+      <div class="sidebar-children">
+        <a class="sidebar-link" onclick="navigate('filter_all')">filters.all</a>
+        <a class="sidebar-link" onclick="navigate('filter_text')">filters.text</a>
+        <a class="sidebar-link" onclick="navigate('filter_command')">filters.command</a>
+        <a class="sidebar-link" onclick="navigate('filter_private')">filters.private</a>
+        <a class="sidebar-link" onclick="navigate('filter_group')">filters.group</a>
+        <a class="sidebar-link" onclick="navigate('filter_channel')">filters.channel</a>
+        <a class="sidebar-link" onclick="navigate('filter_user')">filters.user</a>
+        <a class="sidebar-link" onclick="navigate('filter_chat')">filters.chat</a>
+        <a class="sidebar-link" onclick="navigate('filter_me')">filters.me</a>
+        <a class="sidebar-link" onclick="navigate('filter_bot')">filters.bot</a>
+        <a class="sidebar-link" onclick="navigate('filter_incoming')">filters.incoming</a>
+        <a class="sidebar-link" onclick="navigate('filter_outgoing')">filters.outgoing</a>
+        <a class="sidebar-link" onclick="navigate('filter_photo')">filters.photo</a>
+        <a class="sidebar-link" onclick="navigate('filter_audio')">filters.audio</a>
+        <a class="sidebar-link" onclick="navigate('filter_video')">filters.video</a>
+        <a class="sidebar-link" onclick="navigate('filter_document')">filters.document</a>
+        <a class="sidebar-link" onclick="navigate('filter_sticker')">filters.sticker</a>
+        <a class="sidebar-link" onclick="navigate('filter_animation')">filters.animation</a>
+        <a class="sidebar-link" onclick="navigate('filter_voice')">filters.voice</a>
+        <a class="sidebar-link" onclick="navigate('filter_video_note')">filters.video_note</a>
+        <a class="sidebar-link" onclick="navigate('filter_contact')">filters.contact</a>
+        <a class="sidebar-link" onclick="navigate('filter_location')">filters.location</a>
+        <a class="sidebar-link" onclick="navigate('filter_poll')">filters.poll</a>
+        <a class="sidebar-link" onclick="navigate('filter_dice')">filters.dice</a>
+        <a class="sidebar-link" onclick="navigate('filter_media')">filters.media</a>
+        <a class="sidebar-link" onclick="navigate('filter_regex')">filters.regex</a>
+        <a class="sidebar-link" onclick="navigate('filter_create')">filters.create (Custom)</a>
+      </div>
+    </div>
+
+    <!-- 12. Enums -->
+    <div class="sidebar-section">
+      <div class="sidebar-heading collapsible" onclick="toggleSection(this)">
+        <span>🔷 Enums Reference</span><span class="chevron">▾</span>
       </div>
       <div class="sidebar-children">
         <a class="sidebar-link" onclick="navigate('enum_ChatType')">ChatType</a>
         <a class="sidebar-link" onclick="navigate('enum_ParseMode')">ParseMode</a>
+        <a class="sidebar-link" onclick="navigate('enum_ButtonStyle')">ButtonStyle ✨</a>
         <a class="sidebar-link" onclick="navigate('enum_MessageMediaType')">MessageMediaType</a>
         <a class="sidebar-link" onclick="navigate('enum_ChatMemberStatus')">ChatMemberStatus</a>
         <a class="sidebar-link" onclick="navigate('enum_ChatAction')">ChatAction</a>
         <a class="sidebar-link" onclick="navigate('enum_MessageEntityType')">MessageEntityType</a>
         <a class="sidebar-link" onclick="navigate('enum_SentCodeType')">SentCodeType</a>
+        <a class="sidebar-link" onclick="navigate('enum_NextCodeType')">NextCodeType</a>
         <a class="sidebar-link" onclick="navigate('enum_MessagesFilter')">MessagesFilter</a>
         <a class="sidebar-link" onclick="navigate('enum_ChatMembersFilter')">ChatMembersFilter</a>
         <a class="sidebar-link" onclick="navigate('enum_StickerType')">StickerType</a>
-        <a class="sidebar-link" onclick="navigate('enum_ButtonStyle')">ButtonStyle</a>
         <a class="sidebar-link" onclick="navigate('enum_ChatJoinType')">ChatJoinType</a>
         <a class="sidebar-link" onclick="navigate('enum_GiftType')">GiftType</a>
         <a class="sidebar-link" onclick="navigate('enum_PollType')">PollType</a>
@@ -199,6 +338,36 @@
         <a class="sidebar-link" onclick="navigate('enum_FolderColor')">FolderColor</a>
         <a class="sidebar-link" onclick="navigate('enum_MediaAreaType')">MediaAreaType</a>
         <a class="sidebar-link" onclick="navigate('enum_PrivacyKey')">PrivacyKey</a>
+        <a class="sidebar-link" onclick="navigate('enum_StoriesPrivacyRules')">StoriesPrivacyRules</a>
+      </div>
+    </div>
+
+    <!-- 13. Types -->
+    <div class="sidebar-section">
+      <div class="sidebar-heading collapsible" onclick="toggleSection(this)">
+        <span>📦 Types & Models</span><span class="chevron">▾</span>
+      </div>
+      <div class="sidebar-children">
+        <a class="sidebar-link" onclick="navigate('type_Message')">Message</a>
+        <a class="sidebar-link" onclick="navigate('type_Chat')">Chat</a>
+        <a class="sidebar-link" onclick="navigate('type_User')">User</a>
+        <a class="sidebar-link" onclick="navigate('type_InputRichMessage')">InputRichMessage ✨</a>
+        <a class="sidebar-link" onclick="navigate('type_InputRichBlockButtons')">InputRichBlockButtons ✨</a>
+        <a class="sidebar-link" onclick="navigate('type_RichMessageButton')">RichMessageButton ✨</a>
+        <a class="sidebar-link" onclick="navigate('type_InputRichBlockParagraph')">InputRichBlockParagraph ✨</a>
+        <a class="sidebar-link" onclick="navigate('type_InputRichBlockTable')">InputRichBlockTable ✨</a>
+        <a class="sidebar-link" onclick="navigate('type_InputRichBlockExpandableBlockQuotation')">InputRichBlockExpandableBlockQuotation ✨</a>
+        <a class="sidebar-link" onclick="navigate('type_EphemeralMessageParameters')">EphemeralMessageParameters ✨</a>
+        <a class="sidebar-link" onclick="navigate('type_DisabledButton')">DisabledButton ✨</a>
+        <a class="sidebar-link" onclick="navigate('type_Community')">Community ✨</a>
+        <a class="sidebar-link" onclick="navigate('type_InlineKeyboardMarkup')">InlineKeyboardMarkup</a>
+        <a class="sidebar-link" onclick="navigate('type_InlineKeyboardButton')">InlineKeyboardButton</a>
+        <a class="sidebar-link" onclick="navigate('type_ReplyKeyboardMarkup')">ReplyKeyboardMarkup</a>
+        <a class="sidebar-link" onclick="navigate('type_KeyboardButton')">KeyboardButton</a>
+        <a class="sidebar-link" onclick="navigate('type_CallbackQuery')">CallbackQuery</a>
+        <a class="sidebar-link" onclick="navigate('type_InlineQuery')">InlineQuery</a>
+        <a class="sidebar-link" onclick="navigate('type_Checklist')">Checklist ✨</a>
+        <a class="sidebar-link" onclick="navigate('type_Link')">Link ✨</a>
       </div>
     </div>
 
@@ -208,7 +377,7 @@
 <!-- Main content -->
 <main class="main" id="main">
   <div class="content" id="content">
-    <!-- Pages inserted by JS -->
+    <!-- Rendered dynamically by app.js -->
   </div>
 </main>
 

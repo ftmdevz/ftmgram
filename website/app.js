@@ -63,13 +63,26 @@ function copyCode(btn) {
 
 // ── Search ────────────────────────────────────────────────────
 const SEARCH_INDEX = [
-  // Getting Started
-  { name: 'Home', cat: 'Home', page: 'home' },
-  { name: 'Installation', cat: 'Getting Started', page: 'install' },
-  { name: 'Quick Start', cat: 'Getting Started', page: 'quickstart' },
-  { name: 'Client', cat: 'Getting Started', page: 'client' },
-  // Messages
+  // Overview
+  { name: 'Home', cat: 'Overview', page: 'home' },
+  { name: 'Installation', cat: 'Overview', page: 'install' },
+  { name: 'Quick Start', cat: 'Overview', page: 'quickstart' },
+  { name: 'Client Configuration', cat: 'Overview', page: 'client' },
+  { name: 'Pyrogram Migration', cat: 'Overview', page: 'migration' },
+
+  // Bot API 10.3 Guides
+  { name: 'Rich Messages Guide', cat: 'Bot API 10.3', page: 'topic_rich_messages' },
+  { name: 'In-Message Buttons (<tg-button-row>)', cat: 'Bot API 10.3', page: 'topic_intext_buttons' },
+  { name: 'AI Response Streaming (Drafts)', cat: 'Bot API 10.3', page: 'topic_streaming_drafts' },
+  { name: 'Ephemeral Messages (Overlays)', cat: 'Bot API 10.3', page: 'topic_ephemeral' },
+  { name: 'Compact Tables & Quotes', cat: 'Bot API 10.3', page: 'topic_tables_quotes' },
+  { name: 'Disabled Buttons', cat: 'Bot API 10.3', page: 'topic_disabled_buttons' },
+
+  // Messages Methods
   { name: 'send_message', cat: 'Messages', page: 'send_message' },
+  { name: 'send_rich_message', cat: 'Messages', page: 'send_rich_message' },
+  { name: 'send_rich_message_draft', cat: 'Messages', page: 'send_rich_message_draft' },
+  { name: 'send_message_draft', cat: 'Messages', page: 'send_message_draft' },
   { name: 'send_photo', cat: 'Messages', page: 'send_photo' },
   { name: 'send_audio', cat: 'Messages', page: 'send_audio' },
   { name: 'send_video', cat: 'Messages', page: 'send_video' },
@@ -83,11 +96,15 @@ const SEARCH_INDEX = [
   { name: 'send_poll', cat: 'Messages', page: 'send_poll' },
   { name: 'send_dice', cat: 'Messages', page: 'send_dice' },
   { name: 'send_media_group', cat: 'Messages', page: 'send_media_group' },
-  { name: 'send_rich_message', cat: 'Messages', page: 'send_rich_message' },
   { name: 'send_checklist', cat: 'Messages', page: 'send_checklist' },
   { name: 'forward_message', cat: 'Messages', page: 'forward_message' },
   { name: 'copy_message', cat: 'Messages', page: 'copy_message' },
   { name: 'edit_message_text', cat: 'Messages', page: 'edit_message_text' },
+  { name: 'edit_message_caption', cat: 'Messages', page: 'edit_message_caption' },
+  { name: 'edit_message_media', cat: 'Messages', page: 'edit_message_media' },
+  { name: 'edit_message_reply_markup', cat: 'Messages', page: 'edit_message_reply_markup' },
+  { name: 'edit_ephemeral_message_text', cat: 'Messages', page: 'edit_ephemeral_message_text' },
+  { name: 'delete_ephemeral_message', cat: 'Messages', page: 'delete_ephemeral_message' },
   { name: 'delete_message', cat: 'Messages', page: 'delete_message' },
   { name: 'get_messages', cat: 'Messages', page: 'get_messages' },
   { name: 'get_chat_history', cat: 'Messages', page: 'get_chat_history' },
@@ -95,20 +112,36 @@ const SEARCH_INDEX = [
   { name: 'download_media', cat: 'Messages', page: 'download_media' },
   { name: 'send_chat_action', cat: 'Messages', page: 'send_chat_action' },
   { name: 'translate_message_text', cat: 'Messages', page: 'translate_message_text' },
-  // Chats
+
+  // Chats Methods
   { name: 'get_chat', cat: 'Chats', page: 'get_chat' },
   { name: 'get_dialogs', cat: 'Chats', page: 'get_dialogs' },
   { name: 'join_chat', cat: 'Chats', page: 'join_chat' },
   { name: 'leave_chat', cat: 'Chats', page: 'leave_chat' },
   { name: 'create_group', cat: 'Chats', page: 'create_group' },
   { name: 'create_channel', cat: 'Chats', page: 'create_channel' },
+  { name: 'create_supergroup', cat: 'Chats', page: 'create_supergroup' },
   { name: 'get_chat_members', cat: 'Chats', page: 'get_chat_members' },
+  { name: 'get_chat_member', cat: 'Chats', page: 'get_chat_member' },
   { name: 'ban_chat_member', cat: 'Chats', page: 'ban_chat_member' },
+  { name: 'unban_chat_member', cat: 'Chats', page: 'unban_chat_member' },
+  { name: 'restrict_chat_member', cat: 'Chats', page: 'restrict_chat_member' },
   { name: 'promote_chat_member', cat: 'Chats', page: 'promote_chat_member' },
   { name: 'set_chat_title', cat: 'Chats', page: 'set_chat_title' },
+  { name: 'set_chat_description', cat: 'Chats', page: 'set_chat_description' },
+  { name: 'set_chat_photo', cat: 'Chats', page: 'set_chat_photo' },
+  { name: 'delete_chat_photo', cat: 'Chats', page: 'delete_chat_photo' },
   { name: 'pin_chat_message', cat: 'Chats', page: 'pin_chat_message' },
-  { name: 'get_chat_event_log', cat: 'Chats', page: 'get_chat_event_log' },
-  // Users
+  { name: 'unpin_chat_message', cat: 'Chats', page: 'unpin_chat_message' },
+  { name: 'get_chat_invite_link', cat: 'Chats', page: 'get_chat_invite_link' },
+  { name: 'create_chat_invite_link', cat: 'Chats', page: 'create_chat_invite_link' },
+  { name: 'archive_chats', cat: 'Chats', page: 'archive_chats' },
+  { name: 'set_slow_mode', cat: 'Chats', page: 'set_slow_mode' },
+  { name: 'set_chat_permissions', cat: 'Chats', page: 'set_chat_permissions' },
+  { name: 'get_forum_topics', cat: 'Chats', page: 'get_forum_topics' },
+  { name: 'create_forum_topic', cat: 'Chats', page: 'create_forum_topic' },
+
+  // Users Methods
   { name: 'get_me', cat: 'Users', page: 'get_me' },
   { name: 'get_users', cat: 'Users', page: 'get_users' },
   { name: 'get_user_profile_photos', cat: 'Users', page: 'get_user_profile_photos' },
@@ -116,46 +149,107 @@ const SEARCH_INDEX = [
   { name: 'unblock_user', cat: 'Users', page: 'unblock_user' },
   { name: 'update_profile', cat: 'Users', page: 'update_profile' },
   { name: 'set_profile_photo', cat: 'Users', page: 'set_profile_photo' },
-  // Bots
+  { name: 'get_common_chats', cat: 'Users', page: 'get_common_chats' },
+
+  // Bots & Inline
   { name: 'answer_callback_query', cat: 'Bots', page: 'answer_callback_query' },
   { name: 'answer_inline_query', cat: 'Bots', page: 'answer_inline_query' },
+  { name: 'answer_web_app_query', cat: 'Bots', page: 'answer_web_app_query' },
   { name: 'set_bot_commands', cat: 'Bots', page: 'set_bot_commands' },
   { name: 'get_bot_commands', cat: 'Bots', page: 'get_bot_commands' },
-  { name: 'send_invoice', cat: 'Bots', page: 'send_invoice' },
-  { name: 'answer_pre_checkout_query', cat: 'Bots', page: 'answer_pre_checkout_query' },
+  { name: 'delete_bot_commands', cat: 'Bots', page: 'delete_bot_commands' },
+  { name: 'set_chat_menu_button', cat: 'Bots', page: 'set_chat_menu_button' },
+  { name: 'get_chat_menu_button', cat: 'Bots', page: 'get_chat_menu_button' },
   { name: 'answer_chat_join_request_query', cat: 'Bots', page: 'answer_chat_join_request_query' },
+  { name: 'send_chat_join_request_web_app', cat: 'Bots', page: 'send_chat_join_request_web_app' },
+  { name: 'get_business_connection', cat: 'Bots', page: 'get_business_connection' },
   { name: 'verify_user', cat: 'Bots', page: 'verify_user' },
   { name: 'create_bot', cat: 'Bots', page: 'create_bot' },
+
+  // Stars & Payments
+  { name: 'get_owned_star_count', cat: 'Stars', page: 'get_owned_star_count' },
+  { name: 'send_invoice', cat: 'Stars', page: 'send_invoice' },
+  { name: 'create_invoice_link', cat: 'Stars', page: 'create_invoice_link' },
+  { name: 'answer_shipping_query', cat: 'Stars', page: 'answer_shipping_query' },
+  { name: 'answer_pre_checkout_query', cat: 'Stars', page: 'answer_pre_checkout_query' },
+  { name: 'refund_star_payment', cat: 'Stars', page: 'refund_star_payment' },
+
+  // Stickers & Reactions
+  { name: 'send_reaction', cat: 'Stickers', page: 'send_reaction' },
+  { name: 'get_custom_emoji_stickers', cat: 'Stickers', page: 'get_custom_emoji_stickers' },
+  { name: 'get_sticker_set', cat: 'Stickers', page: 'get_sticker_set' },
+  { name: 'create_new_sticker_set', cat: 'Stickers', page: 'create_new_sticker_set' },
+  { name: 'add_sticker_to_set', cat: 'Stickers', page: 'add_sticker_to_set' },
+  { name: 'set_sticker_position_in_set', cat: 'Stickers', page: 'set_sticker_position_in_set' },
+  { name: 'delete_sticker_from_set', cat: 'Stickers', page: 'delete_sticker_from_set' },
+
   // Utilities
   { name: 'start', cat: 'Utilities', page: 'start' },
   { name: 'stop', cat: 'Utilities', page: 'stop' },
   { name: 'run', cat: 'Utilities', page: 'run' },
   { name: 'idle', cat: 'Utilities', page: 'idle' },
   { name: 'add_handler', cat: 'Utilities', page: 'add_handler' },
+  { name: 'remove_handler', cat: 'Utilities', page: 'remove_handler' },
   { name: 'export_session_string', cat: 'Utilities', page: 'export_session_string' },
+  { name: 'invoke', cat: 'Utilities', page: 'invoke' },
+
   // Handlers
-  { name: 'MessageHandler', cat: 'Handlers', page: 'message_handler' },
+  { name: 'MessageHandler (@on_message)', cat: 'Handlers', page: 'message_handler' },
   { name: 'CallbackQueryHandler', cat: 'Handlers', page: 'callback_query_handler' },
   { name: 'InlineQueryHandler', cat: 'Handlers', page: 'inline_query_handler' },
+  { name: 'ChosenInlineResultHandler', cat: 'Handlers', page: 'chosen_inline_result_handler' },
   { name: 'EditedMessageHandler', cat: 'Handlers', page: 'edited_message_handler' },
+  { name: 'DeletedMessagesHandler', cat: 'Handlers', page: 'deleted_messages_handler' },
   { name: 'ChatMemberUpdatedHandler', cat: 'Handlers', page: 'chat_member_updated_handler' },
   { name: 'ChatJoinRequestHandler', cat: 'Handlers', page: 'chat_join_request_handler' },
   { name: 'PollHandler', cat: 'Handlers', page: 'poll_handler' },
   { name: 'StoryHandler', cat: 'Handlers', page: 'story_handler' },
-  { name: 'ErrorHandler', cat: 'Handlers', page: 'error_handler' },
+  { name: 'MessageGenerationStoppedHandler', cat: 'Handlers', page: 'message_generation_stopped_handler' },
   { name: 'RawUpdateHandler', cat: 'Handlers', page: 'raw_update_handler' },
+  { name: 'ErrorHandler', cat: 'Handlers', page: 'error_handler' },
+
+  // Filters
+  { name: 'filters.all', cat: 'Filters', page: 'filter_all' },
+  { name: 'filters.text', cat: 'Filters', page: 'filter_text' },
+  { name: 'filters.command', cat: 'Filters', page: 'filter_command' },
+  { name: 'filters.private', cat: 'Filters', page: 'filter_private' },
+  { name: 'filters.group', cat: 'Filters', page: 'filter_group' },
+  { name: 'filters.channel', cat: 'Filters', page: 'filter_channel' },
+  { name: 'filters.user', cat: 'Filters', page: 'filter_user' },
+  { name: 'filters.chat', cat: 'Filters', page: 'filter_chat' },
+  { name: 'filters.me', cat: 'Filters', page: 'filter_me' },
+  { name: 'filters.bot', cat: 'Filters', page: 'filter_bot' },
+  { name: 'filters.incoming', cat: 'Filters', page: 'filter_incoming' },
+  { name: 'filters.outgoing', cat: 'Filters', page: 'filter_outgoing' },
+  { name: 'filters.photo', cat: 'Filters', page: 'filter_photo' },
+  { name: 'filters.audio', cat: 'Filters', page: 'filter_audio' },
+  { name: 'filters.video', cat: 'Filters', page: 'filter_video' },
+  { name: 'filters.document', cat: 'Filters', page: 'filter_document' },
+  { name: 'filters.sticker', cat: 'Filters', page: 'filter_sticker' },
+  { name: 'filters.animation', cat: 'Filters', page: 'filter_animation' },
+  { name: 'filters.voice', cat: 'Filters', page: 'filter_voice' },
+  { name: 'filters.video_note', cat: 'Filters', page: 'filter_video_note' },
+  { name: 'filters.contact', cat: 'Filters', page: 'filter_contact' },
+  { name: 'filters.location', cat: 'Filters', page: 'filter_location' },
+  { name: 'filters.poll', cat: 'Filters', page: 'filter_poll' },
+  { name: 'filters.dice', cat: 'Filters', page: 'filter_dice' },
+  { name: 'filters.media', cat: 'Filters', page: 'filter_media' },
+  { name: 'filters.regex', cat: 'Filters', page: 'filter_regex' },
+  { name: 'filters.create', cat: 'Filters', page: 'filter_create' },
+
   // Enums
   { name: 'ChatType', cat: 'Enums', page: 'enum_ChatType' },
   { name: 'ParseMode', cat: 'Enums', page: 'enum_ParseMode' },
+  { name: 'ButtonStyle', cat: 'Enums', page: 'enum_ButtonStyle' },
   { name: 'MessageMediaType', cat: 'Enums', page: 'enum_MessageMediaType' },
   { name: 'ChatMemberStatus', cat: 'Enums', page: 'enum_ChatMemberStatus' },
   { name: 'ChatAction', cat: 'Enums', page: 'enum_ChatAction' },
   { name: 'MessageEntityType', cat: 'Enums', page: 'enum_MessageEntityType' },
   { name: 'SentCodeType', cat: 'Enums', page: 'enum_SentCodeType' },
+  { name: 'NextCodeType', cat: 'Enums', page: 'enum_NextCodeType' },
   { name: 'MessagesFilter', cat: 'Enums', page: 'enum_MessagesFilter' },
   { name: 'ChatMembersFilter', cat: 'Enums', page: 'enum_ChatMembersFilter' },
   { name: 'StickerType', cat: 'Enums', page: 'enum_StickerType' },
-  { name: 'ButtonStyle', cat: 'Enums', page: 'enum_ButtonStyle' },
   { name: 'ChatJoinType', cat: 'Enums', page: 'enum_ChatJoinType' },
   { name: 'GiftType', cat: 'Enums', page: 'enum_GiftType' },
   { name: 'PollType', cat: 'Enums', page: 'enum_PollType' },
@@ -165,6 +259,29 @@ const SEARCH_INDEX = [
   { name: 'FolderColor', cat: 'Enums', page: 'enum_FolderColor' },
   { name: 'MediaAreaType', cat: 'Enums', page: 'enum_MediaAreaType' },
   { name: 'PrivacyKey', cat: 'Enums', page: 'enum_PrivacyKey' },
+  { name: 'StoriesPrivacyRules', cat: 'Enums', page: 'enum_StoriesPrivacyRules' },
+
+  // Types
+  { name: 'Message', cat: 'Types', page: 'type_Message' },
+  { name: 'Chat', cat: 'Types', page: 'type_Chat' },
+  { name: 'User', cat: 'Types', page: 'type_User' },
+  { name: 'InputRichMessage', cat: 'Types', page: 'type_InputRichMessage' },
+  { name: 'InputRichBlockButtons', cat: 'Types', page: 'type_InputRichBlockButtons' },
+  { name: 'RichMessageButton', cat: 'Types', page: 'type_RichMessageButton' },
+  { name: 'InputRichBlockParagraph', cat: 'Types', page: 'type_InputRichBlockParagraph' },
+  { name: 'InputRichBlockTable', cat: 'Types', page: 'type_InputRichBlockTable' },
+  { name: 'InputRichBlockExpandableBlockQuotation', cat: 'Types', page: 'type_InputRichBlockExpandableBlockQuotation' },
+  { name: 'EphemeralMessageParameters', cat: 'Types', page: 'type_EphemeralMessageParameters' },
+  { name: 'DisabledButton', cat: 'Types', page: 'type_DisabledButton' },
+  { name: 'Community', cat: 'Types', page: 'type_Community' },
+  { name: 'InlineKeyboardMarkup', cat: 'Types', page: 'type_InlineKeyboardMarkup' },
+  { name: 'InlineKeyboardButton', cat: 'Types', page: 'type_InlineKeyboardButton' },
+  { name: 'ReplyKeyboardMarkup', cat: 'Types', page: 'type_ReplyKeyboardMarkup' },
+  { name: 'KeyboardButton', cat: 'Types', page: 'type_KeyboardButton' },
+  { name: 'CallbackQuery', cat: 'Types', page: 'type_CallbackQuery' },
+  { name: 'InlineQuery', cat: 'Types', page: 'type_InlineQuery' },
+  { name: 'Checklist', cat: 'Types', page: 'type_Checklist' },
+  { name: 'Link', cat: 'Types', page: 'type_Link' },
 ];
 
 function handleSearch(q) {
@@ -2263,5 +2380,376 @@ enum_PrivacyKey: () => enumPage('PrivacyKey','Enums',
     { key:'VOICE_MESSAGES',  desc:'Who can send you voice messages.' },
     { key:'BIO',             desc:'Who can see your bio.' },
   ]),
+
+
+// ── Bot API 10.3 In-Depth Topic Pages ────────────────────────
+PAGES.topic_rich_messages = () => `${breadcrumb('Bot API 10.3', 'Rich Messages Guide')}
+<div class="method-header">
+  <h1>Rich Messages Guide 🌟</h1>
+  <p>Telegram Bot API 10.3 introduced advanced structured formatting options including in-message buttons, collapsible quotes, compact responsive tables, document attachments, formulas, and multi-media slideshows.</p>
+  <div class="method-tags"><span class="tag tag-new">✨ Bot API 10.3</span><span class="tag tag-async">Full Support</span></div>
+</div>
+
+<div class="sec-title">Key Formatting Features</div>
+<div class="cards-grid">
+  <div class="card" onclick="navigate('topic_intext_buttons')">
+    <div class="card-icon">🔘</div>
+    <div class="card-title">In-Message Buttons</div>
+    <div class="card-desc">Native pills embedded inside message bubbles with primary, success, and danger styles.</div>
+  </div>
+  <div class="card" onclick="navigate('topic_tables_quotes')">
+    <div class="card-icon">📊</div>
+    <div class="card-title">Compact Tables & Quotes</div>
+    <div class="card-desc">Collapsible blockquotes and formatted striped compact data tables.</div>
+  </div>
+  <div class="card" onclick="navigate('topic_streaming_drafts')">
+    <div class="card-icon">🌊</div>
+    <div class="card-title">Live Response Streaming</div>
+    <div class="card-desc">Stream AI text responses token-by-token with typing animation and stop button.</div>
+  </div>
+  <div class="card" onclick="navigate('topic_ephemeral')">
+    <div class="card-icon">👻</div>
+    <div class="card-title">Ephemeral Messages</div>
+    <div class="card-desc">Private overlay messages visible only to the interacting user.</div>
+  </div>
+</div>
+
+<div class="sec-title">Limits & Specifications</div>
+<div class="table-wrap">
+  <table class="doc-table">
+    <thead><tr><th>Limit</th><th>Value</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>Max UTF-8 Characters</td><td><code>32,768</code></td><td>Total characters in rich message text including emojis and formulas.</td></tr>
+      <tr><td>Max Blocks</td><td><code>500</code></td><td>Total nested blocks, list items, table rows, and quote blocks.</td></tr>
+      <tr><td>Max Nested Levels</td><td><code>16</code></td><td>Levels of nested formatting tags.</td></tr>
+      <tr><td>Max Media Attachments</td><td><code>50</code></td><td>Total media files attached per message.</td></tr>
+      <tr><td>Max Table Columns</td><td><code>20</code></td><td>Columns supported in a table block.</td></tr>
+    </tbody>
+  </table>
+</div>
+
+${exampleBox(`from ftmgram import Client
+from ftmgram.types import InputRichMessage
+
+app = Client("my_bot", bot_token="TOKEN")
+
+async def main():
+    async with app:
+        html_content = """
+        <b>🍿 Movie Night Selection</b>
+        <blockquote expandable>
+          📌 <b>Question 2 of 3:</b> How much time do you have tonight?
+        </blockquote>
+        <table bordered striped compact>
+          <tr><th>Option</th><th>Duration</th><th>Action</th></tr>
+          <tr><td>Short</td><td>&lt; 90 min</td><td>Primary</td></tr>
+          <tr><td>Long</td><td>3+ hours</td><td>Danger</td></tr>
+        </table>
+        <tg-button-row align="center">
+          <tg-button type="callback_data" style="primary" data="opt_90">⚡ Under 90 min</tg-button>
+          <tg-button type="callback_data" style="danger" data="opt_long">🚀 3+ Hours</tg-button>
+        </tg-button-row>
+        """
+        await app.send_rich_message(
+            chat_id=123456789,
+            rich_message=InputRichMessage(html=html_content.strip())
+        )
+
+app.run(main())`, "Sending Rich Message (HTML Mode)")}
+`;
+
+PAGES.topic_intext_buttons = () => `${breadcrumb('Bot API 10.3', 'In-Message Buttons')}
+<div class="method-header">
+  <h1>In-Message Buttons (<code style="font-size:1.4rem">&lt;tg-button-row&gt;</code>) 🔘</h1>
+  <p>Unlike standard bottom keyboard inline buttons, In-Message Buttons are rendered directly inside the message card bubble as styled rounded pills.</p>
+  <div class="method-tags"><span class="tag tag-new">✨ Bot API 10.3</span><span class="tag tag-bot">Bots Only</span></div>
+</div>
+
+<div class="sec-title">Supported HTML Tags & Styles</div>
+<div class="table-wrap">
+  <table class="doc-table">
+    <thead><tr><th>Tag / Attribute</th><th>Values</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td><code>&lt;tg-button-row&gt;</code></td><td><code>align="left|center|right"</code></td><td>Container for 1 to 8 buttons in a horizontal row.</td></tr>
+      <tr><td><code>type="callback_data"</code></td><td><code>data="YOUR_DATA"</code></td><td>Triggers a callback query to your bot.</td></tr>
+      <tr><td><code>type="url"</code></td><td><code>url="https://..."</code></td><td>Opens an external link or deep-link.</td></tr>
+      <tr><td><code>type="copy_text"</code></td><td><code>text="TEXT_TO_COPY"</code></td><td>One-tap clipboard copy button.</td></tr>
+      <tr><td><code>type="web_app"</code></td><td><code>url="https://..."</code></td><td>Launches a Telegram Mini App.</td></tr>
+      <tr><td><code>type="disabled"</code></td><td><code>style="..."</code></td><td>Disabled unclickable button.</td></tr>
+      <tr><td><code>style="..."</code></td><td><code>primary | success | danger | link</code></td><td>Visual button color: Blue (primary), Green (success), Red (danger), Plain (link).</td></tr>
+    </tbody>
+  </table>
+</div>
+
+${exampleBox(`from ftmgram import Client
+from ftmgram.types import InputRichMessage
+
+app = Client("my_bot", bot_token="TOKEN")
+
+async def main():
+    async with app:
+        html = """
+        <b>Choose your subscription tier:</b>
+        <tg-button-row align="center">
+          <tg-button type="callback_data" style="primary" data="buy_basic">🔵 Basic ($4.99)</tg-button>
+          <tg-button type="callback_data" style="success" data="buy_pro">🟢 Pro ($9.99)</tg-button>
+          <tg-button type="callback_data" style="danger" data="buy_vip">🔴 VIP ($19.99)</tg-button>
+        </tg-button-row>
+        <tg-button-row align="center">
+          <tg-button type="copy_text" text="PROMO2026">📋 Copy Promo Code</tg-button>
+          <tg-button type="disabled" style="primary">🔒 Enterprise (Sold Out)</tg-button>
+        </tg-button-row>
+        """
+        await app.send_rich_message(chat_id=123456789, rich_message=InputRichMessage(html=html.strip()))
+
+app.run(main())`, "In-Message Buttons Example")}`;
+
+PAGES.topic_streaming_drafts = () => `${breadcrumb('Bot API 10.3', 'AI Response Streaming')}
+<div class="method-header">
+  <h1>Live AI Token Streaming & Drafts 🌊</h1>
+  <p>Live response streaming allows chatbots to stream text responses to the user in real-time as they are generated. Uses native MTProto <code>sendMessageTextDraftAction</code> via <code>messages.setTyping</code> with zero flood wait.</p>
+  <div class="method-tags"><span class="tag tag-new">✨ Bot API 10.3</span><span class="tag tag-async">Realtime Typing</span></div>
+</div>
+
+<div class="callout">
+  <div class="callout-title">💡 Why use Draft Streaming instead of edit_message_text?</div>
+  <div class="callout-body">
+    Traditional <code>edit_message_text</code> hits <code>FLOOD_WAIT_X</code> when updated frequently. Draft streaming via <code>send_rich_message_draft</code> has high throughput (40 updates per 30s) and Telegram clients automatically animate character fade-in!
+  </div>
+</div>
+
+${exampleBox(`import asyncio
+from ftmgram import Client
+from ftmgram.types import InputRichMessage
+
+app = Client("my_bot", bot_token="TOKEN")
+
+async def stream_demo(chat_id: int):
+    async with app:
+        draft_id = app.rnd_id()
+
+        # 1. Show native thinking placeholder
+        await app.send_rich_message_draft(
+            chat_id=chat_id,
+            draft_id=draft_id,
+            rich_message=InputRichMessage(html="<tg-thinking>AI is searching...</tg-thinking>"),
+            can_stop=True  # Displays native [Stop] button
+        )
+        await asyncio.sleep(1.2)
+
+        # 2. Progressively stream text
+        chunks = ["Searching database...\n", "Found 3 servers.\n", "All systems operational! 🚀"]
+        streamed_text = ""
+        for chunk in chunks:
+            streamed_text += chunk
+            await app.send_rich_message_draft(
+                chat_id=chat_id,
+                draft_id=draft_id,
+                rich_message=InputRichMessage(markdown=streamed_text),
+                can_stop=True
+            )
+            await asyncio.sleep(0.5)
+
+        # 3. Finalize to permanent message
+        await app.send_rich_message(
+            chat_id=chat_id,
+            rich_message=InputRichMessage(
+                markdown=streamed_text + "\n\n<tg-button-row align='center'><tg-button type='copy_text' text='FTM-2026'>📋 Copy Result</tg-button></tg-button-row>"
+            )
+        )
+
+app.run(stream_demo(123456789))`, "Complete Real-time Streaming Example")}`;
+
+PAGES.topic_ephemeral = () => `${breadcrumb('Bot API 10.3', 'Ephemeral Messages')}
+<div class="method-header">
+  <h1>Ephemeral Messages (User Overlays) 👻</h1>
+  <p>Ephemeral messages allow bots to send temporary interactive overlays or replace messages exclusively for the user who triggered a callback button.</p>
+  <div class="method-tags"><span class="tag tag-new">✨ Bot API 10.3</span><span class="tag tag-bot">Overlays</span></div>
+</div>
+
+${exampleBox(`from ftmgram import Client
+from ftmgram.types import EphemeralMessageParameters
+
+app = Client("my_bot", bot_token="TOKEN")
+
+@app.on_callback_query()
+async def handle_click(client, query):
+    # Sends a private message visible only to this user, replacing the button message in-place
+    await client.send_message(
+        chat_id=query.message.chat.id,
+        text="🤫 Secret VIP Code: **FTM-VIP-999**\nVisible only to you!",
+        ephemeral_message_parameters=EphemeralMessageParameters(
+            receiver_user_id=query.from_user.id,
+            callback_query_id=query.id,
+            replace_callback_query_message=True
+        )
+    )
+
+app.run()`, "Ephemeral In-Place Replacement")}`;
+
+PAGES.topic_tables_quotes = () => `${breadcrumb('Bot API 10.3', 'Tables & Quotes')}
+<div class="method-header">
+  <h1>Compact Responsive Tables & Expandable Quotes 📊</h1>
+  <p>Format structured data with striped compact borders and collapsible blockquotes that expand when tapped.</p>
+  <div class="method-tags"><span class="tag tag-new">✨ Bot API 10.3</span></div>
+</div>
+
+${exampleBox(`from ftmgram import Client
+from ftmgram.types import InputRichMessage
+
+app = Client("my_bot", bot_token="TOKEN")
+
+async def main():
+    async with app:
+        html = """
+        <b>Server Health Dashboard</b>
+
+        <blockquote expandable>
+          📌 <b>System Diagnostics:</b><br>
+          • Core CPU: <code>AMD EPYC 9654 (128 Cores)</code><br>
+          • RAM Usage: <code>18.4 / 128 GB (14.3%)</code><br>
+          • Uptime: <code>99.998% (48 days)</code>
+        </blockquote>
+
+        <table bordered striped compact>
+          <tr><th>Node</th><th>Ping</th><th>Status</th></tr>
+          <tr><td>Singapore</td><td>18 ms</td><td>🟢 100%</td></tr>
+          <tr><td>Frankfurt</td><td>85 ms</td><td>🟢 100%</td></tr>
+          <tr><td>New York</td><td>120 ms</td><td>🟡 98%</td></tr>
+        </table>
+        """
+        await app.send_rich_message(chat_id=123456789, rich_message=InputRichMessage(html=html.strip()))
+
+app.run(main())`, "Compact Table & Expandable Quote Example")}`;
+
+PAGES.topic_disabled_buttons = () => `${breadcrumb('Bot API 10.3', 'Disabled Buttons')}
+<div class="method-header">
+  <h1>Disabled Buttons (<code style="font-size:1.4rem">DisabledButton</code>) 🔒</h1>
+  <p>Disabled buttons indicate unavailable actions with an optional reason shown in a popup when clicked.</p>
+  <div class="method-tags"><span class="tag tag-new">✨ Bot API 10.3</span></div>
+</div>
+
+${exampleBox(`from ftmgram import Client
+from ftmgram.types import InlineKeyboardMarkup, InlineKeyboardButton, DisabledButton
+
+app = Client("my_bot", bot_token="TOKEN")
+
+async def main():
+    async with app:
+        await app.send_message(
+            chat_id=123456789,
+            text="Select your seat:",
+            reply_markup=InlineKeyboardMarkup([
+                [
+                    InlineKeyboardButton("Seat A1 (Free)", callback_data="seat_a1"),
+                    InlineKeyboardButton(
+                        "Seat A2 (Taken)",
+                        callback_data="none",
+                        disabled=DisabledButton("Seat A2 was already booked by John.")
+                    )
+                ]
+            ])
+        )
+
+app.run(main())`, "Disabled Inline Button Example")}`;
+
+
+// ── Filters Reference Pages ──────────────────────────────────
+PAGES.filter_all = () => filterPage('filters.all', 'Matches all incoming updates without filtering.');
+PAGES.filter_text = () => filterPage('filters.text', 'Matches messages containing plain text.', `from ftmgram import Client, filters\n\n@app.on_message(filters.text)\nasync def handle_text(client, message):\n    await message.reply(f"You said: {message.text}")`);
+PAGES.filter_command = () => filterPage('filters.command', 'Matches bot commands (e.g. /start, /help). Supports prefixes and case sensitivity.', `from ftmgram import Client, filters\n\n@app.on_message(filters.command(["start", "help"], prefixes=["/", "!"]))\nasync def handle_cmds(client, message):\n    await message.reply("Welcome to FTMGram Bot!")`);
+PAGES.filter_private = () => filterPage('filters.private', 'Matches messages received in direct private chats (1-on-1).');
+PAGES.filter_group = () => filterPage('filters.group', 'Matches messages in basic groups and supergroups.');
+PAGES.filter_channel = () => filterPage('filters.channel', 'Matches broadcast channel posts.');
+PAGES.filter_user = () => filterPage('filters.user', 'Matches messages sent by specific user IDs or usernames.', `from ftmgram import Client, filters\n\n@app.on_message(filters.user([123456789, "ftmdevz"]))\nasync def handle_owner(client, message):\n    await message.reply("Hello Admin!")`);
+PAGES.filter_chat = () => filterPage('filters.chat', 'Matches messages from specific chat IDs or usernames.');
+PAGES.filter_me = () => filterPage('filters.me', 'Matches outgoing messages sent by the logged-in user account.');
+PAGES.filter_bot = () => filterPage('filters.bot', 'Matches messages sent by bot accounts.');
+PAGES.filter_incoming = () => filterPage('filters.incoming', 'Matches incoming messages sent to the bot or user.');
+PAGES.filter_outgoing = () => filterPage('filters.outgoing', 'Matches outgoing messages sent by this client.');
+PAGES.filter_photo = () => filterPage('filters.photo', 'Matches photo messages.');
+PAGES.filter_audio = () => filterPage('filters.audio', 'Matches music/audio audio files.');
+PAGES.filter_video = () => filterPage('filters.video', 'Matches video files.');
+PAGES.filter_document = () => filterPage('filters.document', 'Matches general document/file attachments.');
+PAGES.filter_sticker = () => filterPage('filters.sticker', 'Matches sticker messages.');
+PAGES.filter_animation = () => filterPage('filters.animation', 'Matches animated GIFs.');
+PAGES.filter_voice = () => filterPage('filters.voice', 'Matches voice notes.');
+PAGES.filter_video_note = () => filterPage('filters.video_note', 'Matches round video notes.');
+PAGES.filter_contact = () => filterPage('filters.contact', 'Matches shared contact cards.');
+PAGES.filter_location = () => filterPage('filters.location', 'Matches shared geo locations.');
+PAGES.filter_poll = () => filterPage('filters.poll', 'Matches poll messages.');
+PAGES.filter_dice = () => filterPage('filters.dice', 'Matches dice, darts, basketball or slot machine emojis.');
+PAGES.filter_media = () => filterPage('filters.media', 'Matches any message containing media (photo, video, doc, etc.).');
+PAGES.filter_regex = () => filterPage('filters.regex', 'Matches text messages using regular expressions.', `import re\nfrom ftmgram import Client, filters\n\n@app.on_message(filters.regex(r"^order_(\d+)$"))\nasync def handle_order(client, message):\n    order_id = message.matches[0].group(1)\n    await message.reply(f"Processing Order #{order_id}")`);
+PAGES.filter_create = () => filterPage('filters.create', 'Creates a custom filter using an async or sync callback function.', `from ftmgram import Client, filters\n\nasync def admin_filter(_, __, message):\n    return message.from_user and message.from_user.id in [123456789]\n\nis_admin = filters.create(admin_filter)\n\n@app.on_message(is_admin & filters.command("ban"))\nasync def admin_ban(client, message):\n    await message.reply("Admin command executed!")`);
+
+// ── Types Reference Pages ────────────────────────────────────
+PAGES.type_Message = () => typePage('Message', 'Types', 'Represents a message object.', [
+  { name: 'id', type: 'int', desc: 'Unique message identifier inside this chat.' },
+  { name: 'from_user', type: 'User', desc: 'Sender of the message; empty for channel posts.' },
+  { name: 'chat', type: 'Chat', desc: 'Conversation the message belongs to.' },
+  { name: 'date', type: 'datetime', desc: 'Date the message was sent.' },
+  { name: 'text', type: 'str', desc: 'Text of the message (if not media).' },
+  { name: 'caption', type: 'str', desc: 'Caption for the media (if present).' },
+  { name: 'reply_markup', type: 'InlineKeyboardMarkup', desc: 'Inline keyboard attached to the message.' },
+  { name: 'rich_message', type: 'RichMessage', desc: 'Structured Bot API 10.3 rich message content.' },
+]);
+
+PAGES.type_Chat = () => typePage('Chat', 'Types', 'Represents a chat (private, group, supergroup, channel).', [
+  { name: 'id', type: 'int', desc: 'Unique identifier for this chat.' },
+  { name: 'type', type: 'enums.ChatType', desc: 'Type of chat: PRIVATE, GROUP, SUPERGROUP, CHANNEL.' },
+  { name: 'title', type: 'str', desc: 'Title for channels, groups, or supergroups.' },
+  { name: 'username', type: 'str', desc: 'Username for private chats, supergroups and channels.' },
+  { name: 'first_name', type: 'str', desc: 'First name of the other party in a private chat.' },
+  { name: 'last_name', type: 'str', desc: 'Last name of the other party in a private chat.' },
+]);
+
+PAGES.type_User = () => typePage('User', 'Types', 'Represents a Telegram user or bot.', [
+  { name: 'id', type: 'int', desc: 'Unique user identifier.' },
+  { name: 'is_bot', type: 'bool', desc: 'True if this user is a bot.' },
+  { name: 'first_name', type: 'str', desc: 'User's first name.' },
+  { name: 'last_name', type: 'str', desc: 'User's last name.' },
+  { name: 'username', type: 'str', desc: 'User's username.' },
+  { name: 'is_premium', type: 'bool', desc: 'True if user has Telegram Premium.' },
+]);
+
+PAGES.type_InputRichMessage = () => typePage('InputRichMessage', 'Types', 'Describes a rich message to be sent (Bot API 10.3). Exactly one of html, markdown, or blocks must be used.', [
+  { name: 'html', type: 'str', desc: 'Optional. Content described using HTML formatting (with <tg-button-row>, etc.).' },
+  { name: 'markdown', type: 'str', desc: 'Optional. Content described using Markdown formatting.' },
+  { name: 'blocks', type: 'List[InputRichBlock]', desc: 'Optional. Content described as an explicit list of blocks.' },
+  { name: 'is_rtl', type: 'bool', desc: 'Optional. True if shown right-to-left.' },
+]);
+
+PAGES.type_InputRichBlockButtons = () => typePage('InputRichBlockButtons', 'Types', 'A block containing a list of buttons that are shown in one row inside a rich message.', [
+  { name: 'type', type: 'str', desc: 'Always "buttons".' },
+  { name: 'buttons', type: 'List[RichMessageButton]', desc: 'List of 1-8 buttons to send.' },
+  { name: 'align', type: 'str', desc: 'Horizontal alignment: "left", "center", "right".' },
+]);
+
+PAGES.type_RichMessageButton = () => typePage('RichMessageButton', 'Types', 'Represents an in-message button inside a RichMessage (Bot API 10.3).', [
+  { name: 'text', type: 'str', desc: 'Text label on the button.' },
+  { name: 'style', type: 'enums.ButtonStyle', desc: 'Button style: PRIMARY, SUCCESS, DANGER, LINK.' },
+  { name: 'callback_data', type: 'str', desc: 'Optional. Data sent in callback query (1-64 bytes).' },
+  { name: 'url', type: 'str', desc: 'Optional. HTTP or tg:// URL to be opened.' },
+  { name: 'copy_text', type: 'str', desc: 'Optional. Text copied to clipboard on tap.' },
+  { name: 'disabled', type: 'DisabledButton', desc: 'Optional. Disabled button indicator.' },
+]);
+
+PAGES.type_EphemeralMessageParameters = () => typePage('EphemeralMessageParameters', 'Types', 'Parameters for sending or editing ephemeral overlay messages (Bot API 10.3).', [
+  { name: 'receiver_user_id', type: 'int', desc: 'Target user ID who will see this ephemeral message.' },
+  { name: 'callback_query_id', type: 'str', desc: 'Optional. ID of the callback query that triggered this overlay.' },
+  { name: 'replace_callback_query_message', type: 'bool', desc: 'Optional. True to replace the original button message.' },
+]);
+
+PAGES.type_DisabledButton = () => typePage('DisabledButton', 'Types', 'Describes a disabled button in keyboards or rich messages.', [
+  { name: 'reason', type: 'str', desc: 'Optional reason shown to user when clicking a disabled button.' },
+]);
+
+PAGES.type_Community = () => typePage('Community', 'Types', 'Represents a Telegram Community (Bot API 10.3).', [
+  { name: 'id', type: 'int', desc: 'Unique community identifier.' },
+  { name: 'title', type: 'str', desc: 'Community title.' },
+  { name: 'description', type: 'str', desc: 'Community description.' },
+]);
+
 
 }; // end PAGES

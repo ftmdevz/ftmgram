@@ -63,6 +63,10 @@ class RichText(Object):
         super().__init__()
 
     @staticmethod
+    def plain(text: str) -> str:
+        return str(text)
+
+    @staticmethod
     async def _parse(
         client: "ftmgram.Client",
         rich_text: "raw.base.RichText",

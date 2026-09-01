@@ -207,6 +207,11 @@ class InputRichBlockThinking(InputRichBlock):
 
 
 class InputRichBlockButtons(InputRichBlock):
-    def __init__(self, buttons: List[List["types.RichMessageButton"]]):
+    def __init__(
+        self,
+        buttons: List[List["types.RichMessageButton"]],
+        align: Optional[str] = None,
+    ):
         super().__init__()
         self.buttons = buttons
+        self.align = align
