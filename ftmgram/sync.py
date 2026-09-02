@@ -26,11 +26,26 @@ from ftmgram.methods import Methods
 from ftmgram.methods.utilities import idle as idle_module, compose as compose_module
 
 
+# ─────────────────────────────────────────────────────────────────────────────
+# Capture the main event loop ONCE at module-load time.
+# This is the exact same technique used by original Pyrogram.
+#
+# Why this works:
+#   • bot.start() and all top-level sync calls run on THIS loop
+#     (via run_until_complete).
+#   • Pyrogram's Session / recv_worker also run on THIS loop
+#     (because they are started from within run_until_complete).
+#   • Worker-thread handlers submit back to THIS loop via
+#     run_coroutine_threadsafe — so every Future is created on the
+#     same loop and there is ZERO "attached to a different loop" error.
+# ─────────────────────────────────────────────────────────────────────────────
+main_loop = utils.get_sync_loop()
+
+
 def async_to_sync(obj, name):
     function = getattr(obj, name)
 
-    def async_to_sync_gen(agen, loop):
-        """Iterate an async generator synchronously by submitting each step to the loop."""
+    def async_to_sync_gen(agen, loop, is_main_thread):
         async def anext(agen):
             try:
                 return await agen.__anext__(), False
@@ -38,41 +53,50 @@ def async_to_sync(obj, name):
                 return None, True
 
         while True:
-            item, done = asyncio.run_coroutine_threadsafe(anext(agen), loop).result()
+            if is_main_thread:
+                item, done = loop.run_until_complete(anext(agen))
+            else:
+                item, done = asyncio.run_coroutine_threadsafe(anext(agen), loop).result()
+
             if done:
                 break
+
             yield item
 
     @functools.wraps(function)
     def async_to_sync_wrap(*args, **kwargs):
         coroutine = function(*args, **kwargs)
 
-        # ------------------------------------------------------------------ #
-        # If we're already inside a running event loop (i.e. an async context
-        # like an async def handler), just return the coroutine/asyncgen so
-        # the caller can `await` it directly.  This is the fast-path used by
-        # async bots — no thread switching, no loop conflicts.
-        # ------------------------------------------------------------------ #
-        try:
-            running_loop = asyncio.get_running_loop()
-            # We are inside an async context — just return as-is.
-            return coroutine
-        except RuntimeError:
-            pass  # No running loop — we are in a sync context.
+        # ── Main thread OR main_loop not yet running (top-level sync code) ──
+        if threading.current_thread() is threading.main_thread() or not main_loop.is_running():
+            if main_loop.is_running():
+                # Already inside an async context on the main loop → return
+                # the coroutine directly so the caller can await it.
+                return coroutine
+            else:
+                if inspect.iscoroutine(coroutine):
+                    return main_loop.run_until_complete(coroutine)
 
-        # ------------------------------------------------------------------ #
-        # Sync context: obtain (or create) a dedicated background event loop
-        # that lives in the main thread but is NOT yet running.  We drive it
-        # with run_until_complete / run_coroutine_threadsafe so it never
-        # conflicts with the Client's internal network loop.
-        # ------------------------------------------------------------------ #
-        loop = utils.get_sync_loop()
+                if inspect.isasyncgen(coroutine):
+                    return async_to_sync_gen(coroutine, main_loop, True)
 
-        if inspect.iscoroutine(coroutine):
-            return loop.run_until_complete(coroutine)
+        # ── Worker thread (sync def handler dispatched by Pyrogram) ────────
+        # The Client's Session and recv_worker are running on main_loop in the
+        # main thread.  Submit to main_loop via run_coroutine_threadsafe so
+        # that every Future is created on the SAME loop — no clash possible.
+        else:
+            if inspect.iscoroutine(coroutine):
+                if main_loop.is_running():
+                    # main_loop is running in another thread — thread-safe submit
+                    return asyncio.run_coroutine_threadsafe(coroutine, main_loop).result()
+                else:
+                    return main_loop.run_until_complete(coroutine)
 
-        if inspect.isasyncgen(coroutine):
-            return async_to_sync_gen(coroutine, loop)
+            if inspect.isasyncgen(coroutine):
+                if main_loop.is_running():
+                    return async_to_sync_gen(coroutine, main_loop, False)
+                else:
+                    return async_to_sync_gen(coroutine, main_loop, True)
 
     setattr(obj, name, async_to_sync_wrap)
 
