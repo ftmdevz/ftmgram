@@ -25,11 +25,13 @@ import os
 import pathlib
 import re
 import struct
+import threading
 from concurrent.futures.thread import ThreadPoolExecutor
 from datetime import datetime, timedelta, timezone
 from getpass import getpass
 from io import BytesIO
 from typing import Dict, List, Optional, Union
+
 
 import ftmgram
 from ftmgram import enums, raw, types
@@ -39,31 +41,65 @@ from ftmgram.types.messages_and_media.message import Str
 
 _policy_set = False
 
+# Thread-local storage for per-thread sync loops.
+# Each thread that calls sync methods gets its own dedicated event loop
+# so there is ZERO interference with the Client's internal network loop.
+_thread_local = threading.local()
 
-def get_event_loop() -> asyncio.AbstractEventLoop:
+
+def _install_uvloop_policy_once():
+    """Install uvloop policy exactly once, only if available. Never raises."""
     global _policy_set
     if not _policy_set:
+        _policy_set = True
         try:
             import uvloop
             asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
-        except (ImportError, AttributeError):
+        except (ImportError, AttributeError, Exception):
             pass
-        _policy_set = True
+
+
+def get_sync_loop() -> asyncio.AbstractEventLoop:
+    """Return a stable, per-thread event loop for SYNC wrappers only.
+
+    This loop is intentionally separate from the Client's internal async loop
+    so that ``run_until_complete`` never races with ``recv_worker`` or any
+    other coroutine the Client is managing.
+
+    DO NOT call this from async code — use ``asyncio.get_running_loop()`` or
+    ``asyncio.get_event_loop()`` instead.
+    """
+    loop = getattr(_thread_local, "loop", None)
+    if loop is None or loop.is_closed():
+        loop = asyncio.new_event_loop()
+        _thread_local.loop = loop
+    return loop
+
+
+def get_event_loop() -> asyncio.AbstractEventLoop:
+    """Return the current event loop for CLIENT-INTERNAL use.
+
+    • If called from inside a running async context, returns that loop.
+    • Otherwise returns (or creates) a regular asyncio loop.
+    • uvloop policy is installed at most once.
+    """
+    _install_uvloop_policy_once()
 
     try:
         return asyncio.get_running_loop()
     except RuntimeError:
-        try:
-            loop = asyncio.get_event_loop()
-            if loop.is_closed():
-                loop = asyncio.new_event_loop()
-                asyncio.set_event_loop(loop)
-            return loop
-        except RuntimeError:
-            loop = asyncio.new_event_loop()
-            asyncio.set_event_loop(loop)
-            return loop
+        pass
 
+    try:
+        loop = asyncio.get_event_loop()
+        if not loop.is_closed():
+            return loop
+    except RuntimeError:
+        pass
+
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+    return loop
 
 
 async def ainput(prompt: str = "", *, hide: bool = False, loop: Optional[asyncio.AbstractEventLoop] = None):

@@ -3,11 +3,11 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="FTMGram 3.5.2 Release Notes" href="v3.5.2.html"><link rel="prev" title="Version 3.5.1" href="v3.5.1.html">
+<link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="Version 3.5.0" href="v3.5.0.html"><link rel="prev" title="Release Notes" href="index.html">
         <link rel="prefetch" href="../_static/ftmgram_icon.svg" as="image">
 
     <link rel="shortcut icon" href="../_static/ftmgram_icon.svg"><!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
-        <title>Release Notes - FTMGram</title>
+        <title>FTMGram 3.5.2 Release Notes - FTMGram</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=7bdb33bb" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -192,7 +192,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
       </label>
     </div>
@@ -514,8 +514,8 @@
 <p class="caption" role="heading"><span class="caption-text">Releases &amp; Changelog</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="v3.5.1.html">Version 3.5.1</a></li>
-<li class="toctree-l1 current has-children current-page"><a class="current reference internal" href="#">Release Notes</a><input aria-label="Toggle navigation of Release Notes" checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="v3.5.2.html">FTMGram 3.5.2 Release Notes</a></li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Release Notes</a><input aria-label="Toggle navigation of Release Notes" checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">FTMGram 3.5.2 Release Notes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v3.5.1.html">Version 3.5.1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v3.5.0.html">Version 3.5.0</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v2.2.24.html">FTMGram v2.2.24</a></li>
@@ -636,92 +636,93 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="release-notes">
-<h1>Release Notes<a class="headerlink" href="#release-notes" title="Link to this heading">¶</a></h1>
-<p>Release notes for FTMGram releases describe what’s new in each version, bug fixes, and feature additions.</p>
-<div class="note admonition">
-<p class="admonition-title">Latest Release: FTMGram v3.5.2</p>
-<p><strong>FTMGram v3.5.2</strong> — Critical hot-fix for sync/async event loop crash
-(<code class="docutils literal notranslate"><span class="pre">RuntimeError:</span> <span class="pre">attached</span> <span class="pre">to</span> <span class="pre">a</span> <span class="pre">different</span> <span class="pre">loop</span></code>) affecting all sync bots.
-Also includes the full v3.5.x feature set: <code class="docutils literal notranslate"><span class="pre">fast_download</span></code>, <code class="docutils literal notranslate"><span class="pre">fast_upload</span></code>,
-<code class="docutils literal notranslate"><span class="pre">get_bot_chat_history</span></code>, <code class="docutils literal notranslate"><span class="pre">RichMessageBuilder</span></code>, <code class="docutils literal notranslate"><span class="pre">stream_text</span></code>, and more.</p>
+          <section id="ftmgram-3-5-2-release-notes">
+<h1>FTMGram 3.5.2 Release Notes<a class="headerlink" href="#ftmgram-3-5-2-release-notes" title="Link to this heading">¶</a></h1>
+<p>Release date: September 2, 2026</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Hot-fix release</strong> — All users on v3.5.0 / v3.5.1 should upgrade immediately.
+<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-U</span> <span class="pre">ftmgram</span></code></p>
 </div>
-<div class="toctree-wrapper compound">
-<p class="caption" role="heading"><span class="caption-text">Latest Releases</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="v3.5.2.html">FTMGram 3.5.2 Release Notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v3.5.1.html">Version 3.5.1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v3.5.0.html">Version 3.5.0</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.2.24.html">FTMGram v2.2.24</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.2.23.html">FTMGram v2.2.23</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.2.22.html">FTMGram v2.2.22</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.2.21.html">FTMGram v2.2.21</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.2.18.html">FTMGram v2.2.18</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.2.17.html">FTMGram v2.2.17</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.2.16.html">FTMGram v2.2.16</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.2.15.html">FTMGram v2.2.15</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.2.14.html">FTMGram v2.2.14</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.2.13.html">FTMGram v2.2.13</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.2.12.html">FTMGram v2.2.12</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.2.11.html">FTMGram v2.2.11</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.2.10.html">FTMGram v2.2.10</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.2.9.html">FTMGram v2.2.9</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.2.8.html">FTMGram v2.2.8</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.2.7.html">FTMGram v2.2.7</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.2.6.html">FTMGram v2.2.6</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.2.5.html">FTMGram v2.2.5</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.2.4.html">FTMGram v2.2.4</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.2.2.html">FTMGram v2.2.2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.2.1.html">FTMGram v2.2.1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.1.37.html">FTMGram v2.1.37</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.1.36.html">FTMGram v2.1.36</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.1.35.html">FTMGram v2.1.35</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.1.34.html">FTMGram v2.1.34</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.1.33.13.html">FTMGram v2.1.33.13</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.1.33.12.html">FTMGram v2.1.33.12</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.1.33.11.html">FTMGram v2.1.33.11</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.1.33.10.html">FTMGram v2.1.33.10</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.1.33.9.html">FTMGram v2.1.33.9</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.1.33.8.html">FTMGram v2.1.33.8</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.1.33.7.html">FTMGram v2.1.33.7</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.1.33.4.html">FTMGram v2.1.33.4</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.1.33.3.html">FTMGram v2.1.33.3</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.1.33.2.html">FTMGram v2.1.33.2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.1.33.1.html">FTMGram v2.1.33.1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.1.32.15.html">FTMGram v2.1.32.15</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.1.32.14.html">FTMGram v2.1.32.14</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.1.32.13.html">FTMGram v2.1.32.13</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.1.32.12.html">FTMGram v2.1.32.12</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.1.32.11.html">FTMGram v2.1.32.11</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.1.32.10.html">FTMGram v2.1.32.10</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.1.32.9.html">FTMGram v2.1.32.9</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.1.32.8.html">FTMGram v2.1.32.8</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.1.32.7.html">FTMGram v2.1.32.7</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.1.32.6.html">FTMGram v2.1.32.6</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.1.32.4.html">FTMGram v2.1.32.4</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.1.32.3.html">FTMGram v2.1.32.3</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.1.32.2.html">FTMGram v2.1.32.2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.1.32.1.html">FTMGram v2.1.32.1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.1.31.html">FTMGram v2.1.31</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.1.30.html">FTMGram v2.1.30</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.1.29.html">FTMGram v2.1.29</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.1.28.html">FTMGram v2.1.28</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.1.27.html">FTMGram v2.1.27</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.1.26.html">FTMGram v2.1.26</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.1.25.html">FTMGram v2.1.25</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.1.23.html">FTMGram v2.1.23</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.1.22.html">FTMGram v2.1.22</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.1.21.html">FTMGram v2.1.21</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.1.20.html">FTMGram v2.1.20</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.1.19.html">FTMGram v2.1.19</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.1.18.html">FTMGram v2.1.18</a></li>
+<section id="critical-bug-fix-sync-async-event-loop-architecture">
+<h2>Critical Bug Fix — Sync/Async Event Loop Architecture<a class="headerlink" href="#critical-bug-fix-sync-async-event-loop-architecture" title="Link to this heading">¶</a></h2>
+<p><strong>Problem (v3.5.0 and v3.5.1):</strong></p>
+<p>When sync bots (using <code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">cmd_start</span></code>, <code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">handle_link</span></code>, etc.) called any
+Client method, FTMGram’s <code class="docutils literal notranslate"><span class="pre">sync.py</span></code> would incorrectly detect the <strong>Client’s
+internal running loop</strong> and try to call <code class="docutils literal notranslate"><span class="pre">run_until_complete()</span></code> on it — which
+Python forbids.  The result was:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="ne">RuntimeError</span><span class="p">:</span> <span class="n">Task</span> <span class="o">&lt;</span><span class="n">Start</span><span class="o">.</span><span class="n">start</span><span class="p">()</span><span class="o">&gt;</span> <span class="n">got</span> <span class="n">Future</span> <span class="o">&lt;</span><span class="n">Session</span><span class="o">.</span><span class="n">recv_worker</span><span class="p">()</span><span class="o">&gt;</span>
+<span class="n">attached</span> <span class="n">to</span> <span class="n">a</span> <span class="n">different</span> <span class="n">loop</span>
+</pre></div>
+</div>
+<p>This happened because:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">get_event_loop()</span></code> returned <code class="docutils literal notranslate"><span class="pre">asyncio.get_running_loop()</span></code> — the Client’s
+internal uvloop.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sync.py</span></code> passed that <strong>already-running</strong> loop to <code class="docutils literal notranslate"><span class="pre">run_until_complete()</span></code>.</p></li>
+<li><p>Python raised <code class="docutils literal notranslate"><span class="pre">RuntimeError</span></code> because you cannot call <code class="docutils literal notranslate"><span class="pre">run_until_complete</span></code>
+on a running loop, destroying the recv_worker task and crashing the bot.</p></li>
+</ol>
+<p><strong>Root cause:</strong> v3.5.1 introduced a uvloop-first policy without a <strong>separate
+stable sync loop</strong> for the sync wrapper layer.</p>
+<p><strong>Fix (v3.5.2):</strong></p>
+<p>Two new functions in <code class="docutils literal notranslate"><span class="pre">utils.py</span></code>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">get_sync_loop()</span></code> — returns a <strong>thread-local, never-running</strong> event loop
+used exclusively by <code class="docutils literal notranslate"><span class="pre">sync.py</span></code> wrappers. Completely isolated from the
+Client’s internal loop. Zero interference.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">_install_uvloop_policy_once()</span></code> — installs uvloop <strong>exactly once</strong> (via a
+module-level flag) and never raises even if uvloop is missing.</p></li>
 </ul>
+<p><code class="docutils literal notranslate"><span class="pre">sync.py</span></code> was rewritten with a clean two-path dispatch:</p>
+<ul class="simple">
+<li><p><strong>Async context</strong> (inside <code class="docutils literal notranslate"><span class="pre">async</span> <span class="pre">def</span></code>): detects running loop with
+<code class="docutils literal notranslate"><span class="pre">asyncio.get_running_loop()</span></code> and returns the coroutine directly so the
+caller can <code class="docutils literal notranslate"><span class="pre">await</span></code> it — zero overhead, zero threads.</p></li>
+<li><p><strong>Sync context</strong> (inside <code class="docutils literal notranslate"><span class="pre">def</span></code>): calls <code class="docutils literal notranslate"><span class="pre">utils.get_sync_loop()</span></code> to get
+the dedicated isolated loop and drives it with <code class="docutils literal notranslate"><span class="pre">run_until_complete</span></code> —
+completely safe, no races.</p></li>
+</ul>
+<p>Now both patterns work flawlessly:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ✅ SYNC bot (Python def handlers) — works perfectly</span>
+<span class="nd">@app</span><span class="o">.</span><span class="n">on_message</span><span class="p">()</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">handle</span><span class="p">(</span><span class="n">client</span><span class="p">,</span> <span class="n">message</span><span class="p">):</span>
+    <span class="n">message</span><span class="o">.</span><span class="n">reply_text</span><span class="p">(</span><span class="s2">&quot;Hello!&quot;</span><span class="p">)</span>          <span class="c1"># no crash</span>
+
+<span class="c1"># ✅ ASYNC bot (async def handlers) — works perfectly</span>
+<span class="nd">@app</span><span class="o">.</span><span class="n">on_message</span><span class="p">()</span>
+<span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">handle</span><span class="p">(</span><span class="n">client</span><span class="p">,</span> <span class="n">message</span><span class="p">):</span>
+    <span class="k">await</span> <span class="n">message</span><span class="o">.</span><span class="n">reply_text</span><span class="p">(</span><span class="s2">&quot;Hello!&quot;</span><span class="p">)</span>    <span class="c1"># no crash</span>
+</pre></div>
 </div>
+</section>
+<section id="upgrade-notes">
+<h2>Upgrade Notes<a class="headerlink" href="#upgrade-notes" title="Link to this heading">¶</a></h2>
+<p>No API changes. Drop-in replacement for v3.5.0 and v3.5.1:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">U</span> <span class="n">ftmgram</span><span class="o">==</span><span class="mf">3.5.2</span>
+</pre></div>
+</div>
+</section>
+<section id="what-s-unchanged">
+<h2>What’s Unchanged<a class="headerlink" href="#what-s-unchanged" title="Link to this heading">¶</a></h2>
+<p>All v3.5.x features are intact:</p>
+<ul class="simple">
+<li><p><span class="xref std std-doc">fast_download</span> — Turbo parallel chunk downloader</p></li>
+<li><p><span class="xref std std-doc">fast_upload</span> — Turbo parallel chunk uploader</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">get_bot_chat_history()</span></code> — Bot message history scanner</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stream_text()</span></code> — Streaming text animation</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">thinking()</span></code> — Thinking effect helper</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">RichMessageBuilder</span></code> — DSL for rich formatted messages</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">purge_messages()</span></code> — Bulk message purge</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">download_media_to_memory()</span></code> — In-memory download</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MultiClient</span></code> — Multi-account manager</p></li>
+</ul>
+</section>
 </section>
 
         </article>
@@ -729,23 +730,23 @@ Also includes the full v3.5.x feature set: <code class="docutils literal notrans
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="v3.5.2.html">
+          <a class="next-page" href="v3.5.0.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">FTMGram 3.5.2 Release Notes</div>
+                <div class="title">Version 3.5.0</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="v3.5.1.html">
+          <a class="prev-page" href="index.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Version 3.5.1</div>
+                <div class="title">Release Notes</div>
                 
               </div>
             </a>
@@ -768,8 +769,29 @@ Also includes the full v3.5.x feature set: <code class="docutils literal notrans
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">FTMGram 3.5.2 Release Notes</a><ul>
+<li><a class="reference internal" href="#critical-bug-fix-sync-async-event-loop-architecture">Critical Bug Fix — Sync/Async Event Loop Architecture</a></li>
+<li><a class="reference internal" href="#upgrade-notes">Upgrade Notes</a></li>
+<li><a class="reference internal" href="#what-s-unchanged">What’s Unchanged</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>

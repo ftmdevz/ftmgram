@@ -29,7 +29,8 @@ from ftmgram.methods.utilities import idle as idle_module, compose as compose_mo
 def async_to_sync(obj, name):
     function = getattr(obj, name)
 
-    def async_to_sync_gen(agen, loop, is_main_thread):
+    def async_to_sync_gen(agen, loop):
+        """Iterate an async generator synchronously by submitting each step to the loop."""
         async def anext(agen):
             try:
                 return await agen.__anext__(), False
@@ -37,49 +38,43 @@ def async_to_sync(obj, name):
                 return None, True
 
         while True:
-            if is_main_thread:
-                item, done = loop.run_until_complete(anext(agen))
-            else:
-                item, done = asyncio.run_coroutine_threadsafe(anext(agen), loop).result()
-
+            item, done = asyncio.run_coroutine_threadsafe(anext(agen), loop).result()
             if done:
                 break
-
             yield item
 
     @functools.wraps(function)
     def async_to_sync_wrap(*args, **kwargs):
         coroutine = function(*args, **kwargs)
 
-        loop = utils.get_event_loop()
+        # ------------------------------------------------------------------ #
+        # If we're already inside a running event loop (i.e. an async context
+        # like an async def handler), just return the coroutine/asyncgen so
+        # the caller can `await` it directly.  This is the fast-path used by
+        # async bots — no thread switching, no loop conflicts.
+        # ------------------------------------------------------------------ #
+        try:
+            running_loop = asyncio.get_running_loop()
+            # We are inside an async context — just return as-is.
+            return coroutine
+        except RuntimeError:
+            pass  # No running loop — we are in a sync context.
 
-        if threading.current_thread() is threading.main_thread() or not loop.is_running():
-            if loop.is_running():
-                return coroutine
-            else:
-                if inspect.iscoroutine(coroutine):
-                    return loop.run_until_complete(coroutine)
+        # ------------------------------------------------------------------ #
+        # Sync context: obtain (or create) a dedicated background event loop
+        # that lives in the main thread but is NOT yet running.  We drive it
+        # with run_until_complete / run_coroutine_threadsafe so it never
+        # conflicts with the Client's internal network loop.
+        # ------------------------------------------------------------------ #
+        loop = utils.get_sync_loop()
 
-                if inspect.isasyncgen(coroutine):
-                    return async_to_sync_gen(coroutine, loop, True)
-        else:
-            if inspect.iscoroutine(coroutine):
-                if loop.is_running():
-                    async def coro_wrapper():
-                        return await asyncio.wrap_future(asyncio.run_coroutine_threadsafe(coroutine, loop))
+        if inspect.iscoroutine(coroutine):
+            return loop.run_until_complete(coroutine)
 
-                    return coro_wrapper()
-                else:
-                    return asyncio.run_coroutine_threadsafe(coroutine, loop).result()
-
-            if inspect.isasyncgen(coroutine):
-                if loop.is_running():
-                    return coroutine
-                else:
-                    return async_to_sync_gen(coroutine, loop, False)
+        if inspect.isasyncgen(coroutine):
+            return async_to_sync_gen(coroutine, loop)
 
     setattr(obj, name, async_to_sync_wrap)
-
 
 
 def wrap(source):

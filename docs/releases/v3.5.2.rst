@@ -1,0 +1,89 @@
+FTMGram 3.5.2 Release Notes
+============================
+
+Release date: September 2, 2026
+
+.. important::
+
+   **Hot-fix release** — All users on v3.5.0 / v3.5.1 should upgrade immediately.
+   ``pip install -U ftmgram``
+
+Critical Bug Fix — Sync/Async Event Loop Architecture
+------------------------------------------------------
+
+**Problem (v3.5.0 and v3.5.1):**
+
+When sync bots (using ``def cmd_start``, ``def handle_link``, etc.) called any
+Client method, FTMGram's ``sync.py`` would incorrectly detect the **Client's
+internal running loop** and try to call ``run_until_complete()`` on it — which
+Python forbids.  The result was::
+
+    RuntimeError: Task <Start.start()> got Future <Session.recv_worker()>
+    attached to a different loop
+
+This happened because:
+
+1. ``get_event_loop()`` returned ``asyncio.get_running_loop()`` — the Client's
+   internal uvloop.
+2. ``sync.py`` passed that **already-running** loop to ``run_until_complete()``.
+3. Python raised ``RuntimeError`` because you cannot call ``run_until_complete``
+   on a running loop, destroying the recv_worker task and crashing the bot.
+
+**Root cause:** v3.5.1 introduced a uvloop-first policy without a **separate
+stable sync loop** for the sync wrapper layer.
+
+**Fix (v3.5.2):**
+
+Two new functions in ``utils.py``:
+
+* ``get_sync_loop()`` — returns a **thread-local, never-running** event loop
+  used exclusively by ``sync.py`` wrappers. Completely isolated from the
+  Client's internal loop. Zero interference.
+
+* ``_install_uvloop_policy_once()`` — installs uvloop **exactly once** (via a
+  module-level flag) and never raises even if uvloop is missing.
+
+``sync.py`` was rewritten with a clean two-path dispatch:
+
+* **Async context** (inside ``async def``): detects running loop with
+  ``asyncio.get_running_loop()`` and returns the coroutine directly so the
+  caller can ``await`` it — zero overhead, zero threads.
+
+* **Sync context** (inside ``def``): calls ``utils.get_sync_loop()`` to get
+  the dedicated isolated loop and drives it with ``run_until_complete`` —
+  completely safe, no races.
+
+Now both patterns work flawlessly::
+
+    # ✅ SYNC bot (Python def handlers) — works perfectly
+    @app.on_message()
+    def handle(client, message):
+        message.reply_text("Hello!")          # no crash
+
+    # ✅ ASYNC bot (async def handlers) — works perfectly
+    @app.on_message()
+    async def handle(client, message):
+        await message.reply_text("Hello!")    # no crash
+
+
+Upgrade Notes
+-------------
+
+No API changes. Drop-in replacement for v3.5.0 and v3.5.1::
+
+    pip install -U ftmgram==3.5.2
+
+What's Unchanged
+----------------
+
+All v3.5.x features are intact:
+
+* :doc:`fast_download` — Turbo parallel chunk downloader
+* :doc:`fast_upload` — Turbo parallel chunk uploader
+* ``get_bot_chat_history()`` — Bot message history scanner
+* ``stream_text()`` — Streaming text animation
+* ``thinking()`` — Thinking effect helper
+* ``RichMessageBuilder`` — DSL for rich formatted messages
+* ``purge_messages()`` — Bulk message purge
+* ``download_media_to_memory()`` — In-memory download
+* ``MultiClient`` — Multi-account manager

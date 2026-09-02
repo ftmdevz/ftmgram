@@ -4,17 +4,19 @@ Release Notes
 
 Release notes for FTMGram releases describe what's new in each version, bug fixes, and feature additions.
 
-.. admonition:: Latest Release: FTMGram v3.5.1
-    v3.5.0
+.. admonition:: Latest Release: FTMGram v3.5.2
     :class: note
 
-    **FTMGram v3.5.1
-    v3.5.0** introduces native Bot Chat History scanning (`get_bot_chat_history`), Turbo multi-worker media transfers (`fast_download`), fluent `RichMessageBuilder` DSL, real-time AI token streaming (`stream_text`), and batch purge tools (`purge_messages`).
+    **FTMGram v3.5.2** — Critical hot-fix for sync/async event loop crash
+    (``RuntimeError: attached to a different loop``) affecting all sync bots.
+    Also includes the full v3.5.x feature set: ``fast_download``, ``fast_upload``,
+    ``get_bot_chat_history``, ``RichMessageBuilder``, ``stream_text``, and more.
 
 .. toctree::
     :maxdepth: 1
     :caption: Latest Releases
 
+    v3.5.2
     v3.5.1
     v3.5.0
     v2.2.24
