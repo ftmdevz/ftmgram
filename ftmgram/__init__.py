@@ -16,7 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
-__version__ = "3.5.2"
+__version__ = "3.5.3"
 
 __license__ = "GNU Lesser General Public License v3.0 (LGPL-3.0)"
 

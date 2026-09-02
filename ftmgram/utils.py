@@ -41,14 +41,17 @@ from ftmgram.types.messages_and_media.message import Str
 
 _policy_set = False
 
-# Thread-local storage for per-thread sync loops.
-# Each thread that calls sync methods gets its own dedicated event loop
-# so there is ZERO interference with the Client's internal network loop.
+# Thread-local storage so each thread gets ONE stable sync loop.
 _thread_local = threading.local()
 
 
 def _install_uvloop_policy_once():
-    """Install uvloop policy exactly once, only if available. Never raises."""
+    """Install uvloop EventLoopPolicy exactly once (async/app.run() mode only).
+
+    IMPORTANT: This is intentionally NOT called from get_sync_loop().
+    uvloop is only beneficial for pure-async bots.  In sync mode we use
+    plain asyncio so there is no policy-level loop identity mismatch.
+    """
     global _policy_set
     if not _policy_set:
         _policy_set = True
@@ -60,46 +63,50 @@ def _install_uvloop_policy_once():
 
 
 def get_sync_loop() -> asyncio.AbstractEventLoop:
-    """Return a stable, per-thread event loop for SYNC wrappers only.
+    """Return the ONE stable event loop used by ALL sync wrappers in this thread.
 
-    This loop is intentionally separate from the Client's internal async loop
-    so that ``run_until_complete`` never races with ``recv_worker`` or any
-    other coroutine the Client is managing.
+    Key guarantee: after this call, ``asyncio.get_event_loop()`` returns the
+    SAME loop object.  This means Pyrogram's Session, recv_worker, and every
+    sync-wrapped method all share a single loop — eliminating the
+    "Future attached to a different loop" crash entirely.
 
-    DO NOT call this from async code — use ``asyncio.get_running_loop()`` or
-    ``asyncio.get_event_loop()`` instead.
+    Uses plain asyncio (no uvloop) so the loop identity is always stable
+    regardless of which EventLoopPolicy is installed.
     """
     loop = getattr(_thread_local, "loop", None)
     if loop is None or loop.is_closed():
-        loop = asyncio.new_event_loop()
+        # Always use plain asyncio.DefaultEventLoopPolicy for sync loops so
+        # that even if uvloop policy was installed we get a consistent loop.
+        loop = asyncio.DefaultEventLoopPolicy().new_event_loop()
         _thread_local.loop = loop
+    # Critical: make this THE current event loop so Pyrogram internals
+    # (Session.__init__, create_task, etc.) all pick up the same object.
+    asyncio.set_event_loop(loop)
     return loop
 
 
 def get_event_loop() -> asyncio.AbstractEventLoop:
-    """Return the current event loop for CLIENT-INTERNAL use.
+    """Return the running loop (async context) or the sync loop (sync context).
 
-    • If called from inside a running async context, returns that loop.
-    • Otherwise returns (or creates) a regular asyncio loop.
-    • uvloop policy is installed at most once.
+    • Inside ``async def`` / ``asyncio.run()`` / ``app.run()``:
+      returns the running uvloop/asyncio loop via get_running_loop().
+    • Outside any running loop (sync bot handlers):
+      delegates to get_sync_loop() so the loop identity is always consistent.
+    • uvloop policy is installed for async contexts only.
     """
-    _install_uvloop_policy_once()
-
+    # Fast-path: inside a running async context.
     try:
         return asyncio.get_running_loop()
     except RuntimeError:
         pass
 
-    try:
-        loop = asyncio.get_event_loop()
-        if not loop.is_closed():
-            return loop
-    except RuntimeError:
-        pass
+    # Sync context: use the stable per-thread sync loop.
+    # Also install uvloop policy now (it won't affect the sync loop itself
+    # since get_sync_loop uses DefaultEventLoopPolicy explicitly).
+    _install_uvloop_policy_once()
+    return get_sync_loop()
 
-    loop = asyncio.new_event_loop()
-    asyncio.set_event_loop(loop)
-    return loop
+
 
 
 async def ainput(prompt: str = "", *, hide: bool = False, loop: Optional[asyncio.AbstractEventLoop] = None):
